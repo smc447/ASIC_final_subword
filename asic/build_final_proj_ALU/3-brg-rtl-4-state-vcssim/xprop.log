@@ -1,0 +1,12 @@
+vc/regs.v:69 YES
+vc/regs.v:103 YES
+proc/ProcDpathAlu.v:23 YES
+./inputs/testbenches/ProcDpathAluWrapper_imul-alu-add_tb.v:72 NO "a non-instrumentable statement" (72)
+./inputs/testbenches/ProcDpathAluWrapper_imul-alu-add_tb.v:73 NO "a non-instrumentable statement" (73)
+./inputs/testbenches/ProcDpathAluWrapper_imul-alu-add_tb.v:74 NO "a non-instrumentable statement" (74)
+vc/regs.v:69 YES
+==================================================
+X P R O P   S T A T I S T I C S
+instrumentable assignments:    33
+instrumented assignments:      21
+instrumentation success rate:  63%

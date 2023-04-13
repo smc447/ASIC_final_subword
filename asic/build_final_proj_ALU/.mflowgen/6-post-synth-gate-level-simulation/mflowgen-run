@@ -1,0 +1,34 @@
+#! /usr/bin/env bash
+set -euo pipefail
+#=========================================================================
+# mflowgen-run
+#=========================================================================
+# Generator : /classes/ece5745/install/venv-pkgs/x86_64-rhel7/pypy3-pymtl3-7.3.3/site-packages/mflowgen/core/build_orchestrator.py
+
+# Pre
+
+rm -f .time_end
+date +%Y-%m%d-%H%M-%S > .time_start
+MFLOWGEN_STEP_HOME=$PWD
+export design_name='ProcDpathAluWrapper'
+export test_design_name='ProcDpathAluWrapper'
+export pad_ring=False
+export dut_name='DUT'
+export waveform=True
+export clock_period=3.0
+export change_clock_period='undefined'
+export input_delay=0.05
+export output_delay=0.05
+export extra_link_lib_dir='./inputs/adk'
+export simtype='gate-level'
+export debug=False
+
+# Commands
+
+./run.sh
+
+# Post
+
+cd $MFLOWGEN_STEP_HOME
+date +%Y-%m%d-%H%M-%S > .time_end
+

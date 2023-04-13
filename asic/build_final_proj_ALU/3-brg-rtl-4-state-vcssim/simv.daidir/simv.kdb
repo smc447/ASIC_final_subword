@@ -1,0 +1,17 @@
+rc file Version 1.0
+
+[Design]
+COMPILE_PATH=/home/ezw2/ece5745/ASIC_final_subword/asic/build_final_proj_ALU/3-brg-rtl-4-state-vcssim
+VCS_HOME=/opt/synopsys/vcs/R-2020.12
+VERDI_HOME=
+SystemC=FALSE
+UUM=FALSE
+KDB=FALSE
+USE_NOVAS_HOME=FALSE
+COSIM=FALSE
+TOP=ProcDpathAluWrapper_tb 
+OTHER_OPTION=-xprop=tmerge 
+
+[Value]
+WREALX=ffff534e50535f58
+WREALZ=ffff534e50535f5a

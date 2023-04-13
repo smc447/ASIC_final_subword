@@ -1,0 +1,48 @@
+build_dir: 11-brg-cadence-innovus-signoff
+build_id: '11'
+commands:
+- bash run.sh
+edges_i:
+  adk:
+  - f: adk
+    step: 2-freepdk-45nm
+  design.checkpoint:
+  - f: design.checkpoint
+    step: 9-brg-cadence-innovus-pnr
+  design.sdc:
+  - f: design.sdc
+    step: 4-brg-synopsys-dc-synthesis
+edges_o:
+  signoff.summary.txt:
+  - f: signoff.summary.txt
+    step: 12-brg-flow-summary
+inputs:
+- adk
+- design.sdc
+- design.checkpoint
+name: brg-cadence-innovus-signoff
+outputs:
+- design.checkpoint
+- design.gds
+- design.lvs.v
+- design.vcs.v
+- design.lef
+- design.sdf
+- design.spef.gz
+- signoff.summary.txt
+parameters:
+  clock_period: 3.0
+  design_name: ProcDpathAluWrapper
+  extra_link_lib_dir: ''
+  order:
+  - main.tcl
+postconditions:
+- assert File( 'outputs/design.checkpoint' )
+- assert File( 'outputs/design.gds')
+- assert File( 'outputs/design.sdf')
+preconditions:
+- assert Tool( 'innovus' )
+- assert File( 'inputs/adk' )
+- assert File( 'inputs/design.sdc' )
+- assert File( 'inputs/design.checkpoint/save.enc')
+source: /classes/ece5745/install/venv-pkgs/x86_64-rhel7/pypy3-pymtl3-7.3.3/site-packages/steps/brg-cadence-innovus-signoff

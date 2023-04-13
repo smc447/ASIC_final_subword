@@ -1,0 +1,13 @@
+vc/regs.v:68 YES:SyncFF
+vc/regs.v:102 YES:SyncFF
+vc/regs.v:68 YES:SyncFF
+==================================================
+Unified Inference Statistics
+Number of always_ff:                   3
+Number of always_latch:                0
+Number of always @*:                   0
+Number of always_comb :                1
+Number of always :                     1
+Number of flip-flop candidates:        3
+Number of synchronous flops inferred:  3
+Number of Asynchronous flops inferred: 0

@@ -280,7 +280,7 @@ module proc_Proc
   logic        imul_istream_val_D;
 
   logic        reg_en_X;
-  logic [3:0]  alu_fn_X;
+  logic [5:0]  alu_fn_X;
   logic [1:0]  ex_result_sel_X;
   logic        imul_ostream_rdy_X;
 

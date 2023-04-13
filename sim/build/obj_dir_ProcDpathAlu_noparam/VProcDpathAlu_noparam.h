@@ -24,7 +24,7 @@ VL_MODULE(VProcDpathAlu_noparam) {
     // propagate new values into/out from the Verilated model.
     VL_IN8(reset,0,0);
     VL_IN8(clk,0,0);
-    VL_IN8(fn,3,0);
+    VL_IN8(fn,5,0);
     VL_OUT8(ops_eq,0,0);
     VL_OUT8(ops_lt,0,0);
     VL_OUT8(ops_ltu,0,0);

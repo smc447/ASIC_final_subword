@@ -1,0 +1,97 @@
+ 
+****************************************
+check_design summary:
+Version:     R-2020.09-SP2
+Date:        Thu Apr 13 14:53:43 2023
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Inputs/Outputs                                                     31
+    Unconnected ports (LINT-28)                                    31
+
+Cells                                                              24
+    Connected to power or ground (LINT-32)                         22
+    Nets connected to multiple pins on same cell (LINT-33)          2
+--------------------------------------------------------------------------------
+
+Warning: In design 'proc_ProcDpathAlu_DW_cmp_J1_0', port 'TC' is not connected to any nets. (LINT-28)
+Warning: In design 'proc_ProcDpathAlu_DW_cmp_J1_0', port 'GE_LT' is not connected to any nets. (LINT-28)
+Warning: In design 'proc_ProcDpathAlu_DW_cmp_J1_0', port 'GE_GT_EQ' is not connected to any nets. (LINT-28)
+Warning: In design 'proc_ProcDpathAlu_DW_cmp_J1_0', port 'EQ_NE' is not connected to any nets. (LINT-28)
+Warning: In design 'proc_ProcDpathAlu_DW_cmp_J1_1', port 'TC' is not connected to any nets. (LINT-28)
+Warning: In design 'proc_ProcDpathAlu_DW_cmp_J1_1', port 'GE_LT' is not connected to any nets. (LINT-28)
+Warning: In design 'proc_ProcDpathAlu_DW_cmp_J1_1', port 'GE_GT_EQ' is not connected to any nets. (LINT-28)
+Warning: In design 'proc_ProcDpathAlu_DW_cmp_J1_1', port 'EQ_NE' is not connected to any nets. (LINT-28)
+Warning: In design 'proc_ProcDpathAlu_DW01_sub_J1_0', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'proc_ProcDpathAlu_DW01_sub_J1_0', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'proc_ProcDpathAlu_DW01_sub_J1_1', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'proc_ProcDpathAlu_DW01_sub_J1_1', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'proc_ProcDpathAlu_DW01_sub_J1_2', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'proc_ProcDpathAlu_DW01_sub_J1_2', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'proc_ProcDpathAlu_DW01_sub_J1_3', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'proc_ProcDpathAlu_DW01_sub_J1_3', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'proc_ProcDpathAlu_DW01_add_J1_0', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'proc_ProcDpathAlu_DW01_add_J1_0', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'proc_ProcDpathAlu_DW01_add_J1_1', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'proc_ProcDpathAlu_DW01_add_J1_1', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'proc_ProcDpathAlu_DW01_add_J1_2', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'proc_ProcDpathAlu_DW01_add_J1_2', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'proc_ProcDpathAlu_DW01_add_J1_3', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'proc_ProcDpathAlu_DW01_add_J1_3', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'proc_ProcDpathAlu_DW01_sub_J1_4', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'proc_ProcDpathAlu_DW01_sub_J1_4', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'proc_ProcDpathAlu_DW01_add_J1_4', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'proc_ProcDpathAlu_DW01_add_J1_4', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'vc_EnReg_p_nbits32_1', port 'reset' is not connected to any nets. (LINT-28)
+Warning: In design 'vc_EnReg_p_nbits32_0', port 'reset' is not connected to any nets. (LINT-28)
+Warning: In design 'vc_EnReg_p_nbits6', port 'reset' is not connected to any nets. (LINT-28)
+Warning: In design 'proc_ProcDpathAluWrapper', a pin on submodule 'in0_reg' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'reset' is connected to logic 0. 
+Warning: In design 'proc_ProcDpathAluWrapper', a pin on submodule 'in1_reg' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'reset' is connected to logic 0. 
+Warning: In design 'proc_ProcDpathAluWrapper', a pin on submodule 'fn_reg' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'reset' is connected to logic 0. 
+Warning: In design 'proc_ProcDpathAlu', a pin on submodule 'lt_x_20' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'TC' is connected to logic 0. 
+Warning: In design 'proc_ProcDpathAlu', a pin on submodule 'lt_x_20' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'GE_LT' is connected to logic 1. 
+Warning: In design 'proc_ProcDpathAlu', a pin on submodule 'lt_x_20' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'GE_GT_EQ' is connected to logic 0. 
+Warning: In design 'proc_ProcDpathAlu', a pin on submodule 'lt_x_19' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'TC' is connected to logic 1. 
+Warning: In design 'proc_ProcDpathAlu', a pin on submodule 'lt_x_19' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'GE_LT' is connected to logic 1. 
+Warning: In design 'proc_ProcDpathAlu', a pin on submodule 'lt_x_19' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'GE_GT_EQ' is connected to logic 0. 
+Warning: In design 'proc_ProcDpathAlu', a pin on submodule 'sub_x_13' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'proc_ProcDpathAlu', a pin on submodule 'sub_x_12' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'proc_ProcDpathAlu', a pin on submodule 'sub_x_11' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'proc_ProcDpathAlu', a pin on submodule 'sub_x_10' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'proc_ProcDpathAlu', a pin on submodule 'add_x_9' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'proc_ProcDpathAlu', a pin on submodule 'add_x_8' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'proc_ProcDpathAlu', a pin on submodule 'add_x_7' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'proc_ProcDpathAlu', a pin on submodule 'add_x_6' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'proc_ProcDpathAlu', a pin on submodule 'sub_x_2' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'proc_ProcDpathAlu', a pin on submodule 'add_x_1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'vc_EnReg_p_nbits32_1', a pin on submodule 'clk_gate_q_reg' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'TE' is connected to logic 0. 
+Warning: In design 'vc_EnReg_p_nbits32_0', a pin on submodule 'clk_gate_q_reg' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'TE' is connected to logic 0. 
+Warning: In design 'vc_EnReg_p_nbits6', a pin on submodule 'clk_gate_q_reg' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'TE' is connected to logic 0. 
+Warning: In design 'proc_ProcDpathAlu', the same net is connected to more than one pin on submodule 'lt_x_20'. (LINT-33)
+   Net 'n712' is connected to pins 'TC', 'GE_GT_EQ''.
+Warning: In design 'proc_ProcDpathAlu', the same net is connected to more than one pin on submodule 'lt_x_19'. (LINT-33)
+   Net 'n711' is connected to pins 'TC', 'GE_LT''.
+1

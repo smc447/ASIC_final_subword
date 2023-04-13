@@ -1,0 +1,40 @@
+build_dir: 9-brg-cadence-innovus-pnr
+build_id: '9'
+commands:
+- bash run.sh
+edges_i:
+  adk:
+  - f: adk
+    step: 2-freepdk-45nm
+  design.checkpoint:
+  - f: design.checkpoint
+    step: 7-brg-cadence-innovus-blocksetup
+  design.sdc:
+  - f: design.sdc
+    step: 4-brg-synopsys-dc-synthesis
+edges_o:
+  design.checkpoint:
+  - f: design.checkpoint
+    step: 11-brg-cadence-innovus-signoff
+inputs:
+- adk
+- design.sdc
+- design.checkpoint
+name: brg-cadence-innovus-pnr
+outputs:
+- design.checkpoint
+parameters:
+  design_name: ProcDpathAluWrapper
+  hold_slack: undefined
+  order:
+  - main.tcl
+  pad_ring: false
+  setup_slack: undefined
+postconditions:
+- assert File( 'outputs/design.checkpoint' )
+preconditions:
+- assert Tool( 'innovus' )
+- assert File( 'inputs/adk' )
+- assert File( 'inputs/design.sdc' )
+- assert File( 'inputs/design.checkpoint/save.enc')
+source: /classes/ece5745/install/venv-pkgs/x86_64-rhel7/pypy3-pymtl3-7.3.3/site-packages/steps/brg-cadence-innovus-pnr

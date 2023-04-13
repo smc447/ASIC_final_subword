@@ -1,0 +1,8 @@
+./inputs/testbenches/ProcDpathAluWrapper_imul-alu-add_tb.v:72 NO "a non-instrumentable statement" (72)
+./inputs/testbenches/ProcDpathAluWrapper_imul-alu-add_tb.v:73 NO "a non-instrumentable statement" (73)
+./inputs/testbenches/ProcDpathAluWrapper_imul-alu-add_tb.v:74 NO "a non-instrumentable statement" (74)
+==================================================
+X P R O P   S T A T I S T I C S
+instrumentable assignments:    12
+instrumented assignments:      0
+instrumentation success rate:  0%

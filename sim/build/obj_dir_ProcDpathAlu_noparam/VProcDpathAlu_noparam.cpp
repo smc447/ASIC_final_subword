@@ -30,7 +30,7 @@ void VProcDpathAlu_noparam::eval_step() {
             Verilated::debug(1);
             __Vchange = _change_request(vlSymsp);
             Verilated::debug(__Vsaved_debug);
-            VL_FATAL_MT("proc/ProcDpathAlu.v", 79, "",
+            VL_FATAL_MT("proc/ProcDpathAlu.v", 83, "",
                 "Verilated model didn't converge\n"
                 "- See DIDNOTCONVERGE in the Verilator manual");
         } else {
@@ -55,7 +55,7 @@ void VProcDpathAlu_noparam::_eval_initial_loop(VProcDpathAlu_noparam__Syms* __re
             Verilated::debug(1);
             __Vchange = _change_request(vlSymsp);
             Verilated::debug(__Vsaved_debug);
-            VL_FATAL_MT("proc/ProcDpathAlu.v", 79, "",
+            VL_FATAL_MT("proc/ProcDpathAlu.v", 83, "",
                 "Verilated model didn't DC converge\n"
                 "- See DIDNOTCONVERGE in the Verilator manual");
         } else {
@@ -71,46 +71,118 @@ VL_INLINE_OPT void VProcDpathAlu_noparam::_combo__TOP__1(VProcDpathAlu_noparam__
     vlTOPp->ops_lt = VL_LTS_III(1,32,32, vlTOPp->in0, vlTOPp->in1);
     vlTOPp->ops_ltu = (vlTOPp->in0 < vlTOPp->in1);
     vlTOPp->ops_eq = (vlTOPp->in0 == vlTOPp->in1);
-    if ((8U & (IData)(vlTOPp->fn))) {
-        if ((4U & (IData)(vlTOPp->fn))) {
-            if ((2U & (IData)(vlTOPp->fn))) {
-                vlTOPp->out = 0U;
-            } else {
-                if ((1U & (IData)(vlTOPp->fn))) {
-                    vlTOPp->out = (vlTOPp->in0 + vlTOPp->in1);
-                    vlTOPp->out = (0xfffffffeU & vlTOPp->out);
-                } else {
-                    vlTOPp->out = vlTOPp->in1;
-                }
-            }
-        } else {
-            vlTOPp->out = ((2U & (IData)(vlTOPp->fn))
-                            ? ((1U & (IData)(vlTOPp->fn))
-                                ? vlTOPp->in0 : VL_SHIFTRS_III(32,32,5, vlTOPp->in0, 
-                                                               (0x1fU 
-                                                                & vlTOPp->in1)))
-                            : ((1U & (IData)(vlTOPp->fn))
-                                ? (vlTOPp->in0 >> (0x1fU 
-                                                   & vlTOPp->in1))
-                                : (~ (vlTOPp->in0 | vlTOPp->in1))));
-        }
+    if ((0x20U & (IData)(vlTOPp->fn))) {
+        vlTOPp->out = 0U;
     } else {
-        vlTOPp->out = ((4U & (IData)(vlTOPp->fn)) ? 
-                       ((2U & (IData)(vlTOPp->fn)) ? 
-                        ((1U & (IData)(vlTOPp->fn))
-                          ? (vlTOPp->in0 ^ vlTOPp->in1)
-                          : (vlTOPp->in0 & vlTOPp->in1))
-                         : ((1U & (IData)(vlTOPp->fn))
-                             ? (vlTOPp->in0 < vlTOPp->in1)
-                             : VL_LTS_III(32,32,32, vlTOPp->in0, vlTOPp->in1)))
-                        : ((2U & (IData)(vlTOPp->fn))
-                            ? ((1U & (IData)(vlTOPp->fn))
-                                ? (vlTOPp->in0 | vlTOPp->in1)
-                                : (vlTOPp->in0 << (0x1fU 
-                                                   & vlTOPp->in1)))
-                            : ((1U & (IData)(vlTOPp->fn))
-                                ? (vlTOPp->in0 - vlTOPp->in1)
-                                : (vlTOPp->in0 + vlTOPp->in1))));
+        if ((0x10U & (IData)(vlTOPp->fn))) {
+            vlTOPp->out = ((8U & (IData)(vlTOPp->fn))
+                            ? 0U : ((4U & (IData)(vlTOPp->fn))
+                                     ? 0U : ((2U & (IData)(vlTOPp->fn))
+                                              ? 0U : 
+                                             ((1U & (IData)(vlTOPp->fn))
+                                               ? ((0xff000000U 
+                                                   & (((vlTOPp->in0 
+                                                        >> 0x18U) 
+                                                       - 
+                                                       (vlTOPp->in1 
+                                                        >> 0x18U)) 
+                                                      << 0x18U)) 
+                                                  | ((0xff0000U 
+                                                      & (((vlTOPp->in0 
+                                                           >> 0x10U) 
+                                                          - 
+                                                          (vlTOPp->in1 
+                                                           >> 0x10U)) 
+                                                         << 0x10U)) 
+                                                     | ((0xff00U 
+                                                         & (((vlTOPp->in0 
+                                                              >> 8U) 
+                                                             - 
+                                                             (vlTOPp->in1 
+                                                              >> 8U)) 
+                                                            << 8U)) 
+                                                        | (0xffU 
+                                                           & (vlTOPp->in0 
+                                                              - vlTOPp->in1)))))
+                                               : ((0xff000000U 
+                                                   & (((vlTOPp->in0 
+                                                        >> 0x18U) 
+                                                       + 
+                                                       (vlTOPp->in1 
+                                                        >> 0x18U)) 
+                                                      << 0x18U)) 
+                                                  | ((0xff0000U 
+                                                      & (((vlTOPp->in0 
+                                                           >> 0x10U) 
+                                                          + 
+                                                          (vlTOPp->in1 
+                                                           >> 0x10U)) 
+                                                         << 0x10U)) 
+                                                     | ((0xff00U 
+                                                         & (((vlTOPp->in0 
+                                                              >> 8U) 
+                                                             + 
+                                                             (vlTOPp->in1 
+                                                              >> 8U)) 
+                                                            << 8U)) 
+                                                        | (0xffU 
+                                                           & (vlTOPp->in0 
+                                                              + vlTOPp->in1)))))))));
+        } else {
+            if ((8U & (IData)(vlTOPp->fn))) {
+                if ((4U & (IData)(vlTOPp->fn))) {
+                    if ((2U & (IData)(vlTOPp->fn))) {
+                        vlTOPp->out = 0U;
+                    } else {
+                        if ((1U & (IData)(vlTOPp->fn))) {
+                            vlTOPp->out = (vlTOPp->in0 
+                                           + vlTOPp->in1);
+                            vlTOPp->out = (0xfffffffeU 
+                                           & vlTOPp->out);
+                        } else {
+                            vlTOPp->out = vlTOPp->in1;
+                        }
+                    }
+                } else {
+                    vlTOPp->out = ((2U & (IData)(vlTOPp->fn))
+                                    ? ((1U & (IData)(vlTOPp->fn))
+                                        ? vlTOPp->in0
+                                        : VL_SHIFTRS_III(32,32,5, vlTOPp->in0, 
+                                                         (0x1fU 
+                                                          & vlTOPp->in1)))
+                                    : ((1U & (IData)(vlTOPp->fn))
+                                        ? (vlTOPp->in0 
+                                           >> (0x1fU 
+                                               & vlTOPp->in1))
+                                        : (~ (vlTOPp->in0 
+                                              | vlTOPp->in1))));
+                }
+            } else {
+                vlTOPp->out = ((4U & (IData)(vlTOPp->fn))
+                                ? ((2U & (IData)(vlTOPp->fn))
+                                    ? ((1U & (IData)(vlTOPp->fn))
+                                        ? (vlTOPp->in0 
+                                           ^ vlTOPp->in1)
+                                        : (vlTOPp->in0 
+                                           & vlTOPp->in1))
+                                    : ((1U & (IData)(vlTOPp->fn))
+                                        ? (vlTOPp->in0 
+                                           < vlTOPp->in1)
+                                        : VL_LTS_III(32,32,32, vlTOPp->in0, vlTOPp->in1)))
+                                : ((2U & (IData)(vlTOPp->fn))
+                                    ? ((1U & (IData)(vlTOPp->fn))
+                                        ? (vlTOPp->in0 
+                                           | vlTOPp->in1)
+                                        : (vlTOPp->in0 
+                                           << (0x1fU 
+                                               & vlTOPp->in1)))
+                                    : ((1U & (IData)(vlTOPp->fn))
+                                        ? (vlTOPp->in0 
+                                           - vlTOPp->in1)
+                                        : (vlTOPp->in0 
+                                           + vlTOPp->in1))));
+            }
+        }
     }
 }
 
@@ -145,7 +217,7 @@ void VProcDpathAlu_noparam::_eval_debug_assertions() {
         Verilated::overWidthError("reset");}
     if (VL_UNLIKELY((clk & 0xfeU))) {
         Verilated::overWidthError("clk");}
-    if (VL_UNLIKELY((fn & 0xf0U))) {
+    if (VL_UNLIKELY((fn & 0xc0U))) {
         Verilated::overWidthError("fn");}
 }
 #endif  // VL_DEBUG

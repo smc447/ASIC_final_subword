@@ -165,6 +165,23 @@ class TinyRV2Semantics (object):
     s.R[inst.rd] = s.R[inst.rs1] & s.R[inst.rs2]
     s.PC += 4
 
+  def execute_add8( s, inst ):
+    s.R[inst.rd] = \
+            (((s.R[inst.rs1] & 0xff000000) + (s.R[inst.rs2] & 0xff000000)) & 0xff000000) + \
+            (((s.R[inst.rs1] & 0x00ff0000) + (s.R[inst.rs2] & 0x00ff0000)) & 0x00ff0000) + \
+            (((s.R[inst.rs1] & 0x0000ff00) + (s.R[inst.rs2] & 0x0000ff00)) & 0x0000ff00) + \
+            (((s.R[inst.rs1] & 0x000000ff) + (s.R[inst.rs2] & 0x000000ff)) & 0x000000ff)
+          
+    s.PC += 4
+
+  def execute_sub8( s, inst ):
+    s.R[inst.rd] = \
+            (((s.R[inst.rs1] & 0xff000000) - (s.R[inst.rs2] & 0xff000000)) & 0xff000000) + \
+            (((s.R[inst.rs1] & 0x00ff0000) - (s.R[inst.rs2] & 0x00ff0000)) & 0x00ff0000) + \
+            (((s.R[inst.rs1] & 0x0000ff00) - (s.R[inst.rs2] & 0x0000ff00)) & 0x0000ff00) + \
+            (((s.R[inst.rs1] & 0x000000ff) - (s.R[inst.rs2] & 0x000000ff)) & 0x000000ff)
+    s.PC += 4
+
   #-----------------------------------------------------------------------
   # Register-immediate arithmetic, logical, and comparison instructions
   #-----------------------------------------------------------------------
@@ -416,6 +433,8 @@ class TinyRV2Semantics (object):
     'sub'   : execute_sub,
     'mul'   : execute_mul,
     'and'   : execute_and,
+    'add8'   : execute_add8,
+    'sub8'   : execute_sub8,
     'andi'  : execute_andi,
     'or'    : execute_or,
     'ori'   : execute_ori,

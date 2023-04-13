@@ -61,7 +61,7 @@ module proc_ProcDpath
   input  logic         imul_istream_val_D,
 
   input  logic         reg_en_X,
-  input  logic [3:0]   alu_fn_X,
+  input  logic [5:0]   alu_fn_X,
   input  logic [1:0]   ex_result_sel_X,
   input  logic         imul_ostream_rdy_X,
 

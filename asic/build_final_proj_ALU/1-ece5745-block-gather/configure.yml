@@ -1,0 +1,43 @@
+build_dir: 1-ece5745-block-gather
+build_id: '1'
+commands:
+- mkdir -p outputs/rtl/build
+- mkdir -p outputs/testbenches
+- cd outputs
+- CWD=$(pwd)
+- cd $sim_path/build
+- if [ $test_filter != undefined ]; then trunc_design_name=$test_filter; fi
+- set -x
+- cd $CWD
+- ln -sf $sim_path/build build
+- ln -sf $design_path raw_rtl
+- cd ..
+- python setup-pymtl-rtl.py
+- python setup-pymtl-testbench.py
+edges_i: {}
+edges_o:
+  rtl:
+  - f: rtl
+    step: 4-brg-synopsys-dc-synthesis
+  - f: rtl
+    step: 3-brg-rtl-4-state-vcssim
+  - f: rtl
+    step: 6-post-synth-gate-level-simulation
+  testbenches:
+  - f: testbenches
+    step: 3-brg-rtl-4-state-vcssim
+  - f: testbenches
+    step: 6-post-synth-gate-level-simulation
+name: ece5745-block-gather
+outputs:
+- rtl
+- testbenches
+parameters:
+  design_name: ProcDpathAluWrapper
+  design_path: /home/ezw2/ece5745/ASIC_final_subword/asic/final_proj_ALU/../../sim/proc
+  pad_ring: false
+  sim_path: /home/ezw2/ece5745/ASIC_final_subword/asic/final_proj_ALU/../../sim
+  test_design_name: ProcDpathAluWrapper
+  test_filter: undefined
+  trunc_design_name: ProcDpathAluWrapper
+source: /classes/ece5745/install/venv-pkgs/x86_64-rhel7/pypy3-pymtl3-7.3.3/site-packages/steps/ece5745-block-gather

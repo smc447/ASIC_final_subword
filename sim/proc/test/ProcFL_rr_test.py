@@ -13,7 +13,9 @@ from proc.test.harness import asm_test, run_test
 from proc.ProcFL import ProcFL
 
 from proc.test import inst_add
+from proc.test import inst_add8
 from proc.test import inst_sub
+from proc.test import inst_sub8
 from proc.test import inst_mul
 from proc.test import inst_and
 from proc.test import inst_or
@@ -56,6 +58,29 @@ class Tests:
     run_test( s.ProcType, inst_add.gen_random_test, delays=True,
               cmdline_opts=s.__class__.cmdline_opts )
 
+
+  #-----------------------------------------------------------------------
+  # add8
+  #-----------------------------------------------------------------------
+
+  @pytest.mark.parametrize( "name,test", [
+    asm_test( inst_add8.gen_basic_test     ),
+    asm_test( inst_add8.gen_dest_dep_test  ),
+    asm_test( inst_add8.gen_src0_dep_test  ),
+    asm_test( inst_add8.gen_src1_dep_test  ),
+    asm_test( inst_add8.gen_srcs_dep_test  ),
+    asm_test( inst_add8.gen_srcs_dest_test ),
+    asm_test( inst_add8.gen_value_test     ),
+    asm_test( inst_add8.gen_random_test    ),
+  ])
+  def test_add8( s, name, test ):
+    run_test( s.ProcType, test, cmdline_opts=s.__class__.cmdline_opts )
+
+  def test_add8_delays( s ):
+    run_test( s.ProcType, inst_add.gen_random_test, delays=True,
+              cmdline_opts=s.__class__.cmdline_opts )
+
+
   #-----------------------------------------------------------------------
   # sub
   #-----------------------------------------------------------------------
@@ -87,6 +112,40 @@ class Tests:
   def test_sub_delays( s ):
     run_test( s.ProcType, inst_sub.gen_random_test, delays=True,
               cmdline_opts=s.__class__.cmdline_opts )
+
+
+  #-----------------------------------------------------------------------
+  # sub8
+  #-----------------------------------------------------------------------
+
+  @pytest.mark.parametrize( "name,test", [
+    asm_test( inst_sub8.gen_basic_test     ),
+
+    # ''' LAB TASK '''''''''''''''''''''''''''''''''''''''''''''''''''''''
+    # Add more rows to the test case table to test more complicated
+    # scenarios.
+    # ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''\/
+
+    asm_test( inst_sub8.gen_dest_dep_test  ),
+    asm_test( inst_sub8.gen_src0_dep_test  ),
+    asm_test( inst_sub8.gen_src1_dep_test  ),
+    asm_test( inst_sub8.gen_srcs_dep_test  ),
+    asm_test( inst_sub8.gen_srcs_dest_test ),
+    asm_test( inst_sub8.gen_value_test     ),
+    asm_test( inst_sub8.gen_random_test    ),
+    #'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''/\
+  ])
+  def test_sub8( s, name, test ):
+    run_test( s.ProcType, test, cmdline_opts=s.__class__.cmdline_opts )
+
+  # ''' LAB TASK '''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+  # random stall and delay
+  # ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''\/
+
+  def test_sub8_delays( s ):
+    run_test( s.ProcType, inst_sub8.gen_random_test, delays=True,
+              cmdline_opts=s.__class__.cmdline_opts )
+
 
   #'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''/\
   #-----------------------------------------------------------------------

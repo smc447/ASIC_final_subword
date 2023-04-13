@@ -1,0 +1,363 @@
+ 
+****************************************
+Report : constraint
+        -verbose
+Design : ProcDpathAluWrapper
+Version: R-2020.09-SP2
+Date   : Thu Apr 13 14:53:44 2023
+****************************************
+
+
+  Startpoint: ostream_rdy[0]
+              (input port clocked by ideal_clock)
+  Endpoint: istream_rdy[0]
+            (output port clocked by ideal_clock)
+  Path Group: FEEDTHROUGH
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  ProcDpathAluWrapper 5K_hvratio_1_1       NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock ideal_clock (rise edge)            0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.15       0.15 r
+  ostream_rdy[0] (in)                      0.01       0.16 r
+  v/U3/Z (CLKBUF_X1)                       0.06       0.22 r
+  istream_rdy[0] (out)                     0.05       0.26 r
+  data arrival time                                   0.26
+
+  clock ideal_clock (rise edge)            3.00       3.00
+  clock network delay (ideal)              0.00       3.00
+  output external delay                   -0.15       2.85
+  data required time                                  2.85
+  -----------------------------------------------------------
+  data required time                                  2.85
+  data arrival time                                  -0.26
+  -----------------------------------------------------------
+  slack (MET)                                         2.59
+
+
+  Startpoint: v/val_reg/q_reg_0_
+              (rising edge-triggered flip-flop clocked by ideal_clock)
+  Endpoint: v/val_reg/q_reg_0_
+            (rising edge-triggered flip-flop clocked by ideal_clock)
+  Path Group: REG2REG
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  ProcDpathAluWrapper 5K_hvratio_1_1       NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock ideal_clock (rise edge)            0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  v/val_reg/q_reg_0_/CK (DFF_X1)           0.00       0.00 r
+  v/val_reg/q_reg_0_/Q (DFF_X1)            0.14       0.14 r
+  v/val_reg/U3/ZN (AOI22_X1)               0.06       0.20 f
+  v/val_reg/U4/ZN (NOR2_X1)                0.04       0.24 r
+  v/val_reg/q_reg_0_/D (DFF_X1)            0.01       0.25 r
+  data arrival time                                   0.25
+
+  clock ideal_clock (rise edge)            3.00       3.00
+  clock network delay (ideal)              0.00       3.00
+  v/val_reg/q_reg_0_/CK (DFF_X1)           0.00       3.00 r
+  library setup time                      -0.03       2.97
+  data required time                                  2.97
+  -----------------------------------------------------------
+  data required time                                  2.97
+  data arrival time                                  -0.25
+  -----------------------------------------------------------
+  slack (MET)                                         2.71
+
+
+  Startpoint: ostream_rdy[0]
+              (input port clocked by ideal_clock)
+  Endpoint: v/val_reg/q_reg_0_
+            (rising edge-triggered flip-flop clocked by ideal_clock)
+  Path Group: REGIN
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  ProcDpathAluWrapper 5K_hvratio_1_1       NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock ideal_clock (rise edge)            0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.15       0.15 r
+  ostream_rdy[0] (in)                      0.01       0.16 r
+  v/val_reg/U2/ZN (INV_X1)                 0.03       0.19 f
+  v/val_reg/U3/ZN (AOI22_X1)               0.06       0.25 r
+  v/val_reg/U4/ZN (NOR2_X1)                0.02       0.27 f
+  v/val_reg/q_reg_0_/D (DFF_X1)            0.01       0.28 f
+  data arrival time                                   0.28
+
+  clock ideal_clock (rise edge)            3.00       3.00
+  clock network delay (ideal)              0.00       3.00
+  v/val_reg/q_reg_0_/CK (DFF_X1)           0.00       3.00 r
+  library setup time                      -0.04       2.96
+  data required time                                  2.96
+  -----------------------------------------------------------
+  data required time                                  2.96
+  data arrival time                                  -0.28
+  -----------------------------------------------------------
+  slack (MET)                                         2.68
+
+
+  Startpoint: v/in0_reg/q_reg_0_
+              (rising edge-triggered flip-flop clocked by ideal_clock)
+  Endpoint: ostream_msg[31]
+            (output port clocked by ideal_clock)
+  Path Group: REGOUT
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  ProcDpathAluWrapper 5K_hvratio_1_1       NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock ideal_clock (rise edge)            0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  v/in0_reg/q_reg_0_/CK (DFF_X1)           0.00       0.00 r
+  v/in0_reg/q_reg_0_/Q (DFF_X1)            0.12       0.12 f
+  v/alu/sub_x_2/U101/ZN (INV_X1)           0.05       0.17 r
+  v/alu/sub_x_2/U102/ZN (NAND2_X1)         0.04       0.21 f
+  v/alu/sub_x_2/U105/ZN (NAND2_X1)         0.03       0.24 r
+  v/alu/sub_x_2/U86/ZN (AND3_X1)           0.06       0.30 r
+  v/alu/sub_x_2/U88/ZN (OAI21_X1)          0.03       0.34 f
+  v/alu/sub_x_2/U225/CO (FA_X1)            0.09       0.43 f
+  v/alu/sub_x_2/U226/CO (FA_X1)            0.10       0.52 f
+  v/alu/sub_x_2/U110/ZN (NAND2_X1)         0.03       0.56 r
+  v/alu/sub_x_2/U112/ZN (NAND3_X1)         0.05       0.61 f
+  v/alu/sub_x_2/U115/ZN (NAND2_X1)         0.04       0.64 r
+  v/alu/sub_x_2/U117/ZN (NAND3_X1)         0.05       0.69 f
+  v/alu/sub_x_2/U120/ZN (NAND2_X1)         0.04       0.72 r
+  v/alu/sub_x_2/U122/ZN (NAND3_X1)         0.05       0.77 f
+  v/alu/sub_x_2/U125/ZN (NAND2_X1)         0.04       0.81 r
+  v/alu/sub_x_2/U127/ZN (NAND3_X1)         0.05       0.86 f
+  v/alu/sub_x_2/U130/ZN (NAND2_X1)         0.04       0.89 r
+  v/alu/sub_x_2/U132/ZN (NAND3_X1)         0.05       0.94 f
+  v/alu/sub_x_2/U135/ZN (NAND2_X1)         0.04       0.97 r
+  v/alu/sub_x_2/U137/ZN (NAND3_X1)         0.05       1.02 f
+  v/alu/sub_x_2/U140/ZN (NAND2_X1)         0.03       1.05 r
+  v/alu/sub_x_2/U70/ZN (AND3_X1)           0.06       1.12 r
+  v/alu/sub_x_2/U75/ZN (OAI21_X1)          0.04       1.16 f
+  v/alu/sub_x_2/U156/ZN (NAND2_X1)         0.03       1.19 r
+  v/alu/sub_x_2/U71/ZN (AND3_X1)           0.06       1.25 r
+  v/alu/sub_x_2/U76/ZN (OAI21_X1)          0.03       1.28 f
+  v/alu/sub_x_2/U227/CO (FA_X1)            0.09       1.37 f
+  v/alu/sub_x_2/U228/CO (FA_X1)            0.09       1.46 f
+  v/alu/sub_x_2/U229/CO (FA_X1)            0.09       1.55 f
+  v/alu/sub_x_2/U230/CO (FA_X1)            0.09       1.64 f
+  v/alu/sub_x_2/U231/CO (FA_X1)            0.10       1.74 f
+  v/alu/sub_x_2/U160/ZN (NAND2_X1)         0.03       1.78 r
+  v/alu/sub_x_2/U72/ZN (AND3_X1)           0.06       1.84 r
+  v/alu/sub_x_2/U93/ZN (OAI21_X1)          0.03       1.87 f
+  v/alu/sub_x_2/U232/CO (FA_X1)            0.10       1.97 f
+  v/alu/sub_x_2/U164/ZN (NAND2_X1)         0.03       2.00 r
+  v/alu/sub_x_2/U94/ZN (AND3_X1)           0.06       2.06 r
+  v/alu/sub_x_2/U95/ZN (OAI21_X1)          0.03       2.10 f
+  v/alu/sub_x_2/U233/CO (FA_X1)            0.10       2.19 f
+  v/alu/sub_x_2/U168/ZN (NAND2_X1)         0.03       2.23 r
+  v/alu/sub_x_2/U170/ZN (NAND3_X1)         0.05       2.28 f
+  v/alu/sub_x_2/U173/ZN (NAND2_X1)         0.03       2.31 r
+  v/alu/sub_x_2/U96/ZN (AND3_X1)           0.06       2.37 r
+  v/alu/sub_x_2/U87/ZN (OAI21_X1)          0.04       2.41 f
+  v/alu/sub_x_2/U185/ZN (NAND2_X1)         0.03       2.45 r
+  v/alu/sub_x_2/U187/ZN (NAND3_X1)         0.05       2.50 f
+  v/alu/sub_x_2/U190/ZN (NAND2_X1)         0.04       2.53 r
+  v/alu/sub_x_2/U192/ZN (NAND3_X1)         0.03       2.57 f
+  v/alu/sub_x_2/U98/ZN (XNOR2_X1)          0.05       2.62 f
+  v/alu/U808/ZN (AOI22_X1)                 0.06       2.68 r
+  v/alu/U822/ZN (NAND4_X1)                 0.04       2.72 f
+  v/U4/ZN (AND2_X1)                        0.05       2.77 f
+  ostream_msg[31] (out)                    0.05       2.81 f
+  data arrival time                                   2.81
+
+  clock ideal_clock (rise edge)            3.00       3.00
+  clock network delay (ideal)              0.00       3.00
+  output external delay                   -0.15       2.85
+  data required time                                  2.85
+  -----------------------------------------------------------
+  data required time                                  2.85
+  data arrival time                                  -2.81
+  -----------------------------------------------------------
+  slack (MET)                                         0.04
+
+
+  Startpoint: ostream_rdy[0]
+              (input port clocked by ideal_clock)
+  Endpoint: istream_rdy[0]
+            (output port clocked by ideal_clock)
+  Path Group: FEEDTHROUGH
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  ProcDpathAluWrapper 5K_hvratio_1_1       NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock ideal_clock (rise edge)            0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.15       0.15 f
+  ostream_rdy[0] (in)                      0.01       0.16 f
+  v/U3/Z (CLKBUF_X1)                       0.05       0.21 f
+  istream_rdy[0] (out)                     0.05       0.25 f
+  data arrival time                                   0.25
+
+  clock ideal_clock (rise edge)            0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  output external delay                   -0.15      -0.15
+  data required time                                 -0.15
+  -----------------------------------------------------------
+  data required time                                 -0.15
+  data arrival time                                  -0.25
+  -----------------------------------------------------------
+  slack (MET)                                         0.40
+
+
+  Startpoint: v/val_reg/q_reg_0_
+              (rising edge-triggered flip-flop clocked by ideal_clock)
+  Endpoint: v/val_reg/q_reg_0_
+            (rising edge-triggered flip-flop clocked by ideal_clock)
+  Path Group: REG2REG
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  ProcDpathAluWrapper 5K_hvratio_1_1       NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock ideal_clock (rise edge)            0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  v/val_reg/q_reg_0_/CK (DFF_X1)           0.00       0.00 r
+  v/val_reg/q_reg_0_/Q (DFF_X1)            0.11       0.11 f
+  v/val_reg/U3/ZN (AOI22_X1)               0.07       0.18 r
+  v/val_reg/U4/ZN (NOR2_X1)                0.02       0.20 f
+  v/val_reg/q_reg_0_/D (DFF_X1)            0.01       0.21 f
+  data arrival time                                   0.21
+
+  clock ideal_clock (rise edge)            0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  v/val_reg/q_reg_0_/CK (DFF_X1)           0.00       0.00 r
+  library hold time                        0.00       0.00
+  data required time                                  0.00
+  -----------------------------------------------------------
+  data required time                                  0.00
+  data arrival time                                  -0.21
+  -----------------------------------------------------------
+  slack (MET)                                         0.21
+
+
+  Startpoint: istream_msg[64]
+              (input port clocked by ideal_clock)
+  Endpoint: v/fn_reg/q_reg_0_
+            (rising edge-triggered flip-flop clocked by ideal_clock)
+  Path Group: REGIN
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  ProcDpathAluWrapper 5K_hvratio_1_1       NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock ideal_clock (rise edge)            0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.15       0.15 r
+  istream_msg[64] (in)                     0.00       0.15 r
+  v/fn_reg/q_reg_0_/D (DFF_X1)             0.01       0.16 r
+  data arrival time                                   0.16
+
+  clock ideal_clock (rise edge)            0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  v/fn_reg/q_reg_0_/CK (DFF_X1)            0.00       0.00 r
+  library hold time                        0.00       0.00
+  data required time                                  0.00
+  -----------------------------------------------------------
+  data required time                                  0.00
+  data arrival time                                  -0.16
+  -----------------------------------------------------------
+  slack (MET)                                         0.16
+
+
+  Startpoint: v/val_reg/q_reg_0_
+              (rising edge-triggered flip-flop clocked by ideal_clock)
+  Endpoint: ostream_msg[0]
+            (output port clocked by ideal_clock)
+  Path Group: REGOUT
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  ProcDpathAluWrapper 5K_hvratio_1_1       NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock ideal_clock (rise edge)            0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  v/val_reg/q_reg_0_/CK (DFF_X1)           0.00       0.00 r
+  v/val_reg/q_reg_0_/Q (DFF_X1)            0.11       0.11 f
+  v/U38/ZN (AND2_X1)                       0.07       0.18 f
+  ostream_msg[0] (out)                     0.05       0.22 f
+  data arrival time                                   0.22
+
+  clock ideal_clock (rise edge)            0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  output external delay                   -0.15      -0.15
+  data required time                                 -0.15
+  -----------------------------------------------------------
+  data required time                                 -0.15
+  data arrival time                                  -0.22
+  -----------------------------------------------------------
+  slack (MET)                                         0.37
+
+
+    Net: v/alu/n774
+
+    max_transition         0.20
+  - Transition Time        0.13
+  ------------------------------
+    Slack                  0.07  (MET)
+
+
+    Net: ostream_val[0]
+
+    max_fanout            20.00
+  - Fanout                20.00
+  ------------------------------
+    Slack                  0.00  (MET)
+
+
+    Net: v/alu/n774
+
+    max_capacitance       26.70
+  - Capacitance           26.70
+  ------------------------------
+    Slack                  0.00  (MET)
+
+
+    Design: ProcDpathAluWrapper
+
+    max_leakage_power          0.00
+  - Current Leakage Power  53586.30
+  ----------------------------------
+    Slack                  -53586.30  (VIOLATED)
+
+
+Min pulse width constraints
+
+                       Required      Actual
+  Pin                pulse width   pulse width   Slack           Scenario
+--------------------------------------------------------------------------------
+  v/in0_reg/clk_gate_q_reg/latch/CK(low)  0.08  1.50  1.42 (MET)
+
+1

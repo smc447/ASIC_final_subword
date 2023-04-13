@@ -1,0 +1,15 @@
+==========================================================================
+  Summary
+==========================================================================
+
+design_name = ProcDpathAluWrapper
+
+area & timing
+  design_area   = 2213.917994 um^2
+  stdcells_area = 2213.917994 um^2
+  macros_area   = 0.0 um^2
+  chip_area     = undefined um^2
+  constraint    = 3.0 ns
+  slack         = 0.04 ns
+  actual_clk    = 2.96 ns
+

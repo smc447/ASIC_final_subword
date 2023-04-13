@@ -1,0 +1,28 @@
+catch { setDesignMode -bottomRoutingLayer 2 }
+catch { setDesignMode -powerEffort high }
+catch { setDesignMode -process 45 }
+catch { setDesignMode -topRoutingLayer 7 }
+catch { setAnalysisMode -analysisType onChipVariation }
+catch { setAnalysisMode -cppr both }
+catch { setPathGroupOptions Reg2Reg -effortLevel high }
+catch { setPathGroupOptions Reg2Out -effortLevel low }
+catch { setPathGroupOptions Reg2ClkGate -effortLevel low }
+catch { setPathGroupOptions In2Reg -effortLevel low }
+catch { setPathGroupOptions In2Out -effortLevel low }
+catch { setExtractRCMode  -engine preRoute -total_c_th 0 -relative_c_th 1 -coupling_c_th 0.1 }
+catch {setNanoRouteMode -quiet -drouteFixAntenna true}
+catch {setNanoRouteMode -quiet -droutePostRouteSpreadWire "true"}
+catch {setNanoRouteMode -quiet -drouteUseMultiCutViaEffort "medium"}
+catch {setNanoRouteMode -quiet -routeWithViaInPin "false"}
+
+catch { setIlmMode -keepHighFanoutPorts true -keepLoopBack false -keepInstInSdc false -keepFlatten true }
+catch { setViaGenMode -ignore_DRC false }
+catch { setViaGenMode -ignore_viarule_enclosure false }
+catch { setViaGenMode -optimize_cross_via true }
+catch { setDelayCalMode -engine aae }
+catch { setDelayCalMode -SIAware true }
+catch { setImportMode -discardFloatingVNets false }
+catch { setImportMode -keepEmptyModule true }
+catch { setFPlanMode -defaultTechSite FreePDK45_38x28_10R_NP_162NW_34O }
+catch { setFPlanMode -maxIoHeight false }
+catch { setFPlanMode -powerRailLayer {} }

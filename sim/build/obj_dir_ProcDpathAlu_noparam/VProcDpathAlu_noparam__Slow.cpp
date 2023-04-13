@@ -52,7 +52,7 @@ void VProcDpathAlu_noparam::_ctor_var_reset() {
     // Body
     reset = VL_RAND_RESET_I(1);
     clk = VL_RAND_RESET_I(1);
-    fn = VL_RAND_RESET_I(4);
+    fn = VL_RAND_RESET_I(6);
     in0 = VL_RAND_RESET_I(32);
     in1 = VL_RAND_RESET_I(32);
     ops_eq = VL_RAND_RESET_I(1);

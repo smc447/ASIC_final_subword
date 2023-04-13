@@ -1,0 +1,129 @@
+ 
+****************************************
+Report : resources
+Design : ProcDpathAluWrapper
+Version: R-2020.09-SP2
+Date   : Thu Apr 13 14:53:44 2023
+****************************************
+
+
+No resource sharing information to report.
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : ProcDpathAluWrapper_proc_ProcDpathAluWrapper_0
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : ProcDpathAluWrapper_vc_EnReg_p_nbits6_0
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : ProcDpathAluWrapper_vc_EnReg_p_nbits32_1
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : ProcDpathAluWrapper_vc_EnReg_p_nbits32_0
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : ProcDpathAluWrapper_vc_EnResetReg_p_nbits1_0
+****************************************
+
+No implementations to report
+ 
+****************************************
+Design : ProcDpathAluWrapper_proc_ProcDpathAlu_0
+****************************************
+
+Resource Report for this hierarchy in file proc/ProcDpathAlu.v
+=============================================================================
+| Cell           | Module         | Parameters | Contained Operations       |
+=============================================================================
+| sub_x_2        | DW01_sub       | width=32   | sub_30 (ProcDpathAlu.v:30) |
+| ash_3          | DW_leftsh      | A_width=32 | sll_31 (ProcDpathAlu.v:31) |
+|                |                | SH_width=5 |                            |
+| ashr_4         | DW_rightsh     | A_width=32 | srl_38 (ProcDpathAlu.v:38) |
+|                |                | SH_width=5 |                            |
+| ashr_5         | DW_rightsh     | A_width=32 | sra_39 (ProcDpathAlu.v:39) |
+|                |                | SH_width=5 |                            |
+| add_x_6        | DW01_add       | width=8    | add_46 (ProcDpathAlu.v:46) |
+| add_x_7        | DW01_add       | width=8    | add_46_2 (ProcDpathAlu.v:46) |
+| add_x_8        | DW01_add       | width=8    | add_46_3 (ProcDpathAlu.v:46) |
+| add_x_9        | DW01_add       | width=8    | add_46_4 (ProcDpathAlu.v:46) |
+| sub_x_10       | DW01_sub       | width=8    | sub_48 (ProcDpathAlu.v:48) |
+| sub_x_11       | DW01_sub       | width=8    | sub_48_2 (ProcDpathAlu.v:48) |
+| sub_x_12       | DW01_sub       | width=8    | sub_48_3 (ProcDpathAlu.v:48) |
+| sub_x_13       | DW01_sub       | width=8    | sub_48_4 (ProcDpathAlu.v:48) |
+| lt_x_19        | DW_cmp         | width=32   | lt_33 (ProcDpathAlu.v:33)  |
+|                |                |            | lt_67 (ProcDpathAlu.v:67)  |
+| lt_x_20        | DW_cmp         | width=32   | lt_34 (ProcDpathAlu.v:34)  |
+|                |                |            | lt_68 (ProcDpathAlu.v:68)  |
+| add_x_1        | DW01_add       | width=32   | add_24 (ProcDpathAlu.v:24) |
+|                |                |            | add_43 (ProcDpathAlu.v:43) |
+=============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| add_x_1            | DW01_add         | apparch (area)     |                |
+| sub_x_2            | DW01_sub         | apparch (area)     |                |
+| add_x_6            | DW01_add         | apparch (area)     |                |
+| add_x_7            | DW01_add         | apparch (area)     |                |
+| add_x_8            | DW01_add         | apparch (area)     |                |
+| add_x_9            | DW01_add         | apparch (area)     |                |
+| sub_x_10           | DW01_sub         | apparch (area)     |                |
+| sub_x_11           | DW01_sub         | apparch (area)     |                |
+| sub_x_12           | DW01_sub         | apparch (area)     |                |
+| sub_x_13           | DW01_sub         | apparch (area)     |                |
+| lt_x_19            | DW_cmp           | apparch (area)     |                |
+| lt_x_20            | DW_cmp           | apparch (area)     |                |
+| ash_3              | DW_leftsh        | astr (area)        |                |
+| ashr_4             | DW_rightsh       | astr (area)        |                |
+| ashr_5             | DW_rightsh       | astr (area)        |                |
+===============================================================================
+
+ 
+****************************************
+Design : ProcDpathAluWrapper_vc_EqComparator_p_nbits32_0
+****************************************
+
+Resource Report for this hierarchy in file vc/arithmetic.v
+=============================================================================
+| Cell           | Module         | Parameters | Contained Operations       |
+=============================================================================
+| eq_x_1         | DW_cmp         | width=32   | eq_141 (arithmetic.v:141)  |
+=============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| eq_x_1             | DW_cmp           | apparch (area)     |                |
+===============================================================================
+
+1

@@ -1,0 +1,32 @@
+ 
+****************************************
+check_design summary:
+Version:     R-2020.09-SP2
+Date:        Thu Apr 13 14:52:31 2023
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Inputs/Outputs                                                      3
+    Unconnected ports (LINT-28)                                     2
+    Feedthrough (LINT-29)                                           1
+
+Nets                                                               11
+    Unloaded nets (LINT-2)                                         11
+--------------------------------------------------------------------------------
+
+Warning: In design 'ProcDpathAluWrapper', net 'v/alu/net96' driven by pin 'v/alu/add_43/Z_0' has no loads. (LINT-2)
+Warning: In design 'ProcDpathAluWrapper', net 'v/alu/net95' driven by pin 'v/alu/C571/Z' has no loads. (LINT-2)
+Warning: In design 'ProcDpathAluWrapper', net 'v/alu/net94' driven by pin 'v/alu/C570/Z' has no loads. (LINT-2)
+Warning: In design 'ProcDpathAluWrapper', net 'v/alu/net93' driven by pin 'v/alu/C569/Z' has no loads. (LINT-2)
+Warning: In design 'ProcDpathAluWrapper', net 'v/alu/net92' driven by pin 'v/alu/C568/Z' has no loads. (LINT-2)
+Warning: In design 'ProcDpathAluWrapper', net 'v/alu/net91' driven by pin 'v/alu/C567/Z' has no loads. (LINT-2)
+Warning: In design 'ProcDpathAluWrapper', net 'v/alu/net90' driven by pin 'v/alu/C438/Z' has no loads. (LINT-2)
+Warning: In design 'ProcDpathAluWrapper', net 'v/alu/net89' driven by pin 'v/alu/C437/Z' has no loads. (LINT-2)
+Warning: In design 'ProcDpathAluWrapper', net 'v/alu/net88' driven by pin 'v/alu/C404/Z' has no loads. (LINT-2)
+Warning: In design 'ProcDpathAluWrapper', net 'v/alu/net87' driven by pin 'v/alu/C403/Z' has no loads. (LINT-2)
+Warning: In design 'ProcDpathAluWrapper', net 'v/alu/net86' driven by pin 'v/alu/C402/Z' has no loads. (LINT-2)
+Warning: In design 'vc_EnReg_p_nbits32', port 'reset' is not connected to any nets. (LINT-28)
+Warning: In design 'vc_EnReg_p_nbits6', port 'reset' is not connected to any nets. (LINT-28)
+Warning: In design 'proc_ProcDpathAluWrapper', input port 'ostream_rdy' is connected directly to output port 'istream_rdy'. (LINT-29)
+1

@@ -1,0 +1,253 @@
+
+Warning-[DEBUG_DEP] Option will be deprecated
+  The option '-debug_pp' will be deprecated in a future release.  Please use 
+  '-debug_acc+pp+dmptf -debug_region+cell+encrypt' instead.
+
+                         Chronologic VCS (TM)
+         Version R-2020.12_Full64 -- Thu Apr 13 14:51:55 2023
+               Copyright (c) 1991-2020 by Synopsys Inc.
+                         ALL RIGHTS RESERVED
+
+This program is proprietary and confidential information of Synopsys Inc.
+and may be used and disclosed only as authorized in a license agreement
+controlling such use and disclosure.
+
+
+Warning-[LCA_FEATURES_ENABLED] Usage warning
+  LCA features enabled by '-lca' argument on the command line.  For more 
+  information regarding list of LCA features please refer to Chapter "LCA 
+  features" in the VCS Release Notes
+
+Parsing design file './inputs/rtl/ProcDpathAluWrapper.v'
+Parsing design file './inputs/testbenches/ProcDpathAluWrapper_imul-alu-add_tb.v'
+
+Lint-[NS] Null statement
+./inputs/testbenches/ProcDpathAluWrapper_imul-alu-add_tb.v, 71
+  Null statement is used in following verilog source.
+  Source info:     #`INTRA_CYCLE_TIME;
+
+
+Lint-[NS] Null statement
+./inputs/testbenches/ProcDpathAluWrapper_imul-alu-add_tb.v, 72
+  Null statement is used in following verilog source. (expanding macro)
+  Source info:     `CHECK(lineno, istream_rdy, ref_istream_rdy, "istream.rdy 
+  (istream_rdy in Verilog)");
+
+
+Lint-[NS] Null statement
+./inputs/testbenches/ProcDpathAluWrapper_imul-alu-add_tb.v, 72
+  Null statement is used in following verilog source. (expanding macro)
+  Source info:     `CHECK(lineno, istream_rdy, ref_istream_rdy, "istream.rdy 
+  (istream_rdy in Verilog)");
+
+
+Lint-[NS] Null statement
+./inputs/testbenches/ProcDpathAluWrapper_imul-alu-add_tb.v, 72
+  Null statement is used in following verilog source. (expanding macro)
+  Source info:     `CHECK(lineno, istream_rdy, ref_istream_rdy, "istream.rdy 
+  (istream_rdy in Verilog)");
+
+
+Lint-[NS] Null statement
+./inputs/testbenches/ProcDpathAluWrapper_imul-alu-add_tb.v, 72
+  Null statement is used in following verilog source. (expanding macro)
+  Source info:     `CHECK(lineno, istream_rdy, ref_istream_rdy, "istream.rdy 
+  (istream_rdy in Verilog)");
+
+
+Lint-[NS] Null statement
+./inputs/testbenches/ProcDpathAluWrapper_imul-alu-add_tb.v, 72
+  Null statement is used in following verilog source. (expanding macro)
+  Source info:     `CHECK(lineno, istream_rdy, ref_istream_rdy, "istream.rdy 
+  (istream_rdy in Verilog)");
+
+
+Lint-[NS] Null statement
+./inputs/testbenches/ProcDpathAluWrapper_imul-alu-add_tb.v, 72
+  Null statement is used in following verilog source.
+  Source info:     `CHECK(lineno, istream_rdy, ref_istream_rdy, "istream.rdy 
+  (istream_rdy in Verilog)");
+
+
+Lint-[NS] Null statement
+./inputs/testbenches/ProcDpathAluWrapper_imul-alu-add_tb.v, 73
+  Null statement is used in following verilog source. (expanding macro)
+  Source info:     `CHECK(lineno, ostream_msg, ref_ostream_msg, "ostream.msg 
+  (ostream_msg in Verilog)");
+
+
+Lint-[NS] Null statement
+./inputs/testbenches/ProcDpathAluWrapper_imul-alu-add_tb.v, 73
+  Null statement is used in following verilog source. (expanding macro)
+  Source info:     `CHECK(lineno, ostream_msg, ref_ostream_msg, "ostream.msg 
+  (ostream_msg in Verilog)");
+
+
+Lint-[NS] Null statement
+./inputs/testbenches/ProcDpathAluWrapper_imul-alu-add_tb.v, 73
+  Null statement is used in following verilog source. (expanding macro)
+  Source info:     `CHECK(lineno, ostream_msg, ref_ostream_msg, "ostream.msg 
+  (ostream_msg in Verilog)");
+
+
+Lint-[NS] Null statement
+./inputs/testbenches/ProcDpathAluWrapper_imul-alu-add_tb.v, 73
+  Null statement is used in following verilog source. (expanding macro)
+  Source info:     `CHECK(lineno, ostream_msg, ref_ostream_msg, "ostream.msg 
+  (ostream_msg in Verilog)");
+
+
+Lint-[NS] Null statement
+./inputs/testbenches/ProcDpathAluWrapper_imul-alu-add_tb.v, 73
+  Null statement is used in following verilog source. (expanding macro)
+  Source info:     `CHECK(lineno, ostream_msg, ref_ostream_msg, "ostream.msg 
+  (ostream_msg in Verilog)");
+
+
+Lint-[NS] Null statement
+./inputs/testbenches/ProcDpathAluWrapper_imul-alu-add_tb.v, 73
+  Null statement is used in following verilog source.
+  Source info:     `CHECK(lineno, ostream_msg, ref_ostream_msg, "ostream.msg 
+  (ostream_msg in Verilog)");
+
+
+Lint-[NS] Null statement
+./inputs/testbenches/ProcDpathAluWrapper_imul-alu-add_tb.v, 74
+  Null statement is used in following verilog source. (expanding macro)
+  Source info:     `CHECK(lineno, ostream_val, ref_ostream_val, "ostream.val 
+  (ostream_val in Verilog)");
+
+
+Lint-[NS] Null statement
+./inputs/testbenches/ProcDpathAluWrapper_imul-alu-add_tb.v, 74
+  Null statement is used in following verilog source. (expanding macro)
+  Source info:     `CHECK(lineno, ostream_val, ref_ostream_val, "ostream.val 
+  (ostream_val in Verilog)");
+
+
+Lint-[NS] Null statement
+./inputs/testbenches/ProcDpathAluWrapper_imul-alu-add_tb.v, 74
+  Null statement is used in following verilog source. (expanding macro)
+  Source info:     `CHECK(lineno, ostream_val, ref_ostream_val, "ostream.val 
+  (ostream_val in Verilog)");
+
+
+Lint-[NS] Null statement
+./inputs/testbenches/ProcDpathAluWrapper_imul-alu-add_tb.v, 74
+  Null statement is used in following verilog source. (expanding macro)
+  Source info:     `CHECK(lineno, ostream_val, ref_ostream_val, "ostream.val 
+  (ostream_val in Verilog)");
+
+
+Lint-[NS] Null statement
+./inputs/testbenches/ProcDpathAluWrapper_imul-alu-add_tb.v, 74
+  Null statement is used in following verilog source. (expanding macro)
+  Source info:     `CHECK(lineno, ostream_val, ref_ostream_val, "ostream.val 
+  (ostream_val in Verilog)");
+
+
+Lint-[NS] Null statement
+./inputs/testbenches/ProcDpathAluWrapper_imul-alu-add_tb.v, 74
+  Null statement is used in following verilog source.
+  Source info:     `CHECK(lineno, ostream_val, ref_ostream_val, "ostream.val 
+  (ostream_val in Verilog)");
+
+
+Lint-[NS] Null statement
+./inputs/testbenches/ProcDpathAluWrapper_imul-alu-add_tb.v, 75
+  Null statement is used in following verilog source.
+  Source info:     #(`CYCLE_TIME-`INTRA_CYCLE_TIME);
+
+
+Lint-[NS] Null statement
+./inputs/testbenches/ProcDpathAluWrapper_imul-alu-add_tb.v, 116
+  Null statement is used in following verilog source.
+  Source info:     #(`CYCLE_TIME/2);
+
+
+Lint-[NS] Null statement
+./inputs/testbenches/ProcDpathAluWrapper_imul-alu-add_tb.v, 119
+  Null statement is used in following verilog source.
+  Source info:     #`VTB_INPUT_DELAY;
+
+
+Lint-[NS] Null statement
+./inputs/testbenches/ProcDpathAluWrapper_imul-alu-add_tb.v, 120
+  Null statement is used in following verilog source.
+  Source info:     #`CYCLE_TIME;
+
+
+Lint-[NS] Null statement
+./inputs/testbenches/ProcDpathAluWrapper_imul-alu-add_tb.v, 122
+  Null statement is used in following verilog source.
+  Source info:     #`CYCLE_TIME;
+
+Parsing included file './inputs/testbenches/ProcDpathAluWrapper_imul-alu-add_tb.v.cases'.
+Back to file './inputs/testbenches/ProcDpathAluWrapper_imul-alu-add_tb.v'.
+
+Lint-[NS] Null statement
+./inputs/testbenches/ProcDpathAluWrapper_imul-alu-add_tb.v, 134
+  Null statement is used in following verilog source.
+  Source info:     #`CYCLE_TIME;
+
+Top Level Modules:
+       ProcDpathAluWrapper_tb
+TimeScale is 1 ns / 1 ns
+
+Lint-[UI] Unused input
+vc/regs.v, 62
+  Following is an unused input.
+  Source info: reset
+
+
+Lint-[WMIA-L] Width mismatch in assignment
+vc/regs.v, 104
+  Width mismatch between LHS and RHS is found in assignment:
+  The following 32-bit wide expression is assigned to a 1-bit LHS target:
+  Source info: q <= (reset ? p_reset_value : d);
+  Expression: q
+
+
+Lint-[UI] Unused input
+vc/regs.v, 62
+  Following is an unused input.
+  Source info: reset
+
+
+Lint-[SVA-UA] Unnamed Assertion
+./inputs/testbenches/ProcDpathAluWrapper_imul-alu-add_tb.v, 110
+ProcDpathAluWrapper_tb
+  Unnamed Assertion found in design
+  \assert((3 <= 4)) else $fatal("\n=====\n\nVTB_OUTPUT_ASSERT_DELAY should be 
+  smaller than or equal to CYCLE_TIME\n\n=====\n");
+
+
+Lint-[SVA-UA] Unnamed Assertion
+./inputs/testbenches/ProcDpathAluWrapper_imul-alu-add_tb.v, 107
+ProcDpathAluWrapper_tb
+  Unnamed Assertion found in design
+  \assert((1 < 3)) else $fatal("\n=====\n\nVTB_OUTPUT_ASSERT_DELAY should be 
+  larger than VTB_INPUT_DELAY\n\n=====\n");
+
+
+Lint-[SVA-UA] Unnamed Assertion
+./inputs/testbenches/ProcDpathAluWrapper_imul-alu-add_tb.v, 104
+ProcDpathAluWrapper_tb
+  Unnamed Assertion found in design
+  \assert((0 <= 1)) else $fatal("\n=====\n\nVTB_INPUT_DELAY should >= 
+  0\n\n=====\n");
+
+Starting vcs inline pass...
+2 modules and 0 UDP read.
+recompiling module vc_EnReg
+recompiling module ProcDpathAluWrapper_tb
+Both modules done.
+make[1]: Entering directory `/home/ezw2/ece5745/ASIC_final_subword/asic/build_final_proj_ALU/3-brg-rtl-4-state-vcssim/csrc'
+make[1]: Leaving directory `/home/ezw2/ece5745/ASIC_final_subword/asic/build_final_proj_ALU/3-brg-rtl-4-state-vcssim/csrc'
+make[1]: Entering directory `/home/ezw2/ece5745/ASIC_final_subword/asic/build_final_proj_ALU/3-brg-rtl-4-state-vcssim/csrc'
+rm -f _cuarc*.so _csrc*.so pre_vcsobj_*.so share_vcsobj_*.so
+if [ -x ../simv ]; then chmod a-x ../simv; fi
+g++  -o ../simv      -rdynamic  -Wl,-rpath='$ORIGIN'/simv.daidir -Wl,-rpath=./simv.daidir -Wl,-rpath=/opt/synopsys/vcs/R-2020.12/linux64/lib -L/opt/synopsys/vcs/R-2020.12/linux64/lib  -Wl,-rpath-link=./  /usr/lib64/libnuma.so.1   objs/amcQw_d.o   _42666_archive_1.so  SIM_l.o      rmapats_mop.o rmapats.o rmar.o rmar_nd.o  rmar_llvm_0_1.o rmar_llvm_0_0.o           -lvirsim -lerrorinf -lsnpsmalloc -lvfs    -lvcsnew -lsimprofile -luclinative /opt/synopsys/vcs/R-2020.12/linux64/lib/vcs_tls.o   -Wl,-whole-archive  -lvcsucli    -Wl,-no-whole-archive          /opt/synopsys/vcs/R-2020.12/linux64/lib/vcs_save_restore_new.o -ldl  -lc -lm -lpthread -ldl 
+../simv up to date
+make[1]: Leaving directory `/home/ezw2/ece5745/ASIC_final_subword/asic/build_final_proj_ALU/3-brg-rtl-4-state-vcssim/csrc'
+CPU time: .822 seconds to compile + .639 seconds to elab + .395 seconds to link

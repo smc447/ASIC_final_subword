@@ -1,0 +1,41 @@
+#! /usr/bin/env bash
+set -euo pipefail
+#=========================================================================
+# mflowgen-run
+#=========================================================================
+# Generator : /classes/ece5745/install/venv-pkgs/x86_64-rhel7/pypy3-pymtl3-7.3.3/site-packages/mflowgen/core/build_orchestrator.py
+
+# Pre
+
+rm -f .time_end
+date +%Y-%m%d-%H%M-%S > .time_start
+MFLOWGEN_STEP_HOME=$PWD
+export design_name='ProcDpathAluWrapper'
+export test_design_name='ProcDpathAluWrapper'
+export trunc_design_name='ProcDpathAluWrapper'
+export pad_ring=False
+export sim_path='/home/ezw2/ece5745/ASIC_final_subword/asic/final_proj_ALU/../../sim'
+export design_path='/home/ezw2/ece5745/ASIC_final_subword/asic/final_proj_ALU/../../sim/proc'
+export test_filter='undefined'
+
+# Commands
+
+mkdir -p outputs/rtl/build
+mkdir -p outputs/testbenches
+cd outputs
+CWD=$(pwd)
+cd $sim_path/build
+if [ $test_filter != undefined ]; then trunc_design_name=$test_filter; fi
+set -x
+cd $CWD
+ln -sf $sim_path/build build
+ln -sf $design_path raw_rtl
+cd ..
+python setup-pymtl-rtl.py
+python setup-pymtl-testbench.py
+
+# Post
+
+cd $MFLOWGEN_STEP_HOME
+date +%Y-%m%d-%H%M-%S > .time_end
+

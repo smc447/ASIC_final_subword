@@ -1,0 +1,122 @@
+ 
+****************************************
+Report : qor
+Design : ProcDpathAluWrapper
+Version: R-2020.09-SP2
+Date   : Thu Apr 13 14:53:43 2023
+****************************************
+
+
+  Timing Path Group 'FEEDTHROUGH'
+  -----------------------------------
+  Levels of Logic:               1.00
+  Critical Path Length:          0.11
+  Critical Path Slack:           2.59
+  Critical Path Clk Period:      3.00
+  Total Negative Slack:          0.00
+  No. of Violating Paths:        0.00
+  Worst Hold Violation:          0.00
+  Total Hold Violation:          0.00
+  No. of Hold Violations:        0.00
+  -----------------------------------
+
+  Timing Path Group 'REG2REG'
+  -----------------------------------
+  Levels of Logic:               2.00
+  Critical Path Length:          0.25
+  Critical Path Slack:           2.71
+  Critical Path Clk Period:      3.00
+  Total Negative Slack:          0.00
+  No. of Violating Paths:        0.00
+  Worst Hold Violation:          0.00
+  Total Hold Violation:          0.00
+  No. of Hold Violations:        0.00
+  -----------------------------------
+
+  Timing Path Group 'REGIN'
+  -----------------------------------
+  Levels of Logic:               3.00
+  Critical Path Length:          0.13
+  Critical Path Slack:           2.68
+  Critical Path Clk Period:      3.00
+  Total Negative Slack:          0.00
+  No. of Violating Paths:        0.00
+  Worst Hold Violation:          0.00
+  Total Hold Violation:          0.00
+  No. of Hold Violations:        0.00
+  -----------------------------------
+
+  Timing Path Group 'REGOUT'
+  -----------------------------------
+  Levels of Logic:              51.00
+  Critical Path Length:          2.81
+  Critical Path Slack:           0.04
+  Critical Path Clk Period:      3.00
+  Total Negative Slack:          0.00
+  No. of Violating Paths:        0.00
+  Worst Hold Violation:          0.00
+  Total Hold Violation:          0.00
+  No. of Hold Violations:        0.00
+  -----------------------------------
+
+
+  Cell Count
+  -----------------------------------
+  Hierarchical Cell Count:         22
+  Hierarchical Port Count:        989
+  Leaf Cell Count:               1625
+  Buf/Inv Cell Count:             316
+  Buf Cell Count:                  22
+  Inv Cell Count:                 294
+  CT Buf/Inv Cell Count:            0
+  Combinational Cell Count:      1551
+  Sequential Cell Count:           74
+  Macro Count:                      0
+  -----------------------------------
+
+
+  Area
+  -----------------------------------
+  Combinational Area:     1880.886006
+  Noncombinational Area:   333.031988
+  Buf/Inv Area:            173.964001
+  Total Buffer Area:            17.56
+  Total Inverter Area:         156.41
+  Macro/Black Box Area:      0.000000
+  Net Area:                  0.000000
+  -----------------------------------
+  Cell Area:              2213.917994
+  Design Area:            2213.917994
+
+
+  Design Rules
+  -----------------------------------
+  Total Number of Nets:          1774
+  Nets With Violations:             0
+  Max Trans Violations:             0
+  Max Cap Violations:               0
+  -----------------------------------
+
+
+  Hostname: en-ec-ecelinux-01.coecis.cornell.edu
+
+  Compile CPU Statistics
+  -----------------------------------------
+  Resource Sharing:                    0.83
+  Logic Optimization:                  5.53
+  Mapping Optimization:               12.13
+  -----------------------------------------
+  Overall Compile Time:               25.86
+  Overall Compile Wall Clock Time:    10.51
+
+  --------------------------------------------------------------------
+
+  Design  WNS: 0.00  TNS: 0.00  Number of Violating Paths: 0
+
+
+  Design (Hold)  WNS: 0.00  TNS: 0.00  Number of Violating Paths: 0
+
+  --------------------------------------------------------------------
+
+
+1

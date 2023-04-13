@@ -1,0 +1,39 @@
+ 
+****************************************
+Report : clock timing
+        -type summary
+Design : ProcDpathAluWrapper
+Version: R-2020.09-SP2
+Date   : Thu Apr 13 14:53:43 2023
+****************************************
+
+  Clock: ideal_clock
+----------------------------------------------------------------------------
+  Maximum setup launch latency:
+      v/val_reg/q_reg_0_/CK                                  0.00      wr-+
+
+  Minimum setup capture latency:
+      v/val_reg/q_reg_0_/CK                                  0.00      wr-+
+
+  Minimum hold launch latency:
+      v/val_reg/q_reg_0_/CK                                  0.00      br-+
+
+  Maximum hold capture latency:
+      v/val_reg/q_reg_0_/CK                                  0.00      br-+
+
+  Maximum active transition:
+      v/val_reg/q_reg_0_/CK                                  0.00      wr-+
+
+  Minimum active transition:
+      v/val_reg/q_reg_0_/CK                                  0.00      wr-+
+
+  Maximum setup skew:
+      v/val_reg/q_reg_0_/CK                                            wr-+
+      v/val_reg/q_reg_0_/CK                                  0.00      wr-+
+
+  Maximum hold skew:
+      v/val_reg/q_reg_0_/CK                                            br-+
+      v/val_reg/q_reg_0_/CK                                  0.00      br-+
+----------------------------------------------------------------------------
+
+1

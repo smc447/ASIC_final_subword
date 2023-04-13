@@ -105,8 +105,22 @@ class ProcFL( Component ):
         elif inst_name == "add":
           s.R[inst.rd] = s.R[inst.rs1] + s.R[inst.rs2]
           s.PC += 4
+        elif inst_name == "add8":
+          s.R[inst.rd] = \
+              (((s.R[inst.rs1] & 0xff000000) + (s.R[inst.rs2] & 0xff000000)) & 0xff000000) + \
+              (((s.R[inst.rs1] & 0x00ff0000) + (s.R[inst.rs2] & 0x00ff0000)) & 0x00ff0000) + \
+              (((s.R[inst.rs1] & 0x0000ff00) + (s.R[inst.rs2] & 0x0000ff00)) & 0x0000ff00) + \
+              (((s.R[inst.rs1] & 0x000000ff) + (s.R[inst.rs2] & 0x000000ff)) & 0x000000ff)
+          s.PC += 4
         elif inst_name == "sub":
           s.R[inst.rd] = s.R[inst.rs1] - s.R[inst.rs2]
+          s.PC += 4
+        elif inst_name == "sub8":
+          s.R[inst.rd] = \
+              (((s.R[inst.rs1] & 0xff000000) - (s.R[inst.rs2] & 0xff000000)) & 0xff000000) + \
+              (((s.R[inst.rs1] & 0x00ff0000) - (s.R[inst.rs2] & 0x00ff0000)) & 0x00ff0000) + \
+              (((s.R[inst.rs1] & 0x0000ff00) - (s.R[inst.rs2] & 0x0000ff00)) & 0x0000ff00) + \
+              (((s.R[inst.rs1] & 0x000000ff) - (s.R[inst.rs2] & 0x000000ff)) & 0x000000ff)
           s.PC += 4
         elif inst_name == "sll":
           s.R[inst.rd] = s.R[inst.rs1] << (s.R[inst.rs2].uint() & 0x1F)

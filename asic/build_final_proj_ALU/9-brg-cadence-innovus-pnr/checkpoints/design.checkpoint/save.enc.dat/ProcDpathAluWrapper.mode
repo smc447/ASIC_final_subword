@@ -1,0 +1,60 @@
+catch { setDesignMode -bottomRoutingLayer 2 }
+catch { setDesignMode -powerEffort high }
+catch { setDesignMode -process 45 }
+catch { setDesignMode -propagateActivity true }
+catch { setDesignMode -topRoutingLayer 7 }
+catch { setAnalysisMode -analysisType onChipVariation }
+catch { setAnalysisMode -checkType setup }
+catch { setAnalysisMode -clkSrcPath true }
+catch { setAnalysisMode -clockPropagation sdcControl }
+catch { setAnalysisMode -cppr both }
+catch { setAnalysisMode -usefulSkew true }
+catch { setOptMode -activeSetupViews { analysis_default } }
+catch { setOptMode -autoSetupViews { analysis_default} }
+catch { setOptMode -autoTDGRSetupViews { analysis_default} }
+catch { setOptMode -drcMargin 0 }
+catch { setOptMode -fixDrc true }
+catch { setOptMode -optimizeFF true }
+catch { setOptMode -powerEffort high }
+catch { setOptMode -preserveAllSequential false }
+catch { setOptMode -setupTargetSlack 0 }
+catch { setPathGroupOptions Reg2Reg -effortLevel high }
+catch { setPathGroupOptions Reg2Out -effortLevel low }
+catch { setPathGroupOptions Reg2ClkGate -effortLevel low }
+catch { setPathGroupOptions In2Reg -effortLevel low }
+catch { setPathGroupOptions In2Out -effortLevel low }
+catch { setExtractRCMode  -effortLevel low -engine postRoute -total_c_th 0 -relative_c_th 1 -coupling_c_th 0.1 -minNetTermNrToBeInMem 50 }
+catch {setNanoRouteMode -quiet -drouteFixAntenna true}
+catch {setNanoRouteMode -quiet -droutePostRouteSpreadWire "false"}
+catch {setNanoRouteMode -quiet -drouteUseMultiCutViaEffort "low"}
+catch {setNanoRouteMode -quiet -extractThirdPartyCompatible false}
+catch {setNanoRouteMode -quiet -grouteExpTdStdDelay 10.100000}
+catch {setNanoRouteMode -quiet -grouteExpTdUseTifTimingEngineForImportDesign true}
+catch {setNanoRouteMode -quiet -routeAntennaCellName "ANTENNA"}
+catch {setNanoRouteMode -quiet -routeInsertAntennaDiode true}
+catch {setNanoRouteMode -quiet -routeSiEffort "high"}
+catch {setNanoRouteMode -quiet -routeWithEco true}
+catch {setNanoRouteMode -quiet -routeWithNewSiDriven true}
+catch {setNanoRouteMode -quiet -routeWithSiDriven true}
+catch {setNanoRouteMode -quiet -routeWithTimingDriven false}
+catch {setNanoRouteMode -quiet -routeWithViaInPin "false"}
+
+catch { setIlmMode -keepHighFanoutPorts true -keepLoopBack false -keepInstInSdc false -keepFlatten true }
+catch { setWireOptMode -expLocalWireReclaimRunSwap true }
+catch { setUsefulSkewMode -ecoRoute false }
+catch { setViaGenMode -ignore_DRC false }
+catch { setViaGenMode -viarule_preference default }
+catch { setDelayCalMode -enable_high_fanout true }
+catch { setDelayCalMode -eng_copyNetPropToNewNet true }
+catch { setDelayCalMode -engine aae }
+catch { setDelayCalMode -ignoreNetLoad false }
+catch { setDelayCalMode -socv_accuracy_mode low }
+catch { setImportMode -config true }
+catch { setImportMode -discardFloatingVNets false }
+catch { setImportMode -keepEmptyModule true }
+catch { setSIMode -separate_delta_delay_on_data true }
+catch { setAddStripeMode -stacked_via_bottom_layer 6 }
+catch { setAddStripeMode -stacked_via_top_layer 7 }
+catch { setFPlanMode -defaultTechSite FreePDK45_38x28_10R_NP_162NW_34O }
+catch { setFPlanMode -maxIoHeight false }
+catch { setFPlanMode -powerRailLayer {} }

@@ -1,0 +1,30 @@
+build_dir: 2-freepdk-45nm
+build_id: '2'
+commands:
+- mkdir -p outputs && cd outputs
+- ln -sf ../stdview adk
+edges_i: {}
+edges_o:
+  adk:
+  - f: adk
+    step: 4-brg-synopsys-dc-synthesis
+  - f: adk
+    step: 6-post-synth-gate-level-simulation
+  - f: adk
+    step: 5-brg-cadence-innovus-init
+  - f: adk
+    step: 7-brg-cadence-innovus-blocksetup
+  - f: adk
+    step: 9-brg-cadence-innovus-pnr
+  - f: adk
+    step: 11-brg-cadence-innovus-signoff
+  - f: adk
+    step: 8-post-synth-power-analysis
+name: freepdk-45nm
+outputs:
+- adk
+parameters:
+  adk: freepdk-45nm
+  adk_view: stdview
+sandbox: false
+source: /classes/ece5745/install/adk-pkgs/freepdk-45nm

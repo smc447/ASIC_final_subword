@@ -1,0 +1,20 @@
++ cd /home/ezw2/ece5745/ASIC_final_subword/asic/build_final_proj_ALU/1-ece5745-block-gather/outputs
++ ln -sf /home/ezw2/ece5745/ASIC_final_subword/asic/final_proj_ALU/../../sim/build build
++ ln -sf /home/ezw2/ece5745/ASIC_final_subword/asic/final_proj_ALU/../../sim/proc raw_rtl
++ cd ..
++ python setup-pymtl-rtl.py
+Running setup-pymtl-rtl.py
+============================
+Copying pickled files into outputs, pad_ring=False
+ Renaming pickled files
++ python setup-pymtl-testbench.py
+Running setup-pymtl-testbench.py
+============================
+Copying testbenches of the format ProcDpathAluWrapper__<test_name>_tb.v(.cases)
+
+Copying ProcDpathAluWrapper_imul-alu-add_tb.v
+Copying ProcDpathAluWrapper_imul-alu-add_tb.v.cases
+
+
++ cd /home/ezw2/ece5745/ASIC_final_subword/asic/build_final_proj_ALU/1-ece5745-block-gather
++ date +%Y-%m%d-%H%M-%S

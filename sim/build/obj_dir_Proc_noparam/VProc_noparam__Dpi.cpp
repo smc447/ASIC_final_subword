@@ -17,7 +17,7 @@
 #ifndef _VL_DPIDECL_line_trace
 #define _VL_DPIDECL_line_trace
 void line_trace(svBitVecVal* trace_str) {
-    // DPI export at proc/Proc.v:362:8
+    // DPI export at proc/Proc.v:394:8
     return VProc_noparam::line_trace(trace_str);
 }
 #endif

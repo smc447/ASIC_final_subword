@@ -1,0 +1,348 @@
+[04/13 15:24:00      0s] 
+[04/13 15:24:00      0s] Cadence Innovus(TM) Implementation System.
+[04/13 15:24:00      0s] Copyright 2020 Cadence Design Systems, Inc. All rights reserved worldwide.
+[04/13 15:24:00      0s] 
+[04/13 15:24:00      0s] Version:	v20.12-s088_1, built Fri Nov 6 10:29:19 PST 2020
+[04/13 15:24:00      0s] Options:	-overwrite -nowin -init START.tcl -log logs/run.log 
+[04/13 15:24:00      0s] Date:		Thu Apr 13 15:24:00 2023
+[04/13 15:24:00      0s] Host:		en-ec-ecelinux-01.coecis.cornell.edu (x86_64 w/Linux 3.10.0-1160.76.1.el7.x86_64) (1core*10cpus*Intel(R) Xeon(R) Gold 6252N CPU @ 2.30GHz 36608KB)
+[04/13 15:24:00      0s] OS:		CentOS Linux release 7.9.2009 (Core)
+[04/13 15:24:00      0s] 
+[04/13 15:24:00      0s] License:
+[04/13 15:24:00      0s] 		invs	Innovus Implementation System	20.1	checkout succeeded
+[04/13 15:24:00      0s] 		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+[04/13 15:24:16     14s] @(#)CDS: Innovus v20.12-s088_1 (64bit) 11/06/2020 10:29 (Linux 2.6.32-431.11.2.el6.x86_64)
+[04/13 15:24:16     14s] @(#)CDS: NanoRoute 20.12-s088_1 NR201104-1900/20_12-UB (database version 18.20.530) {superthreading v2.11}
+[04/13 15:24:16     14s] @(#)CDS: AAE 20.12-s034 (64bit) 11/06/2020 (Linux 2.6.32-431.11.2.el6.x86_64)
+[04/13 15:24:16     14s] @(#)CDS: CTE 20.12-s038_1 () Nov  5 2020 21:44:51 ( )
+[04/13 15:24:16     14s] @(#)CDS: SYNTECH 20.12-s015_1 () Oct  9 2020 06:18:19 ( )
+[04/13 15:24:16     14s] @(#)CDS: CPE v20.12-s080
+[04/13 15:24:16     14s] @(#)CDS: IQuantus/TQuantus 20.1.1-s391 (64bit) Tue Sep 8 11:07:25 PDT 2020 (Linux 2.6.32-431.11.2.el6.x86_64)
+[04/13 15:24:16     14s] @(#)CDS: OA 22.60-s011 Tue Jun 16 12:27:00 2020
+[04/13 15:24:16     14s] @(#)CDS: SGN 20.10-d001 (01-Jun-2020) (64 bit executable, Qt5.9.0)
+[04/13 15:24:16     14s] @(#)CDS: RCDB 11.15.0
+[04/13 15:24:16     14s] @(#)CDS: STYLUS 20.10-p020_1 (09/24/2020 03:15 PDT)
+[04/13 15:24:17     14s] Create and set the environment variable TMPDIR to /tmp/innovus_temp_59948_en-ec-ecelinux-01.coecis.cornell.edu_ezw2_er6XvE.
+
+[04/13 15:24:17     14s] The soft stacksize limit is either up to the hard limit or larger than 0.2% of RAM. No change is needed.
+[04/13 15:24:17     15s] 
+[04/13 15:24:17     15s] **INFO:  MMMC transition support version v31-84 
+[04/13 15:24:17     15s] 
+[04/13 15:24:17     15s] <CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+[04/13 15:24:17     15s] <CMD> suppressMessage ENCEXT-2799
+[04/13 15:24:17     15s] Sourcing file "START.tcl" ...
+[04/13 15:24:17     15s] ### Start verbose source output (echo mode) for 'scripts/main.tcl' ...
+[04/13 15:24:17     15s] # set init_mmmc_file "./scripts/setup-timing.tcl"
+<CMD> set init_mmmc_file ./scripts/setup-timing.tcl
+[04/13 15:24:17     15s] # set init_verilog   "./inputs/design.v"
+<CMD> set init_verilog ./inputs/design.v
+[04/13 15:24:17     15s] # set init_top_cell  $env(design_name)
+<CMD> set init_top_cell ProcDpathAluWrapper
+[04/13 15:24:17     15s] # if {$env(extra_link_lib_dir)!=""} {
+    set extra_link_lib_dir $::env(extra_link_lib_dir)
+    set init_lef_file  [join "
+                              [list ./inputs/adk/rtk-tech.lef         \
+                                    ./inputs/adk/stdcells.lef         ]
+                              [lsort [glob -nocomplain ./inputs/adk/*.lef]]
+                              [lsort [glob -nocomplain $extra_link_lib_dir/*.lef]]
+                      "]
+} else {
+    set init_lef_file [join "
+                              [list ./inputs/adk/rtk-tech.lef         \
+                                    ./inputs/adk/stdcells.lef         ]
+                              [lsort [glob -nocomplain ./inputs/adk/*.lef]]
+                      "]
+}
+<CMD> set init_lef_file {./inputs/adk/rtk-tech.lef ./inputs/adk/stdcells.lef ./inputs/adk/rtk-tech.lef ./inputs/adk/stdcells.lef}
+[04/13 15:24:17     15s] # set init_gnd_net $ADK_GND_NETS
+<CMD> set init_gnd_net {VSS VGND}
+[04/13 15:24:17     15s] # set init_pwr_net $ADK_PWR_NETS
+<CMD> set init_pwr_net {VDD VPWR}
+[04/13 15:24:17     15s] # set init_design_uniquify 1
+<CMD> set init_design_uniquify 1
+[04/13 15:24:17     15s] # init_design
+<CMD> init_design
+[04/13 15:24:17     15s] #% Begin Load MMMC data ... (date=04/13 15:24:17, mem=497.9M)
+[04/13 15:24:17     15s] #% End Load MMMC data ... (date=04/13 15:24:17, total cpu=0:00:00.0, real=0:00:00.0, peak res=498.1M, current mem=498.1M)
+[04/13 15:24:17     15s] 
+[04/13 15:24:17     15s] Loading LEF file ./inputs/adk/rtk-tech.lef ...
+[04/13 15:24:17     15s] 
+[04/13 15:24:17     15s] Loading LEF file ./inputs/adk/stdcells.lef ...
+[04/13 15:24:17     15s] Set DBUPerIGU to M2 pitch 380.
+[04/13 15:24:17     15s] 
+[04/13 15:24:17     15s] viaInitial starts at Thu Apr 13 15:24:17 2023
+viaInitial ends at Thu Apr 13 15:24:17 2023
+
+##  Check design process and node:  
+##  Both design process and tech node are not set.
+
+[04/13 15:24:17     15s] Loading view definition file from ./scripts/setup-timing.tcl
+[04/13 15:24:17     15s] Reading libs_typical timing library '/classes/ece5745/install/adk-pkgs/freepdk-45nm/pkgs/NangateOpenCellLibrary_PDKv1_3_v2010_12/Front_End/Liberty/NLDM/NangateOpenCellLibrary_typical.lib' ...
+[04/13 15:24:17     15s] Read 134 cells in library 'NangateOpenCellLibrary' 
+[04/13 15:24:17     15s] Ending "PreSetAnalysisView" (total cpu=0:00:00.4, real=0:00:00.0, peak res=563.4M, current mem=510.8M)
+[04/13 15:24:17     15s] *** End library_loading (cpu=0.01min, real=0.00min, mem=11.0M, fe_cpu=0.26min, fe_real=0.28min, fe_mem=1075.1M) ***
+[04/13 15:24:17     15s] #% Begin Load netlist data ... (date=04/13 15:24:17, mem=510.8M)
+[04/13 15:24:17     15s] *** Begin netlist parsing (mem=1075.1M) ***
+[04/13 15:24:17     15s] Created 134 new cells from 1 timing libraries.
+[04/13 15:24:17     15s] Reading netlist ...
+[04/13 15:24:17     15s] Backslashed names will retain backslash and a trailing blank character.
+[04/13 15:24:17     15s] Reading verilog netlist './inputs/design.v'
+[04/13 15:24:17     15s] 
+[04/13 15:24:17     15s] *** Memory Usage v#1 (Current mem = 1075.086M, initial mem = 389.527M) ***
+[04/13 15:24:17     15s] *** End netlist parsing (cpu=0:00:00.0, real=0:00:00.0, mem=1075.1M) ***
+[04/13 15:24:17     15s] #% End Load netlist data ... (date=04/13 15:24:17, total cpu=0:00:00.0, real=0:00:00.0, peak res=515.9M, current mem=515.9M)
+[04/13 15:24:17     15s] Set top cell to ProcDpathAluWrapper.
+[04/13 15:24:18     15s] Hooked 134 DB cells to tlib cells.
+[04/13 15:24:18     15s] Ending "BindLib:" (total cpu=0:00:00.0, real=0:00:00.0, peak res=519.4M, current mem=519.4M)
+[04/13 15:24:18     15s] Starting recursive module instantiation check.
+[04/13 15:24:18     15s] No recursion found.
+[04/13 15:24:18     15s] Building hierarchical netlist for Cell ProcDpathAluWrapper ...
+[04/13 15:24:18     15s] *** Netlist is unique.
+[04/13 15:24:18     15s] Setting Std. cell height to 2800 DBU (smallest netlist inst).
+[04/13 15:24:18     15s] ** info: there are 157 modules.
+[04/13 15:24:18     15s] ** info: there are 1625 stdCell insts.
+[04/13 15:24:18     15s] 
+[04/13 15:24:18     15s] *** Memory Usage v#1 (Current mem = 1090.500M, initial mem = 389.527M) ***
+[04/13 15:24:18     15s] Generated pitch 1.68 in metal10 is different from 1.6 defined in technology file in preferred direction.
+[04/13 15:24:18     15s] Generated pitch 0.84 in metal8 is different from 0.8 defined in technology file in preferred direction.
+[04/13 15:24:18     15s] Generated pitch 0.84 in metal7 is different from 0.8 defined in technology file in preferred direction.
+[04/13 15:24:18     15s] Set Default Net Delay as 1000 ps.
+[04/13 15:24:18     15s] Set Default Net Load as 0.5 pF. 
+[04/13 15:24:18     15s] Set Default Input Pin Transition as 0.1 ps.
+[04/13 15:24:18     16s] Extraction setup Started 
+[04/13 15:24:18     16s] Initializing multi-corner RC extraction with 1 active RC Corners ...
+[04/13 15:24:18     16s] Reading Capacitance Table File ./inputs/adk/rtk-typical.captable ...
+[04/13 15:24:18     16s] Cap table was created using Encounter 08.10-p004_1.
+[04/13 15:24:18     16s] Process name: master_techFreePDK45.
+[04/13 15:24:18     16s] Importing multi-corner RC tables ... 
+[04/13 15:24:18     16s] Summary of Active RC-Corners : 
+[04/13 15:24:18     16s]  
+[04/13 15:24:18     16s]  Analysis View: analysis_default
+[04/13 15:24:18     16s]     RC-Corner Name        : typical
+[04/13 15:24:18     16s]     RC-Corner Index       : 0
+[04/13 15:24:18     16s]     RC-Corner Temperature : 25 Celsius
+[04/13 15:24:18     16s]     RC-Corner Cap Table   : './inputs/adk/rtk-typical.captable'
+[04/13 15:24:18     16s]     RC-Corner PreRoute Res Factor         : 1
+[04/13 15:24:18     16s]     RC-Corner PreRoute Cap Factor         : 1
+[04/13 15:24:18     16s]     RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+[04/13 15:24:18     16s]     RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+[04/13 15:24:18     16s]     RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+[04/13 15:24:18     16s]     RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+[04/13 15:24:18     16s]     RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+[04/13 15:24:18     16s]     RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+[04/13 15:24:18     16s]     RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+[04/13 15:24:18     16s] LayerId::1 widthSet size::4
+[04/13 15:24:18     16s] LayerId::2 widthSet size::4
+[04/13 15:24:18     16s] LayerId::3 widthSet size::4
+[04/13 15:24:18     16s] LayerId::4 widthSet size::4
+[04/13 15:24:18     16s] LayerId::5 widthSet size::4
+[04/13 15:24:18     16s] LayerId::6 widthSet size::4
+[04/13 15:24:18     16s] LayerId::7 widthSet size::4
+[04/13 15:24:18     16s] LayerId::8 widthSet size::4
+[04/13 15:24:18     16s] LayerId::9 widthSet size::4
+[04/13 15:24:18     16s] LayerId::10 widthSet size::3
+[04/13 15:24:18     16s] Updating RC grid for preRoute extraction ...
+[04/13 15:24:18     16s] Initializing multi-corner capacitance tables ... 
+[04/13 15:24:18     16s] Initializing multi-corner resistance tables ...
+[04/13 15:24:18     16s] **Info: Trial Route has Max Route Layer 15/10.
+[04/13 15:24:18     16s] {RT typical 0 10 10 {4 1} {7 0} {9 0} 3}
+[04/13 15:24:18     16s] Preroute length aware model : n: 40 ; LLS: 2-3 ; HLS: 3-5 ; rDens: 0.000000 ; uaWl: 0.000000 ; uaWlH: 0.000000 ; aWlH: 0.000000 ; Pmax: 0.850000 ; wcR: 0.000000 ; newSi: 0.000000 ; pMod: 82 ; 
+[04/13 15:24:18     16s] *Info: initialize multi-corner CTS.
+[04/13 15:24:18     16s] Ending "SetAnalysisView" (total cpu=0:00:00.0, real=0:00:00.0, peak res=729.5M, current mem=534.6M)
+[04/13 15:24:18     16s] Reading timing constraints file './inputs/design.sdc' ...
+[04/13 15:24:18     16s] Current (total cpu=0:00:16.6, real=0:00:18.0, peak res=736.8M, current mem=736.8M)
+[04/13 15:24:18     16s] **WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File ./inputs/design.sdc, Line 8).
+[04/13 15:24:18     16s] 
+[04/13 15:24:18     16s] **WARN: (TCLNL-330):	set_input_delay on clock root 'clk[0]' is not supported. You should use the -source option to set_clock_latency to provide this offset. You can also use the global timing_allow_input_delay_on_clock_source to allow set_input_delay assertion to have an effect on clock source paths beginning at this clock root. (File ./inputs/design.sdc, Line 127).
+[04/13 15:24:18     16s] 
+[04/13 15:24:18     16s] INFO (CTE): Reading of timing constraints file ./inputs/design.sdc completed, with 2 WARNING
+[04/13 15:24:18     16s] Ending "Constraint file reading stats" (total cpu=0:00:00.1, real=0:00:00.0, peak res=756.3M, current mem=756.3M)
+[04/13 15:24:18     16s] Current (total cpu=0:00:16.7, real=0:00:18.0, peak res=756.3M, current mem=756.3M)
+[04/13 15:24:18     16s] **WARN: (TA-976):	Path groups asserted by the group_path constraint are considered by the software to be global in nature - they cannot be restricted to specific constraint modes. Due to this restriction, the group_path constraint is not supported directly in the constraint files which are configured in mode-specific commands such as create_constraint_mode. The current group_path entry will be ignored. You can enter the group_path constraint interactively or as part of a general command script -  where it will be interpreted as global and will be in effect for all modes.
+[04/13 15:24:18     16s] Tech dependent Parameter, Build TLibAnalyzer for: cellAreaConsiderPadding
+[04/13 15:24:18     16s] Creating Cell Server ...(0, 1, 1, 1)
+[04/13 15:24:18     16s] Summary for sequential cells identification: 
+[04/13 15:24:18     16s]   Identified SBFF number: 16
+[04/13 15:24:18     16s]   Identified MBFF number: 0
+[04/13 15:24:18     16s]   Identified SB Latch number: 0
+[04/13 15:24:18     16s]   Identified MB Latch number: 0
+[04/13 15:24:18     16s]   Not identified SBFF number: 0
+[04/13 15:24:18     16s]   Not identified MBFF number: 0
+[04/13 15:24:18     16s]   Not identified SB Latch number: 0
+[04/13 15:24:18     16s]   Not identified MB Latch number: 0
+[04/13 15:24:18     16s]   Number of sequential cells which are not FFs: 13
+[04/13 15:24:18     16s] Total number of combinational cells: 99
+[04/13 15:24:18     16s] Total number of sequential cells: 29
+[04/13 15:24:18     16s] Total number of tristate cells: 6
+[04/13 15:24:18     16s] Total number of level shifter cells: 0
+[04/13 15:24:18     16s] Total number of power gating cells: 0
+[04/13 15:24:18     16s] Total number of isolation cells: 0
+[04/13 15:24:18     16s] Total number of power switch cells: 0
+[04/13 15:24:18     16s] Total number of pulse generator cells: 0
+[04/13 15:24:18     16s] Total number of always on buffers: 0
+[04/13 15:24:18     16s] Total number of retention cells: 0
+[04/13 15:24:18     16s] List of usable buffers: BUF_X1 BUF_X2 BUF_X4 BUF_X8 BUF_X16 BUF_X32 CLKBUF_X1 CLKBUF_X2 CLKBUF_X3
+[04/13 15:24:18     16s] Total number of usable buffers: 9
+[04/13 15:24:18     16s] List of unusable buffers:
+[04/13 15:24:18     16s] Total number of unusable buffers: 0
+[04/13 15:24:18     16s] List of usable inverters: INV_X1 INV_X2 INV_X4 INV_X8 INV_X16 INV_X32
+[04/13 15:24:18     16s] Total number of usable inverters: 6
+[04/13 15:24:18     16s] List of unusable inverters:
+[04/13 15:24:18     16s] Total number of unusable inverters: 0
+[04/13 15:24:18     16s] List of identified usable delay cells:
+[04/13 15:24:18     16s] Total number of identified usable delay cells: 0
+[04/13 15:24:18     16s] List of identified unusable delay cells:
+[04/13 15:24:18     16s] Total number of identified unusable delay cells: 0
+[04/13 15:24:18     16s] Creating Cell Server, finished. 
+[04/13 15:24:18     16s] 
+[04/13 15:24:18     16s] No delay cells were detected in the set of buffers. Buffers will be used to fix hold violations.
+[04/13 15:24:18     16s] Deleting Cell Server ...
+[04/13 15:24:18     16s] Ending "Cell type marking" (total cpu=0:00:00.0, real=0:00:00.0, peak res=777.7M, current mem=777.7M)
+[04/13 15:24:18     16s] Creating Cell Server ...(0, 0, 0, 0)
+[04/13 15:24:18     16s] Summary for sequential cells identification: 
+[04/13 15:24:18     16s]   Identified SBFF number: 16
+[04/13 15:24:18     16s]   Identified MBFF number: 0
+[04/13 15:24:18     16s]   Identified SB Latch number: 0
+[04/13 15:24:18     16s]   Identified MB Latch number: 0
+[04/13 15:24:18     16s]   Not identified SBFF number: 0
+[04/13 15:24:18     16s]   Not identified MBFF number: 0
+[04/13 15:24:18     16s]   Not identified SB Latch number: 0
+[04/13 15:24:18     16s]   Not identified MB Latch number: 0
+[04/13 15:24:18     16s]   Number of sequential cells which are not FFs: 13
+[04/13 15:24:18     16s]  Visiting view : analysis_default
+[04/13 15:24:18     16s]    : PowerDomain = none : Weighted F : unweighted  = 10.10 (1.000) with rcCorner = 0
+[04/13 15:24:18     16s]    : PowerDomain = none : Weighted F : unweighted  = 7.80 (1.000) with rcCorner = -1
+[04/13 15:24:18     16s]  Visiting view : analysis_default
+[04/13 15:24:18     16s]    : PowerDomain = none : Weighted F : unweighted  = 10.10 (1.000) with rcCorner = 0
+[04/13 15:24:18     16s]    : PowerDomain = none : Weighted F : unweighted  = 7.80 (1.000) with rcCorner = -1
+[04/13 15:24:18     16s]  Setting StdDelay to 10.10
+[04/13 15:24:18     16s] Creating Cell Server, finished. 
+[04/13 15:24:18     16s] 
+[04/13 15:24:19     16s] 
+[04/13 15:24:19     16s] *** Summary of all messages that are not suppressed in this session:
+[04/13 15:24:19     16s] Severity  ID               Count  Summary                                  
+[04/13 15:24:19     16s] WARNING   TA-976               1  Path groups asserted by the group_path c...
+[04/13 15:24:19     16s] WARNING   TCLCMD-1461          1  Skipped unsupported command: %s          
+[04/13 15:24:19     16s] WARNING   TCLNL-330            1  set_input_delay on clock root '%s' is no...
+[04/13 15:24:19     16s] *** Message Summary: 3 warning(s), 0 error(s)
+[04/13 15:24:19     16s] 
+[04/13 15:24:19     16s] # if {[file exists ./scripts/post_init.tcl]} {
+  source ./scripts/post_init.tcl
+}
+# add_tracks
+<CMD> add_tracks
+[04/13 15:24:19     16s] Generated pitch 1.68 in metal10 is different from 1.6 defined in technology file in preferred direction.
+[04/13 15:24:19     16s] Generated pitch 0.84 in metal8 is different from 0.8 defined in technology file in preferred direction.
+[04/13 15:24:19     16s] Generated pitch 0.84 in metal7 is different from 0.8 defined in technology file in preferred direction.
+[04/13 15:24:19     16s] # setDesignMode -process $ADK_PROCESS -powerEffort high
+<CMD> setDesignMode -process 45 -powerEffort high
+[04/13 15:24:19     16s] ##  Process: 45            (User Set)               
+[04/13 15:24:19     16s] ##     Node: (not set)                           
+[04/13 15:24:19     16s] 
+##  Check design process and node:  
+##  Design tech node is not set.
+
+[04/13 15:24:19     16s] Applying the recommended capacitance filtering threshold values for 45nm process node: total_c_th=0, relative_c_th=1 and coupling_c_th=0.1.
+[04/13 15:24:19     16s] 	These values will be used by all post-route extraction engines, including TQuantus, IQuantus and Quantus QRC extraction.
+[04/13 15:24:19     16s] 	Capacitance filtering mode(-capFilterMode option of the setExtractRCMode) is 'relAndCoup' for all engines.
+[04/13 15:24:19     16s] 	The accuracy mode for postRoute effortLevel low extraction will be set to 'high'.
+[04/13 15:24:19     16s] 	Default value for EffortLevel(-effortLevel option of the setExtractRCMode) in postRoute extraction mode will be 'medium' if Quantus QRC technology file is specified else 'low'.
+[04/13 15:24:19     16s] # setDesignMode -bottomRoutingLayer            $ADK_MIN_ROUTING_LAYER_INNOVUS
+<CMD> setDesignMode -bottomRoutingLayer 2
+[04/13 15:24:19     16s] # setDesignMode -topRoutingLayer               $ADK_MAX_ROUTING_LAYER_INNOVUS
+<CMD> setDesignMode -topRoutingLayer 7
+[04/13 15:24:19     16s] # setViaGenMode -ignore_viarule_enclosure false
+<CMD> setViaGenMode -ignore_viarule_enclosure false
+[04/13 15:24:19     16s] Setting -ignore_viarule_enclosure to 0. ViaGen will use enclosures defined in VIARULE GENERATE with precedence.
+[04/13 15:24:19     16s] # setViaGenMode -optimize_cross_via true
+<CMD> setViaGenMode -optimize_cross_via true
+[04/13 15:24:19     16s] Setting -optimize_cross_via to 1. ViaGen will try to generate vias with the minimum enclosure.
+[04/13 15:24:19     16s] # setViaGenMode -ignore_DRC false
+<CMD> setViaGenMode -ignore_DRC false
+[04/13 15:24:19     16s] Setting -ignore_DRC to 0. ViaGen will do DRC check while creating vias.
+[04/13 15:24:19     16s] # setAnalysisMode -analysisType onChipVariation -cppr both
+<CMD> setAnalysisMode -analysisType onChipVariation -cppr both
+[04/13 15:24:19     16s] # setDelayCalMode -siAware true -engine aae
+<CMD> setDelayCalMode -siAware true -engine aae
+[04/13 15:24:19     16s] # setNanoRouteMode -drouteUseMultiCutViaEffort medium
+<CMD> setNanoRouteMode -drouteUseMultiCutViaEffort medium
+[04/13 15:24:19     16s] # setNanoRouteMode -routeWithViaInPin          false
+<CMD> setNanoRouteMode -routeWithViaInPin false
+[04/13 15:24:19     16s] # setNanoRouteMode -drouteFixAntenna           true
+<CMD> setNanoRouteMode -drouteFixAntenna true
+[04/13 15:24:19     16s] # setNanoRouteMode -droutePostRouteSpreadWire  true
+<CMD> setNanoRouteMode -droutePostRouteSpreadWire true
+[04/13 15:24:19     16s] # reset_path_group -all
+<CMD> reset_path_group -all
+[04/13 15:24:19     16s] # resetPathGroupOptions
+<CMD> resetPathGroupOptions
+[04/13 15:24:19     16s] # set inputs   [all_inputs -no_clocks]
+# set outputs  [all_outputs]
+# set icgs     [filter_collection [all_registers] "is_integrated_clock_gating_cell == true"]
+# set regs     [remove_from_collection [all_registers -edge_triggered] $$icgs]
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern '$0xe5'
+[04/13 15:24:19     16s] # set allregs  [all_registers]
+# group_path -name In2Reg  -from $inputs  -to $allregs
+<CMD> group_path -name In2Reg  -from $inputs  -to $allregs
+[04/13 15:24:19     16s] # group_path -name Reg2Out -from $allregs -to $outputs
+<CMD> group_path -name Reg2Out -from $allregs -to $outputs
+[04/13 15:24:19     16s] # group_path -name In2Out  -from $inputs  -to $outputs
+<CMD> group_path -name In2Out  -from $inputs  -to $outputs
+[04/13 15:24:19     16s] # group_path -name Reg2Reg     -from $regs    -to $regs
+<CMD> group_path -name Reg2Reg     -from $regs    -to $regs
+[04/13 15:24:19     16s] # group_path -name Reg2ClkGate -from $allregs -to $icgs
+<CMD> group_path -name Reg2ClkGate -from $allregs -to $icgs
+[04/13 15:24:19     16s] # setPathGroupOptions Reg2Reg -effortLevel high
+<CMD> setPathGroupOptions Reg2Reg -effortLevel high
+[04/13 15:24:19     16s] Effort level <high> specified for Reg2Reg path_group
+[04/13 15:24:19     16s] ### End verbose source output for 'scripts/main.tcl'.
+[04/13 15:24:19     16s] <CMD> getVersion
+[04/13 15:24:19     16s] <CMD> saveDesign ./checkpoints/design.checkpoint/save.enc -user_path
+[04/13 15:24:19     16s] #% Begin save design ... (date=04/13 15:24:19, mem=783.8M)
+[04/13 15:24:19     16s] % Begin Save ccopt configuration ... (date=04/13 15:24:19, mem=786.9M)
+[04/13 15:24:19     16s] % End Save ccopt configuration ... (date=04/13 15:24:19, total cpu=0:00:00.0, real=0:00:00.0, peak res=787.7M, current mem=787.7M)
+[04/13 15:24:19     16s] % Begin Save netlist data ... (date=04/13 15:24:19, mem=787.7M)
+[04/13 15:24:19     16s] Writing Binary DB to ./checkpoints/design.checkpoint/save.enc.dat/ProcDpathAluWrapper.v.bin in single-threaded mode...
+[04/13 15:24:19     16s] % End Save netlist data ... (date=04/13 15:24:19, total cpu=0:00:00.0, real=0:00:00.0, peak res=788.3M, current mem=788.1M)
+[04/13 15:24:19     16s] Saving symbol-table file ...
+[04/13 15:24:19     16s] Saving congestion map file ./checkpoints/design.checkpoint/save.enc.dat/ProcDpathAluWrapper.route.congmap.gz ...
+[04/13 15:24:19     16s] % Begin Save AAE data ... (date=04/13 15:24:19, mem=788.8M)
+[04/13 15:24:19     16s] Saving AAE Data ...
+[04/13 15:24:19     16s] % End Save AAE data ... (date=04/13 15:24:19, total cpu=0:00:00.0, real=0:00:00.0, peak res=788.8M, current mem=788.8M)
+[04/13 15:24:19     16s] Saving preference file ./checkpoints/design.checkpoint/save.enc.dat/gui.pref.tcl ...
+[04/13 15:24:19     16s] Saving mode setting ...
+[04/13 15:24:19     16s] Saving global file ...
+[04/13 15:24:19     17s] % Begin Save floorplan data ... (date=04/13 15:24:19, mem=791.9M)
+[04/13 15:24:19     17s] Saving floorplan file ...
+[04/13 15:24:20     17s] % End Save floorplan data ... (date=04/13 15:24:20, total cpu=0:00:00.0, real=0:00:01.0, peak res=792.6M, current mem=792.6M)
+[04/13 15:24:20     17s] Saving Drc markers ...
+[04/13 15:24:20     17s] ... No Drc file written since there is no markers found.
+[04/13 15:24:20     17s] % Begin Save placement data ... (date=04/13 15:24:20, mem=792.7M)
+[04/13 15:24:20     17s] ** Saving stdCellPlacement_binary (version# 2) ...
+[04/13 15:24:20     17s] Save Adaptive View Pruning View Names to Binary file
+[04/13 15:24:20     17s] *** Completed savePlace (cpu=0:00:00.0 real=0:00:00.0 mem=1357.2M) ***
+[04/13 15:24:20     17s] % End Save placement data ... (date=04/13 15:24:20, total cpu=0:00:00.0, real=0:00:00.0, peak res=792.9M, current mem=792.9M)
+[04/13 15:24:20     17s] % Begin Save routing data ... (date=04/13 15:24:20, mem=792.9M)
+[04/13 15:24:20     17s] Saving route file ...
+[04/13 15:24:20     17s] *** Completed saveRoute (cpu=0:00:00.0 real=0:00:00.0 mem=1358.2M) ***
+[04/13 15:24:20     17s] % End Save routing data ... (date=04/13 15:24:20, total cpu=0:00:00.0, real=0:00:00.0, peak res=797.1M, current mem=797.1M)
+[04/13 15:24:20     17s] Saving property file ./checkpoints/design.checkpoint/save.enc.dat/ProcDpathAluWrapper.prop
+[04/13 15:24:20     17s] *** Completed saveProperty (cpu=0:00:00.0 real=0:00:00.0 mem=1362.2M) ***
+[04/13 15:24:20     17s] % Begin Save power constraints data ... (date=04/13 15:24:20, mem=797.8M)
+[04/13 15:24:20     17s] % End Save power constraints data ... (date=04/13 15:24:20, total cpu=0:00:00.0, real=0:00:00.0, peak res=797.9M, current mem=797.9M)
+[04/13 15:24:21     17s] Generated self-contained design save.enc.dat
+[04/13 15:24:21     17s] #% End save design ... (date=04/13 15:24:21, total cpu=0:00:00.8, real=0:00:02.0, peak res=822.6M, current mem=801.3M)
+[04/13 15:24:21     17s] *** Message Summary: 0 warning(s), 0 error(s)
+[04/13 15:24:21     17s] 
+[04/13 15:24:21     17s] 
+[04/13 15:24:21     17s] *** Memory Usage v#1 (Current mem = 1371.336M, initial mem = 389.527M) ***
+[04/13 15:24:21     17s] 
+[04/13 15:24:21     17s] *** Summary of all messages that are not suppressed in this session:
+[04/13 15:24:21     17s] Severity  ID               Count  Summary                                  
+[04/13 15:24:21     17s] WARNING   TA-976               1  Path groups asserted by the group_path c...
+[04/13 15:24:21     17s] WARNING   TCLCMD-513           1  The software could not find a matching o...
+[04/13 15:24:21     17s] WARNING   TCLCMD-1461          1  Skipped unsupported command: %s          
+[04/13 15:24:21     17s] WARNING   TCLNL-330            1  set_input_delay on clock root '%s' is no...
+[04/13 15:24:21     17s] *** Message Summary: 4 warning(s), 0 error(s)
+[04/13 15:24:21     17s] 
+[04/13 15:24:21     17s] --- Ending "Innovus" (totcpu=0:00:17.6, real=0:00:21.0, mem=1371.3M) ---

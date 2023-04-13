@@ -1,0 +1,7 @@
+/home/ezw2/ece5745/ASIC_final_subword/asic/build_final_proj_ALU/3-brg-rtl-4-state-vcssim/inputs/rtl/ProcDpathAluWrapper.v
+/home/ezw2/ece5745/ASIC_final_subword/asic/build_final_proj_ALU/3-brg-rtl-4-state-vcssim/inputs/testbenches/ProcDpathAluWrapper_imul-alu-add_tb.v
+/home/ezw2/ece5745/ASIC_final_subword/asic/build_final_proj_ALU/3-brg-rtl-4-state-vcssim/inputs/testbenches/ProcDpathAluWrapper_imul-alu-add_tb.v.cases
+/home/ezw2/ece5745/ASIC_final_subword/asic/build_final_proj_ALU/3-brg-rtl-4-state-vcssim/proc/ProcDpathAlu.v
+/home/ezw2/ece5745/ASIC_final_subword/asic/build_final_proj_ALU/3-brg-rtl-4-state-vcssim/proc/ProcDpathAluWrapper.v
+/home/ezw2/ece5745/ASIC_final_subword/asic/build_final_proj_ALU/3-brg-rtl-4-state-vcssim/vc/arithmetic.v
+/home/ezw2/ece5745/ASIC_final_subword/asic/build_final_proj_ALU/3-brg-rtl-4-state-vcssim/vc/regs.v

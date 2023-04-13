@@ -1,0 +1,5 @@
+/home/ezw2/ece5745/ASIC_final_subword/asic/build_final_proj_ALU/6-post-synth-gate-level-simulation/inputs/adk/iocells.v
+/home/ezw2/ece5745/ASIC_final_subword/asic/build_final_proj_ALU/6-post-synth-gate-level-simulation/inputs/adk/stdcells.v
+/home/ezw2/ece5745/ASIC_final_subword/asic/build_final_proj_ALU/6-post-synth-gate-level-simulation/inputs/design.vcs.v
+/home/ezw2/ece5745/ASIC_final_subword/asic/build_final_proj_ALU/6-post-synth-gate-level-simulation/inputs/testbenches/ProcDpathAluWrapper_imul-alu-add_tb.v
+/home/ezw2/ece5745/ASIC_final_subword/asic/build_final_proj_ALU/6-post-synth-gate-level-simulation/inputs/testbenches/ProcDpathAluWrapper_imul-alu-add_tb.v.cases

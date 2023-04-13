@@ -1,0 +1,60 @@
+Warning: Duplicate library /classes/ece5745/install/adk-pkgs/freepdk-45nm/pkgs/brg-support-v1/lib2db/stdcells.db specified.
+Warning: Duplicate library /classes/ece5745/install/adk-pkgs/freepdk-45nm/pkgs/brg-support-v1/lib2db/stdcells.db specified.
+
+#BEGIN_XCHECK_LIBRARY
+
+Logic Library #1:
+    Library name              NangateOpenCellLibrary
+    File name                 /classes/ece5745/install/adk-pkgs/freepdk-45nm/pkgs/brg-support-v1/lib2db/stdcells.db
+    Library type              pg_pin based db
+    Library Version           revision 1.0
+    Tool Created              R-2020.09-SP2
+    Data Created              Thu 10 Feb 2011, 18:11:20
+    Time unit                 1ns
+    Capacitance unit          1ff
+    Leakage power unit        1nW
+    Current unit              1mA
+check_library options         
+Version                       R-2020.09-SP2
+Check date and time           Thu Apr 13 14:52:29 2023
+
+
+#BEGIN_LIBSCREEN_UPF
+
+Library#1 (NangateOpenCellLibrary):
+No power management cells in library#1.
+
+#END_LIBSCREEN_UPF
+
+#BEGIN_XCHECK_LOGICCELLS
+
+
+#END_XCHECK_LOGICCELLS
+
+#BEGIN_XCHECK_LOGICPINS
+
+
+
+#END_XCHECK_LOGICPINS
+
+#BEGIN_XCHECK_LOGICPGPINS
+
+Number of cells missing pg_pins in library 1:   0 (out of 133)
+
+#END_XCHECK_LOGICPGPINS
+
+#BEGIN_XCHECK_ARCS
+
+
+#END_XCHECK_ARCS
+
+
+#END_XCHECK_LIBRARY
+
+Memory usage for this session 38 Mbytes.
+CPU usage for this session 1 seconds ( 0.00 hours ).
+
+Thank you...
+Warning: Duplicate library /home/ezw2/ece5745/ASIC_final_subword/asic/build_final_proj_ALU/4-brg-synopsys-dc-synthesis/inputs/adk/stdcells.db specified.
+Warning: Duplicate library /home/ezw2/ece5745/ASIC_final_subword/asic/build_final_proj_ALU/4-brg-synopsys-dc-synthesis/inputs/adk/stdcells.db specified.
+1

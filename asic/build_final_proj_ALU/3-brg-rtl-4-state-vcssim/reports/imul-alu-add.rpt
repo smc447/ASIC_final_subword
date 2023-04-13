@@ -1,0 +1,12 @@
+Chronologic VCS simulator copyright 1991-2020
+Contains Synopsys proprietary information.
+Compiler version R-2020.12_Full64; Runtime version R-2020.12_Full64;  Apr 13 14:52 2023
+
+  [ passed ]
+
+$finish called from file "./inputs/testbenches/ProcDpathAluWrapper_imul-alu-add_tb.v", line 136.
+$finish at simulation time                   63
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 63 ns
+CPU Time:      0.620 seconds;       Data structure size:   0.0Mb
+Thu Apr 13 14:52:01 2023

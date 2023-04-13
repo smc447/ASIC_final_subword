@@ -1,0 +1,45 @@
+build_dir: 3-brg-rtl-4-state-vcssim
+build_id: '3'
+commands:
+- ./run.sh
+edges_i:
+  rtl:
+  - f: rtl
+    step: 1-ece5745-block-gather
+  testbenches:
+  - f: testbenches
+    step: 1-ece5745-block-gather
+edges_o:
+  sim.summary.txt:
+  - f: 4state.summary.txt
+    step: 10-brg-synth-flow-summary
+  - f: 4state.summary.txt
+    step: 12-brg-flow-summary
+inputs:
+- adk
+- testbenches
+- macrofiles
+- rtl
+- design.vcs.v
+- design.sdf
+- design.args
+name: brg-rtl-4-state-vcssim
+outputs:
+- vpd
+- vcd
+- saif
+- sim.summary.txt
+parameters:
+  change_clock_period: undefined
+  clock_period: 3.0
+  debug: false
+  design_name: ProcDpathAluWrapper
+  dut_name: DUT
+  extra_link_lib_dir: ./inputs/adk
+  input_delay: 0.05
+  output_delay: 0.05
+  pad_ring: false
+  simtype: rtl
+  test_design_name: ProcDpathAluWrapper
+  waveform: true
+source: /classes/ece5745/install/venv-pkgs/x86_64-rhel7/pypy3-pymtl3-7.3.3/site-packages/steps/brg-synopsys-vcs-sim

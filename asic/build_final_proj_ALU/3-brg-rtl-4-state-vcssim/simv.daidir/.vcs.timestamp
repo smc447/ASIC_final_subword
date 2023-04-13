@@ -1,0 +1,155 @@
+2        
+0 ProcDpathAluWrapper_imul-alu-add_tb.v.cases
+0 /opt/synopsys/vcs/R-2020.12/etc/systemverilog/ProcDpathAluWrapper_imul-alu-add_tb.v.cases
+42
++cli+1
++incdir+./inputs/rtl
++incdir+./inputs/testbenches
++itf+/opt/synopsys/vcs/R-2020.12/linux64/lib/vcsdp.tab
++lint=all
++memcbk
++vcs+dumpvars+outputs/vcd/imul-alu-add.vcd
++vcs+saif_libcell
++vcsd
++vpi
+-Mamsrun=
+-Masflags=
+-Mcc=gcc
+-Mcfl= -pipe -fPIC -O -I/opt/synopsys/vcs/R-2020.12/include
+-Mcplusplus=g++
+-Mcrt0=
+-Mcrtn=
+-Mcsrc=
+-Mexternalobj=
+-Mldflags= -rdynamic
+-Mobjects= /opt/synopsys/vcs/R-2020.12/linux64/lib/libvirsim.so /opt/synopsys/vcs/R-2020.12/linux64/lib/liberrorinf.so /opt/synopsys/vcs/R-2020.12/linux64/lib/libsnpsmalloc.so /opt/synopsys/vcs/R-2020.12/linux64/lib/libvfs.so
+-Mout=simv
+-Msaverestoreobj=/opt/synopsys/vcs/R-2020.12/linux64/lib/vcs_save_restore_new.o
+-Msyslibs=-ldl
+-Mvcsaceobjs=
+-Mxcflags= -pipe -fPIC -I/opt/synopsys/vcs/R-2020.12/include
+-Mxllcflags=
+-Xcbug=0x1
+-debug=1
+-full64
+-gen_obj
+-lca
+-override_timescale=1ns/1ns
+-picarchive
+-rad
+-sverilog
+-top
+-xprop=tmerge
+/opt/synopsys/vcs/R-2020.12/linux64/bin/vcs1
+ProcDpathAluWrapper_tb
+./inputs/rtl/ProcDpathAluWrapper.v
+./inputs/testbenches/ProcDpathAluWrapper_imul-alu-add_tb.v
+95
+waveform=True
+test_design_name=ProcDpathAluWrapper
+simtype=rtl
+rvm_version=1.29.12-next (master)
+rvm_prefix=/classes/ece5745/install/rvm-pkgs
+rvm_path=/classes/ece5745/install/rvm-pkgs/x86_64-rhel7
+rvm_bin_path=/classes/ece5745/install/rvm-pkgs/x86_64-rhel7/bin
+pad_ring=False
+output_delay=0.05
+input_delay=0.05
+extra_link_lib_dir=./inputs/adk
+dut_name=DUT
+design_name=ProcDpathAluWrapper
+debug=False
+clock_period=3.0
+change_clock_period=undefined
+_LMFILES_=/usr/share/Modules/modulefiles/synopsys-dc-R-2020.09-SP2:/usr/share/Modules/modulefiles/synopsys-mw-R-2020.09-SP2:/usr/share/Modules/modulefiles/synopsys-pt-2020.09-SP2:/usr/share/Modules/modulefiles/synopsys-vcs-R-2020.12:/usr/share/Modules/modulefiles/synopsys-lc-R-2020.09-SP2:/usr/share/Modules/modulefiles/synopsys-cc-R-2020.12:/usr/share/Modules/modulefiles/innovus-201:/usr/share/Modules/modulefiles/emx
+XDG_SESSION_ID=43694
+XDG_RUNTIME_DIR=/run/user/1470035
+XDG_DATA_DIRS=/home/ezw2/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share
+VMR_MODE_FLAG=64
+VIRTUAL_ENV=/classes/ece5745/install/venv-pkgs/x86_64-rhel7/pypy3-pymtl3-7.3.3
+VENV_PKGS_ROOT=/home/ezw2/install/venv-pkgs
+VENV_PKGS_PREFIX=/home/ezw2/install/venv-pkgs/x86_64-rhel7
+VENV_PKGS_GLOBAL_ROOT=/classes/ece5745/install/venv-pkgs
+VENV_PKGS_GLOBAL_PREFIX=/classes/ece5745/install/venv-pkgs/x86_64-rhel7
+VCS_MX_HOME_INTERNAL=1
+VCS_MODE_FLAG=64
+VCS_LCAMSG_PRINT_OFF=1
+VCS_HOME=/opt/synopsys/vcs/R-2020.12
+VCS_DEPTH=0
+VCS_ARG_ADDED_FOR_TMP=1
+VCS_ARCH=linux64
+UNAME=/bin/uname
+TOOL_HOME=/opt/synopsys/vcs/R-2020.12/linux64
+SYNOPSYS_DIR=/opt/synopsys/customcompiler/R-2020.12/
+SYNOPSYS=/opt/synopsys/customcompiler/R-2020.12/
+STOW_PKGS_ROOT=/home/ezw2/install/stow-pkgs
+STOW_PKGS_PREFIX=/home/ezw2/install/stow-pkgs/x86_64-rhel7
+STOW_PKGS_GLOBAL_ROOT=/classes/ece5745/install/stow-pkgs
+STOW_PKGS_GLOBAL_PREFIX=/classes/ece5745/install/stow-pkgs/x86_64-rhel7
+SSH_TTY=/dev/pts/511
+SSH_CONNECTION=10.48.42.163 64294 128.253.128.57 22
+SSH_CLIENT=10.48.42.163 64294 22
+SSH_AUTH_SOCK=/tmp/ssh-ebHINc2opr/agent.15726
+SSH_ASKPASS=/usr/libexec/openssh/gnome-ssh-askpass
+SETUP_OPENRAM=yes
+SETUP_KLAYOUT=yes
+SETUP_ECE5745=yes
+SETUP_COURSE=ece5745
+SETUP_BLUESPEC=yes
+SCRNAME=vcs
+SCRIPT_NAME=vcs
+RVM_PKGS_ROOT=/home/ezw2/install/rvm-pkgs
+RVM_PKGS_PREFIX=/home/ezw2/install/rvm-pkgs/x86_64-rhel7
+RVM_PKGS_GLOBAL_ROOT=/classes/ece5745/install/rvm-pkgs
+RVM_PKGS_GLOBAL_PREFIX=/classes/ece5745/install/rvm-pkgs/x86_64-rhel7
+RUBY_VERSION=ruby-3.0.0
+QT_GRAPHICSSYSTEM_CHECKED=1
+QTLIB=/usr/lib64/qt-3.3/lib
+QTINC=/usr/lib64/qt-3.3/include
+QTDIR=/usr/lib64/qt-3.3
+PROMPT_DIRTRIM=2
+PKG_CONFIG_PATH=/home/ezw2/install/stow-pkgs/x86_64-rhel7/lib/pkgconfig:/home/ezw2/install/stow-pkgs/x86_64-rhel7/share/pkgconfig:/classes/ece5745/install/stow-pkgs/x86_64-rhel7/lib/pkgconfig:/classes/ece5745/install/stow-pkgs/x86_64-rhel7/share/pkgconfig
+PDK_ROOT=/classes/ece5745/pdks
+PDK=sky130a
+OVA_UUM=0
+OPENRAM_TECH=/classes/ece5745/install/bare-pkgs/x86_64-rhel7/pkgs/OpenRAM-1.1.14/technology
+OPENRAM_HOME=/classes/ece5745/install/bare-pkgs/x86_64-rhel7/pkgs/OpenRAM-1.1.14/compiler
+OPENLANE_ROOT=/classes/ece5745/openlane
+MY_RUBY_HOME=/classes/ece5745/install/rvm-pkgs/x86_64-rhel7/rubies/ruby-3.0.0
+MODULESHOME=/usr/share/Modules
+MODULEPATH=/usr/share/Modules/modulefiles:/etc/modulefiles
+MFLOWGEN_PATH=/classes/ece5745/install/adk-pkgs
+MFLAGS=
+MAKELEVEL=1
+MAKEFLAGS=
+LOADEDMODULES=synopsys-dc-R-2020.09-SP2:synopsys-mw-R-2020.09-SP2:synopsys-pt-2020.09-SP2:synopsys-vcs-R-2020.12:synopsys-lc-R-2020.09-SP2:synopsys-cc-R-2020.12:innovus-201:emx
+LESSOPEN=||/usr/bin/lesspipe.sh %s
+LC_ALL=C
+IRBRC=/classes/ece5745/install/rvm-pkgs/x86_64-rhel7/rubies/ruby-3.0.0/.irbrc
+HISTCONTROL=ignoredups
+GEM_PATH=/classes/ece5745/install/rvm-pkgs/x86_64-rhel7/gems/ruby-3.0.0:/classes/ece5745/install/rvm-pkgs/x86_64-rhel7/gems/ruby-3.0.0@global
+GEM_HOME=/classes/ece5745/install/rvm-pkgs/x86_64-rhel7/gems/ruby-3.0.0
+FREEPDK45=/classes/ece5745/install/adk-pkgs/freepdk-45nm/pkgs/FreePDK45-1.4
+ECE5745_STDCELLS=/classes/ece5745/install/adk-pkgs/freepdk-45nm/stdview
+DVE_HOME=/opt/synopsys/vcs/R-2020.12/gui/dve/
+CDS_LIC_FILE=5280@flex.ece.cornell.edu
+BASH_FUNC_module()=() {  eval `/usr/bin/modulecmd bash $*`_}
+BARE_PKGS_ROOT=/home/ezw2/install/bare-pkgs
+BARE_PKGS_PREFIX=/home/ezw2/install/bare-pkgs/x86_64-rhel7
+BARE_PKGS_GLOBAL_ROOT=/classes/ece5745/install/bare-pkgs
+BARE_PKGS_GLOBAL_PREFIX=/classes/ece5745/install/bare-pkgs/x86_64-rhel7
+ARCH=x86_64-rhel7
+ADK_PKGS=/classes/ece5745/install/adk-pkgs
+0
+4
+1681411910 ./inputs/testbenches/ProcDpathAluWrapper_imul-alu-add_tb.v.cases
+1681411910 ./inputs/testbenches/ProcDpathAluWrapper_imul-alu-add_tb.v
+1681411910 ./inputs/rtl/ProcDpathAluWrapper.v
+1607400655 /opt/synopsys/vcs/R-2020.12/linux64/lib/vcsdp.tab
+4
+1607402064 /opt/synopsys/vcs/R-2020.12/linux64/lib/libvirsim.so
+1607401445 /opt/synopsys/vcs/R-2020.12/linux64/lib/liberrorinf.so
+1607401218 /opt/synopsys/vcs/R-2020.12/linux64/lib/libsnpsmalloc.so
+1607401442 /opt/synopsys/vcs/R-2020.12/linux64/lib/libvfs.so
+1681411919 simv.daidir
+-1 partitionlib

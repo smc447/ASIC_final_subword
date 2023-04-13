@@ -35,8 +35,8 @@ void VProc_noparam::_settle__TOP__2(VProc_noparam__Syms* __restrict vlSymsp) {
     VL_DEBUG_IF(VL_DBG_MSGF("+    VProc_noparam::_settle__TOP__2\n"); );
     VProc_noparam* const __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Variables
-    WData/*95:0*/ __Vtemp226[3];
-    WData/*95:0*/ __Vtemp227[3];
+    WData/*95:0*/ __Vtemp219[3];
+    WData/*95:0*/ __Vtemp220[3];
     // Body
     vlTOPp->stats_en = (0U != vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__stats_en_W);
     vlTOPp->Proc_noparam__DOT__v__DOT__xcel_reqstream_enq_msg 
@@ -54,59 +54,120 @@ void VProc_noparam::_settle__TOP__2(VProc_noparam__Syms* __restrict vlSymsp) {
         = ((vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__a_reg_out 
             * vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__b_reg_out) 
            & (- (IData)((IData)(vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__val_reg_out))));
-    if ((8U & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__alu_fn_X))) {
-        if ((4U & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__alu_fn_X))) {
-            if ((2U & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__alu_fn_X))) {
-                vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__alu_result_X = 0U;
-            } else {
-                if ((1U & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__alu_fn_X))) {
-                    vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__alu_result_X 
-                        = (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op1_X 
-                           + vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op2_X);
-                    vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__alu_result_X 
-                        = (0xfffffffeU & vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__alu_result_X);
+    if ((0x20U & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__alu_fn_X))) {
+        vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__alu_result_X = 0U;
+    } else {
+        if ((0x10U & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__alu_fn_X))) {
+            vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__alu_result_X 
+                = ((8U & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__alu_fn_X))
+                    ? 0U : ((4U & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__alu_fn_X))
+                             ? 0U : ((2U & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__alu_fn_X))
+                                      ? 0U : ((1U & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__alu_fn_X))
+                                               ? ((0xff000000U 
+                                                   & (((vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op1_X 
+                                                        >> 0x18U) 
+                                                       - 
+                                                       (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op2_X 
+                                                        >> 0x18U)) 
+                                                      << 0x18U)) 
+                                                  | ((0xff0000U 
+                                                      & (((vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op1_X 
+                                                           >> 0x10U) 
+                                                          - 
+                                                          (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op2_X 
+                                                           >> 0x10U)) 
+                                                         << 0x10U)) 
+                                                     | ((0xff00U 
+                                                         & (((vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op1_X 
+                                                              >> 8U) 
+                                                             - 
+                                                             (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op2_X 
+                                                              >> 8U)) 
+                                                            << 8U)) 
+                                                        | (0xffU 
+                                                           & (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op1_X 
+                                                              - vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op2_X)))))
+                                               : ((0xff000000U 
+                                                   & (((vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op1_X 
+                                                        >> 0x18U) 
+                                                       + 
+                                                       (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op2_X 
+                                                        >> 0x18U)) 
+                                                      << 0x18U)) 
+                                                  | ((0xff0000U 
+                                                      & (((vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op1_X 
+                                                           >> 0x10U) 
+                                                          + 
+                                                          (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op2_X 
+                                                           >> 0x10U)) 
+                                                         << 0x10U)) 
+                                                     | ((0xff00U 
+                                                         & (((vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op1_X 
+                                                              >> 8U) 
+                                                             + 
+                                                             (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op2_X 
+                                                              >> 8U)) 
+                                                            << 8U)) 
+                                                        | (0xffU 
+                                                           & (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op1_X 
+                                                              + vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op2_X)))))))));
+        } else {
+            if ((8U & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__alu_fn_X))) {
+                if ((4U & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__alu_fn_X))) {
+                    if ((2U & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__alu_fn_X))) {
+                        vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__alu_result_X = 0U;
+                    } else {
+                        if ((1U & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__alu_fn_X))) {
+                            vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__alu_result_X 
+                                = (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op1_X 
+                                   + vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op2_X);
+                            vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__alu_result_X 
+                                = (0xfffffffeU & vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__alu_result_X);
+                        } else {
+                            vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__alu_result_X 
+                                = vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op2_X;
+                        }
+                    }
                 } else {
                     vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__alu_result_X 
-                        = vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op2_X;
+                        = ((2U & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__alu_fn_X))
+                            ? ((1U & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__alu_fn_X))
+                                ? vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op1_X
+                                : VL_SHIFTRS_III(32,32,5, vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op1_X, 
+                                                 (0x1fU 
+                                                  & vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op2_X)))
+                            : ((1U & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__alu_fn_X))
+                                ? (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op1_X 
+                                   >> (0x1fU & vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op2_X))
+                                : (~ (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op1_X 
+                                      | vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op2_X))));
                 }
+            } else {
+                vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__alu_result_X 
+                    = ((4U & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__alu_fn_X))
+                        ? ((2U & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__alu_fn_X))
+                            ? ((1U & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__alu_fn_X))
+                                ? (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op1_X 
+                                   ^ vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op2_X)
+                                : (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op1_X 
+                                   & vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op2_X))
+                            : ((1U & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__alu_fn_X))
+                                ? (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op1_X 
+                                   < vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op2_X)
+                                : VL_LTS_III(32,32,32, vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op1_X, vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op2_X)))
+                        : ((2U & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__alu_fn_X))
+                            ? ((1U & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__alu_fn_X))
+                                ? (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op1_X 
+                                   | vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op2_X)
+                                : (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op1_X 
+                                   << (0x1fU & vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op2_X)))
+                            : ((1U & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__alu_fn_X))
+                                ? (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op1_X 
+                                   - vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op2_X)
+                                : (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op1_X 
+                                   + vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op2_X))));
             }
-        } else {
-            vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__alu_result_X 
-                = ((2U & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__alu_fn_X))
-                    ? ((1U & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__alu_fn_X))
-                        ? vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op1_X
-                        : VL_SHIFTRS_III(32,32,5, vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op1_X, 
-                                         (0x1fU & vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op2_X)))
-                    : ((1U & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__alu_fn_X))
-                        ? (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op1_X 
-                           >> (0x1fU & vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op2_X))
-                        : (~ (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op1_X 
-                              | vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op2_X))));
         }
-    } else {
-        vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__alu_result_X 
-            = ((4U & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__alu_fn_X))
-                ? ((2U & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__alu_fn_X))
-                    ? ((1U & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__alu_fn_X))
-                        ? (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op1_X 
-                           ^ vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op2_X)
-                        : (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op1_X 
-                           & vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op2_X))
-                    : ((1U & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__alu_fn_X))
-                        ? (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op1_X 
-                           < vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op2_X)
-                        : VL_LTS_III(32,32,32, vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op1_X, vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op2_X)))
-                : ((2U & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__alu_fn_X))
-                    ? ((1U & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__alu_fn_X))
-                        ? (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op1_X 
-                           | vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op2_X)
-                        : (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op1_X 
-                           << (0x1fU & vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op2_X)))
-                    : ((1U & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__alu_fn_X))
-                        ? (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op1_X 
-                           - vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op2_X)
-                        : (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op1_X 
-                           + vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op2_X))));
     }
     vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__wb_result_M 
         = ((0U == (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__wb_result_sel_M))
@@ -116,10 +177,6 @@ void VProc_noparam::_settle__TOP__2(VProc_noparam__Syms* __restrict vlSymsp) {
                 : ((2U == (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__wb_result_sel_M))
                     ? (IData)(vlTOPp->xcel_respstream_msg)
                     : 0U)));
-    vlTOPp->proc2mngr_msg = ((IData)(vlTOPp->Proc_noparam__DOT__v__DOT__proc2mngr_queue__DOT__genblk1__DOT__ctrl__DOT__full)
-                              ? vlTOPp->Proc_noparam__DOT__v__DOT__proc2mngr_queue__DOT__genblk1__DOT__dpath__DOT__qstore
-                              : ((IData)(vlTOPp->Proc_noparam__DOT__v__DOT__proc2mngr_queue__DOT__genblk1__DOT__ctrl__DOT__full)
-                                  ? 0U : vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__wb_result_W));
     vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imulresp_q__DOT__genblk1__DOT__ctrl__DOT__do_enq 
         = ((~ (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imulresp_q__DOT__genblk1__DOT__ctrl__DOT__full)) 
            & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__val_reg_out));
@@ -286,68 +343,95 @@ void VProc_noparam::_settle__TOP__2(VProc_noparam__Syms* __restrict vlSymsp) {
                                                       & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
                                                      ? 9U
                                                      : 2U)))))))
-                : (((((((((0x13U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
-                          | (0x7013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                         | (0x6013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                        | (0x4013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                       | (0x2013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                      | (0x3013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                     | (0x40005013U == (0xfe00707fU 
-                                        & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                    | (0x5013U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))
-                    ? ((0x13U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
-                        ? 0U : ((0x7013U == (0x707fU 
-                                             & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
-                                 ? 6U : ((0x6013U == 
-                                          (0x707fU 
-                                           & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
-                                          ? 3U : ((0x4013U 
-                                                   == 
-                                                   (0x707fU 
-                                                    & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
-                                                   ? 7U
-                                                   : 
-                                                  ((0x2013U 
+                : (((((((((0x48000077U == (0xfe00707fU 
+                                           & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                          | (0x4a000077U == (0xfe00707fU 
+                                             & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                         | (0x13U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                        | (0x7013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                       | (0x6013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                      | (0x4013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                     | (0x2013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                    | (0x3013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))
+                    ? ((0x48000077U == (0xfe00707fU 
+                                        & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                        ? 0x10U : ((0x4a000077U == 
+                                    (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                    ? 0x11U : ((0x13U 
+                                                == 
+                                                (0x707fU 
+                                                 & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                                ? 0U
+                                                : (
+                                                   (0x7013U 
                                                     == 
                                                     (0x707fU 
                                                      & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
-                                                    ? 4U
+                                                    ? 6U
                                                     : 
-                                                   ((0x3013U 
+                                                   ((0x6013U 
                                                      == 
                                                      (0x707fU 
                                                       & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
-                                                     ? 5U
+                                                     ? 3U
                                                      : 
-                                                    ((0x40005013U 
+                                                    ((0x4013U 
                                                       == 
-                                                      (0xfe00707fU 
+                                                      (0x707fU 
                                                        & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
-                                                      ? 0xaU
-                                                      : 9U)))))))
-                    : (((((((((0x1013U == (0xfe00707fU 
-                                           & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
-                              | (0x37U == (0x7fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                             | (0x17U == (0x7fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                            | (0x2003U == (0x707fU 
-                                           & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                           | (0x2023U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                          | (0x1063U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                         | (0x63U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                        | (0x4063U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))
-                        ? ((0x1013U == (0xfe00707fU 
-                                        & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
-                            ? 2U : ((0x37U == (0x7fU 
-                                               & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
-                                     ? 0xcU : 0U)) : 
-                       ((0x6063U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
-                         ? 0U : ((0x5063U == (0x707fU 
-                                              & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
-                                  ? 0U : ((0x7063U 
-                                           == (0x707fU 
-                                               & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
-                                           ? 0U : (
-                                                   (0x6fU 
+                                                      ? 7U
+                                                      : 
+                                                     ((0x2013U 
+                                                       == 
+                                                       (0x707fU 
+                                                        & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                                       ? 4U
+                                                       : 5U)))))))
+                    : (((((((((0x40005013U == (0xfe00707fU 
+                                               & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                              | (0x5013U == (0xfe00707fU 
+                                             & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                             | (0x1013U == (0xfe00707fU 
+                                            & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                            | (0x37U == (0x7fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                           | (0x17U == (0x7fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                          | (0x2003U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                         | (0x2023U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                        | (0x1063U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))
+                        ? ((0x40005013U == (0xfe00707fU 
+                                            & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                            ? 0xaU : ((0x5013U == (0xfe00707fU 
+                                                   & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                       ? 9U : ((0x1013U 
+                                                == 
+                                                (0xfe00707fU 
+                                                 & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                                ? 2U
+                                                : (
+                                                   (0x37U 
+                                                    == 
+                                                    (0x7fU 
+                                                     & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                                    ? 0xcU
+                                                    : 0U))))
+                        : ((0x63U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                            ? 0U : ((0x4063U == (0x707fU 
+                                                 & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                     ? 0U : ((0x6063U 
+                                              == (0x707fU 
+                                                  & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                              ? 0U : 
+                                             ((0x5063U 
+                                               == (0x707fU 
+                                                   & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                               ? 0U
+                                               : ((0x7063U 
+                                                   == 
+                                                   (0x707fU 
+                                                    & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                                   ? 0U
+                                                   : 
+                                                  ((0x6fU 
                                                     == 
                                                     (0x7fU 
                                                      & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
@@ -358,7 +442,7 @@ void VProc_noparam::_settle__TOP__2(VProc_noparam__Syms* __restrict vlSymsp) {
                                                      (0x707fU 
                                                       & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
                                                      ? 0xdU
-                                                     : 0U))))))));
+                                                     : 0U))))))))));
         vlTOPp->Proc_noparam__DOT__v__DOT__ctrl__DOT__rf_wen_D 
             = (((((((((0x7033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
                       | (0x6033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
@@ -368,37 +452,52 @@ void VProc_noparam::_settle__TOP__2(VProc_noparam__Syms* __restrict vlSymsp) {
                   | (0x40005033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
                  | (0x5033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
                 | (0x1033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-               | (((((((((0x13U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
-                         | (0x7013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                        | (0x6013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                       | (0x4013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                      | (0x2013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                     | (0x3013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                    | (0x40005013U == (0xfe00707fU 
-                                       & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                   | (0x5013U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                  | (((((((((0x1013U == (0xfe00707fU 
-                                         & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
-                            | (0x37U == (0x7fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                           | (0x17U == (0x7fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                          | (0x2003U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                         | (0x2023U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                        | (0x1063U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                       | (0x63U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                      | (0x4063U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))
-                      ? ((0x1013U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
-                         | ((0x37U == (0x7fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
-                            | ((0x17U == (0x7fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
-                               | (0x2003U == (0x707fU 
-                                              & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))))
-                      : ((0x6063U != (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
-                         & ((0x5063U != (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
-                            & ((0x7063U != (0x707fU 
-                                            & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
-                               & ((0x6fU == (0x7fU 
+               | (((((((((0x48000077U == (0xfe00707fU 
+                                          & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                         | (0x4a000077U == (0xfe00707fU 
+                                            & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                        | (0x13U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                       | (0x7013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                      | (0x6013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                     | (0x4013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                    | (0x2013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                   | (0x3013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                  | (((((((((0x40005013U == (0xfe00707fU 
                                              & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
-                                  | (0x67U == (0x707fU 
-                                               & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))))))));
+                            | (0x5013U == (0xfe00707fU 
+                                           & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                           | (0x1013U == (0xfe00707fU 
+                                          & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                          | (0x37U == (0x7fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                         | (0x17U == (0x7fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                        | (0x2003U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                       | (0x2023U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                      | (0x1063U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))
+                      ? ((0x40005013U == (0xfe00707fU 
+                                          & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                         | ((0x5013U == (0xfe00707fU 
+                                         & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                            | ((0x1013U == (0xfe00707fU 
+                                            & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                               | ((0x37U == (0x7fU 
+                                             & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                                  | ((0x17U == (0x7fU 
+                                                & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                                     | (0x2003U == 
+                                        (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))))))
+                      : ((0x63U != (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                         & ((0x4063U != (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                            & ((0x6063U != (0x707fU 
+                                            & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                               & ((0x5063U != (0x707fU 
+                                               & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                                  & ((0x7063U != (0x707fU 
+                                                  & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                                     & ((0x6fU == (0x7fU 
+                                                   & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                                        | (0x67U == 
+                                           (0x707fU 
+                                            & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))))))))));
         vlTOPp->Proc_noparam__DOT__v__DOT__ctrl__DOT__wb_result_sel_D 
             = (((((((((0x7033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
                       | (0x6033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
@@ -408,55 +507,69 @@ void VProc_noparam::_settle__TOP__2(VProc_noparam__Syms* __restrict vlSymsp) {
                   | (0x40005033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
                  | (0x5033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
                 | (0x1033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))
-                ? 0U : (((((((((0x13U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
-                               | (0x7013U == (0x707fU 
-                                              & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                              | (0x6013U == (0x707fU 
-                                             & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                             | (0x4013U == (0x707fU 
-                                            & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                            | (0x2013U == (0x707fU 
+                ? 0U : (((((((((0x48000077U == (0xfe00707fU 
+                                                & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                               | (0x4a000077U == (0xfe00707fU 
+                                                  & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                              | (0x13U == (0x707fU 
                                            & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                           | (0x3013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                          | (0x40005013U == (0xfe00707fU 
-                                             & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                         | (0x5013U == (0xfe00707fU 
-                                        & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))
-                         ? 0U : (((((((((0x1013U == 
-                                         (0xfe00707fU 
-                                          & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
-                                        | (0x37U == 
-                                           (0x7fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                                       | (0x17U == 
-                                          (0x7fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                                      | (0x2003U == 
-                                         (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                                     | (0x2023U == 
-                                        (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                                    | (0x1063U == (0x707fU 
+                             | (0x7013U == (0x707fU 
+                                            & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                            | (0x6013U == (0x707fU 
+                                           & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                           | (0x4013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                          | (0x2013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                         | (0x3013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))
+                         ? 0U : (((((((((0x40005013U 
+                                         == (0xfe00707fU 
+                                             & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                                        | (0x5013U 
+                                           == (0xfe00707fU 
+                                               & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                                       | (0x1013U == 
+                                          (0xfe00707fU 
+                                           & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                                      | (0x37U == (0x7fU 
                                                    & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                                   | (0x63U == (0x707fU 
-                                                & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                                  | (0x4063U == (0x707fU 
+                                     | (0x17U == (0x7fU 
+                                                  & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                                    | (0x2003U == (0x707fU 
+                                                   & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                                   | (0x2023U == (0x707fU 
+                                                  & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                                  | (0x1063U == (0x707fU 
                                                  & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))
-                                  ? ((0x1013U == (0xfe00707fU 
-                                                  & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
-                                      ? 0U : ((0x37U 
-                                               == (0x7fU 
+                                  ? ((0x40005013U == 
+                                      (0xfe00707fU 
+                                       & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                      ? 0U : ((0x5013U 
+                                               == (0xfe00707fU 
                                                    & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
                                                ? 0U
-                                               : ((0x17U 
+                                               : ((0x1013U 
                                                    == 
-                                                   (0x7fU 
+                                                   (0xfe00707fU 
                                                     & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
                                                    ? 0U
                                                    : 
-                                                  ((0x2003U 
+                                                  ((0x37U 
                                                     == 
-                                                    (0x707fU 
+                                                    (0x7fU 
                                                      & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
-                                                    ? 1U
-                                                    : 0U))))
+                                                    ? 0U
+                                                    : 
+                                                   ((0x17U 
+                                                     == 
+                                                     (0x7fU 
+                                                      & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                                     ? 0U
+                                                     : 
+                                                    ((0x2003U 
+                                                      == 
+                                                      (0x707fU 
+                                                       & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                                      ? 1U
+                                                      : 0U))))))
                                   : 0U)));
         vlTOPp->Proc_noparam__DOT__v__DOT__ctrl__DOT__ex_result_sel_D 
             = (((((((((0x7033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
@@ -467,41 +580,354 @@ void VProc_noparam::_settle__TOP__2(VProc_noparam__Syms* __restrict vlSymsp) {
                   | (0x40005033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
                  | (0x5033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
                 | (0x1033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))
-                ? 0U : (((((((((0x13U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
-                               | (0x7013U == (0x707fU 
-                                              & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                              | (0x6013U == (0x707fU 
-                                             & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                             | (0x4013U == (0x707fU 
-                                            & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                            | (0x2013U == (0x707fU 
+                ? 0U : (((((((((0x48000077U == (0xfe00707fU 
+                                                & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                               | (0x4a000077U == (0xfe00707fU 
+                                                  & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                              | (0x13U == (0x707fU 
                                            & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                           | (0x3013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                          | (0x40005013U == (0xfe00707fU 
-                                             & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                         | (0x5013U == (0xfe00707fU 
-                                        & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))
-                         ? 0U : (((((((((0x1013U == 
-                                         (0xfe00707fU 
-                                          & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
-                                        | (0x37U == 
-                                           (0x7fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                                       | (0x17U == 
-                                          (0x7fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                                      | (0x2003U == 
-                                         (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                                     | (0x2023U == 
-                                        (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                                    | (0x1063U == (0x707fU 
+                             | (0x7013U == (0x707fU 
+                                            & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                            | (0x6013U == (0x707fU 
+                                           & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                           | (0x4013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                          | (0x2013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                         | (0x3013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))
+                         ? 0U : (((((((((0x40005013U 
+                                         == (0xfe00707fU 
+                                             & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                                        | (0x5013U 
+                                           == (0xfe00707fU 
+                                               & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                                       | (0x1013U == 
+                                          (0xfe00707fU 
+                                           & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                                      | (0x37U == (0x7fU 
                                                    & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                                   | (0x63U == (0x707fU 
-                                                & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                                  | (0x4063U == (0x707fU 
+                                     | (0x17U == (0x7fU 
+                                                  & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                                    | (0x2003U == (0x707fU 
+                                                   & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                                   | (0x2023U == (0x707fU 
+                                                  & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                                  | (0x1063U == (0x707fU 
                                                  & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))
-                                  ? 0U : ((0x6063U 
-                                           == (0x707fU 
-                                               & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                  ? 0U : ((0x63U == 
+                                           (0x707fU 
+                                            & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
                                            ? 0U : (
+                                                   (0x4063U 
+                                                    == 
+                                                    (0x707fU 
+                                                     & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                                    ? 0U
+                                                    : 
+                                                   ((0x6063U 
+                                                     == 
+                                                     (0x707fU 
+                                                      & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                                     ? 0U
+                                                     : 
+                                                    ((0x5063U 
+                                                      == 
+                                                      (0x707fU 
+                                                       & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                                      ? 0U
+                                                      : 
+                                                     ((0x7063U 
+                                                       == 
+                                                       (0x707fU 
+                                                        & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                                       ? 0U
+                                                       : 
+                                                      ((0x6fU 
+                                                        == 
+                                                        (0x7fU 
+                                                         & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                                        ? 2U
+                                                        : 
+                                                       ((0x67U 
+                                                         == 
+                                                         (0x707fU 
+                                                          & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                                         ? 2U
+                                                         : 0U))))))))));
+        vlTOPp->Proc_noparam__DOT__v__DOT__ctrl__DOT__br_type_D 
+            = (((((((((0x7033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                      | (0x6033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                     | (0x4033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                    | (0x2033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                   | (0x3033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                  | (0x40005033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                 | (0x5033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                | (0x1033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))
+                ? 0U : (((((((((0x48000077U == (0xfe00707fU 
+                                                & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                               | (0x4a000077U == (0xfe00707fU 
+                                                  & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                              | (0x13U == (0x707fU 
+                                           & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                             | (0x7013U == (0x707fU 
+                                            & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                            | (0x6013U == (0x707fU 
+                                           & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                           | (0x4013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                          | (0x2013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                         | (0x3013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))
+                         ? 0U : (((((((((0x40005013U 
+                                         == (0xfe00707fU 
+                                             & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                                        | (0x5013U 
+                                           == (0xfe00707fU 
+                                               & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                                       | (0x1013U == 
+                                          (0xfe00707fU 
+                                           & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                                      | (0x37U == (0x7fU 
+                                                   & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                                     | (0x17U == (0x7fU 
+                                                  & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                                    | (0x2003U == (0x707fU 
+                                                   & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                                   | (0x2023U == (0x707fU 
+                                                  & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                                  | (0x1063U == (0x707fU 
+                                                 & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))
+                                  ? ((0x40005013U == 
+                                      (0xfe00707fU 
+                                       & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                      ? 0U : ((0x5013U 
+                                               == (0xfe00707fU 
+                                                   & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                               ? 0U
+                                               : ((0x1013U 
+                                                   == 
+                                                   (0xfe00707fU 
+                                                    & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                                   ? 0U
+                                                   : 
+                                                  ((0x37U 
+                                                    == 
+                                                    (0x7fU 
+                                                     & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                                    ? 0U
+                                                    : 
+                                                   ((0x17U 
+                                                     == 
+                                                     (0x7fU 
+                                                      & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                                     ? 0U
+                                                     : 
+                                                    ((0x2003U 
+                                                      == 
+                                                      (0x707fU 
+                                                       & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                                      ? 0U
+                                                      : 
+                                                     ((0x2023U 
+                                                       == 
+                                                       (0x707fU 
+                                                        & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                                       ? 0U
+                                                       : 1U)))))))
+                                  : ((0x63U == (0x707fU 
+                                                & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                      ? 4U : ((0x4063U 
+                                               == (0x707fU 
+                                                   & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                               ? 2U
+                                               : ((0x6063U 
+                                                   == 
+                                                   (0x707fU 
+                                                    & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                                   ? 3U
+                                                   : 
+                                                  ((0x5063U 
+                                                    == 
+                                                    (0x707fU 
+                                                     & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                                    ? 5U
+                                                    : 
+                                                   ((0x7063U 
+                                                     == 
+                                                     (0x707fU 
+                                                      & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                                     ? 6U
+                                                     : 
+                                                    ((0x6fU 
+                                                      == 
+                                                      (0x7fU 
+                                                       & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                                      ? 0U
+                                                      : 
+                                                     ((0x67U 
+                                                       == 
+                                                       (0x707fU 
+                                                        & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                                       ? 7U
+                                                       : 0U))))))))));
+        vlTOPp->Proc_noparam__DOT__v__DOT__ctrl__DOT__dmem_reqstream_type_D 
+            = (((((((((0x7033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                      | (0x6033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                     | (0x4033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                    | (0x2033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                   | (0x3033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                  | (0x40005033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                 | (0x5033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                | (0x1033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))
+                ? 0U : (((((((((0x48000077U == (0xfe00707fU 
+                                                & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                               | (0x4a000077U == (0xfe00707fU 
+                                                  & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                              | (0x13U == (0x707fU 
+                                           & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                             | (0x7013U == (0x707fU 
+                                            & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                            | (0x6013U == (0x707fU 
+                                           & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                           | (0x4013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                          | (0x2013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                         | (0x3013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))
+                         ? 0U : (((((((((0x40005013U 
+                                         == (0xfe00707fU 
+                                             & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                                        | (0x5013U 
+                                           == (0xfe00707fU 
+                                               & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                                       | (0x1013U == 
+                                          (0xfe00707fU 
+                                           & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                                      | (0x37U == (0x7fU 
+                                                   & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                                     | (0x17U == (0x7fU 
+                                                  & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                                    | (0x2003U == (0x707fU 
+                                                   & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                                   | (0x2023U == (0x707fU 
+                                                  & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                                  | (0x1063U == (0x707fU 
+                                                 & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))
+                                  ? ((0x40005013U == 
+                                      (0xfe00707fU 
+                                       & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                      ? 0U : ((0x5013U 
+                                               == (0xfe00707fU 
+                                                   & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                               ? 0U
+                                               : ((0x1013U 
+                                                   == 
+                                                   (0xfe00707fU 
+                                                    & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                                   ? 0U
+                                                   : 
+                                                  ((0x37U 
+                                                    == 
+                                                    (0x7fU 
+                                                     & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                                    ? 0U
+                                                    : 
+                                                   ((0x17U 
+                                                     == 
+                                                     (0x7fU 
+                                                      & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                                     ? 0U
+                                                     : 
+                                                    ((0x2003U 
+                                                      == 
+                                                      (0x707fU 
+                                                       & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                                      ? 1U
+                                                      : 
+                                                     ((0x2023U 
+                                                       == 
+                                                       (0x707fU 
+                                                        & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                                       ? 2U
+                                                       : 0U)))))))
+                                  : 0U)));
+        vlTOPp->Proc_noparam__DOT__v__DOT__op2_sel_D 
+            = (((((((((0x7033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                      | (0x6033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                     | (0x4033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                    | (0x2033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                   | (0x3033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                  | (0x40005033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                 | (0x5033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                | (0x1033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))
+                ? 0U : (((((((((0x48000077U == (0xfe00707fU 
+                                                & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                               | (0x4a000077U == (0xfe00707fU 
+                                                  & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                              | (0x13U == (0x707fU 
+                                           & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                             | (0x7013U == (0x707fU 
+                                            & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                            | (0x6013U == (0x707fU 
+                                           & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                           | (0x4013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                          | (0x2013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                         | (0x3013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))
+                         ? ((0x48000077U == (0xfe00707fU 
+                                             & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                             ? 0U : ((0x4a000077U == 
+                                      (0xfe00707fU 
+                                       & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                      ? 0U : 1U)) : 
+                        (((((((((0x40005013U == (0xfe00707fU 
+                                                 & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                                | (0x5013U == (0xfe00707fU 
+                                               & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                               | (0x1013U == (0xfe00707fU 
+                                              & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                              | (0x37U == (0x7fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                             | (0x17U == (0x7fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                            | (0x2003U == (0x707fU 
+                                           & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                           | (0x2023U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                          | (0x1063U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))
+                          ? ((0x40005013U == (0xfe00707fU 
+                                              & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                              ? 1U : ((0x5013U == (0xfe00707fU 
+                                                   & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                       ? 1U : ((0x1013U 
+                                                == 
+                                                (0xfe00707fU 
+                                                 & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                                ? 1U
+                                                : (
+                                                   (0x37U 
+                                                    == 
+                                                    (0x7fU 
+                                                     & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                                    ? 1U
+                                                    : 
+                                                   ((0x17U 
+                                                     == 
+                                                     (0x7fU 
+                                                      & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                                     ? 1U
+                                                     : 
+                                                    ((0x2003U 
+                                                      == 
+                                                      (0x707fU 
+                                                       & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                                      ? 1U
+                                                      : 
+                                                     ((0x2023U 
+                                                       == 
+                                                       (0x707fU 
+                                                        & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                                       ? 1U
+                                                       : 0U)))))))
+                          : ((0x63U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                              ? 0U : ((0x4063U == (0x707fU 
+                                                   & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                       ? 0U : ((0x6063U 
+                                                == 
+                                                (0x707fU 
+                                                 & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                                ? 0U
+                                                : (
                                                    (0x5063U 
                                                     == 
                                                     (0x707fU 
@@ -518,267 +944,14 @@ void VProc_noparam::_settle__TOP__2(VProc_noparam__Syms* __restrict vlSymsp) {
                                                       == 
                                                       (0x7fU 
                                                        & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
-                                                      ? 2U
+                                                      ? 0U
                                                       : 
                                                      ((0x67U 
                                                        == 
                                                        (0x707fU 
                                                         & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
-                                                       ? 2U
-                                                       : 0U))))))));
-        vlTOPp->Proc_noparam__DOT__v__DOT__ctrl__DOT__br_type_D 
-            = (((((((((0x7033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
-                      | (0x6033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                     | (0x4033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                    | (0x2033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                   | (0x3033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                  | (0x40005033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                 | (0x5033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                | (0x1033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))
-                ? 0U : (((((((((0x13U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
-                               | (0x7013U == (0x707fU 
-                                              & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                              | (0x6013U == (0x707fU 
-                                             & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                             | (0x4013U == (0x707fU 
-                                            & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                            | (0x2013U == (0x707fU 
-                                           & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                           | (0x3013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                          | (0x40005013U == (0xfe00707fU 
-                                             & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                         | (0x5013U == (0xfe00707fU 
-                                        & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))
-                         ? 0U : (((((((((0x1013U == 
-                                         (0xfe00707fU 
-                                          & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
-                                        | (0x37U == 
-                                           (0x7fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                                       | (0x17U == 
-                                          (0x7fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                                      | (0x2003U == 
-                                         (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                                     | (0x2023U == 
-                                        (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                                    | (0x1063U == (0x707fU 
-                                                   & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                                   | (0x63U == (0x707fU 
-                                                & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                                  | (0x4063U == (0x707fU 
-                                                 & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))
-                                  ? ((0x1013U == (0xfe00707fU 
-                                                  & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
-                                      ? 0U : ((0x37U 
-                                               == (0x7fU 
-                                                   & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
-                                               ? 0U
-                                               : ((0x17U 
-                                                   == 
-                                                   (0x7fU 
-                                                    & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
-                                                   ? 0U
-                                                   : 
-                                                  ((0x2003U 
-                                                    == 
-                                                    (0x707fU 
-                                                     & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
-                                                    ? 0U
-                                                    : 
-                                                   ((0x2023U 
-                                                     == 
-                                                     (0x707fU 
-                                                      & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
-                                                     ? 0U
-                                                     : 
-                                                    ((0x1063U 
-                                                      == 
-                                                      (0x707fU 
-                                                       & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
-                                                      ? 1U
-                                                      : 
-                                                     ((0x63U 
-                                                       == 
-                                                       (0x707fU 
-                                                        & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
-                                                       ? 4U
-                                                       : 2U)))))))
-                                  : ((0x6063U == (0x707fU 
-                                                  & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
-                                      ? 3U : ((0x5063U 
-                                               == (0x707fU 
-                                                   & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
-                                               ? 5U
-                                               : ((0x7063U 
-                                                   == 
-                                                   (0x707fU 
-                                                    & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
-                                                   ? 6U
-                                                   : 
-                                                  ((0x6fU 
-                                                    == 
-                                                    (0x7fU 
-                                                     & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
-                                                    ? 0U
-                                                    : 
-                                                   ((0x67U 
-                                                     == 
-                                                     (0x707fU 
-                                                      & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
-                                                     ? 7U
-                                                     : 0U))))))));
-        vlTOPp->Proc_noparam__DOT__v__DOT__ctrl__DOT__dmem_reqstream_type_D 
-            = (((((((((0x7033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
-                      | (0x6033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                     | (0x4033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                    | (0x2033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                   | (0x3033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                  | (0x40005033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                 | (0x5033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                | (0x1033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))
-                ? 0U : (((((((((0x13U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
-                               | (0x7013U == (0x707fU 
-                                              & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                              | (0x6013U == (0x707fU 
-                                             & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                             | (0x4013U == (0x707fU 
-                                            & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                            | (0x2013U == (0x707fU 
-                                           & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                           | (0x3013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                          | (0x40005013U == (0xfe00707fU 
-                                             & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                         | (0x5013U == (0xfe00707fU 
-                                        & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))
-                         ? 0U : (((((((((0x1013U == 
-                                         (0xfe00707fU 
-                                          & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
-                                        | (0x37U == 
-                                           (0x7fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                                       | (0x17U == 
-                                          (0x7fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                                      | (0x2003U == 
-                                         (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                                     | (0x2023U == 
-                                        (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                                    | (0x1063U == (0x707fU 
-                                                   & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                                   | (0x63U == (0x707fU 
-                                                & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                                  | (0x4063U == (0x707fU 
-                                                 & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))
-                                  ? ((0x1013U == (0xfe00707fU 
-                                                  & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
-                                      ? 0U : ((0x37U 
-                                               == (0x7fU 
-                                                   & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
-                                               ? 0U
-                                               : ((0x17U 
-                                                   == 
-                                                   (0x7fU 
-                                                    & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
-                                                   ? 0U
-                                                   : 
-                                                  ((0x2003U 
-                                                    == 
-                                                    (0x707fU 
-                                                     & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
-                                                    ? 1U
-                                                    : 
-                                                   ((0x2023U 
-                                                     == 
-                                                     (0x707fU 
-                                                      & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
-                                                     ? 2U
-                                                     : 0U)))))
-                                  : 0U)));
-        vlTOPp->Proc_noparam__DOT__v__DOT__op2_sel_D 
-            = (((((((((0x7033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
-                      | (0x6033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                     | (0x4033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                    | (0x2033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                   | (0x3033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                  | (0x40005033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                 | (0x5033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                | (0x1033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))
-                ? 0U : (((((((((0x13U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
-                               | (0x7013U == (0x707fU 
-                                              & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                              | (0x6013U == (0x707fU 
-                                             & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                             | (0x4013U == (0x707fU 
-                                            & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                            | (0x2013U == (0x707fU 
-                                           & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                           | (0x3013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                          | (0x40005013U == (0xfe00707fU 
-                                             & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                         | (0x5013U == (0xfe00707fU 
-                                        & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))
-                         ? 1U : (((((((((0x1013U == 
-                                         (0xfe00707fU 
-                                          & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
-                                        | (0x37U == 
-                                           (0x7fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                                       | (0x17U == 
-                                          (0x7fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                                      | (0x2003U == 
-                                         (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                                     | (0x2023U == 
-                                        (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                                    | (0x1063U == (0x707fU 
-                                                   & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                                   | (0x63U == (0x707fU 
-                                                & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                                  | (0x4063U == (0x707fU 
-                                                 & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))
-                                  ? ((0x1013U == (0xfe00707fU 
-                                                  & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
-                                      ? 1U : ((0x37U 
-                                               == (0x7fU 
-                                                   & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
-                                               ? 1U
-                                               : ((0x17U 
-                                                   == 
-                                                   (0x7fU 
-                                                    & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
-                                                   ? 1U
-                                                   : 
-                                                  ((0x2003U 
-                                                    == 
-                                                    (0x707fU 
-                                                     & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
-                                                    ? 1U
-                                                    : 
-                                                   ((0x2023U 
-                                                     == 
-                                                     (0x707fU 
-                                                      & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
-                                                     ? 1U
-                                                     : 0U)))))
-                                  : ((0x6063U == (0x707fU 
-                                                  & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
-                                      ? 0U : ((0x5063U 
-                                               == (0x707fU 
-                                                   & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
-                                               ? 0U
-                                               : ((0x7063U 
-                                                   == 
-                                                   (0x707fU 
-                                                    & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
-                                                   ? 0U
-                                                   : 
-                                                  ((0x6fU 
-                                                    == 
-                                                    (0x7fU 
-                                                     & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
-                                                    ? 0U
-                                                    : 
-                                                   ((0x67U 
-                                                     == 
-                                                     (0x707fU 
-                                                      & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
-                                                     ? 1U
-                                                     : 0U))))))));
+                                                       ? 1U
+                                                       : 0U))))))))));
     }
     vlTOPp->Proc_noparam__DOT__v__DOT__op1_sel_D = 
         ((~ ((((((((0x13U == vlTOPp->Proc_noparam__DOT__v__DOT__inst_D) 
@@ -797,26 +970,33 @@ void VProc_noparam::_settle__TOP__2(VProc_noparam__Syms* __restrict vlSymsp) {
                   | (0x40005033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
                  | (0x5033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
                 | (0x1033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))) 
-            & ((~ ((((((((0x13U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
-                         | (0x7013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                        | (0x6013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                       | (0x4013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                      | (0x2013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                     | (0x3013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                    | (0x40005013U == (0xfe00707fU 
+            & ((~ ((((((((0x48000077U == (0xfe00707fU 
+                                          & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                         | (0x4a000077U == (0xfe00707fU 
+                                            & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                        | (0x13U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                       | (0x7013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                      | (0x6013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                     | (0x4013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                    | (0x2013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                   | (0x3013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))) 
+               & (((((((((0x40005013U == (0xfe00707fU 
+                                          & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                         | (0x5013U == (0xfe00707fU 
+                                        & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                        | (0x1013U == (0xfe00707fU 
                                        & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                   | (0x5013U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))) 
-               & (((((((((0x1013U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
-                         | (0x37U == (0x7fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                        | (0x17U == (0x7fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                       | (0x2003U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                      | (0x2023U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                     | (0x1063U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                    | (0x63U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                   | (0x4063U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                  & ((0x1013U != (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
-                     & ((0x37U == (0x7fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
-                        | (0x17U == (0x7fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))))))));
+                       | (0x37U == (0x7fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                      | (0x17U == (0x7fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                     | (0x2003U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                    | (0x2023U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                   | (0x1063U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                  & ((0x40005013U != (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                     & ((0x5013U != (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                        & ((0x1013U != (0xfe00707fU 
+                                        & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                           & ((0x37U == (0x7fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                              | (0x17U == (0x7fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))))))))));
     vlTOPp->Proc_noparam__DOT__v__DOT__ctrl__DOT__csrw_D 
         = (((((((((0x13U == vlTOPp->Proc_noparam__DOT__v__DOT__inst_D) 
                   | (0x1063U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
@@ -868,128 +1048,152 @@ void VProc_noparam::_settle__TOP__2(VProc_noparam__Syms* __restrict vlSymsp) {
                                           (0xfe00707fU 
                                            & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))
                                        ? 0U : (((((
-                                                   ((((0x13U 
+                                                   ((((0x48000077U 
                                                        == 
-                                                       (0x707fU 
+                                                       (0xfe00707fU 
                                                         & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
-                                                      | (0x7013U 
+                                                      | (0x4a000077U 
                                                          == 
-                                                         (0x707fU 
+                                                         (0xfe00707fU 
                                                           & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                                                     | (0x6013U 
+                                                     | (0x13U 
                                                         == 
                                                         (0x707fU 
                                                          & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                                                    | (0x4013U 
+                                                    | (0x7013U 
                                                        == 
                                                        (0x707fU 
                                                         & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                                                   | (0x2013U 
+                                                   | (0x6013U 
                                                       == 
                                                       (0x707fU 
                                                        & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                                                  | (0x3013U 
+                                                  | (0x4013U 
                                                      == 
                                                      (0x707fU 
                                                       & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                                                 | (0x40005013U 
+                                                 | (0x2013U 
                                                     == 
-                                                    (0xfe00707fU 
+                                                    (0x707fU 
                                                      & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                                                | (0x5013U 
+                                                | (0x3013U 
                                                    == 
-                                                   (0xfe00707fU 
+                                                   (0x707fU 
                                                     & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))
                                                 ? 0U
                                                 : (
-                                                   ((((((((0x1013U 
+                                                   ((((((((0x40005013U 
                                                            == 
                                                            (0xfe00707fU 
                                                             & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
-                                                          | (0x37U 
+                                                          | (0x5013U 
                                                              == 
-                                                             (0x7fU 
+                                                             (0xfe00707fU 
                                                               & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                                                         | (0x17U 
+                                                         | (0x1013U 
                                                             == 
-                                                            (0x7fU 
+                                                            (0xfe00707fU 
                                                              & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                                                        | (0x2003U 
+                                                        | (0x37U 
                                                            == 
-                                                           (0x707fU 
+                                                           (0x7fU 
                                                             & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                                                       | (0x2023U 
+                                                       | (0x17U 
                                                           == 
-                                                          (0x707fU 
+                                                          (0x7fU 
                                                            & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                                                      | (0x1063U 
+                                                      | (0x2003U 
                                                          == 
                                                          (0x707fU 
                                                           & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                                                     | (0x63U 
+                                                     | (0x2023U 
                                                         == 
                                                         (0x707fU 
                                                          & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                                                    | (0x4063U 
+                                                    | (0x1063U 
                                                        == 
                                                        (0x707fU 
                                                         & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))
                                                     ? 
-                                                   ((0x1013U 
+                                                   ((0x40005013U 
                                                      == 
                                                      (0xfe00707fU 
                                                       & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
                                                      ? 0U
                                                      : 
-                                                    ((0x37U 
+                                                    ((0x5013U 
                                                       == 
-                                                      (0x7fU 
+                                                      (0xfe00707fU 
                                                        & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
-                                                      ? 3U
+                                                      ? 0U
                                                       : 
-                                                     ((0x17U 
+                                                     ((0x1013U 
                                                        == 
-                                                       (0x7fU 
+                                                       (0xfe00707fU 
                                                         & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
-                                                       ? 3U
+                                                       ? 0U
                                                        : 
-                                                      ((0x2003U 
+                                                      ((0x37U 
                                                         == 
-                                                        (0x707fU 
+                                                        (0x7fU 
                                                          & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
-                                                        ? 0U
+                                                        ? 3U
                                                         : 
-                                                       ((0x2023U 
+                                                       ((0x17U 
                                                          == 
-                                                         (0x707fU 
+                                                         (0x7fU 
                                                           & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
-                                                         ? 1U
-                                                         : 2U)))))
+                                                         ? 3U
+                                                         : 
+                                                        ((0x2003U 
+                                                          == 
+                                                          (0x707fU 
+                                                           & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                                          ? 0U
+                                                          : 
+                                                         ((0x2023U 
+                                                           == 
+                                                           (0x707fU 
+                                                            & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                                           ? 1U
+                                                           : 2U)))))))
                                                     : 
-                                                   ((0x6063U 
+                                                   ((0x63U 
                                                      == 
                                                      (0x707fU 
                                                       & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
                                                      ? 2U
                                                      : 
-                                                    ((0x5063U 
+                                                    ((0x4063U 
                                                       == 
                                                       (0x707fU 
                                                        & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
                                                       ? 2U
                                                       : 
-                                                     ((0x7063U 
+                                                     ((0x6063U 
                                                        == 
                                                        (0x707fU 
                                                         & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
                                                        ? 2U
                                                        : 
-                                                      ((0x6fU 
+                                                      ((0x5063U 
                                                         == 
-                                                        (0x7fU 
+                                                        (0x707fU 
                                                          & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
-                                                        ? 4U
-                                                        : 0U))))))));
+                                                        ? 2U
+                                                        : 
+                                                       ((0x7063U 
+                                                         == 
+                                                         (0x707fU 
+                                                          & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                                         ? 2U
+                                                         : 
+                                                        ((0x6fU 
+                                                          == 
+                                                          (0x7fU 
+                                                           & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                                          ? 4U
+                                                          : 0U))))))))));
     vlTOPp->Proc_noparam__DOT__v__DOT__ctrl__DOT__jal_D 
         = ((~ ((((((((0x13U == vlTOPp->Proc_noparam__DOT__v__DOT__inst_D) 
                      | (0x1063U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
@@ -1010,29 +1214,36 @@ void VProc_noparam::_settle__TOP__2(VProc_noparam__Syms* __restrict vlSymsp) {
                                        & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
                    | (0x5033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
                   | (0x1033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))) 
-              & ((~ ((((((((0x13U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
-                           | (0x7013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                          | (0x6013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                         | (0x4013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                        | (0x2013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                       | (0x3013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                      | (0x40005013U == (0xfe00707fU 
-                                         & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                     | (0x5013U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))) 
-                 & ((~ ((((((((0x1013U == (0xfe00707fU 
-                                           & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
-                              | (0x37U == (0x7fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                             | (0x17U == (0x7fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                            | (0x2003U == (0x707fU 
-                                           & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                           | (0x2023U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                          | (0x1063U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                         | (0x63U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                        | (0x4063U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))) 
-                    & ((0x6063U != (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
-                       & ((0x5063U != (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
-                          & ((0x7063U != (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
-                             & (0x6fU == (0x7fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))))))));
+              & ((~ ((((((((0x48000077U == (0xfe00707fU 
+                                            & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                           | (0x4a000077U == (0xfe00707fU 
+                                              & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                          | (0x13U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                         | (0x7013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                        | (0x6013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                       | (0x4013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                      | (0x2013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                     | (0x3013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))) 
+                 & ((~ ((((((((0x40005013U == (0xfe00707fU 
+                                               & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                              | (0x5013U == (0xfe00707fU 
+                                             & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                             | (0x1013U == (0xfe00707fU 
+                                            & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                            | (0x37U == (0x7fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                           | (0x17U == (0x7fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                          | (0x2003U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                         | (0x2023U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                        | (0x1063U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))) 
+                    & ((0x63U != (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                       & ((0x4063U != (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                          & ((0x6063U != (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                             & ((0x5063U != (0x707fU 
+                                             & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                                & ((0x7063U != (0x707fU 
+                                                & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                                   & (0x6fU == (0x7fU 
+                                                & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))))))))));
     vlTOPp->Proc_noparam__DOT__v__DOT__ctrl__DOT__mul_D 
         = (((((((((0x13U == vlTOPp->Proc_noparam__DOT__v__DOT__inst_D) 
                   | (0x1063U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
@@ -1087,35 +1298,50 @@ void VProc_noparam::_settle__TOP__2(VProc_noparam__Syms* __restrict vlSymsp) {
                   | (0x40005033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
                  | (0x5033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
                 | (0x1033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-               | (((((((((0x13U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
-                         | (0x7013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                        | (0x6013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                       | (0x4013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                      | (0x2013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                     | (0x3013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                    | (0x40005013U == (0xfe00707fU 
-                                       & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                   | (0x5013U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                  | (((((((((0x1013U == (0xfe00707fU 
-                                         & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
-                            | (0x37U == (0x7fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                           | (0x17U == (0x7fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                          | (0x2003U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                         | (0x2023U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                        | (0x1063U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                       | (0x63U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                      | (0x4063U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))
-                      ? ((0x1013U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
-                         | ((0x37U != (0x7fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
-                            & (0x17U != (0x7fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))))
-                      : ((0x6063U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
-                         | ((0x5063U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
-                            | ((0x7063U == (0x707fU 
-                                            & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
-                               | ((0x6fU != (0x7fU 
+               | (((((((((0x48000077U == (0xfe00707fU 
+                                          & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                         | (0x4a000077U == (0xfe00707fU 
+                                            & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                        | (0x13U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                       | (0x7013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                      | (0x6013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                     | (0x4013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                    | (0x2013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                   | (0x3013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                  | (((((((((0x40005013U == (0xfe00707fU 
                                              & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
-                                  & (0x67U == (0x707fU 
-                                               & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))))))));
+                            | (0x5013U == (0xfe00707fU 
+                                           & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                           | (0x1013U == (0xfe00707fU 
+                                          & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                          | (0x37U == (0x7fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                         | (0x17U == (0x7fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                        | (0x2003U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                       | (0x2023U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                      | (0x1063U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))
+                      ? ((0x40005013U == (0xfe00707fU 
+                                          & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                         | ((0x5013U == (0xfe00707fU 
+                                         & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                            | ((0x1013U == (0xfe00707fU 
+                                            & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                               | ((0x37U != (0x7fU 
+                                             & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                                  & (0x17U != (0x7fU 
+                                               & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))))))
+                      : ((0x63U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                         | ((0x4063U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                            | ((0x6063U == (0x707fU 
+                                            & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                               | ((0x5063U == (0x707fU 
+                                               & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                                  | ((0x7063U == (0x707fU 
+                                                  & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                                     | ((0x6fU != (0x7fU 
+                                                   & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                                        & (0x67U == 
+                                           (0x707fU 
+                                            & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))))))))));
         vlTOPp->Proc_noparam__DOT__v__DOT__ctrl__DOT__rs2_en_D 
             = (((((((((0x7033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
                       | (0x6033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
@@ -1125,56 +1351,69 @@ void VProc_noparam::_settle__TOP__2(VProc_noparam__Syms* __restrict vlSymsp) {
                   | (0x40005033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
                  | (0x5033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
                 | (0x1033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-               | ((~ ((((((((0x13U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
-                            | (0x7013U == (0x707fU 
+               | (((((((((0x48000077U == (0xfe00707fU 
+                                          & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                         | (0x4a000077U == (0xfe00707fU 
+                                            & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                        | (0x13U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                       | (0x7013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                      | (0x6013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                     | (0x4013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                    | (0x2013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                   | (0x3013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))
+                   ? ((0x48000077U == (0xfe00707fU 
+                                       & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                      | (0x4a000077U == (0xfe00707fU 
+                                         & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))
+                   : (((((((((0x40005013U == (0xfe00707fU 
+                                              & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                             | (0x5013U == (0xfe00707fU 
+                                            & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                            | (0x1013U == (0xfe00707fU 
                                            & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                           | (0x6013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                          | (0x4013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                         | (0x2013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                        | (0x3013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                       | (0x40005013U == (0xfe00707fU 
-                                          & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                      | (0x5013U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))) 
-                  & (((((((((0x1013U == (0xfe00707fU 
-                                         & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
-                            | (0x37U == (0x7fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                           | (0x17U == (0x7fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                          | (0x2003U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                         | (0x2023U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                        | (0x1063U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                       | (0x63U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                      | (0x4063U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))
-                      ? ((0x1013U != (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
-                         & ((0x37U != (0x7fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
-                            & ((0x17U != (0x7fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
-                               & (0x2003U != (0x707fU 
-                                              & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))))
-                      : ((0x6063U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
-                         | ((0x5063U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
-                            | (0x7063U == (0x707fU 
-                                           & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))))));
+                           | (0x37U == (0x7fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                          | (0x17U == (0x7fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                         | (0x2003U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                        | (0x2023U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                       | (0x1063U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))
+                       ? ((0x40005013U != (0xfe00707fU 
+                                           & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                          & ((0x5013U != (0xfe00707fU 
+                                          & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                             & ((0x1013U != (0xfe00707fU 
+                                             & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                                & ((0x37U != (0x7fU 
+                                              & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                                   & ((0x17U != (0x7fU 
+                                                 & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                                      & (0x2003U != 
+                                         (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))))))
+                       : ((0x63U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                          | ((0x4063U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                             | ((0x6063U == (0x707fU 
+                                             & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                                | ((0x5063U == (0x707fU 
+                                                & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                                   | (0x7063U == (0x707fU 
+                                                  & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))))))));
         vlTOPp->Proc_noparam__DOT__v__DOT__ctrl__DOT__csrr_D = 0U;
     }
-    vlTOPp->xcel_reqstream_msg = ((IData)(vlTOPp->Proc_noparam__DOT__v__DOT__xcel_queue__DOT__genblk1__DOT__ctrl__DOT__full)
-                                   ? vlTOPp->Proc_noparam__DOT__v__DOT__xcel_queue__DOT__genblk1__DOT__dpath__DOT__qstore
-                                   : ((IData)(vlTOPp->Proc_noparam__DOT__v__DOT__xcel_queue__DOT__genblk1__DOT__ctrl__DOT__full)
-                                       ? 0ULL : vlTOPp->Proc_noparam__DOT__v__DOT__xcel_reqstream_enq_msg));
-    __Vtemp226[0U] = (IData)((QData)((IData)(vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_enq_msg_data)));
-    __Vtemp226[1U] = ((0xfffffffcU & (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__alu_result_X 
+    __Vtemp219[0U] = (IData)((QData)((IData)(vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_enq_msg_data)));
+    __Vtemp219[1U] = ((0xfffffffcU & (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__alu_result_X 
                                       << 2U)) | (IData)(
                                                         ((QData)((IData)(vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_enq_msg_data)) 
                                                          >> 0x20U)));
-    __Vtemp226[2U] = (3U & (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__alu_result_X 
+    __Vtemp219[2U] = (3U & (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__alu_result_X 
                             >> 0x1eU));
-    VL_EXTEND_WW(74,66, __Vtemp227, __Vtemp226);
+    VL_EXTEND_WW(74,66, __Vtemp220, __Vtemp219);
     vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_enq_msg[0U] 
-        = __Vtemp227[0U];
+        = __Vtemp220[0U];
     vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_enq_msg[1U] 
-        = __Vtemp227[1U];
+        = __Vtemp220[1U];
     vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_enq_msg[2U] 
         = ((0xfffffc00U & (((2U == (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__ctrl__DOT__dmem_reqstream_type_X))
                              ? 1U : 0U) << 0xaU)) | 
-           __Vtemp227[2U]);
+           __Vtemp220[2U]);
     vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__ex_result_X 
         = ((0U == (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__ex_result_sel_X))
             ? vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__alu_result_X
@@ -1386,24 +1625,6 @@ void VProc_noparam::_settle__TOP__2(VProc_noparam__Syms* __restrict vlSymsp) {
             vlTOPp->Proc_noparam__DOT__v__DOT__ctrl__DOT__mngr2proc_rdy_D = 1U;
         }
     }
-    if (vlTOPp->Proc_noparam__DOT__v__DOT__dmem_queue__DOT__genblk1__DOT__ctrl__DOT__full) {
-        vlTOPp->Proc_noparam__DOT__v__DOT____Vcellout__dmem_queue__deq_msg[0U] 
-            = vlTOPp->Proc_noparam__DOT__v__DOT__dmem_queue__DOT__genblk1__DOT__dpath__DOT__qstore[0U];
-        vlTOPp->Proc_noparam__DOT__v__DOT____Vcellout__dmem_queue__deq_msg[1U] 
-            = vlTOPp->Proc_noparam__DOT__v__DOT__dmem_queue__DOT__genblk1__DOT__dpath__DOT__qstore[1U];
-        vlTOPp->Proc_noparam__DOT__v__DOT____Vcellout__dmem_queue__deq_msg[2U] 
-            = vlTOPp->Proc_noparam__DOT__v__DOT__dmem_queue__DOT__genblk1__DOT__dpath__DOT__qstore[2U];
-    } else {
-        vlTOPp->Proc_noparam__DOT__v__DOT____Vcellout__dmem_queue__deq_msg[0U] 
-            = ((IData)(vlTOPp->Proc_noparam__DOT__v__DOT__dmem_queue__DOT__genblk1__DOT__ctrl__DOT__full)
-                ? 0U : vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_enq_msg[0U]);
-        vlTOPp->Proc_noparam__DOT__v__DOT____Vcellout__dmem_queue__deq_msg[1U] 
-            = ((IData)(vlTOPp->Proc_noparam__DOT__v__DOT__dmem_queue__DOT__genblk1__DOT__ctrl__DOT__full)
-                ? 0U : vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_enq_msg[1U]);
-        vlTOPp->Proc_noparam__DOT__v__DOT____Vcellout__dmem_queue__deq_msg[2U] 
-            = ((IData)(vlTOPp->Proc_noparam__DOT__v__DOT__dmem_queue__DOT__genblk1__DOT__ctrl__DOT__full)
-                ? 0U : vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_enq_msg[2U]);
-    }
     vlTOPp->commit_inst = ((IData)(vlTOPp->Proc_noparam__DOT__v__DOT__ctrl__DOT__val_W) 
                            & (~ (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__ctrl__DOT__stall_W)));
     vlTOPp->Proc_noparam__DOT__v__DOT__proc2mngr_enq_val 
@@ -1498,9 +1719,6 @@ void VProc_noparam::_settle__TOP__2(VProc_noparam__Syms* __restrict vlSymsp) {
                      & (~ (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__ctrl__DOT__xcelreq_msg_type_X))))) 
               | ((IData)(vlTOPp->Proc_noparam__DOT__v__DOT__ctrl__DOT__mul_D) 
                  & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imulresp_q__DOT__genblk1__DOT__ctrl__DOT__full))));
-    vlTOPp->dmem_reqstream_msg[0U] = vlTOPp->Proc_noparam__DOT__v__DOT____Vcellout__dmem_queue__deq_msg[0U];
-    vlTOPp->dmem_reqstream_msg[1U] = vlTOPp->Proc_noparam__DOT__v__DOT____Vcellout__dmem_queue__deq_msg[1U];
-    vlTOPp->dmem_reqstream_msg[2U] = vlTOPp->Proc_noparam__DOT__v__DOT____Vcellout__dmem_queue__deq_msg[2U];
     vlTOPp->Proc_noparam__DOT__v__DOT__proc2mngr_queue__DOT__genblk1__DOT__ctrl__DOT__do_enq 
         = ((~ (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__proc2mngr_queue__DOT__genblk1__DOT__ctrl__DOT__full)) 
            & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__proc2mngr_enq_val));
@@ -1511,14 +1729,14 @@ void VProc_noparam::_settle__TOP__2(VProc_noparam__Syms* __restrict vlSymsp) {
              & (~ (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__ctrl__DOT__stall_X))) 
             & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__ctrl__DOT__mul_X)) 
            & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__imul_ostream_val_X));
-    vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_enq_val 
-        = (((IData)(vlTOPp->Proc_noparam__DOT__v__DOT__ctrl__DOT__val_X) 
-            & (~ (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__ctrl__DOT__stall_X))) 
-           & (0U != (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__ctrl__DOT__dmem_reqstream_type_X)));
     vlTOPp->Proc_noparam__DOT__v__DOT__xcel_reqstream_enq_val 
         = (((IData)(vlTOPp->Proc_noparam__DOT__v__DOT__ctrl__DOT__val_X) 
             & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__ctrl__DOT__xcelreq_X)) 
            & (~ (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__ctrl__DOT__stall_X)));
+    vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_enq_val 
+        = (((IData)(vlTOPp->Proc_noparam__DOT__v__DOT__ctrl__DOT__val_X) 
+            & (~ (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__ctrl__DOT__stall_X))) 
+           & (0U != (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__ctrl__DOT__dmem_reqstream_type_X)));
     vlTOPp->Proc_noparam__DOT__v__DOT__ctrl__DOT__osquash_X 
         = (((IData)(vlTOPp->Proc_noparam__DOT__v__DOT__ctrl__DOT__val_X) 
             & (~ (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__ctrl__DOT__stall_X))) 
@@ -1554,22 +1772,27 @@ void VProc_noparam::_settle__TOP__2(VProc_noparam__Syms* __restrict vlSymsp) {
                 | (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__ctrl__DOT__ostall_X)) 
                | (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__ctrl__DOT__ostall_M)) 
               | (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__ctrl__DOT__ostall_W)));
+    vlTOPp->proc2mngr_msg = (((IData)(vlTOPp->Proc_noparam__DOT__v__DOT__proc2mngr_queue__DOT__genblk1__DOT__ctrl__DOT__full)
+                               ? vlTOPp->Proc_noparam__DOT__v__DOT__proc2mngr_queue__DOT__genblk1__DOT__dpath__DOT__qstore
+                               : ((IData)(vlTOPp->Proc_noparam__DOT__v__DOT__proc2mngr_queue__DOT__genblk1__DOT__ctrl__DOT__full)
+                                   ? 0U : vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__wb_result_W)) 
+                             & (- (IData)((IData)(vlTOPp->proc2mngr_val))));
     vlTOPp->Proc_noparam__DOT__v__DOT__proc2mngr_queue__DOT__genblk1__DOT__ctrl__DOT__do_deq 
         = ((IData)(vlTOPp->proc2mngr_rdy) & (IData)(vlTOPp->proc2mngr_val));
     vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imulresp_q__DOT__genblk1__DOT__ctrl__DOT__do_bypass 
         = (((~ (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imulresp_q__DOT__genblk1__DOT__ctrl__DOT__full)) 
             & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imulresp_q__DOT__genblk1__DOT__ctrl__DOT__do_enq)) 
            & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imulresp_q__DOT__genblk1__DOT__ctrl__DOT__do_deq));
-    vlTOPp->Proc_noparam__DOT__v__DOT__dmem_queue__DOT__genblk1__DOT__ctrl__DOT__do_enq 
-        = ((~ (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__dmem_queue__DOT__genblk1__DOT__ctrl__DOT__full)) 
-           & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_enq_val));
-    vlTOPp->dmem_reqstream_val = ((IData)(vlTOPp->Proc_noparam__DOT__v__DOT__dmem_queue__DOT__genblk1__DOT__ctrl__DOT__full) 
-                                  | (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_enq_val));
     vlTOPp->Proc_noparam__DOT__v__DOT__xcel_queue__DOT__genblk1__DOT__ctrl__DOT__do_enq 
         = ((~ (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__xcel_queue__DOT__genblk1__DOT__ctrl__DOT__full)) 
            & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__xcel_reqstream_enq_val));
     vlTOPp->xcel_reqstream_val = ((IData)(vlTOPp->Proc_noparam__DOT__v__DOT__xcel_queue__DOT__genblk1__DOT__ctrl__DOT__full) 
                                   | (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__xcel_reqstream_enq_val));
+    vlTOPp->Proc_noparam__DOT__v__DOT__dmem_queue__DOT__genblk1__DOT__ctrl__DOT__do_enq 
+        = ((~ (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__dmem_queue__DOT__genblk1__DOT__ctrl__DOT__full)) 
+           & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_enq_val));
+    vlTOPp->dmem_reqstream_val = ((IData)(vlTOPp->Proc_noparam__DOT__v__DOT__dmem_queue__DOT__genblk1__DOT__ctrl__DOT__full) 
+                                  | (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_enq_val));
     vlTOPp->Proc_noparam__DOT__v__DOT__ctrl__DOT__squash_D 
         = ((IData)(vlTOPp->Proc_noparam__DOT__v__DOT__ctrl__DOT__val_D) 
            & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__ctrl__DOT__osquash_X));
@@ -1604,10 +1827,42 @@ void VProc_noparam::_settle__TOP__2(VProc_noparam__Syms* __restrict vlSymsp) {
            & (((IData)(vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imulresp_q__DOT__genblk1__DOT__ctrl__DOT__do_enq) 
                & (~ (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imulresp_q__DOT__genblk1__DOT__ctrl__DOT__do_bypass))) 
               | (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imulresp_q__DOT__genblk1__DOT__ctrl__DOT__full)));
-    vlTOPp->Proc_noparam__DOT__v__DOT__dmem_queue__DOT__genblk1__DOT__ctrl__DOT__do_deq 
-        = ((IData)(vlTOPp->dmem_reqstream_rdy) & (IData)(vlTOPp->dmem_reqstream_val));
+    vlTOPp->xcel_reqstream_msg = (((IData)(vlTOPp->Proc_noparam__DOT__v__DOT__xcel_queue__DOT__genblk1__DOT__ctrl__DOT__full)
+                                    ? vlTOPp->Proc_noparam__DOT__v__DOT__xcel_queue__DOT__genblk1__DOT__dpath__DOT__qstore
+                                    : ((IData)(vlTOPp->Proc_noparam__DOT__v__DOT__xcel_queue__DOT__genblk1__DOT__ctrl__DOT__full)
+                                        ? 0ULL : vlTOPp->Proc_noparam__DOT__v__DOT__xcel_reqstream_enq_msg)) 
+                                  & (- (QData)((IData)(vlTOPp->xcel_reqstream_val))));
     vlTOPp->Proc_noparam__DOT__v__DOT__xcel_queue__DOT__genblk1__DOT__ctrl__DOT__do_deq 
         = ((IData)(vlTOPp->xcel_reqstream_rdy) & (IData)(vlTOPp->xcel_reqstream_val));
+    vlTOPp->Proc_noparam__DOT____Vcellout__v__dmem_reqstream_msg[0U] = 0U;
+    vlTOPp->Proc_noparam__DOT____Vcellout__v__dmem_reqstream_msg[1U] = 0U;
+    vlTOPp->Proc_noparam__DOT____Vcellout__v__dmem_reqstream_msg[2U] = 0U;
+    if (vlTOPp->dmem_reqstream_val) {
+        if (vlTOPp->Proc_noparam__DOT__v__DOT__dmem_queue__DOT__genblk1__DOT__ctrl__DOT__full) {
+            vlTOPp->Proc_noparam__DOT____Vcellout__v__dmem_reqstream_msg[0U] 
+                = vlTOPp->Proc_noparam__DOT__v__DOT__dmem_queue__DOT__genblk1__DOT__dpath__DOT__qstore[0U];
+            vlTOPp->Proc_noparam__DOT____Vcellout__v__dmem_reqstream_msg[1U] 
+                = vlTOPp->Proc_noparam__DOT__v__DOT__dmem_queue__DOT__genblk1__DOT__dpath__DOT__qstore[1U];
+            vlTOPp->Proc_noparam__DOT____Vcellout__v__dmem_reqstream_msg[2U] 
+                = vlTOPp->Proc_noparam__DOT__v__DOT__dmem_queue__DOT__genblk1__DOT__dpath__DOT__qstore[2U];
+        } else {
+            vlTOPp->Proc_noparam__DOT____Vcellout__v__dmem_reqstream_msg[0U] 
+                = ((IData)(vlTOPp->Proc_noparam__DOT__v__DOT__dmem_queue__DOT__genblk1__DOT__ctrl__DOT__full)
+                    ? 0U : vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_enq_msg[0U]);
+            vlTOPp->Proc_noparam__DOT____Vcellout__v__dmem_reqstream_msg[1U] 
+                = ((IData)(vlTOPp->Proc_noparam__DOT__v__DOT__dmem_queue__DOT__genblk1__DOT__ctrl__DOT__full)
+                    ? 0U : vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_enq_msg[1U]);
+            vlTOPp->Proc_noparam__DOT____Vcellout__v__dmem_reqstream_msg[2U] 
+                = ((IData)(vlTOPp->Proc_noparam__DOT__v__DOT__dmem_queue__DOT__genblk1__DOT__ctrl__DOT__full)
+                    ? 0U : vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_enq_msg[2U]);
+        }
+        if ((0U == (7U & (vlTOPp->Proc_noparam__DOT____Vcellout__v__dmem_reqstream_msg[2U] 
+                          >> 0xaU)))) {
+            vlTOPp->Proc_noparam__DOT____Vcellout__v__dmem_reqstream_msg[0U] = 0U;
+        }
+    }
+    vlTOPp->Proc_noparam__DOT__v__DOT__dmem_queue__DOT__genblk1__DOT__ctrl__DOT__do_deq 
+        = ((IData)(vlTOPp->dmem_reqstream_rdy) & (IData)(vlTOPp->dmem_reqstream_val));
     vlTOPp->Proc_noparam__DOT__v__DOT__reg_en_D = (1U 
                                                    & ((~ (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__ctrl__DOT__stall_D)) 
                                                       | (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__ctrl__DOT__squash_D)));
@@ -1616,30 +1871,6 @@ void VProc_noparam::_settle__TOP__2(VProc_noparam__Syms* __restrict vlSymsp) {
              & (~ (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__ctrl__DOT__stall_D))) 
             & (~ (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__ctrl__DOT__squash_D))) 
            & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__ctrl__DOT__mul_D));
-    if (vlTOPp->Proc_noparam__DOT__v__DOT__imem_queue__DOT__genblk2__DOT__ctrl__DOT__empty) {
-        vlTOPp->Proc_noparam__DOT__v__DOT____Vcellout__imem_queue__deq_msg[0U] 
-            = ((IData)(vlTOPp->Proc_noparam__DOT__v__DOT__imem_queue__DOT__genblk2__DOT__ctrl__DOT__empty)
-                ? vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_enq_msg[0U]
-                : 0U);
-        vlTOPp->Proc_noparam__DOT__v__DOT____Vcellout__imem_queue__deq_msg[1U] 
-            = ((IData)(vlTOPp->Proc_noparam__DOT__v__DOT__imem_queue__DOT__genblk2__DOT__ctrl__DOT__empty)
-                ? vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_enq_msg[1U]
-                : 0U);
-        vlTOPp->Proc_noparam__DOT__v__DOT____Vcellout__imem_queue__deq_msg[2U] 
-            = ((IData)(vlTOPp->Proc_noparam__DOT__v__DOT__imem_queue__DOT__genblk2__DOT__ctrl__DOT__empty)
-                ? vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_enq_msg[2U]
-                : 0U);
-    } else {
-        vlTOPp->Proc_noparam__DOT__v__DOT____Vcellout__imem_queue__deq_msg[0U] 
-            = vlTOPp->Proc_noparam__DOT__v__DOT__imem_queue__DOT__genblk2__DOT__dpath__DOT__qstore__DOT__rfile
-            [vlTOPp->Proc_noparam__DOT__v__DOT__imem_queue__DOT__genblk2__DOT__ctrl__DOT__deq_ptr][0U];
-        vlTOPp->Proc_noparam__DOT__v__DOT____Vcellout__imem_queue__deq_msg[1U] 
-            = vlTOPp->Proc_noparam__DOT__v__DOT__imem_queue__DOT__genblk2__DOT__dpath__DOT__qstore__DOT__rfile
-            [vlTOPp->Proc_noparam__DOT__v__DOT__imem_queue__DOT__genblk2__DOT__ctrl__DOT__deq_ptr][1U];
-        vlTOPp->Proc_noparam__DOT__v__DOT____Vcellout__imem_queue__deq_msg[2U] 
-            = vlTOPp->Proc_noparam__DOT__v__DOT__imem_queue__DOT__genblk2__DOT__dpath__DOT__qstore__DOT__rfile
-            [vlTOPp->Proc_noparam__DOT__v__DOT__imem_queue__DOT__genblk2__DOT__ctrl__DOT__deq_ptr][2U];
-    }
     vlTOPp->Proc_noparam__DOT__v__DOT__ctrl__DOT__stall_F 
         = ((IData)(vlTOPp->Proc_noparam__DOT__v__DOT__ctrl__DOT__val_F) 
            & ((((((IData)(vlTOPp->Proc_noparam__DOT__v__DOT__ctrl__DOT__val_F) 
@@ -1655,17 +1886,17 @@ void VProc_noparam::_settle__TOP__2(VProc_noparam__Syms* __restrict vlSymsp) {
            & (((IData)(vlTOPp->Proc_noparam__DOT__v__DOT__proc2mngr_queue__DOT__genblk1__DOT__ctrl__DOT__do_enq) 
                & (~ (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__proc2mngr_queue__DOT__genblk1__DOT__ctrl__DOT__do_bypass))) 
               | (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__proc2mngr_queue__DOT__genblk1__DOT__ctrl__DOT__full)));
-    vlTOPp->Proc_noparam__DOT__v__DOT__dmem_queue__DOT__genblk1__DOT__ctrl__DOT__do_bypass 
-        = (((~ (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__dmem_queue__DOT__genblk1__DOT__ctrl__DOT__full)) 
-            & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__dmem_queue__DOT__genblk1__DOT__ctrl__DOT__do_enq)) 
-           & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__dmem_queue__DOT__genblk1__DOT__ctrl__DOT__do_deq));
     vlTOPp->Proc_noparam__DOT__v__DOT__xcel_queue__DOT__genblk1__DOT__ctrl__DOT__do_bypass 
         = (((~ (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__xcel_queue__DOT__genblk1__DOT__ctrl__DOT__full)) 
             & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__xcel_queue__DOT__genblk1__DOT__ctrl__DOT__do_enq)) 
            & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__xcel_queue__DOT__genblk1__DOT__ctrl__DOT__do_deq));
-    vlTOPp->imem_reqstream_msg[0U] = vlTOPp->Proc_noparam__DOT__v__DOT____Vcellout__imem_queue__deq_msg[0U];
-    vlTOPp->imem_reqstream_msg[1U] = vlTOPp->Proc_noparam__DOT__v__DOT____Vcellout__imem_queue__deq_msg[1U];
-    vlTOPp->imem_reqstream_msg[2U] = vlTOPp->Proc_noparam__DOT__v__DOT____Vcellout__imem_queue__deq_msg[2U];
+    vlTOPp->dmem_reqstream_msg[0U] = vlTOPp->Proc_noparam__DOT____Vcellout__v__dmem_reqstream_msg[0U];
+    vlTOPp->dmem_reqstream_msg[1U] = vlTOPp->Proc_noparam__DOT____Vcellout__v__dmem_reqstream_msg[1U];
+    vlTOPp->dmem_reqstream_msg[2U] = vlTOPp->Proc_noparam__DOT____Vcellout__v__dmem_reqstream_msg[2U];
+    vlTOPp->Proc_noparam__DOT__v__DOT__dmem_queue__DOT__genblk1__DOT__ctrl__DOT__do_bypass 
+        = (((~ (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__dmem_queue__DOT__genblk1__DOT__ctrl__DOT__full)) 
+            & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__dmem_queue__DOT__genblk1__DOT__ctrl__DOT__do_enq)) 
+           & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__dmem_queue__DOT__genblk1__DOT__ctrl__DOT__do_deq));
     vlTOPp->Proc_noparam__DOT__v__DOT__reg_en_F = (1U 
                                                    & ((~ (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__ctrl__DOT__stall_F)) 
                                                       | (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__ctrl__DOT__squash_F)));
@@ -1676,16 +1907,16 @@ void VProc_noparam::_settle__TOP__2(VProc_noparam__Syms* __restrict vlSymsp) {
         = (1U & (((~ (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__ctrl__DOT__stall_F)) 
                   | (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__ctrl__DOT__squash_F)) 
                  & (~ (IData)(vlTOPp->reset))));
-    vlTOPp->Proc_noparam__DOT__v__DOT__dmem_queue__DOT__genblk1__DOT__ctrl__DOT__full_next 
-        = ((~ (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__dmem_queue__DOT__genblk1__DOT__ctrl__DOT__do_deq)) 
-           & (((IData)(vlTOPp->Proc_noparam__DOT__v__DOT__dmem_queue__DOT__genblk1__DOT__ctrl__DOT__do_enq) 
-               & (~ (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__dmem_queue__DOT__genblk1__DOT__ctrl__DOT__do_bypass))) 
-              | (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__dmem_queue__DOT__genblk1__DOT__ctrl__DOT__full)));
     vlTOPp->Proc_noparam__DOT__v__DOT__xcel_queue__DOT__genblk1__DOT__ctrl__DOT__full_next 
         = ((~ (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__xcel_queue__DOT__genblk1__DOT__ctrl__DOT__do_deq)) 
            & (((IData)(vlTOPp->Proc_noparam__DOT__v__DOT__xcel_queue__DOT__genblk1__DOT__ctrl__DOT__do_enq) 
                & (~ (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__xcel_queue__DOT__genblk1__DOT__ctrl__DOT__do_bypass))) 
               | (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__xcel_queue__DOT__genblk1__DOT__ctrl__DOT__full)));
+    vlTOPp->Proc_noparam__DOT__v__DOT__dmem_queue__DOT__genblk1__DOT__ctrl__DOT__full_next 
+        = ((~ (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__dmem_queue__DOT__genblk1__DOT__ctrl__DOT__do_deq)) 
+           & (((IData)(vlTOPp->Proc_noparam__DOT__v__DOT__dmem_queue__DOT__genblk1__DOT__ctrl__DOT__do_enq) 
+               & (~ (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__dmem_queue__DOT__genblk1__DOT__ctrl__DOT__do_bypass))) 
+              | (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__dmem_queue__DOT__genblk1__DOT__ctrl__DOT__full)));
     vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_drop_unit__DOT__istream_go 
         = ((IData)(vlTOPp->imem_respstream_rdy) & (IData)(vlTOPp->imem_respstream_val));
     vlTOPp->Proc_noparam__DOT__v__DOT__imem_queue__DOT__genblk2__DOT__ctrl__DOT__do_enq 
@@ -1699,8 +1930,32 @@ void VProc_noparam::_settle__TOP__2(VProc_noparam__Syms* __restrict vlSymsp) {
                   ? (~ (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_drop_unit__DOT__istream_go))
                   : ((IData)(vlTOPp->Proc_noparam__DOT__v__DOT__ctrl__DOT__squash_F) 
                      & (~ (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_drop_unit__DOT__istream_go)))));
+    vlTOPp->Proc_noparam__DOT____Vcellout__v__imem_reqstream_msg[0U] 
+        = (((IData)(vlTOPp->Proc_noparam__DOT__v__DOT__imem_queue__DOT__genblk2__DOT__ctrl__DOT__empty)
+             ? ((IData)(vlTOPp->Proc_noparam__DOT__v__DOT__imem_queue__DOT__genblk2__DOT__ctrl__DOT__empty)
+                 ? vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_enq_msg[0U]
+                 : 0U) : vlTOPp->Proc_noparam__DOT__v__DOT__imem_queue__DOT__genblk2__DOT__dpath__DOT__qstore__DOT__rfile
+            [vlTOPp->Proc_noparam__DOT__v__DOT__imem_queue__DOT__genblk2__DOT__ctrl__DOT__deq_ptr][0U]) 
+           & (- (IData)((IData)(vlTOPp->imem_reqstream_val))));
+    vlTOPp->Proc_noparam__DOT____Vcellout__v__imem_reqstream_msg[1U] 
+        = (((IData)(vlTOPp->Proc_noparam__DOT__v__DOT__imem_queue__DOT__genblk2__DOT__ctrl__DOT__empty)
+             ? ((IData)(vlTOPp->Proc_noparam__DOT__v__DOT__imem_queue__DOT__genblk2__DOT__ctrl__DOT__empty)
+                 ? vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_enq_msg[1U]
+                 : 0U) : vlTOPp->Proc_noparam__DOT__v__DOT__imem_queue__DOT__genblk2__DOT__dpath__DOT__qstore__DOT__rfile
+            [vlTOPp->Proc_noparam__DOT__v__DOT__imem_queue__DOT__genblk2__DOT__ctrl__DOT__deq_ptr][1U]) 
+           & (- (IData)((IData)(vlTOPp->imem_reqstream_val))));
+    vlTOPp->Proc_noparam__DOT____Vcellout__v__imem_reqstream_msg[2U] 
+        = (((IData)(vlTOPp->Proc_noparam__DOT__v__DOT__imem_queue__DOT__genblk2__DOT__ctrl__DOT__empty)
+             ? ((IData)(vlTOPp->Proc_noparam__DOT__v__DOT__imem_queue__DOT__genblk2__DOT__ctrl__DOT__empty)
+                 ? vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_enq_msg[2U]
+                 : 0U) : vlTOPp->Proc_noparam__DOT__v__DOT__imem_queue__DOT__genblk2__DOT__dpath__DOT__qstore__DOT__rfile
+            [vlTOPp->Proc_noparam__DOT__v__DOT__imem_queue__DOT__genblk2__DOT__ctrl__DOT__deq_ptr][2U]) 
+           & (- (IData)((IData)(vlTOPp->imem_reqstream_val))));
     vlTOPp->Proc_noparam__DOT__v__DOT__imem_queue__DOT__genblk2__DOT__ctrl__DOT__do_deq 
         = ((IData)(vlTOPp->imem_reqstream_rdy) & (IData)(vlTOPp->imem_reqstream_val));
+    vlTOPp->imem_reqstream_msg[0U] = vlTOPp->Proc_noparam__DOT____Vcellout__v__imem_reqstream_msg[0U];
+    vlTOPp->imem_reqstream_msg[1U] = vlTOPp->Proc_noparam__DOT____Vcellout__v__imem_reqstream_msg[1U];
+    vlTOPp->imem_reqstream_msg[2U] = vlTOPp->Proc_noparam__DOT____Vcellout__v__imem_reqstream_msg[2U];
     vlTOPp->Proc_noparam__DOT__v__DOT__imem_queue__DOT__genblk2__DOT__ctrl__DOT__full_next 
         = ((((IData)(vlTOPp->Proc_noparam__DOT__v__DOT__imem_queue__DOT__genblk2__DOT__ctrl__DOT__do_enq) 
              & (~ (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__imem_queue__DOT__genblk2__DOT__ctrl__DOT__do_deq))) 
@@ -1778,13 +2033,13 @@ void VProc_noparam::_ctor_var_reset() {
     xcel_respstream_msg = VL_RAND_RESET_Q(33);
     xcel_respstream_rdy = VL_RAND_RESET_I(1);
     xcel_respstream_val = VL_RAND_RESET_I(1);
+    VL_RAND_RESET_W(77, Proc_noparam__DOT____Vcellout__v__imem_reqstream_msg);
+    VL_RAND_RESET_W(77, Proc_noparam__DOT____Vcellout__v__dmem_reqstream_msg);
     VL_RAND_RESET_W(77, Proc_noparam__DOT__v__DOT__imem_reqstream_enq_msg);
     Proc_noparam__DOT__v__DOT__imem_reqstream_enq_val = VL_RAND_RESET_I(1);
-    VL_RAND_RESET_W(77, Proc_noparam__DOT__v__DOT____Vcellout__imem_queue__deq_msg);
     VL_RAND_RESET_W(77, Proc_noparam__DOT__v__DOT__dmem_reqstream_enq_msg);
     Proc_noparam__DOT__v__DOT__dmem_reqstream_enq_val = VL_RAND_RESET_I(1);
     Proc_noparam__DOT__v__DOT__dmem_reqstream_enq_msg_data = VL_RAND_RESET_I(32);
-    VL_RAND_RESET_W(77, Proc_noparam__DOT__v__DOT____Vcellout__dmem_queue__deq_msg);
     Proc_noparam__DOT__v__DOT__proc2mngr_enq_val = VL_RAND_RESET_I(1);
     Proc_noparam__DOT__v__DOT__xcel_reqstream_enq_msg = VL_RAND_RESET_Q(38);
     Proc_noparam__DOT__v__DOT__xcel_reqstream_enq_val = VL_RAND_RESET_I(1);
@@ -1798,7 +2053,7 @@ void VProc_noparam::_ctor_var_reset() {
     Proc_noparam__DOT__v__DOT__csrr_sel_D = VL_RAND_RESET_I(2);
     Proc_noparam__DOT__v__DOT__imm_type_D = VL_RAND_RESET_I(3);
     Proc_noparam__DOT__v__DOT__imul_istream_val_D = VL_RAND_RESET_I(1);
-    Proc_noparam__DOT__v__DOT__alu_fn_X = VL_RAND_RESET_I(4);
+    Proc_noparam__DOT__v__DOT__alu_fn_X = VL_RAND_RESET_I(6);
     Proc_noparam__DOT__v__DOT__ex_result_sel_X = VL_RAND_RESET_I(2);
     Proc_noparam__DOT__v__DOT__wb_result_sel_M = VL_RAND_RESET_I(2);
     Proc_noparam__DOT__v__DOT__rf_waddr_W = VL_RAND_RESET_I(5);
@@ -1859,11 +2114,12 @@ void VProc_noparam::_ctor_var_reset() {
     Proc_noparam__DOT__v__DOT__ctrl__DOT__squash_D = VL_RAND_RESET_I(1);
     Proc_noparam__DOT__v__DOT__ctrl__DOT__pc_redirect_D = VL_RAND_RESET_I(1);
     Proc_noparam__DOT__v__DOT__ctrl__DOT__pc_redirect_X = VL_RAND_RESET_I(1);
+    Proc_noparam__DOT__v__DOT__ctrl__DOT__br_type_X = VL_RAND_RESET_I(3);
     Proc_noparam__DOT__v__DOT__ctrl__DOT__br_type_D = VL_RAND_RESET_I(3);
     Proc_noparam__DOT__v__DOT__ctrl__DOT__jal_D = VL_RAND_RESET_I(1);
     Proc_noparam__DOT__v__DOT__ctrl__DOT__rs1_en_D = VL_RAND_RESET_I(1);
     Proc_noparam__DOT__v__DOT__ctrl__DOT__rs2_en_D = VL_RAND_RESET_I(1);
-    Proc_noparam__DOT__v__DOT__ctrl__DOT__alu_fn_D = VL_RAND_RESET_I(4);
+    Proc_noparam__DOT__v__DOT__ctrl__DOT__alu_fn_D = VL_RAND_RESET_I(6);
     Proc_noparam__DOT__v__DOT__ctrl__DOT__dmem_reqstream_type_D = VL_RAND_RESET_I(3);
     Proc_noparam__DOT__v__DOT__ctrl__DOT__ex_result_sel_D = VL_RAND_RESET_I(2);
     Proc_noparam__DOT__v__DOT__ctrl__DOT__wb_result_sel_D = VL_RAND_RESET_I(2);
@@ -1888,7 +2144,6 @@ void VProc_noparam::_ctor_var_reset() {
     Proc_noparam__DOT__v__DOT__ctrl__DOT__wb_result_sel_X = VL_RAND_RESET_I(2);
     Proc_noparam__DOT__v__DOT__ctrl__DOT__proc2mngr_val_X = VL_RAND_RESET_I(1);
     Proc_noparam__DOT__v__DOT__ctrl__DOT__stats_en_wen_X = VL_RAND_RESET_I(1);
-    Proc_noparam__DOT__v__DOT__ctrl__DOT__br_type_X = VL_RAND_RESET_I(3);
     Proc_noparam__DOT__v__DOT__ctrl__DOT__mul_X = VL_RAND_RESET_I(1);
     Proc_noparam__DOT__v__DOT__ctrl__DOT__inst_M = VL_RAND_RESET_I(32);
     Proc_noparam__DOT__v__DOT__ctrl__DOT__dmem_reqstream_type_M = VL_RAND_RESET_I(3);

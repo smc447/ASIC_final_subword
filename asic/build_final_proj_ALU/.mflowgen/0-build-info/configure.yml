@@ -1,0 +1,20 @@
+build_dir: 0-build-info
+build_id: '0'
+commands:
+- echo "Design name      -- ProcDpathAluWrapper"
+- echo "Clock period     -- 3.0"
+- echo "ADK              -- freepdk-45nm"
+- echo "ADK view         -- stdview"
+- echo
+- echo "Constructed from -- /home/ezw2/ece5745/ASIC_final_subword/asic/final_proj_ALU/flow.py"
+- echo
+edges_i: {}
+edges_o: {}
+name: build-info
+parameters:
+  adk: freepdk-45nm
+  adk_view: stdview
+  clock_period: 3.0
+  construct_path: /home/ezw2/ece5745/ASIC_final_subword/asic/final_proj_ALU/flow.py
+  design_name: ProcDpathAluWrapper
+source: /classes/ece5745/install/venv-pkgs/x86_64-rhel7/pypy3-pymtl3-7.3.3/site-packages/steps/info

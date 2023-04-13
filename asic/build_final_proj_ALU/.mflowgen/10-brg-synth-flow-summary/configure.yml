@@ -1,0 +1,35 @@
+build_dir: 10-brg-synth-flow-summary
+build_id: '10'
+commands:
+- ./run.sh
+edges_i:
+  4state.summary.txt:
+  - f: sim.summary.txt
+    step: 3-brg-rtl-4-state-vcssim
+  ff.summary.txt:
+  - f: sim.summary.txt
+    step: 6-post-synth-gate-level-simulation
+  powerFF.summary.txt:
+  - f: power.summary.txt
+    step: 8-post-synth-power-analysis
+  synth.summary.txt:
+  - f: synth.summary.txt
+    step: 4-brg-synopsys-dc-synthesis
+edges_o: {}
+inputs:
+- 4state.summary.txt
+- powerRTL.summary.txt
+- synth.summary.txt
+- ff.summary.txt
+- powerFF.summary.txt
+- signoff.summary.txt
+- ba.summary.txt
+- powerBA.summary.txt
+name: brg-synth-flow-summary
+outputs:
+- flow.summary.rpt
+parameters:
+  clock_period: 3.0
+  design_name: ProcDpathAluWrapper
+  test_design_name: ProcDpathAluWrapper
+source: /classes/ece5745/install/venv-pkgs/x86_64-rhel7/pypy3-pymtl3-7.3.3/site-packages/steps/brg-flow-summary

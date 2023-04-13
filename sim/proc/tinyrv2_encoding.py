@@ -82,7 +82,9 @@ tinyrv2_encoding_table = \
   [ "sub    rd, rs1, rs2",     0b11111110000000000111000001111111, 0b01000000000000000000000000110011 ], # R-type, tinyrv{2}
   [ "lui    rd, u_imm",        0b00000000000000000000000001111111, 0b00000000000000000000000000110111 ], # U-type, tinyrv{2}
   [ "auipc  rd, u_imm",        0b00000000000000000000000001111111, 0b00000000000000000000000000010111 ], # U-type, tinyrv{2}
-
+  [ "add8   rd, rs1, rs2",     0b11111110000000000111000001111111, 0b01001000000000000000000001110111 ], # R-type, tinyrv{1,2}
+  [ "sub8   rd, rs1, rs2",     0b11111110000000000111000001111111, 0b01001010000000000000000001110111 ], # R-type, tinyrv{1,2}
+ 
   # Logical
   [ "xor    rd, rs1, rs2",     0b11111110000000000111000001111111, 0b00000000000000000100000000110011 ], # R-type, tinyrv{2}
   [ "xori   rd, rs1, i_imm",   0b00000000000000000111000001111111, 0b00000000000000000100000000010011 ], # I-type, tinyrv{2}
@@ -938,6 +940,12 @@ def decode_inst_name( inst ):
       elif inst[funct3] == 0b101:     inst_name = "sra"
     elif inst[funct7] == 0b0000001:
       if   inst[funct3] == 0b000:     inst_name = "mul"
+    
+  elif inst[opcode] == 0b1110111:
+    if inst[funct7] == 0b0100100:
+      if   inst[funct3] == 0b000:     inst_name = "add8"
+    elif inst[funct7] == 0b0100101:
+      if   inst[funct3] == 0b000:     inst_name = "sub8"
 
   elif inst[opcode] == 0b0010011:
     if   inst[funct3] == 0b000:       inst_name = "addi"

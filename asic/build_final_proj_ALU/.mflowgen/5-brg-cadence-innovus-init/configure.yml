@@ -1,0 +1,46 @@
+build_dir: 5-brg-cadence-innovus-init
+build_id: '5'
+commands:
+- bash run.sh
+edges_i:
+  adk:
+  - f: adk
+    step: 2-freepdk-45nm
+  design.sdc:
+  - f: design.sdc
+    step: 4-brg-synopsys-dc-synthesis
+  design.v:
+  - f: design.v
+    step: 4-brg-synopsys-dc-synthesis
+edges_o:
+  design.checkpoint:
+  - f: design.checkpoint
+    step: 7-brg-cadence-innovus-blocksetup
+inputs:
+- adk
+- design.v
+- design.sdc
+name: brg-cadence-innovus-init
+outputs:
+- design.checkpoint
+parameters:
+  design_name: ProcDpathAluWrapper
+  extra_link_lib_dir: ''
+  order:
+  - main.tcl
+postconditions:
+- assert File( 'outputs/design.checkpoint/save.enc' )
+- assert '(IMPOPT-665)'    not in File( 'logs/run.log' )
+- assert '(IMPVFC-97)'     not in File( 'logs/run.log' )
+- assert '(IMPOGDS-217)'   not in File( 'logs/run.log' )
+- assert '(IMPFP-53)'      not in File( 'logs/run.log' )
+- assert '(IMPREPO-214)'   not in File( 'logs/run.log' )
+- assert '(NRIG-39)'       not in File( 'logs/run.log' )
+- assert '(NRDB-1005)'     not in File( 'logs/run.log' )
+- assert '(IMPCCOPT-2215)' not in File( 'logs/run.log' )
+preconditions:
+- assert Tool( 'innovus' )
+- assert File( 'inputs/adk' )
+- assert File( 'inputs/design.v' )
+- assert File( 'inputs/design.sdc' )
+source: /classes/ece5745/install/venv-pkgs/x86_64-rhel7/pypy3-pymtl3-7.3.3/site-packages/steps/brg-cadence-innovus-init

@@ -1,0 +1,259 @@
++ innovus_exec='innovus -overwrite -64 -nowin -init'
++ rm -rf ./logs
++ rm -rf ./reports
++ rm -rf ./results
++ mkdir -p logs
++ mkdir -p reports
++ mkdir -p results
++ mkdir -p checkpoints/design.checkpoint
++ innovus -overwrite -64 -nowin -init START.tcl -log logs/run.log
+
+Cadence Innovus(TM) Implementation System.
+Copyright 2020 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+Version:	v20.12-s088_1, built Fri Nov 6 10:29:19 PST 2020
+Options:	-overwrite -nowin -init START.tcl -log logs/run.log 
+Date:		Thu Apr 13 15:24:00 2023
+Host:		en-ec-ecelinux-01.coecis.cornell.edu (x86_64 w/Linux 3.10.0-1160.76.1.el7.x86_64) (1core*10cpus*Intel(R) Xeon(R) Gold 6252N CPU @ 2.30GHz 36608KB)
+OS:		CentOS Linux release 7.9.2009 (Core)
+
+License:
+		invs	Innovus Implementation System	20.1	checkout succeeded
+		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+Create and set the environment variable TMPDIR to /tmp/innovus_temp_59948_en-ec-ecelinux-01.coecis.cornell.edu_ezw2_er6XvE.
+
+The soft stacksize limit is either up to the hard limit or larger than 0.2% of RAM. No change is needed.
+
+**INFO:  MMMC transition support version v31-84 
+
+Sourcing file "START.tcl" ...
+
+  > Info: Sourcing "scripts/main.tcl"
+
+### Start verbose source output (echo mode) for 'scripts/main.tcl' ...
+# set init_mmmc_file "./scripts/setup-timing.tcl"
+# set init_verilog   "./inputs/design.v"
+# set init_top_cell  $env(design_name)
+# if {$env(extra_link_lib_dir)!=""} {
+    set extra_link_lib_dir $::env(extra_link_lib_dir)
+    set init_lef_file  [join "
+                              [list ./inputs/adk/rtk-tech.lef         \
+                                    ./inputs/adk/stdcells.lef         ]
+                              [lsort [glob -nocomplain ./inputs/adk/*.lef]]
+                              [lsort [glob -nocomplain $extra_link_lib_dir/*.lef]]
+                      "]
+} else {
+    set init_lef_file [join "
+                              [list ./inputs/adk/rtk-tech.lef         \
+                                    ./inputs/adk/stdcells.lef         ]
+                              [lsort [glob -nocomplain ./inputs/adk/*.lef]]
+                      "]
+}
+# set init_gnd_net $ADK_GND_NETS
+# set init_pwr_net $ADK_PWR_NETS
+# set init_design_uniquify 1
+# init_design
+#% Begin Load MMMC data ... (date=04/13 15:24:17, mem=497.9M)
+#% End Load MMMC data ... (date=04/13 15:24:17, total cpu=0:00:00.0, real=0:00:00.0, peak res=498.1M, current mem=498.1M)
+
+Loading LEF file ./inputs/adk/rtk-tech.lef ...
+
+Loading LEF file ./inputs/adk/stdcells.lef ...
+Set DBUPerIGU to M2 pitch 380.
+
+viaInitial starts at Thu Apr 13 15:24:17 2023
+viaInitial ends at Thu Apr 13 15:24:17 2023
+
+##  Check design process and node:  
+##  Both design process and tech node are not set.
+
+Loading view definition file from ./scripts/setup-timing.tcl
+Reading libs_typical timing library '/classes/ece5745/install/adk-pkgs/freepdk-45nm/pkgs/NangateOpenCellLibrary_PDKv1_3_v2010_12/Front_End/Liberty/NLDM/NangateOpenCellLibrary_typical.lib' ...
+Read 134 cells in library 'NangateOpenCellLibrary' 
+*** End library_loading (cpu=0.01min, real=0.00min, mem=11.0M, fe_cpu=0.26min, fe_real=0.28min, fe_mem=1075.1M) ***
+#% Begin Load netlist data ... (date=04/13 15:24:17, mem=510.8M)
+*** Begin netlist parsing (mem=1075.1M) ***
+Created 134 new cells from 1 timing libraries.
+Reading netlist ...
+Backslashed names will retain backslash and a trailing blank character.
+Reading verilog netlist './inputs/design.v'
+
+*** Memory Usage v#1 (Current mem = 1075.086M, initial mem = 389.527M) ***
+*** End netlist parsing (cpu=0:00:00.0, real=0:00:00.0, mem=1075.1M) ***
+#% End Load netlist data ... (date=04/13 15:24:17, total cpu=0:00:00.0, real=0:00:00.0, peak res=515.9M, current mem=515.9M)
+Set top cell to ProcDpathAluWrapper.
+Hooked 134 DB cells to tlib cells.
+Starting recursive module instantiation check.
+No recursion found.
+Building hierarchical netlist for Cell ProcDpathAluWrapper ...
+*** Netlist is unique.
+** info: there are 157 modules.
+** info: there are 1625 stdCell insts.
+
+*** Memory Usage v#1 (Current mem = 1090.500M, initial mem = 389.527M) ***
+Generated pitch 1.68 in metal10 is different from 1.6 defined in technology file in preferred direction.
+Generated pitch 0.84 in metal8 is different from 0.8 defined in technology file in preferred direction.
+Generated pitch 0.84 in metal7 is different from 0.8 defined in technology file in preferred direction.
+Set Default Net Delay as 1000 ps.
+Set Default Net Load as 0.5 pF. 
+Set Default Input Pin Transition as 0.1 ps.
+Extraction setup Started 
+Initializing multi-corner RC extraction with 1 active RC Corners ...
+Reading Capacitance Table File ./inputs/adk/rtk-typical.captable ...
+Cap table was created using Encounter 08.10-p004_1.
+Process name: master_techFreePDK45.
+Importing multi-corner RC tables ... 
+Summary of Active RC-Corners : 
+ 
+ Analysis View: analysis_default
+    RC-Corner Name        : typical
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 25 Celsius
+    RC-Corner Cap Table   : './inputs/adk/rtk-typical.captable'
+    RC-Corner PreRoute Res Factor         : 1
+    RC-Corner PreRoute Cap Factor         : 1
+    RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+    RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+    RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+    RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+    RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+Updating RC grid for preRoute extraction ...
+Initializing multi-corner capacitance tables ... 
+Initializing multi-corner resistance tables ...
+*Info: initialize multi-corner CTS.
+Reading timing constraints file './inputs/design.sdc' ...
+Current (total cpu=0:00:16.6, real=0:00:18.0, peak res=736.8M, current mem=736.8M)
+**WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File ./inputs/design.sdc, Line 8).
+
+**WARN: (TCLNL-330):	set_input_delay on clock root 'clk[0]' is not supported. You should use the -source option to set_clock_latency to provide this offset. You can also use the global timing_allow_input_delay_on_clock_source to allow set_input_delay assertion to have an effect on clock source paths beginning at this clock root. (File ./inputs/design.sdc, Line 127).
+
+INFO (CTE): Reading of timing constraints file ./inputs/design.sdc completed, with 2 WARNING
+Ending "Constraint file reading stats" (total cpu=0:00:00.1, real=0:00:00.0, peak res=756.3M, current mem=756.3M)
+Current (total cpu=0:00:16.7, real=0:00:18.0, peak res=756.3M, current mem=756.3M)
+**WARN: (TA-976):	Path groups asserted by the group_path constraint are considered by the software to be global in nature - they cannot be restricted to specific constraint modes. Due to this restriction, the group_path constraint is not supported directly in the constraint files which are configured in mode-specific commands such as create_constraint_mode. The current group_path entry will be ignored. You can enter the group_path constraint interactively or as part of a general command script -  where it will be interpreted as global and will be in effect for all modes.
+Total number of combinational cells: 99
+Total number of sequential cells: 29
+Total number of tristate cells: 6
+Total number of level shifter cells: 0
+Total number of power gating cells: 0
+Total number of isolation cells: 0
+Total number of power switch cells: 0
+Total number of pulse generator cells: 0
+Total number of always on buffers: 0
+Total number of retention cells: 0
+List of usable buffers: BUF_X1 BUF_X2 BUF_X4 BUF_X8 BUF_X16 BUF_X32 CLKBUF_X1 CLKBUF_X2 CLKBUF_X3
+Total number of usable buffers: 9
+List of unusable buffers:
+Total number of unusable buffers: 0
+List of usable inverters: INV_X1 INV_X2 INV_X4 INV_X8 INV_X16 INV_X32
+Total number of usable inverters: 6
+List of unusable inverters:
+Total number of unusable inverters: 0
+List of identified usable delay cells:
+Total number of identified usable delay cells: 0
+List of identified unusable delay cells:
+Total number of identified unusable delay cells: 0
+No delay cells were detected in the set of buffers. Buffers will be used to fix hold violations.
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+WARNING   TA-976               1  Path groups asserted by the group_path c...
+WARNING   TCLCMD-1461          1  Skipped unsupported command: %s          
+WARNING   TCLNL-330            1  set_input_delay on clock root '%s' is no...
+*** Message Summary: 3 warning(s), 0 error(s)
+
+# if {[file exists ./scripts/post_init.tcl]} {
+  source ./scripts/post_init.tcl
+}
+# add_tracks
+Generated pitch 1.68 in metal10 is different from 1.6 defined in technology file in preferred direction.
+Generated pitch 0.84 in metal8 is different from 0.8 defined in technology file in preferred direction.
+Generated pitch 0.84 in metal7 is different from 0.8 defined in technology file in preferred direction.
+# setDesignMode -process $ADK_PROCESS -powerEffort high
+##  Process: 45            (User Set)               
+##     Node: (not set)                           
+
+##  Check design process and node:  
+##  Design tech node is not set.
+
+Applying the recommended capacitance filtering threshold values for 45nm process node: total_c_th=0, relative_c_th=1 and coupling_c_th=0.1.
+	These values will be used by all post-route extraction engines, including TQuantus, IQuantus and Quantus QRC extraction.
+	Capacitance filtering mode(-capFilterMode option of the setExtractRCMode) is 'relAndCoup' for all engines.
+	The accuracy mode for postRoute effortLevel low extraction will be set to 'high'.
+	Default value for EffortLevel(-effortLevel option of the setExtractRCMode) in postRoute extraction mode will be 'medium' if Quantus QRC technology file is specified else 'low'.
+# setDesignMode -bottomRoutingLayer            $ADK_MIN_ROUTING_LAYER_INNOVUS
+# setDesignMode -topRoutingLayer               $ADK_MAX_ROUTING_LAYER_INNOVUS
+# setViaGenMode -ignore_viarule_enclosure false
+Setting -ignore_viarule_enclosure to 0. ViaGen will use enclosures defined in VIARULE GENERATE with precedence.
+# setViaGenMode -optimize_cross_via true
+Setting -optimize_cross_via to 1. ViaGen will try to generate vias with the minimum enclosure.
+# setViaGenMode -ignore_DRC false
+Setting -ignore_DRC to 0. ViaGen will do DRC check while creating vias.
+# setAnalysisMode -analysisType onChipVariation -cppr both
+# setDelayCalMode -siAware true -engine aae
+# setNanoRouteMode -drouteUseMultiCutViaEffort medium
+# setNanoRouteMode -routeWithViaInPin          false
+# setNanoRouteMode -drouteFixAntenna           true
+# setNanoRouteMode -droutePostRouteSpreadWire  true
+# reset_path_group -all
+# resetPathGroupOptions
+# set inputs   [all_inputs -no_clocks]
+# set outputs  [all_outputs]
+# set icgs     [filter_collection [all_registers] "is_integrated_clock_gating_cell == true"]
+# set regs     [remove_from_collection [all_registers -edge_triggered] $$icgs]
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern '$0xe5'
+# set allregs  [all_registers]
+# group_path -name In2Reg  -from $inputs  -to $allregs
+# group_path -name Reg2Out -from $allregs -to $outputs
+# group_path -name In2Out  -from $inputs  -to $outputs
+# group_path -name Reg2Reg     -from $regs    -to $regs
+# group_path -name Reg2ClkGate -from $allregs -to $icgs
+# setPathGroupOptions Reg2Reg -effortLevel high
+Effort level <high> specified for Reg2Reg path_group
+### End verbose source output for 'scripts/main.tcl'.
+#% Begin save design ... (date=04/13 15:24:19, mem=783.8M)
+% Begin Save ccopt configuration ... (date=04/13 15:24:19, mem=786.9M)
+% End Save ccopt configuration ... (date=04/13 15:24:19, total cpu=0:00:00.0, real=0:00:00.0, peak res=787.7M, current mem=787.7M)
+% Begin Save netlist data ... (date=04/13 15:24:19, mem=787.7M)
+Writing Binary DB to ./checkpoints/design.checkpoint/save.enc.dat/ProcDpathAluWrapper.v.bin in single-threaded mode...
+% End Save netlist data ... (date=04/13 15:24:19, total cpu=0:00:00.0, real=0:00:00.0, peak res=788.3M, current mem=788.1M)
+Saving symbol-table file ...
+Saving congestion map file ./checkpoints/design.checkpoint/save.enc.dat/ProcDpathAluWrapper.route.congmap.gz ...
+% Begin Save AAE data ... (date=04/13 15:24:19, mem=788.8M)
+Saving AAE Data ...
+% End Save AAE data ... (date=04/13 15:24:19, total cpu=0:00:00.0, real=0:00:00.0, peak res=788.8M, current mem=788.8M)
+Saving preference file ./checkpoints/design.checkpoint/save.enc.dat/gui.pref.tcl ...
+Saving mode setting ...
+Saving global file ...
+% Begin Save floorplan data ... (date=04/13 15:24:19, mem=791.9M)
+Saving floorplan file ...
+% End Save floorplan data ... (date=04/13 15:24:20, total cpu=0:00:00.0, real=0:00:01.0, peak res=792.6M, current mem=792.6M)
+Saving Drc markers ...
+... No Drc file written since there is no markers found.
+% Begin Save placement data ... (date=04/13 15:24:20, mem=792.7M)
+** Saving stdCellPlacement_binary (version# 2) ...
+Save Adaptive View Pruning View Names to Binary file
+% End Save placement data ... (date=04/13 15:24:20, total cpu=0:00:00.0, real=0:00:00.0, peak res=792.9M, current mem=792.9M)
+% Begin Save routing data ... (date=04/13 15:24:20, mem=792.9M)
+Saving route file ...
+*** Completed saveRoute (cpu=0:00:00.0 real=0:00:00.0 mem=1358.2M) ***
+% End Save routing data ... (date=04/13 15:24:20, total cpu=0:00:00.0, real=0:00:00.0, peak res=797.1M, current mem=797.1M)
+Saving property file ./checkpoints/design.checkpoint/save.enc.dat/ProcDpathAluWrapper.prop
+*** Completed saveProperty (cpu=0:00:00.0 real=0:00:00.0 mem=1362.2M) ***
+% Begin Save power constraints data ... (date=04/13 15:24:20, mem=797.8M)
+% End Save power constraints data ... (date=04/13 15:24:20, total cpu=0:00:00.0, real=0:00:00.0, peak res=797.9M, current mem=797.9M)
+Generated self-contained design save.enc.dat
+#% End save design ... (date=04/13 15:24:21, total cpu=0:00:00.8, real=0:00:02.0, peak res=822.6M, current mem=801.3M)
+*** Message Summary: 0 warning(s), 0 error(s)
+
+
+*** Memory Usage v#1 (Current mem = 1371.336M, initial mem = 389.527M) ***
+*** Message Summary: 4 warning(s), 0 error(s)
+
+--- Ending "Innovus" (totcpu=0:00:17.6, real=0:00:21.0, mem=1371.3M) ---
+
++ mkdir -p outputs
++ cd outputs
++ ln -sf ../checkpoints/design.checkpoint

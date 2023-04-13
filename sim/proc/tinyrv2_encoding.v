@@ -75,6 +75,8 @@
 `define TINYRV2_INST_SLT   32'b0000000_?????_?????_010_?????_0110011
 `define TINYRV2_INST_SLTU  32'b0000000_?????_?????_011_?????_0110011
 `define TINYRV2_INST_MUL   32'b0000001_?????_?????_000_?????_0110011
+`define TINYRV2_INST_ADD_8_BIT   32'b0100100_?????_?????_000_?????_1110111
+`define TINYRV2_INST_SUB_8_BIT   32'b0100101_?????_?????_000_?????_1110111
 
 // Register-immediate arithmetic, logical, and comparison instructions
 
@@ -260,6 +262,8 @@ module proc_tinyrv2_encoding_InstTasks();
       `TINYRV2_INST_SLT   : $sformat( disasm, "slt    %s, %s, %s   ",   rd_str,  rs1_str, rs2_str );
       `TINYRV2_INST_SLTU  : $sformat( disasm, "sltu   %s, %s, %s   ",   rd_str,  rs1_str, rs2_str );
       `TINYRV2_INST_MUL   : $sformat( disasm, "mul    %s, %s, %s   ",   rd_str,  rs1_str, rs2_str );
+      `TINYRV2_INST_ADD_8_BIT   : $sformat( disasm, "add8    %s, %s, %s   ",   rd_str,  rs1_str, rs2_str );
+      `TINYRV2_INST_SUB_8_BIT   : $sformat( disasm, "sub8    %s, %s, %s   ",   rd_str,  rs1_str, rs2_str );
 
       `TINYRV2_INST_ADDI  : $sformat( disasm, "addi   %s, %s, 0x%x ",   rd_str,  rs1_str, imm_i(inst) );
       `TINYRV2_INST_ANDI  : $sformat( disasm, "andi   %s, %s, 0x%x ",   rd_str,  rs1_str, imm_i(inst) );
@@ -318,6 +322,8 @@ module proc_tinyrv2_encoding_InstTasks();
       `TINYRV2_INST_SLT   : disasm_tiny = "slt ";
       `TINYRV2_INST_SLTU  : disasm_tiny = "sltu";
       `TINYRV2_INST_MUL   : disasm_tiny = "mul ";
+      `TINYRV2_INST_ADD_8_BIT   : disasm_tiny = "add8 ";
+      `TINYRV2_INST_SUB_8_BIT   : disasm_tiny = "sub8 ";
 
       `TINYRV2_INST_ADDI  : disasm_tiny = "addi";
       `TINYRV2_INST_ANDI  : disasm_tiny = "andi";

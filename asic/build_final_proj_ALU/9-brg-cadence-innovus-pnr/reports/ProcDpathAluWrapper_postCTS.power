@@ -1,0 +1,97 @@
+*----------------------------------------------------------------------------------------
+*	Innovus 20.12-s088_1 (64bit) 11/06/2020 10:29 (Linux 2.6.32-431.11.2.el6.x86_64)
+*	
+*
+* 	Date & Time:	2023-Apr-13 15:26:21 (2023-Apr-13 19:26:21 GMT)
+*
+*----------------------------------------------------------------------------------------
+*
+*	Design: ProcDpathAluWrapper
+*
+*	Liberty Libraries used: 
+*	        analysis_default: ./inputs/adk/stdcells.lib
+*
+*	Power Domain used: 
+*              Rail:        VDD      Voltage:        1.1 
+*
+*       Power View : analysis_default
+*
+*       User-Defined Activity : N.A.
+*
+*       Activity File: N.A.
+*
+*       Hierarchical Global Activity: N.A.
+*
+*       Global Activity: N.A.
+*
+*       Sequential Element Activity: 0.200000
+*
+*       Primary Input Activity: 0.200000
+*
+*       Default icg ratio: N.A.
+*
+*       Global Comb ClockGate Ratio: N.A.
+*
+*	Power Units = 1mW
+*
+*	Time Units = 1e-09 secs 
+*
+*       report_power -outfile ./reports/ProcDpathAluWrapper_postCTS.power -leakage
+*
+-----------------------------------------------------------------------------------------
+
+
+Total Power 
+-----------------------------------------------------------------------------------------
+Total Leakage Power:         0.04974335 
+-----------------------------------------------------------------------------------------
+
+
+Group                           Leakage       Percentage 
+                                Power         (%)        
+-----------------------------------------------------------------------------------------
+Sequential                       0.00566       11.38 
+Macro                                  0           0 
+IO                                     0           0 
+Combinational                    0.04357        87.6 
+Clock (Combinational)          1.121e-05     0.02254 
+Clock (Sequential)             0.0004982       1.002 
+-----------------------------------------------------------------------------------------
+Total                            0.04974         100 
+-----------------------------------------------------------------------------------------
+
+
+Rail                  Voltage   Leakage       Percentage 
+                                Power         (%)        
+-----------------------------------------------------------------------------------------
+VDD                       1.1    0.04974         100 
+
+
+Clock                           Leakage       Percentage 
+                                Power         (%)        
+-----------------------------------------------------------------------------------------
+ideal_clock                    0.0005095       1.024 
+-----------------------------------------------------------------------------------------
+Total (excluding duplicates)   0.0005095       1.024 
+-----------------------------------------------------------------------------------------
+Clock: ideal_clock
+Clock Period: 0.003000 usec 
+Clock Toggle Rate:   666.6667 Mhz 
+Clock Static Probability:  0.5000
+
+
+
+-----------------------------------------------------------------------------------------
+*	Power Distribution Summary: 
+*                Highest Average Power: v/in0_reg/clk_gate_q_reg/latch (CLKGATETST_X8):        0.0002116 
+*                Highest Leakage Power: v/in0_reg/clk_gate_q_reg/latch (CLKGATETST_X8):        0.0002116 
+*          Total Cap:      9.75944e-12 F
+*          Total instances in design:  1507
+*          Total instances in design with no power:     3
+*          Total instances in design with no activity:     3
+*          Total Fillers and Decap:     0
+-----------------------------------------------------------------------------------------
+
+Total leakage power = 0.0497434 mW
+Cell usage statistics:  
+Library NangateOpenCellLibrary , 1504 cells ( 100.000000%) , 0.0497434 mW ( 100.000000%  ) 

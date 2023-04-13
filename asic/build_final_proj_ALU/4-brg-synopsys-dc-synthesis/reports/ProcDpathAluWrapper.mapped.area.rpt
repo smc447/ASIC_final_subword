@@ -1,0 +1,67 @@
+ 
+****************************************
+Report : area
+Design : ProcDpathAluWrapper
+Version: R-2020.09-SP2
+Date   : Thu Apr 13 14:53:44 2023
+****************************************
+
+Library(s) Used:
+
+    NangateOpenCellLibrary (File: /home/ezw2/ece5745/ASIC_final_subword/asic/build_final_proj_ALU/4-brg-synopsys-dc-synthesis/inputs/adk/stdcells.db)
+
+Number of ports:                         1100
+Number of nets:                          2732
+Number of cells:                         1653
+Number of combinational cells:           1551
+Number of sequential cells:                74
+Number of macros/black boxes:               0
+Number of buf/inv:                        316
+Number of references:                       1
+
+Combinational area:               1880.886006
+Buf/Inv area:                      173.964001
+Noncombinational area:             333.031988
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:                  2213.917994
+Total area:                 undefined
+
+The above information was reported from the logical library. The following are from the physical library:
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area          Local cell area
+                                  ------------------  ---------------------------- 
+Hierarchical cell                 Absolute   Percent  Combi-     Noncombi-  Black-
+                                  Total      Total    national   national   boxes   Design
+--------------------------------  ---------  -------  ---------  ---------  ------  ---------------------------------------------------------------
+ProcDpathAluWrapper               2213.9180    100.0     0.0000     0.0000  0.0000  ProcDpathAluWrapper
+v                                 2213.9180    100.0    38.8360     0.0000  0.0000  ProcDpathAluWrapper_proc_ProcDpathAluWrapper_0
+v/alu                             1839.3900     83.1   912.1140     0.0000  0.0000  ProcDpathAluWrapper_proc_ProcDpathAlu_0
+v/alu/add_x_1                      183.2740      8.3   183.2740     0.0000  0.0000  ProcDpathAluWrapper_proc_ProcDpathAlu_DW01_add_J1_4_0
+v/alu/add_x_6                       31.3880      1.4    31.3880     0.0000  0.0000  ProcDpathAluWrapper_proc_ProcDpathAlu_DW01_add_J1_3_0
+v/alu/add_x_7                       31.3880      1.4    31.3880     0.0000  0.0000  ProcDpathAluWrapper_proc_ProcDpathAlu_DW01_add_J1_2_0
+v/alu/add_x_8                       31.3880      1.4    31.3880     0.0000  0.0000  ProcDpathAluWrapper_proc_ProcDpathAlu_DW01_add_J1_1_0
+v/alu/add_x_9                       31.3880      1.4    31.3880     0.0000  0.0000  ProcDpathAluWrapper_proc_ProcDpathAlu_DW01_add_J1_0_0
+v/alu/cond_eq_comp                  65.1700      2.9    65.1700     0.0000  0.0000  ProcDpathAluWrapper_vc_EqComparator_p_nbits32_0
+v/alu/lt_x_19                      108.2620      4.9   108.2620     0.0000  0.0000  ProcDpathAluWrapper_proc_ProcDpathAlu_DW_cmp_J1_1_0
+v/alu/lt_x_20                      108.2620      4.9   108.2620     0.0000  0.0000  ProcDpathAluWrapper_proc_ProcDpathAlu_DW_cmp_J1_0_0
+v/alu/sub_x_10                      35.3780      1.6    35.3780     0.0000  0.0000  ProcDpathAluWrapper_proc_ProcDpathAlu_DW01_sub_J1_3_0
+v/alu/sub_x_11                      34.8460      1.6    34.8460     0.0000  0.0000  ProcDpathAluWrapper_proc_ProcDpathAlu_DW01_sub_J1_2_0
+v/alu/sub_x_12                      34.8460      1.6    34.8460     0.0000  0.0000  ProcDpathAluWrapper_proc_ProcDpathAlu_DW01_sub_J1_1_0
+v/alu/sub_x_13                      34.8460      1.6    34.8460     0.0000  0.0000  ProcDpathAluWrapper_proc_ProcDpathAlu_DW01_sub_J1_0_0
+v/alu/sub_x_2                      196.8400      8.9   196.8400     0.0000  0.0000  ProcDpathAluWrapper_proc_ProcDpathAlu_DW01_sub_J1_4_0
+v/fn_reg                            31.1220      1.4     0.0000    27.1320  0.0000  ProcDpathAluWrapper_vc_EnReg_p_nbits6_0
+v/fn_reg/clk_gate_q_reg              3.9900      0.2     0.0000     3.9900  0.0000  ProcDpathAluWrapper_SNPS_CLOCK_GATE_HIGH_vc_EnReg_p_nbits6_0
+v/in0_reg                          148.6940      6.7     0.0000   144.7040  0.0000  ProcDpathAluWrapper_vc_EnReg_p_nbits32_0
+v/in0_reg/clk_gate_q_reg             3.9900      0.2     0.0000     3.9900  0.0000  ProcDpathAluWrapper_SNPS_CLOCK_GATE_HIGH_vc_EnReg_p_nbits32_0_0
+v/in1_reg                          148.6940      6.7     0.0000   144.7040  0.0000  ProcDpathAluWrapper_vc_EnReg_p_nbits32_1
+v/in1_reg/clk_gate_q_reg             3.9900      0.2     0.0000     3.9900  0.0000  ProcDpathAluWrapper_SNPS_CLOCK_GATE_HIGH_vc_EnReg_p_nbits32_0_1
+v/val_reg                            7.1820      0.3     2.6600     4.5220  0.0000  ProcDpathAluWrapper_vc_EnResetReg_p_nbits1_0
+--------------------------------  ---------  -------  ---------  ---------  ------  ---------------------------------------------------------------
+Total                                                 1880.8860   333.0320  0.0000
+
+1

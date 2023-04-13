@@ -71,7 +71,7 @@ VL_MODULE(VProc_noparam) {
         CData/*1:0*/ Proc_noparam__DOT__v__DOT__csrr_sel_D;
         CData/*2:0*/ Proc_noparam__DOT__v__DOT__imm_type_D;
         CData/*0:0*/ Proc_noparam__DOT__v__DOT__imul_istream_val_D;
-        CData/*3:0*/ Proc_noparam__DOT__v__DOT__alu_fn_X;
+        CData/*5:0*/ Proc_noparam__DOT__v__DOT__alu_fn_X;
         CData/*1:0*/ Proc_noparam__DOT__v__DOT__ex_result_sel_X;
         CData/*1:0*/ Proc_noparam__DOT__v__DOT__wb_result_sel_M;
         CData/*4:0*/ Proc_noparam__DOT__v__DOT__rf_waddr_W;
@@ -126,11 +126,12 @@ VL_MODULE(VProc_noparam) {
         CData/*0:0*/ Proc_noparam__DOT__v__DOT__ctrl__DOT__squash_D;
         CData/*0:0*/ Proc_noparam__DOT__v__DOT__ctrl__DOT__pc_redirect_D;
         CData/*0:0*/ Proc_noparam__DOT__v__DOT__ctrl__DOT__pc_redirect_X;
+        CData/*2:0*/ Proc_noparam__DOT__v__DOT__ctrl__DOT__br_type_X;
         CData/*2:0*/ Proc_noparam__DOT__v__DOT__ctrl__DOT__br_type_D;
         CData/*0:0*/ Proc_noparam__DOT__v__DOT__ctrl__DOT__jal_D;
         CData/*0:0*/ Proc_noparam__DOT__v__DOT__ctrl__DOT__rs1_en_D;
         CData/*0:0*/ Proc_noparam__DOT__v__DOT__ctrl__DOT__rs2_en_D;
-        CData/*3:0*/ Proc_noparam__DOT__v__DOT__ctrl__DOT__alu_fn_D;
+        CData/*5:0*/ Proc_noparam__DOT__v__DOT__ctrl__DOT__alu_fn_D;
         CData/*2:0*/ Proc_noparam__DOT__v__DOT__ctrl__DOT__dmem_reqstream_type_D;
         CData/*1:0*/ Proc_noparam__DOT__v__DOT__ctrl__DOT__ex_result_sel_D;
         CData/*1:0*/ Proc_noparam__DOT__v__DOT__ctrl__DOT__wb_result_sel_D;
@@ -154,7 +155,6 @@ VL_MODULE(VProc_noparam) {
         CData/*1:0*/ Proc_noparam__DOT__v__DOT__ctrl__DOT__wb_result_sel_X;
         CData/*0:0*/ Proc_noparam__DOT__v__DOT__ctrl__DOT__proc2mngr_val_X;
         CData/*0:0*/ Proc_noparam__DOT__v__DOT__ctrl__DOT__stats_en_wen_X;
-        CData/*2:0*/ Proc_noparam__DOT__v__DOT__ctrl__DOT__br_type_X;
         CData/*0:0*/ Proc_noparam__DOT__v__DOT__ctrl__DOT__mul_X;
         CData/*2:0*/ Proc_noparam__DOT__v__DOT__ctrl__DOT__dmem_reqstream_type_M;
         CData/*0:0*/ Proc_noparam__DOT__v__DOT__ctrl__DOT__proc2mngr_val_M;
@@ -255,8 +255,8 @@ VL_MODULE(VProc_noparam) {
     // Internals; generally not touched by application code
     CData/*6:0*/ __Vtableidx1;
     CData/*0:0*/ __Vclklast__TOP__clk;
-    WData/*76:0*/ Proc_noparam__DOT__v__DOT____Vcellout__imem_queue__deq_msg[3];
-    WData/*76:0*/ Proc_noparam__DOT__v__DOT____Vcellout__dmem_queue__deq_msg[3];
+    WData/*76:0*/ Proc_noparam__DOT____Vcellout__v__imem_reqstream_msg[3];
+    WData/*76:0*/ Proc_noparam__DOT____Vcellout__v__dmem_reqstream_msg[3];
     static CData/*0:0*/ __Vtable1_Proc_noparam__DOT__v__DOT__ctrl__DOT__pc_redirect_X[128];
     
     // INTERNAL VARIABLES

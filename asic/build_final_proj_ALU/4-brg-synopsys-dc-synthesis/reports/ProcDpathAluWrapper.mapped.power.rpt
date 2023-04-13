@@ -1,0 +1,61 @@
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -hier
+        -analysis_effort low
+Design : ProcDpathAluWrapper
+Version: R-2020.09-SP2
+Date   : Thu Apr 13 14:53:44 2023
+****************************************
+
+
+Library(s) Used:
+
+    NangateOpenCellLibrary (File: /home/ezw2/ece5745/ASIC_final_subword/asic/build_final_proj_ALU/4-brg-synopsys-dc-synthesis/inputs/adk/stdcells.db)
+
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+Design        Wire Load Model            Library
+------------------------------------------------
+ProcDpathAluWrapper    5K_hvratio_1_1    NangateOpenCellLibrary
+
+
+Global Operating Voltage = 1.1  
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000ff
+    Time Units = 1ns
+    Dynamic Power Units = 1uW    (derived from V,C,T units)
+    Leakage Power Units = 1nW
+
+
+--------------------------------------------------------------------------------
+                                       Switch   Int      Leak     Total
+Hierarchy                              Power    Power    Power    Power    %
+--------------------------------------------------------------------------------
+ProcDpathAluWrapper                     129.384  146.451 5.08e+04  326.666 100.0
+  v (ProcDpathAluWrapper_proc_ProcDpathAluWrapper_0)  129.384  146.451 5.08e+04  326.666 100.0
+    alu (ProcDpathAluWrapper_proc_ProcDpathAlu_0)   74.861   81.729 4.42e+04  200.774  61.5
+      add_x_1 (ProcDpathAluWrapper_proc_ProcDpathAlu_DW01_add_J1_4_0)    6.947   11.678 4.09e+03   22.717   7.0
+      sub_x_2 (ProcDpathAluWrapper_proc_ProcDpathAlu_DW01_sub_J1_4_0)    9.084   11.858 4.45e+03   25.387   7.8
+      add_x_6 (ProcDpathAluWrapper_proc_ProcDpathAlu_DW01_add_J1_3_0)    0.850    2.050  583.225    3.483   1.1
+      add_x_7 (ProcDpathAluWrapper_proc_ProcDpathAlu_DW01_add_J1_2_0)    0.848    2.047  585.425    3.481   1.1
+      add_x_8 (ProcDpathAluWrapper_proc_ProcDpathAlu_DW01_add_J1_1_0)    0.845    2.027  581.060    3.453   1.1
+      add_x_9 (ProcDpathAluWrapper_proc_ProcDpathAlu_DW01_add_J1_0_0)    0.851    2.049  583.176    3.483   1.1
+      sub_x_10 (ProcDpathAluWrapper_proc_ProcDpathAlu_DW01_sub_J1_3_0)    1.231    2.250  700.131    4.181   1.3
+      sub_x_11 (ProcDpathAluWrapper_proc_ProcDpathAlu_DW01_sub_J1_2_0)    1.168    2.205  682.320    4.055   1.2
+      sub_x_12 (ProcDpathAluWrapper_proc_ProcDpathAlu_DW01_sub_J1_1_0)    1.152    2.182  685.436    4.019   1.2
+      sub_x_13 (ProcDpathAluWrapper_proc_ProcDpathAlu_DW01_sub_J1_0_0)    1.151    2.201  684.181    4.037   1.2
+      lt_x_19 (ProcDpathAluWrapper_proc_ProcDpathAlu_DW_cmp_J1_1_0)    4.102    5.183 2.67e+03   11.958   3.7
+      lt_x_20 (ProcDpathAluWrapper_proc_ProcDpathAlu_DW_cmp_J1_0_0)    4.090    5.184 2.67e+03   11.949   3.7
+      cond_eq_comp (ProcDpathAluWrapper_vc_EqComparator_p_nbits32_0)    1.314    3.565 1.45e+03    6.327   1.9
+    fn_reg (ProcDpathAluWrapper_vc_EnReg_p_nbits6_0)    2.319    8.240  533.818   11.093   3.4
+    in1_reg (ProcDpathAluWrapper_vc_EnReg_p_nbits32_1)   23.009   26.930 2.59e+03   52.533  16.1
+    in0_reg (ProcDpathAluWrapper_vc_EnReg_p_nbits32_0)   27.342   26.923 2.59e+03   56.858  17.4
+    val_reg (ProcDpathAluWrapper_vc_EnResetReg_p_nbits1_0)    0.402    1.974  145.480    2.521   0.8
+1

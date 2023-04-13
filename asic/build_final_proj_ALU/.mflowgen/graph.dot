@@ -1,0 +1,101 @@
+digraph {
+label="";
+labelloc="t";
+fontsize=60;
+size="8.5;11";
+ratio="fill";
+margin=0;
+pad=1;
+rankdir="TB";
+concentrate=true;
+splines=polyline;
+center=true;
+nodesep=1.2;
+ranksep=0.8;
+brg_cadence_innovus_blocksetup [ fontsize=24, width=2, penwidth=2, shape=Mrecord, label="{ { <i_adk> adk | <i_design_checkpoint> design.checkpoint | <i_design_sdc> design.sdc } | \n
+brg-cadence-innovus-blocksetup
+
+\n\n | { <o_design_checkpoint> design.checkpoint } }", color=black ];
+brg_cadence_innovus_init [ fontsize=24, width=2, penwidth=2, shape=Mrecord, label="{ { <i_adk> adk | <i_design_sdc> design.sdc | <i_design_v> design.v } | \n
+brg-cadence-innovus-init
+
+\n\n | { <o_design_checkpoint> design.checkpoint } }", color=black ];
+brg_cadence_innovus_pnr [ fontsize=24, width=2, penwidth=2, shape=Mrecord, label="{ { <i_adk> adk | <i_design_checkpoint> design.checkpoint | <i_design_sdc> design.sdc } | \n
+brg-cadence-innovus-pnr
+
+\n\n | { <o_design_checkpoint> design.checkpoint } }", color=black ];
+brg_cadence_innovus_signoff [ fontsize=24, width=2, penwidth=2, shape=Mrecord, label="{ { <i_adk> adk | <i_design_checkpoint> design.checkpoint | <i_design_sdc> design.sdc } | \n
+brg-cadence-innovus-signoff
+
+\n\n | { <o_design_checkpoint> design.checkpoint | <o_design_gds> design.gds | <o_design_lef> design.lef | <o_design_lvs_v> design.lvs.v | <o_design_sdf> design.sdf | <o_design_spef_gz> design.spef.gz | <o_design_vcs_v> design.vcs.v | <o_signoff_summary_txt> signoff.summary.txt } }", color=black ];
+brg_flow_summary [ fontsize=24, width=2, penwidth=2, shape=Mrecord, label="{ { <i_4state_summary_txt> 4state.summary.txt | <i_ba_summary_txt> ba.summary.txt | <i_ff_summary_txt> ff.summary.txt | <i_powerBA_summary_txt> powerBA.summary.txt | <i_powerFF_summary_txt> powerFF.summary.txt | <i_powerRTL_summary_txt> powerRTL.summary.txt | <i_signoff_summary_txt> signoff.summary.txt | <i_synth_summary_txt> synth.summary.txt } | \n
+brg-flow-summary
+
+\n\n | { <o_flow_summary_rpt> flow.summary.rpt } }", color=black ];
+brg_rtl_4_state_vcssim [ fontsize=24, width=2, penwidth=2, shape=Mrecord, label="{ { <i_adk> adk | <i_design_args> design.args | <i_design_sdf> design.sdf | <i_design_vcs_v> design.vcs.v | <i_macrofiles> macrofiles | <i_rtl> rtl | <i_testbenches> testbenches } | \n
+brg-rtl-4-state-vcssim
+
+\n\n | { <o_saif> saif | <o_sim_summary_txt> sim.summary.txt | <o_vcd> vcd | <o_vpd> vpd } }", color=black ];
+brg_synopsys_dc_synthesis [ fontsize=24, width=2, penwidth=2, shape=Mrecord, label="{ { <i_adk> adk | <i_rtl> rtl | <i_run_saif> run.saif } | \n
+brg-synopsys-dc-synthesis
+
+\n\n | { <o_design_namemap> design.namemap | <o_design_sdc> design.sdc | <o_design_spef_gz> design.spef.gz | <o_design_svf> design.svf | <o_design_v> design.v | <o_design_vcs_v> design.vcs.v | <o_synth_summary_txt> synth.summary.txt } }", color=black ];
+brg_synth_flow_summary [ fontsize=24, width=2, penwidth=2, shape=Mrecord, label="{ { <i_4state_summary_txt> 4state.summary.txt | <i_ba_summary_txt> ba.summary.txt | <i_ff_summary_txt> ff.summary.txt | <i_powerBA_summary_txt> powerBA.summary.txt | <i_powerFF_summary_txt> powerFF.summary.txt | <i_powerRTL_summary_txt> powerRTL.summary.txt | <i_signoff_summary_txt> signoff.summary.txt | <i_synth_summary_txt> synth.summary.txt } | \n
+brg-synth-flow-summary
+
+\n\n | { <o_flow_summary_rpt> flow.summary.rpt } }", color=black ];
+build_info [ fontsize=24, width=2, penwidth=2, shape=Mrecord, label="{ {  } | \n
+build-info
+
+\n\n | {  } }", color=black ];
+ece5745_block_gather [ fontsize=24, width=2, penwidth=2, shape=Mrecord, label="{ {  } | \n
+ece5745-block-gather
+
+\n\n | { <o_rtl> rtl | <o_testbenches> testbenches } }", color=black ];
+freepdk_45nm [ fontsize=24, width=2, penwidth=2, shape=Mrecord, label="{ {  } | \n
+freepdk-45nm
+
+\n\n | { <o_adk> adk } }", color=black ];
+post_synth_gate_level_simulation [ fontsize=24, width=2, penwidth=2, shape=Mrecord, label="{ { <i_adk> adk | <i_design_args> design.args | <i_design_sdf> design.sdf | <i_design_vcs_v> design.vcs.v | <i_macrofiles> macrofiles | <i_rtl> rtl | <i_testbenches> testbenches } | \n
+post-synth-gate-level-simulation
+
+\n\n | { <o_saif> saif | <o_sim_summary_txt> sim.summary.txt | <o_vcd> vcd | <o_vpd> vpd } }", color=black ];
+post_synth_power_analysis [ fontsize=24, width=2, penwidth=2, shape=Mrecord, label="{ { <i_adk> adk | <i_design_namemap> design.namemap | <i_design_sdc> design.sdc | <i_design_spef_gz> design.spef.gz | <i_design_vcs_v> design.vcs.v | <i_saif> saif | <i_vcd> vcd } | \n
+post-synth-power-analysis
+
+\n\n | { <o_design_sdf> design.sdf | <o_power_summary_txt> power.summary.txt | <o_primetime_session> primetime.session } }", color=black ];
+freepdk_45nm:o_adk:s -> brg_cadence_innovus_blocksetup:i_adk:n [ arrowsize=2, penwidth=2 ];
+brg_cadence_innovus_init:o_design_checkpoint:s -> brg_cadence_innovus_blocksetup:i_design_checkpoint:n [ arrowsize=2, penwidth=2 ];
+brg_synopsys_dc_synthesis:o_design_sdc:s -> brg_cadence_innovus_blocksetup:i_design_sdc:n [ arrowsize=2, penwidth=2 ];
+freepdk_45nm:o_adk:s -> brg_cadence_innovus_init:i_adk:n [ arrowsize=2, penwidth=2 ];
+brg_synopsys_dc_synthesis:o_design_sdc:s -> brg_cadence_innovus_init:i_design_sdc:n [ arrowsize=2, penwidth=2 ];
+brg_synopsys_dc_synthesis:o_design_v:s -> brg_cadence_innovus_init:i_design_v:n [ arrowsize=2, penwidth=2 ];
+freepdk_45nm:o_adk:s -> brg_cadence_innovus_pnr:i_adk:n [ arrowsize=2, penwidth=2 ];
+brg_cadence_innovus_blocksetup:o_design_checkpoint:s -> brg_cadence_innovus_pnr:i_design_checkpoint:n [ arrowsize=2, penwidth=2 ];
+brg_synopsys_dc_synthesis:o_design_sdc:s -> brg_cadence_innovus_pnr:i_design_sdc:n [ arrowsize=2, penwidth=2 ];
+freepdk_45nm:o_adk:s -> brg_cadence_innovus_signoff:i_adk:n [ arrowsize=2, penwidth=2 ];
+brg_cadence_innovus_pnr:o_design_checkpoint:s -> brg_cadence_innovus_signoff:i_design_checkpoint:n [ arrowsize=2, penwidth=2 ];
+brg_synopsys_dc_synthesis:o_design_sdc:s -> brg_cadence_innovus_signoff:i_design_sdc:n [ arrowsize=2, penwidth=2 ];
+brg_rtl_4_state_vcssim:o_sim_summary_txt:s -> brg_flow_summary:i_4state_summary_txt:n [ arrowsize=2, penwidth=2 ];
+post_synth_gate_level_simulation:o_sim_summary_txt:s -> brg_flow_summary:i_ff_summary_txt:n [ arrowsize=2, penwidth=2 ];
+post_synth_power_analysis:o_power_summary_txt:s -> brg_flow_summary:i_powerFF_summary_txt:n [ arrowsize=2, penwidth=2 ];
+brg_cadence_innovus_signoff:o_signoff_summary_txt:s -> brg_flow_summary:i_signoff_summary_txt:n [ arrowsize=2, penwidth=2 ];
+ece5745_block_gather:o_rtl:s -> brg_rtl_4_state_vcssim:i_rtl:n [ arrowsize=2, penwidth=2 ];
+ece5745_block_gather:o_testbenches:s -> brg_rtl_4_state_vcssim:i_testbenches:n [ arrowsize=2, penwidth=2 ];
+freepdk_45nm:o_adk:s -> brg_synopsys_dc_synthesis:i_adk:n [ arrowsize=2, penwidth=2 ];
+ece5745_block_gather:o_rtl:s -> brg_synopsys_dc_synthesis:i_rtl:n [ arrowsize=2, penwidth=2 ];
+brg_rtl_4_state_vcssim:o_sim_summary_txt:s -> brg_synth_flow_summary:i_4state_summary_txt:n [ arrowsize=2, penwidth=2 ];
+post_synth_gate_level_simulation:o_sim_summary_txt:s -> brg_synth_flow_summary:i_ff_summary_txt:n [ arrowsize=2, penwidth=2 ];
+post_synth_power_analysis:o_power_summary_txt:s -> brg_synth_flow_summary:i_powerFF_summary_txt:n [ arrowsize=2, penwidth=2 ];
+brg_synopsys_dc_synthesis:o_synth_summary_txt:s -> brg_synth_flow_summary:i_synth_summary_txt:n [ arrowsize=2, penwidth=2 ];
+freepdk_45nm:o_adk:s -> post_synth_gate_level_simulation:i_adk:n [ arrowsize=2, penwidth=2 ];
+brg_synopsys_dc_synthesis:o_design_vcs_v:s -> post_synth_gate_level_simulation:i_design_vcs_v:n [ arrowsize=2, penwidth=2 ];
+ece5745_block_gather:o_rtl:s -> post_synth_gate_level_simulation:i_rtl:n [ arrowsize=2, penwidth=2 ];
+ece5745_block_gather:o_testbenches:s -> post_synth_gate_level_simulation:i_testbenches:n [ arrowsize=2, penwidth=2 ];
+freepdk_45nm:o_adk:s -> post_synth_power_analysis:i_adk:n [ arrowsize=2, penwidth=2 ];
+brg_synopsys_dc_synthesis:o_design_sdc:s -> post_synth_power_analysis:i_design_sdc:n [ arrowsize=2, penwidth=2 ];
+brg_synopsys_dc_synthesis:o_design_spef_gz:s -> post_synth_power_analysis:i_design_spef_gz:n [ arrowsize=2, penwidth=2 ];
+brg_synopsys_dc_synthesis:o_design_vcs_v:s -> post_synth_power_analysis:i_design_vcs_v:n [ arrowsize=2, penwidth=2 ];
+post_synth_gate_level_simulation:o_saif:s -> post_synth_power_analysis:i_saif:n [ arrowsize=2, penwidth=2 ];
+post_synth_gate_level_simulation:o_vcd:s -> post_synth_power_analysis:i_vcd:n [ arrowsize=2, penwidth=2 ];
+}

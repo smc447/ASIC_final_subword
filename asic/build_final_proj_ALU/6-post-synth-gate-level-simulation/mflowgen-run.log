@@ -1,0 +1,24 @@
++ rm -rf ./logs
++ rm -rf ./reports
++ mkdir -p logs
++ mkdir -p reports
++ mkdir -p outputs/vpd
++ mkdir -p outputs/vcd
++ mkdir -p outputs/saif
++ python sim_all.py
+=== Running sim_all.py ================
+Running Tests:
+[34mRun #1[0m
+[34m=== Running run_sim.py -t imul-alu-add =======[0m
+Fnmatches: False|False
+No ./simv present, must be first run
+command: vcs  ./inputs/design.vcs.v ./inputs/adk/stdcells.v ./inputs/adk/iocells.v -full64 -debug_pp -sverilog +incdir+./inputs/testbenches +lint=all -xprop=tmerge -top ProcDpathAluWrapper_tb ./inputs/testbenches/ProcDpathAluWrapper_imul-alu-add_tb.v +define+CYCLE_TIME=3.0 +define+VTB_INPUT_DELAY=0.15000000000000002 +define+VTB_OUTPUT_ASSERT_DELAY=2.85 +vcs+dumpvars+outputs/vcd/imul-alu-add.vcd +delay_mode_zero +neg_tchk -hsopt=gates -y ./inputs/macrofiles -override_timescale=1ns/1ps -rad +vcs+saif_libcell -lca
+[32m[PASSED][0m
+VCD to SAIF translator version R-2020.09-SP2 Synopsys, Inc.
+direct mapping all VCD instances
+processing header of VCD file: ./outputs/vcd/imul-alu-add.vcd
+processing value changes of VCD file: ./outputs/vcd/imul-alu-add.vcd
+generating backward SAIF file: ./outputs/saif/imul-alu-add.saif
+[32m[PASSED]: imul-alu-add[0m
+=== Ending Simulations ================
+

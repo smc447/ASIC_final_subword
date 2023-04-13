@@ -32,7 +32,7 @@ void VProc_noparam::eval_step() {
             Verilated::debug(1);
             __Vchange = _change_request(vlSymsp);
             Verilated::debug(__Vsaved_debug);
-            VL_FATAL_MT("proc/Proc.v", 478, "",
+            VL_FATAL_MT("proc/Proc.v", 510, "",
                 "Verilated model didn't converge\n"
                 "- See DIDNOTCONVERGE in the Verilator manual");
         } else {
@@ -57,7 +57,7 @@ void VProc_noparam::_eval_initial_loop(VProc_noparam__Syms* __restrict vlSymsp) 
             Verilated::debug(1);
             __Vchange = _change_request(vlSymsp);
             Verilated::debug(__Vsaved_debug);
-            VL_FATAL_MT("proc/Proc.v", 478, "",
+            VL_FATAL_MT("proc/Proc.v", 510, "",
                 "Verilated model didn't DC converge\n"
                 "- See DIDNOTCONVERGE in the Verilator manual");
         } else {
@@ -801,10 +801,12 @@ void VProc_noparam::__Vdpiexp_Proc_noparam__DOT__v__DOT__line_trace_TOP(VProc_no
                                              & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__inst))) 
                              | (0x2000033U == (0xfe00707fU 
                                                & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__inst))) 
-                            | (0x13U == (0x707fU & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__inst))) 
-                           | (0x7013U == (0x707fU & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__inst))) 
-                          | (0x6013U == (0x707fU & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__inst))) 
-                         | (0x4013U == (0x707fU & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__inst)))) {
+                            | (0x48000077U == (0xfe00707fU 
+                                               & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__inst))) 
+                           | (0x4a000077U == (0xfe00707fU 
+                                              & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__inst))) 
+                          | (0x13U == (0x707fU & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__inst))) 
+                         | (0x7013U == (0x707fU & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__inst)))) {
                         if ((0x4033U == (0xfe00707fU 
                                          & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__inst))) {
                             VL_SFORMAT_X(200,__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__Vfuncout
@@ -846,84 +848,71 @@ void VProc_noparam::__Vdpiexp_Proc_noparam__DOT__v__DOT__line_trace_TOP(VProc_no
                                                      24,
                                                      vlTOPp->Proc_noparam__DOT__v__DOT__tinyrv2__DOT__rs2_str);
                                     } else {
-                                        if ((0x13U 
-                                             == (0x707fU 
+                                        if ((0x48000077U 
+                                             == (0xfe00707fU 
                                                  & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__inst))) {
-                                            __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_i__13__inst 
-                                                = __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__inst;
-                                            __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_i__13__Vfuncout 
-                                                = (0xfffU 
-                                                   & (__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_i__13__inst 
-                                                      >> 0x14U));
                                             VL_SFORMAT_X(200
                                                          ,__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__Vfuncout
-                                                         ,"addi   %s, %s, 0x%x ",
+                                                         ,"add8    %s, %s, %s   ",
                                                          24,
                                                          vlTOPp->Proc_noparam__DOT__v__DOT__tinyrv2__DOT__rd_str,
                                                          24,
                                                          vlTOPp->Proc_noparam__DOT__v__DOT__tinyrv2__DOT__rs1_str,
-                                                         12,
-                                                         (IData)(__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_i__13__Vfuncout));
+                                                         24,
+                                                         vlTOPp->Proc_noparam__DOT__v__DOT__tinyrv2__DOT__rs2_str);
                                         } else {
-                                            if ((0x7013U 
+                                            if ((0x4a000077U 
                                                  == 
-                                                 (0x707fU 
+                                                 (0xfe00707fU 
                                                   & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__inst))) {
-                                                __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_i__14__inst 
-                                                    = __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__inst;
-                                                __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_i__14__Vfuncout 
-                                                    = 
-                                                    (0xfffU 
-                                                     & (__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_i__14__inst 
-                                                        >> 0x14U));
                                                 VL_SFORMAT_X(200
                                                              ,__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__Vfuncout
-                                                             ,"andi   %s, %s, 0x%x ",
+                                                             ,"sub8    %s, %s, %s   ",
                                                              24,
                                                              vlTOPp->Proc_noparam__DOT__v__DOT__tinyrv2__DOT__rd_str,
                                                              24,
                                                              vlTOPp->Proc_noparam__DOT__v__DOT__tinyrv2__DOT__rs1_str,
-                                                             12,
-                                                             (IData)(__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_i__14__Vfuncout));
+                                                             24,
+                                                             vlTOPp->Proc_noparam__DOT__v__DOT__tinyrv2__DOT__rs2_str);
                                             } else {
                                                 if (
-                                                    (0x6013U 
+                                                    (0x13U 
                                                      == 
                                                      (0x707fU 
                                                       & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__inst))) {
-                                                    __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_i__15__inst 
+                                                    __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_i__13__inst 
                                                         = __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__inst;
-                                                    __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_i__15__Vfuncout 
+                                                    __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_i__13__Vfuncout 
                                                         = 
                                                         (0xfffU 
-                                                         & (__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_i__15__inst 
+                                                         & (__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_i__13__inst 
                                                             >> 0x14U));
                                                     VL_SFORMAT_X(200
                                                                  ,__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__Vfuncout
-                                                                 ,"ori    %s, %s, 0x%x ",
+                                                                 ,"addi   %s, %s, 0x%x ",
                                                                  24,
                                                                  vlTOPp->Proc_noparam__DOT__v__DOT__tinyrv2__DOT__rd_str,
                                                                  24,
                                                                  vlTOPp->Proc_noparam__DOT__v__DOT__tinyrv2__DOT__rs1_str,
                                                                  12,
-                                                                 (IData)(__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_i__15__Vfuncout));
+                                                                 (IData)(__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_i__13__Vfuncout));
                                                 } else {
-                                                    __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_i__16__inst 
+                                                    __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_i__14__inst 
                                                         = __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__inst;
-                                                    __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_i__16__Vfuncout 
+                                                    __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_i__14__Vfuncout 
                                                         = 
                                                         (0xfffU 
-                                                         & (__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_i__16__inst 
+                                                         & (__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_i__14__inst 
                                                             >> 0x14U));
                                                     VL_SFORMAT_X(200
                                                                  ,__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__Vfuncout
-                                                                 ,"xori   %s, %s, 0x%x ",
+                                                                 ,"andi   %s, %s, 0x%x ",
                                                                  24,
                                                                  vlTOPp->Proc_noparam__DOT__v__DOT__tinyrv2__DOT__rd_str,
                                                                  24,
                                                                  vlTOPp->Proc_noparam__DOT__v__DOT__tinyrv2__DOT__rs1_str,
                                                                  12,
-                                                                 (IData)(__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_i__16__Vfuncout));
+                                                                 (IData)(__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_i__14__Vfuncout));
                                                 }
                                             }
                                         }
@@ -932,172 +921,171 @@ void VProc_noparam::__Vdpiexp_Proc_noparam__DOT__v__DOT__line_trace_TOP(VProc_no
                             }
                         }
                     } else {
-                        if (((((((((0x2013U == (0x707fU 
+                        if (((((((((0x6013U == (0x707fU 
                                                 & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__inst)) 
-                                   | (0x3013U == (0x707fU 
+                                   | (0x4013U == (0x707fU 
                                                   & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__inst))) 
-                                  | (0x40005033U == 
-                                     (0xfe00707fU & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__inst))) 
-                                 | (0x5033U == (0xfe00707fU 
+                                  | (0x2013U == (0x707fU 
+                                                 & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__inst))) 
+                                 | (0x3013U == (0x707fU 
                                                 & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__inst))) 
-                                | (0x1033U == (0xfe00707fU 
-                                               & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__inst))) 
-                               | (0x40005013U == (0xfe00707fU 
-                                                  & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__inst))) 
-                              | (0x5013U == (0xfe00707fU 
+                                | (0x40005033U == (0xfe00707fU 
+                                                   & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__inst))) 
+                               | (0x5033U == (0xfe00707fU 
+                                              & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__inst))) 
+                              | (0x1033U == (0xfe00707fU 
                                              & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__inst))) 
-                             | (0x1013U == (0xfe00707fU 
-                                            & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__inst)))) {
-                            if ((0x2013U == (0x707fU 
+                             | (0x40005013U == (0xfe00707fU 
+                                                & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__inst)))) {
+                            if ((0x6013U == (0x707fU 
                                              & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__inst))) {
-                                __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_i__17__inst 
+                                __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_i__15__inst 
                                     = __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__inst;
-                                __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_i__17__Vfuncout 
-                                    = (0xfffU & (__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_i__17__inst 
+                                __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_i__15__Vfuncout 
+                                    = (0xfffU & (__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_i__15__inst 
                                                  >> 0x14U));
                                 VL_SFORMAT_X(200,__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__Vfuncout
-                                             ,"slti   %s, %s, 0x%x ",
+                                             ,"ori    %s, %s, 0x%x ",
                                              24,vlTOPp->Proc_noparam__DOT__v__DOT__tinyrv2__DOT__rd_str,
                                              24,vlTOPp->Proc_noparam__DOT__v__DOT__tinyrv2__DOT__rs1_str,
-                                             12,(IData)(__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_i__17__Vfuncout));
+                                             12,(IData)(__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_i__15__Vfuncout));
                             } else {
-                                if ((0x3013U == (0x707fU 
+                                if ((0x4013U == (0x707fU 
                                                  & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__inst))) {
-                                    __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_i__18__inst 
+                                    __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_i__16__inst 
                                         = __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__inst;
-                                    __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_i__18__Vfuncout 
+                                    __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_i__16__Vfuncout 
                                         = (0xfffU & 
-                                           (__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_i__18__inst 
+                                           (__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_i__16__inst 
                                             >> 0x14U));
                                     VL_SFORMAT_X(200
                                                  ,__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__Vfuncout
-                                                 ,"sltiu  %s, %s, 0x%x ",
+                                                 ,"xori   %s, %s, 0x%x ",
                                                  24,
                                                  vlTOPp->Proc_noparam__DOT__v__DOT__tinyrv2__DOT__rd_str,
                                                  24,
                                                  vlTOPp->Proc_noparam__DOT__v__DOT__tinyrv2__DOT__rs1_str,
                                                  12,
-                                                 (IData)(__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_i__18__Vfuncout));
+                                                 (IData)(__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_i__16__Vfuncout));
                                 } else {
-                                    if ((0x40005033U 
-                                         == (0xfe00707fU 
-                                             & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__inst))) {
-                                        __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_shamt__19__inst 
+                                    if ((0x2013U == 
+                                         (0x707fU & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__inst))) {
+                                        __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_i__17__inst 
                                             = __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__inst;
-                                        __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_shamt__19__Vfuncout 
-                                            = (0x1fU 
-                                               & (__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_shamt__19__inst 
+                                        __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_i__17__Vfuncout 
+                                            = (0xfffU 
+                                               & (__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_i__17__inst 
                                                   >> 0x14U));
                                         VL_SFORMAT_X(200
                                                      ,__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__Vfuncout
-                                                     ,"sra    %s, %s, 0x%x  ",
+                                                     ,"slti   %s, %s, 0x%x ",
                                                      24,
                                                      vlTOPp->Proc_noparam__DOT__v__DOT__tinyrv2__DOT__rd_str,
                                                      24,
                                                      vlTOPp->Proc_noparam__DOT__v__DOT__tinyrv2__DOT__rs1_str,
-                                                     5,
-                                                     (IData)(__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_shamt__19__Vfuncout));
+                                                     12,
+                                                     (IData)(__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_i__17__Vfuncout));
                                     } else {
-                                        if ((0x5033U 
-                                             == (0xfe00707fU 
+                                        if ((0x3013U 
+                                             == (0x707fU 
                                                  & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__inst))) {
-                                            __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_shamt__20__inst 
+                                            __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_i__18__inst 
                                                 = __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__inst;
-                                            __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_shamt__20__Vfuncout 
-                                                = (0x1fU 
-                                                   & (__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_shamt__20__inst 
+                                            __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_i__18__Vfuncout 
+                                                = (0xfffU 
+                                                   & (__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_i__18__inst 
                                                       >> 0x14U));
                                             VL_SFORMAT_X(200
                                                          ,__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__Vfuncout
-                                                         ,"srl    %s, %s, 0x%x  ",
+                                                         ,"sltiu  %s, %s, 0x%x ",
                                                          24,
                                                          vlTOPp->Proc_noparam__DOT__v__DOT__tinyrv2__DOT__rd_str,
                                                          24,
                                                          vlTOPp->Proc_noparam__DOT__v__DOT__tinyrv2__DOT__rs1_str,
-                                                         5,
-                                                         (IData)(__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_shamt__20__Vfuncout));
+                                                         12,
+                                                         (IData)(__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_i__18__Vfuncout));
                                         } else {
-                                            if ((0x1033U 
+                                            if ((0x40005033U 
                                                  == 
                                                  (0xfe00707fU 
                                                   & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__inst))) {
-                                                __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_shamt__21__inst 
+                                                __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_shamt__19__inst 
                                                     = __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__inst;
-                                                __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_shamt__21__Vfuncout 
+                                                __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_shamt__19__Vfuncout 
                                                     = 
                                                     (0x1fU 
-                                                     & (__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_shamt__21__inst 
+                                                     & (__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_shamt__19__inst 
                                                         >> 0x14U));
                                                 VL_SFORMAT_X(200
                                                              ,__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__Vfuncout
-                                                             ,"sll    %s, %s, 0x%x  ",
+                                                             ,"sra    %s, %s, 0x%x  ",
                                                              24,
                                                              vlTOPp->Proc_noparam__DOT__v__DOT__tinyrv2__DOT__rd_str,
                                                              24,
                                                              vlTOPp->Proc_noparam__DOT__v__DOT__tinyrv2__DOT__rs1_str,
                                                              5,
-                                                             (IData)(__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_shamt__21__Vfuncout));
+                                                             (IData)(__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_shamt__19__Vfuncout));
                                             } else {
                                                 if (
-                                                    (0x40005013U 
+                                                    (0x5033U 
                                                      == 
                                                      (0xfe00707fU 
                                                       & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__inst))) {
-                                                    __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_shamt__22__inst 
+                                                    __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_shamt__20__inst 
                                                         = __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__inst;
-                                                    __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_shamt__22__Vfuncout 
+                                                    __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_shamt__20__Vfuncout 
                                                         = 
                                                         (0x1fU 
-                                                         & (__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_shamt__22__inst 
+                                                         & (__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_shamt__20__inst 
                                                             >> 0x14U));
                                                     VL_SFORMAT_X(200
                                                                  ,__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__Vfuncout
-                                                                 ,"srai   %s, %s, 0x%x  ",
+                                                                 ,"srl    %s, %s, 0x%x  ",
                                                                  24,
                                                                  vlTOPp->Proc_noparam__DOT__v__DOT__tinyrv2__DOT__rd_str,
                                                                  24,
                                                                  vlTOPp->Proc_noparam__DOT__v__DOT__tinyrv2__DOT__rs1_str,
                                                                  5,
-                                                                 (IData)(__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_shamt__22__Vfuncout));
+                                                                 (IData)(__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_shamt__20__Vfuncout));
                                                 } else {
                                                     if (
-                                                        (0x5013U 
+                                                        (0x1033U 
                                                          == 
                                                          (0xfe00707fU 
                                                           & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__inst))) {
-                                                        __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_shamt__23__inst 
+                                                        __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_shamt__21__inst 
                                                             = __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__inst;
-                                                        __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_shamt__23__Vfuncout 
+                                                        __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_shamt__21__Vfuncout 
                                                             = 
                                                             (0x1fU 
-                                                             & (__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_shamt__23__inst 
+                                                             & (__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_shamt__21__inst 
                                                                 >> 0x14U));
                                                         VL_SFORMAT_X(200
                                                                      ,__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__Vfuncout
-                                                                     ,"srli   %s, %s, 0x%x  ",
+                                                                     ,"sll    %s, %s, 0x%x  ",
                                                                      24,
                                                                      vlTOPp->Proc_noparam__DOT__v__DOT__tinyrv2__DOT__rd_str,
                                                                      24,
                                                                      vlTOPp->Proc_noparam__DOT__v__DOT__tinyrv2__DOT__rs1_str,
                                                                      5,
-                                                                     (IData)(__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_shamt__23__Vfuncout));
+                                                                     (IData)(__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_shamt__21__Vfuncout));
                                                     } else {
-                                                        __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_shamt__24__inst 
+                                                        __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_shamt__22__inst 
                                                             = __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__inst;
-                                                        __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_shamt__24__Vfuncout 
+                                                        __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_shamt__22__Vfuncout 
                                                             = 
                                                             (0x1fU 
-                                                             & (__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_shamt__24__inst 
+                                                             & (__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_shamt__22__inst 
                                                                 >> 0x14U));
                                                         VL_SFORMAT_X(200
                                                                      ,__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__Vfuncout
-                                                                     ,"slli   %s, %s, 0x%x  ",
+                                                                     ,"srai   %s, %s, 0x%x  ",
                                                                      24,
                                                                      vlTOPp->Proc_noparam__DOT__v__DOT__tinyrv2__DOT__rd_str,
                                                                      24,
                                                                      vlTOPp->Proc_noparam__DOT__v__DOT__tinyrv2__DOT__rs1_str,
                                                                      5,
-                                                                     (IData)(__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_shamt__24__Vfuncout));
+                                                                     (IData)(__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_shamt__22__Vfuncout));
                                                     }
                                                 }
                                             }
@@ -1106,206 +1094,191 @@ void VProc_noparam::__Vdpiexp_Proc_noparam__DOT__v__DOT__line_trace_TOP(VProc_no
                                 }
                             }
                         } else {
-                            if (((((((((0x37U == (0x7fU 
-                                                  & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__inst)) 
-                                       | (0x17U == 
-                                          (0x7fU & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__inst))) 
-                                      | (0x2003U == 
-                                         (0x707fU & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__inst))) 
-                                     | (0x2023U == 
-                                        (0x707fU & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__inst))) 
-                                    | (0x6fU == (0x7fU 
-                                                 & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__inst))) 
-                                   | (0x67U == (0x707fU 
-                                                & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__inst))) 
-                                  | (0x63U == (0x707fU 
+                            if (((((((((0x5013U == 
+                                        (0xfe00707fU 
+                                         & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__inst)) 
+                                       | (0x1013U == 
+                                          (0xfe00707fU 
+                                           & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__inst))) 
+                                      | (0x37U == (0x7fU 
+                                                   & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__inst))) 
+                                     | (0x17U == (0x7fU 
+                                                  & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__inst))) 
+                                    | (0x2003U == (0x707fU 
+                                                   & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__inst))) 
+                                   | (0x2023U == (0x707fU 
+                                                  & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__inst))) 
+                                  | (0x6fU == (0x7fU 
                                                & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__inst))) 
-                                 | (0x1063U == (0x707fU 
-                                                & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__inst)))) {
-                                if ((0x37U == (0x7fU 
-                                               & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__inst))) {
-                                    __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_u_sh12__25__inst 
+                                 | (0x67U == (0x707fU 
+                                              & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__inst)))) {
+                                if ((0x5013U == (0xfe00707fU 
+                                                 & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__inst))) {
+                                    __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_shamt__23__inst 
                                         = __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__inst;
-                                    __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_u_sh12__25__Vfuncout 
-                                        = (0xfffffU 
-                                           & (__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_u_sh12__25__inst 
-                                              >> 0xcU));
+                                    __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_shamt__23__Vfuncout 
+                                        = (0x1fU & 
+                                           (__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_shamt__23__inst 
+                                            >> 0x14U));
                                     VL_SFORMAT_X(200
                                                  ,__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__Vfuncout
-                                                 ,"lui    %s, 0x%x    ",
+                                                 ,"srli   %s, %s, 0x%x  ",
                                                  24,
                                                  vlTOPp->Proc_noparam__DOT__v__DOT__tinyrv2__DOT__rd_str,
-                                                 20,
-                                                 __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_u_sh12__25__Vfuncout);
+                                                 24,
+                                                 vlTOPp->Proc_noparam__DOT__v__DOT__tinyrv2__DOT__rs1_str,
+                                                 5,
+                                                 (IData)(__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_shamt__23__Vfuncout));
                                 } else {
-                                    if ((0x17U == (0x7fU 
-                                                   & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__inst))) {
-                                        __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_u_sh12__26__inst 
+                                    if ((0x1013U == 
+                                         (0xfe00707fU 
+                                          & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__inst))) {
+                                        __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_shamt__24__inst 
                                             = __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__inst;
-                                        __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_u_sh12__26__Vfuncout 
-                                            = (0xfffffU 
-                                               & (__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_u_sh12__26__inst 
-                                                  >> 0xcU));
+                                        __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_shamt__24__Vfuncout 
+                                            = (0x1fU 
+                                               & (__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_shamt__24__inst 
+                                                  >> 0x14U));
                                         VL_SFORMAT_X(200
                                                      ,__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__Vfuncout
-                                                     ,"auipc  %s, 0x%x    ",
+                                                     ,"slli   %s, %s, 0x%x  ",
                                                      24,
                                                      vlTOPp->Proc_noparam__DOT__v__DOT__tinyrv2__DOT__rd_str,
-                                                     20,
-                                                     __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_u_sh12__26__Vfuncout);
+                                                     24,
+                                                     vlTOPp->Proc_noparam__DOT__v__DOT__tinyrv2__DOT__rs1_str,
+                                                     5,
+                                                     (IData)(__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_shamt__24__Vfuncout));
                                     } else {
-                                        if ((0x2003U 
-                                             == (0x707fU 
+                                        if ((0x37U 
+                                             == (0x7fU 
                                                  & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__inst))) {
-                                            __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_i__27__inst 
+                                            __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_u_sh12__25__inst 
                                                 = __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__inst;
-                                            __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_i__27__Vfuncout 
-                                                = (0xfffU 
-                                                   & (__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_i__27__inst 
-                                                      >> 0x14U));
+                                            __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_u_sh12__25__Vfuncout 
+                                                = (0xfffffU 
+                                                   & (__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_u_sh12__25__inst 
+                                                      >> 0xcU));
                                             VL_SFORMAT_X(200
                                                          ,__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__Vfuncout
-                                                         ,"lw     %s, 0x%x(%s) ",
+                                                         ,"lui    %s, 0x%x    ",
                                                          24,
                                                          vlTOPp->Proc_noparam__DOT__v__DOT__tinyrv2__DOT__rd_str,
-                                                         12,
-                                                         (IData)(__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_i__27__Vfuncout),
-                                                         24,
-                                                         vlTOPp->Proc_noparam__DOT__v__DOT__tinyrv2__DOT__rs1_str);
+                                                         20,
+                                                         __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_u_sh12__25__Vfuncout);
                                         } else {
-                                            if ((0x2023U 
+                                            if ((0x17U 
                                                  == 
-                                                 (0x707fU 
+                                                 (0x7fU 
                                                   & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__inst))) {
-                                                __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_s__28__inst 
+                                                __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_u_sh12__26__inst 
                                                     = __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__inst;
-                                                __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_s__28__Vfuncout 
+                                                __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_u_sh12__26__Vfuncout 
                                                     = 
-                                                    ((0xfe0U 
-                                                      & (__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_s__28__inst 
-                                                         >> 0x14U)) 
-                                                     | (0x1fU 
-                                                        & (__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_s__28__inst 
-                                                           >> 7U)));
+                                                    (0xfffffU 
+                                                     & (__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_u_sh12__26__inst 
+                                                        >> 0xcU));
                                                 VL_SFORMAT_X(200
                                                              ,__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__Vfuncout
-                                                             ,"sw     %s, 0x%x(%s) ",
+                                                             ,"auipc  %s, 0x%x    ",
                                                              24,
-                                                             vlTOPp->Proc_noparam__DOT__v__DOT__tinyrv2__DOT__rs2_str,
-                                                             12,
-                                                             (IData)(__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_s__28__Vfuncout),
-                                                             24,
-                                                             vlTOPp->Proc_noparam__DOT__v__DOT__tinyrv2__DOT__rs1_str);
+                                                             vlTOPp->Proc_noparam__DOT__v__DOT__tinyrv2__DOT__rd_str,
+                                                             20,
+                                                             __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_u_sh12__26__Vfuncout);
                                             } else {
                                                 if (
-                                                    (0x6fU 
+                                                    (0x2003U 
                                                      == 
-                                                     (0x7fU 
+                                                     (0x707fU 
                                                       & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__inst))) {
-                                                    __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_j__29__inst 
+                                                    __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_i__27__inst 
                                                         = __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__inst;
-                                                    __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_j__29__Vfuncout 
+                                                    __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_i__27__Vfuncout 
                                                         = 
-                                                        ((0x100000U 
-                                                          & (__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_j__29__inst 
-                                                             >> 0xbU)) 
-                                                         | ((0xff000U 
-                                                             & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_j__29__inst) 
-                                                            | ((0x800U 
-                                                                & (__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_j__29__inst 
-                                                                   >> 9U)) 
-                                                               | ((0x7e0U 
-                                                                   & (__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_j__29__inst 
-                                                                      >> 0x14U)) 
-                                                                  | (0x1eU 
-                                                                     & (__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_j__29__inst 
-                                                                        >> 0x14U))))));
+                                                        (0xfffU 
+                                                         & (__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_i__27__inst 
+                                                            >> 0x14U));
                                                     VL_SFORMAT_X(200
                                                                  ,__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__Vfuncout
-                                                                 ,"jal    %s, 0x%x   ",
+                                                                 ,"lw     %s, 0x%x(%s) ",
                                                                  24,
                                                                  vlTOPp->Proc_noparam__DOT__v__DOT__tinyrv2__DOT__rd_str,
-                                                                 21,
-                                                                 __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_j__29__Vfuncout);
+                                                                 12,
+                                                                 (IData)(__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_i__27__Vfuncout),
+                                                                 24,
+                                                                 vlTOPp->Proc_noparam__DOT__v__DOT__tinyrv2__DOT__rs1_str);
                                                 } else {
                                                     if (
-                                                        (0x67U 
+                                                        (0x2023U 
                                                          == 
                                                          (0x707fU 
                                                           & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__inst))) {
-                                                        __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_i__30__inst 
+                                                        __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_s__28__inst 
                                                             = __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__inst;
-                                                        __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_i__30__Vfuncout 
+                                                        __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_s__28__Vfuncout 
                                                             = 
-                                                            (0xfffU 
-                                                             & (__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_i__30__inst 
-                                                                >> 0x14U));
+                                                            ((0xfe0U 
+                                                              & (__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_s__28__inst 
+                                                                 >> 0x14U)) 
+                                                             | (0x1fU 
+                                                                & (__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_s__28__inst 
+                                                                   >> 7U)));
                                                         VL_SFORMAT_X(200
                                                                      ,__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__Vfuncout
-                                                                     ,"jalr   %s, %s, 0x%x ",
+                                                                     ,"sw     %s, 0x%x(%s) ",
                                                                      24,
-                                                                     vlTOPp->Proc_noparam__DOT__v__DOT__tinyrv2__DOT__rd_str,
-                                                                     24,
-                                                                     vlTOPp->Proc_noparam__DOT__v__DOT__tinyrv2__DOT__rs1_str,
+                                                                     vlTOPp->Proc_noparam__DOT__v__DOT__tinyrv2__DOT__rs2_str,
                                                                      12,
-                                                                     (IData)(__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_i__30__Vfuncout));
+                                                                     (IData)(__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_s__28__Vfuncout),
+                                                                     24,
+                                                                     vlTOPp->Proc_noparam__DOT__v__DOT__tinyrv2__DOT__rs1_str);
                                                     } else {
                                                         if (
-                                                            (0x63U 
+                                                            (0x6fU 
                                                              == 
-                                                             (0x707fU 
+                                                             (0x7fU 
                                                               & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__inst))) {
-                                                            __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_b__31__inst 
+                                                            __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_j__29__inst 
                                                                 = __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__inst;
-                                                            __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_b__31__Vfuncout 
+                                                            __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_j__29__Vfuncout 
                                                                 = 
-                                                                ((0x1000U 
-                                                                  & (__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_b__31__inst 
-                                                                     >> 0x13U)) 
-                                                                 | ((0x800U 
-                                                                     & (__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_b__31__inst 
-                                                                        << 4U)) 
-                                                                    | ((0x7e0U 
-                                                                        & (__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_b__31__inst 
-                                                                           >> 0x14U)) 
-                                                                       | (0x1eU 
-                                                                          & (__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_b__31__inst 
-                                                                             >> 7U)))));
+                                                                ((0x100000U 
+                                                                  & (__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_j__29__inst 
+                                                                     >> 0xbU)) 
+                                                                 | ((0xff000U 
+                                                                     & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_j__29__inst) 
+                                                                    | ((0x800U 
+                                                                        & (__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_j__29__inst 
+                                                                           >> 9U)) 
+                                                                       | ((0x7e0U 
+                                                                           & (__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_j__29__inst 
+                                                                              >> 0x14U)) 
+                                                                          | (0x1eU 
+                                                                             & (__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_j__29__inst 
+                                                                                >> 0x14U))))));
                                                             VL_SFORMAT_X(200
                                                                          ,__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__Vfuncout
-                                                                         ,"beq    %s, %s, 0x%x",
+                                                                         ,"jal    %s, 0x%x   ",
                                                                          24,
-                                                                         vlTOPp->Proc_noparam__DOT__v__DOT__tinyrv2__DOT__rs1_str,
-                                                                         24,
-                                                                         vlTOPp->Proc_noparam__DOT__v__DOT__tinyrv2__DOT__rs2_str,
-                                                                         13,
-                                                                         (IData)(__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_b__31__Vfuncout));
+                                                                         vlTOPp->Proc_noparam__DOT__v__DOT__tinyrv2__DOT__rd_str,
+                                                                         21,
+                                                                         __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_j__29__Vfuncout);
                                                         } else {
-                                                            __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_b__32__inst 
+                                                            __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_i__30__inst 
                                                                 = __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__inst;
-                                                            __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_b__32__Vfuncout 
+                                                            __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_i__30__Vfuncout 
                                                                 = 
-                                                                ((0x1000U 
-                                                                  & (__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_b__32__inst 
-                                                                     >> 0x13U)) 
-                                                                 | ((0x800U 
-                                                                     & (__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_b__32__inst 
-                                                                        << 4U)) 
-                                                                    | ((0x7e0U 
-                                                                        & (__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_b__32__inst 
-                                                                           >> 0x14U)) 
-                                                                       | (0x1eU 
-                                                                          & (__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_b__32__inst 
-                                                                             >> 7U)))));
+                                                                (0xfffU 
+                                                                 & (__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_i__30__inst 
+                                                                    >> 0x14U));
                                                             VL_SFORMAT_X(200
                                                                          ,__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__Vfuncout
-                                                                         ,"bne    %s, %s, 0x%x",
+                                                                         ,"jalr   %s, %s, 0x%x ",
+                                                                         24,
+                                                                         vlTOPp->Proc_noparam__DOT__v__DOT__tinyrv2__DOT__rd_str,
                                                                          24,
                                                                          vlTOPp->Proc_noparam__DOT__v__DOT__tinyrv2__DOT__rs1_str,
-                                                                         24,
-                                                                         vlTOPp->Proc_noparam__DOT__v__DOT__tinyrv2__DOT__rs2_str,
-                                                                         13,
-                                                                         (IData)(__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_b__32__Vfuncout));
+                                                                         12,
+                                                                         (IData)(__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_i__30__Vfuncout));
                                                         }
                                                     }
                                                 }
@@ -1314,139 +1287,203 @@ void VProc_noparam::__Vdpiexp_Proc_noparam__DOT__v__DOT__line_trace_TOP(VProc_no
                                     }
                                 }
                             } else {
-                                if ((0x4063U == (0x707fU 
-                                                 & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__inst))) {
-                                    __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_b__33__inst 
+                                if ((0x63U == (0x707fU 
+                                               & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__inst))) {
+                                    __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_b__31__inst 
                                         = __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__inst;
-                                    __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_b__33__Vfuncout 
+                                    __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_b__31__Vfuncout 
                                         = ((0x1000U 
-                                            & (__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_b__33__inst 
+                                            & (__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_b__31__inst 
                                                >> 0x13U)) 
                                            | ((0x800U 
-                                               & (__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_b__33__inst 
+                                               & (__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_b__31__inst 
                                                   << 4U)) 
                                               | ((0x7e0U 
-                                                  & (__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_b__33__inst 
+                                                  & (__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_b__31__inst 
                                                      >> 0x14U)) 
                                                  | (0x1eU 
-                                                    & (__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_b__33__inst 
+                                                    & (__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_b__31__inst 
                                                        >> 7U)))));
                                     VL_SFORMAT_X(200
                                                  ,__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__Vfuncout
-                                                 ,"blt    %s, %s, 0x%x",
+                                                 ,"beq    %s, %s, 0x%x",
                                                  24,
                                                  vlTOPp->Proc_noparam__DOT__v__DOT__tinyrv2__DOT__rs1_str,
                                                  24,
                                                  vlTOPp->Proc_noparam__DOT__v__DOT__tinyrv2__DOT__rs2_str,
                                                  13,
-                                                 (IData)(__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_b__33__Vfuncout));
+                                                 (IData)(__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_b__31__Vfuncout));
                                 } else {
-                                    if ((0x5063U == 
+                                    if ((0x1063U == 
                                          (0x707fU & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__inst))) {
-                                        __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_b__34__inst 
+                                        __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_b__32__inst 
                                             = __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__inst;
-                                        __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_b__34__Vfuncout 
+                                        __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_b__32__Vfuncout 
                                             = ((0x1000U 
-                                                & (__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_b__34__inst 
+                                                & (__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_b__32__inst 
                                                    >> 0x13U)) 
                                                | ((0x800U 
-                                                   & (__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_b__34__inst 
+                                                   & (__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_b__32__inst 
                                                       << 4U)) 
                                                   | ((0x7e0U 
-                                                      & (__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_b__34__inst 
+                                                      & (__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_b__32__inst 
                                                          >> 0x14U)) 
                                                      | (0x1eU 
-                                                        & (__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_b__34__inst 
+                                                        & (__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_b__32__inst 
                                                            >> 7U)))));
                                         VL_SFORMAT_X(200
                                                      ,__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__Vfuncout
-                                                     ,"bge    %s, %s, 0x%x",
+                                                     ,"bne    %s, %s, 0x%x",
                                                      24,
                                                      vlTOPp->Proc_noparam__DOT__v__DOT__tinyrv2__DOT__rs1_str,
                                                      24,
                                                      vlTOPp->Proc_noparam__DOT__v__DOT__tinyrv2__DOT__rs2_str,
                                                      13,
-                                                     (IData)(__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_b__34__Vfuncout));
+                                                     (IData)(__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_b__32__Vfuncout));
                                     } else {
-                                        if ((0x6063U 
+                                        if ((0x4063U 
                                              == (0x707fU 
                                                  & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__inst))) {
-                                            __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_b__35__inst 
+                                            __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_b__33__inst 
                                                 = __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__inst;
-                                            __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_b__35__Vfuncout 
+                                            __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_b__33__Vfuncout 
                                                 = (
                                                    (0x1000U 
-                                                    & (__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_b__35__inst 
+                                                    & (__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_b__33__inst 
                                                        >> 0x13U)) 
                                                    | ((0x800U 
-                                                       & (__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_b__35__inst 
+                                                       & (__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_b__33__inst 
                                                           << 4U)) 
                                                       | ((0x7e0U 
-                                                          & (__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_b__35__inst 
+                                                          & (__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_b__33__inst 
                                                              >> 0x14U)) 
                                                          | (0x1eU 
-                                                            & (__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_b__35__inst 
+                                                            & (__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_b__33__inst 
                                                                >> 7U)))));
                                             VL_SFORMAT_X(200
                                                          ,__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__Vfuncout
-                                                         ,"bltu   %s, %s, 0x%x",
+                                                         ,"blt    %s, %s, 0x%x",
                                                          24,
                                                          vlTOPp->Proc_noparam__DOT__v__DOT__tinyrv2__DOT__rs1_str,
                                                          24,
                                                          vlTOPp->Proc_noparam__DOT__v__DOT__tinyrv2__DOT__rs2_str,
                                                          13,
-                                                         (IData)(__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_b__35__Vfuncout));
+                                                         (IData)(__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_b__33__Vfuncout));
                                         } else {
-                                            if ((0x7063U 
+                                            if ((0x5063U 
                                                  == 
                                                  (0x707fU 
                                                   & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__inst))) {
-                                                __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_b__36__inst 
+                                                __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_b__34__inst 
                                                     = __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__inst;
-                                                __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_b__36__Vfuncout 
+                                                __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_b__34__Vfuncout 
                                                     = 
                                                     ((0x1000U 
-                                                      & (__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_b__36__inst 
+                                                      & (__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_b__34__inst 
                                                          >> 0x13U)) 
                                                      | ((0x800U 
-                                                         & (__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_b__36__inst 
+                                                         & (__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_b__34__inst 
                                                             << 4U)) 
                                                         | ((0x7e0U 
-                                                            & (__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_b__36__inst 
+                                                            & (__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_b__34__inst 
                                                                >> 0x14U)) 
                                                            | (0x1eU 
-                                                              & (__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_b__36__inst 
+                                                              & (__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_b__34__inst 
                                                                  >> 7U)))));
                                                 VL_SFORMAT_X(200
                                                              ,__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__Vfuncout
-                                                             ,"bgeu   %s, %s, 0x%x",
+                                                             ,"bge    %s, %s, 0x%x",
                                                              24,
                                                              vlTOPp->Proc_noparam__DOT__v__DOT__tinyrv2__DOT__rs1_str,
                                                              24,
                                                              vlTOPp->Proc_noparam__DOT__v__DOT__tinyrv2__DOT__rs2_str,
                                                              13,
-                                                             (IData)(__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_b__36__Vfuncout));
+                                                             (IData)(__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_b__34__Vfuncout));
                                             } else {
                                                 if (
-                                                    (0xbU 
+                                                    (0x6063U 
                                                      == 
-                                                     (0x7fU 
+                                                     (0x707fU 
                                                       & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__inst))) {
+                                                    __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_b__35__inst 
+                                                        = __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__inst;
+                                                    __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_b__35__Vfuncout 
+                                                        = 
+                                                        ((0x1000U 
+                                                          & (__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_b__35__inst 
+                                                             >> 0x13U)) 
+                                                         | ((0x800U 
+                                                             & (__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_b__35__inst 
+                                                                << 4U)) 
+                                                            | ((0x7e0U 
+                                                                & (__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_b__35__inst 
+                                                                   >> 0x14U)) 
+                                                               | (0x1eU 
+                                                                  & (__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_b__35__inst 
+                                                                     >> 7U)))));
                                                     VL_SFORMAT_X(200
                                                                  ,__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__Vfuncout
-                                                                 ,"cust0 %s, %s, %s, %s",
-                                                                 24,
-                                                                 vlTOPp->Proc_noparam__DOT__v__DOT__tinyrv2__DOT__rd_str,
+                                                                 ,"bltu   %s, %s, 0x%x",
                                                                  24,
                                                                  vlTOPp->Proc_noparam__DOT__v__DOT__tinyrv2__DOT__rs1_str,
                                                                  24,
                                                                  vlTOPp->Proc_noparam__DOT__v__DOT__tinyrv2__DOT__rs2_str,
-                                                                 16,
-                                                                 (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__tinyrv2__DOT__funct_str));
+                                                                 13,
+                                                                 (IData)(__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_b__35__Vfuncout));
                                                 } else {
-                                                    VL_SFORMAT_X(200
-                                                                 ,__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__Vfuncout
-                                                                 ,"illegal inst           ");
+                                                    if (
+                                                        (0x7063U 
+                                                         == 
+                                                         (0x707fU 
+                                                          & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__inst))) {
+                                                        __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_b__36__inst 
+                                                            = __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__inst;
+                                                        __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_b__36__Vfuncout 
+                                                            = 
+                                                            ((0x1000U 
+                                                              & (__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_b__36__inst 
+                                                                 >> 0x13U)) 
+                                                             | ((0x800U 
+                                                                 & (__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_b__36__inst 
+                                                                    << 4U)) 
+                                                                | ((0x7e0U 
+                                                                    & (__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_b__36__inst 
+                                                                       >> 0x14U)) 
+                                                                   | (0x1eU 
+                                                                      & (__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_b__36__inst 
+                                                                         >> 7U)))));
+                                                        VL_SFORMAT_X(200
+                                                                     ,__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__Vfuncout
+                                                                     ,"bgeu   %s, %s, 0x%x",
+                                                                     24,
+                                                                     vlTOPp->Proc_noparam__DOT__v__DOT__tinyrv2__DOT__rs1_str,
+                                                                     24,
+                                                                     vlTOPp->Proc_noparam__DOT__v__DOT__tinyrv2__DOT__rs2_str,
+                                                                     13,
+                                                                     (IData)(__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__imm_b__36__Vfuncout));
+                                                    } else {
+                                                        if (
+                                                            (0xbU 
+                                                             == 
+                                                             (0x7fU 
+                                                              & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__inst))) {
+                                                            VL_SFORMAT_X(200
+                                                                         ,__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__Vfuncout
+                                                                         ,"cust0 %s, %s, %s, %s",
+                                                                         24,
+                                                                         vlTOPp->Proc_noparam__DOT__v__DOT__tinyrv2__DOT__rd_str,
+                                                                         24,
+                                                                         vlTOPp->Proc_noparam__DOT__v__DOT__tinyrv2__DOT__rs1_str,
+                                                                         24,
+                                                                         vlTOPp->Proc_noparam__DOT__v__DOT__tinyrv2__DOT__rs2_str,
+                                                                         16,
+                                                                         (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__tinyrv2__DOT__funct_str));
+                                                        } else {
+                                                            VL_SFORMAT_X(200
+                                                                         ,__Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm__12__Vfuncout
+                                                                         ,"illegal inst           ");
+                                                        }
+                                                    }
                                                 }
                                             }
                                         }
@@ -1724,11 +1761,13 @@ void VProc_noparam::__Vdpiexp_Proc_noparam__DOT__v__DOT__line_trace_TOP(VProc_no
                                              & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__42__inst))) 
                              | (0x2000033U == (0xfe00707fU 
                                                & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__42__inst))) 
-                            | (0x13U == (0x707fU & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__42__inst))) 
-                           | (0x7013U == (0x707fU & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__42__inst))) 
-                          | (0x6013U == (0x707fU & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__42__inst))) 
-                         | (0x4013U == (0x707fU & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__42__inst))) 
-                        | (0x2013U == (0x707fU & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__42__inst)))
+                            | (0x48000077U == (0xfe00707fU 
+                                               & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__42__inst))) 
+                           | (0x4a000077U == (0xfe00707fU 
+                                              & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__42__inst))) 
+                          | (0x13U == (0x707fU & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__42__inst))) 
+                         | (0x7013U == (0x707fU & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__42__inst))) 
+                        | (0x6013U == (0x707fU & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__42__inst)))
                         ? ((0x2033U == (0xfe00707fU 
                                         & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__42__inst))
                             ? 0x736c7420U : ((0x3033U 
@@ -1741,140 +1780,152 @@ void VProc_noparam::__Vdpiexp_Proc_noparam__DOT__v__DOT__line_trace_TOP(VProc_no
                                                    & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__42__inst))
                                                   ? 0x6d756c20U
                                                   : 
-                                                 ((0x13U 
-                                                   == 
-                                                   (0x707fU 
-                                                    & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__42__inst))
-                                                   ? 0x61646469U
-                                                   : 
-                                                  ((0x7013U 
-                                                    == 
-                                                    (0x707fU 
-                                                     & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__42__inst))
-                                                    ? 0x616e6469U
-                                                    : 
-                                                   ((0x6013U 
-                                                     == 
-                                                     (0x707fU 
-                                                      & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__42__inst))
-                                                     ? 0x6f726920U
-                                                     : 
-                                                    ((0x4013U 
-                                                      == 
-                                                      (0x707fU 
-                                                       & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__42__inst))
-                                                      ? 0x786f7269U
-                                                      : 0x736c7469U)))))))
-                        : (((((((((0x3013U == (0x707fU 
-                                               & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__42__inst)) 
-                                  | (0x40005033U == 
-                                     (0xfe00707fU & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__42__inst))) 
-                                 | (0x5033U == (0xfe00707fU 
-                                                & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__42__inst))) 
-                                | (0x1033U == (0xfe00707fU 
-                                               & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__42__inst))) 
-                               | (0x40005013U == (0xfe00707fU 
-                                                  & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__42__inst))) 
-                              | (0x5013U == (0xfe00707fU 
-                                             & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__42__inst))) 
-                             | (0x1013U == (0xfe00707fU 
-                                            & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__42__inst))) 
-                            | (0x37U == (0x7fU & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__42__inst)))
-                            ? ((0x3013U == (0x707fU 
-                                            & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__42__inst))
-                                ? 0x736c7449U : ((0x40005033U 
-                                                  == 
-                                                  (0xfe00707fU 
-                                                   & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__42__inst))
-                                                  ? 0x73726120U
-                                                  : 
-                                                 ((0x5033U 
+                                                 ((0x48000077U 
                                                    == 
                                                    (0xfe00707fU 
                                                     & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__42__inst))
-                                                   ? 0x73726c20U
+                                                   ? 0x64643820U
                                                    : 
-                                                  ((0x1033U 
+                                                  ((0x4a000077U 
                                                     == 
                                                     (0xfe00707fU 
                                                      & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__42__inst))
-                                                    ? 0x736c6c20U
+                                                    ? 0x75623820U
                                                     : 
-                                                   ((0x40005013U 
+                                                   ((0x13U 
                                                      == 
-                                                     (0xfe00707fU 
+                                                     (0x707fU 
                                                       & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__42__inst))
-                                                     ? 0x73726169U
+                                                     ? 0x61646469U
                                                      : 
-                                                    ((0x5013U 
+                                                    ((0x7013U 
                                                       == 
-                                                      (0xfe00707fU 
+                                                      (0x707fU 
                                                        & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__42__inst))
-                                                      ? 0x73726c69U
-                                                      : 
-                                                     ((0x1013U 
-                                                       == 
-                                                       (0xfe00707fU 
-                                                        & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__42__inst))
-                                                       ? 0x736c6c69U
-                                                       : 0x6c756920U)))))))
-                            : (((((((((0x17U == (0x7fU 
-                                                 & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__42__inst)) 
-                                      | (0x2003U == 
-                                         (0x707fU & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__42__inst))) 
-                                     | (0x2023U == 
-                                        (0x707fU & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__42__inst))) 
-                                    | (0x6fU == (0x7fU 
+                                                      ? 0x616e6469U
+                                                      : 0x6f726920U)))))))
+                        : (((((((((0x4013U == (0x707fU 
+                                               & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__42__inst)) 
+                                  | (0x2013U == (0x707fU 
                                                  & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__42__inst))) 
-                                   | (0x67U == (0x707fU 
+                                 | (0x3013U == (0x707fU 
                                                 & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__42__inst))) 
-                                  | (0x63U == (0x707fU 
-                                               & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__42__inst))) 
-                                 | (0x1063U == (0x707fU 
+                                | (0x40005033U == (0xfe00707fU 
+                                                   & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__42__inst))) 
+                               | (0x5033U == (0xfe00707fU 
+                                              & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__42__inst))) 
+                              | (0x1033U == (0xfe00707fU 
+                                             & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__42__inst))) 
+                             | (0x40005013U == (0xfe00707fU 
                                                 & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__42__inst))) 
-                                | (0x4063U == (0x707fU 
-                                               & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__42__inst)))
-                                ? ((0x17U == (0x7fU 
-                                              & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__42__inst))
-                                    ? 0x61756950U : 
-                                   ((0x2003U == (0x707fU 
-                                                 & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__42__inst))
-                                     ? 0x6c772020U : 
-                                    ((0x2023U == (0x707fU 
-                                                  & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__42__inst))
-                                      ? 0x73772020U
-                                      : ((0x6fU == 
-                                          (0x7fU & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__42__inst))
-                                          ? 0x6a616c20U
-                                          : ((0x67U 
-                                              == (0x707fU 
-                                                  & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__42__inst))
-                                              ? 0x6a616c72U
-                                              : ((0x63U 
+                            | (0x5013U == (0xfe00707fU 
+                                           & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__42__inst)))
+                            ? ((0x4013U == (0x707fU 
+                                            & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__42__inst))
+                                ? 0x786f7269U : ((0x2013U 
                                                   == 
                                                   (0x707fU 
                                                    & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__42__inst))
-                                                  ? 0x62657120U
+                                                  ? 0x736c7469U
                                                   : 
-                                                 ((0x1063U 
+                                                 ((0x3013U 
                                                    == 
                                                    (0x707fU 
                                                     & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__42__inst))
-                                                   ? 0x626e6520U
-                                                   : 0x626c7420U)))))))
-                                : ((0x5063U == (0x707fU 
+                                                   ? 0x736c7449U
+                                                   : 
+                                                  ((0x40005033U 
+                                                    == 
+                                                    (0xfe00707fU 
+                                                     & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__42__inst))
+                                                    ? 0x73726120U
+                                                    : 
+                                                   ((0x5033U 
+                                                     == 
+                                                     (0xfe00707fU 
+                                                      & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__42__inst))
+                                                     ? 0x73726c20U
+                                                     : 
+                                                    ((0x1033U 
+                                                      == 
+                                                      (0xfe00707fU 
+                                                       & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__42__inst))
+                                                      ? 0x736c6c20U
+                                                      : 
+                                                     ((0x40005013U 
+                                                       == 
+                                                       (0xfe00707fU 
+                                                        & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__42__inst))
+                                                       ? 0x73726169U
+                                                       : 0x73726c69U)))))))
+                            : (((((((((0x1013U == (0xfe00707fU 
+                                                   & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__42__inst)) 
+                                      | (0x37U == (0x7fU 
+                                                   & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__42__inst))) 
+                                     | (0x17U == (0x7fU 
+                                                  & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__42__inst))) 
+                                    | (0x2003U == (0x707fU 
+                                                   & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__42__inst))) 
+                                   | (0x2023U == (0x707fU 
+                                                  & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__42__inst))) 
+                                  | (0x6fU == (0x7fU 
+                                               & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__42__inst))) 
+                                 | (0x67U == (0x707fU 
+                                              & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__42__inst))) 
+                                | (0x63U == (0x707fU 
+                                             & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__42__inst)))
+                                ? ((0x1013U == (0xfe00707fU 
                                                 & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__42__inst))
-                                    ? 0x62676520U : 
-                                   ((0x6063U == (0x707fU 
-                                                 & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__42__inst))
-                                     ? 0x626c7475U : 
-                                    ((0x7063U == (0x707fU 
+                                    ? 0x736c6c69U : 
+                                   ((0x37U == (0x7fU 
+                                               & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__42__inst))
+                                     ? 0x6c756920U : 
+                                    ((0x17U == (0x7fU 
+                                                & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__42__inst))
+                                      ? 0x61756950U
+                                      : ((0x2003U == 
+                                          (0x707fU 
+                                           & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__42__inst))
+                                          ? 0x6c772020U
+                                          : ((0x2023U 
+                                              == (0x707fU 
                                                   & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__42__inst))
-                                      ? 0x62676575U
-                                      : ((0xbU == (0x7fU 
+                                              ? 0x73772020U
+                                              : ((0x6fU 
+                                                  == 
+                                                  (0x7fU 
                                                    & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__42__inst))
-                                          ? 0x63757330U
-                                          : 0x3f3f3f3fU))))))));
+                                                  ? 0x6a616c20U
+                                                  : 
+                                                 ((0x67U 
+                                                   == 
+                                                   (0x707fU 
+                                                    & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__42__inst))
+                                                   ? 0x6a616c72U
+                                                   : 0x62657120U)))))))
+                                : ((0x1063U == (0x707fU 
+                                                & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__42__inst))
+                                    ? 0x626e6520U : 
+                                   ((0x4063U == (0x707fU 
+                                                 & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__42__inst))
+                                     ? 0x626c7420U : 
+                                    ((0x5063U == (0x707fU 
+                                                  & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__42__inst))
+                                      ? 0x62676520U
+                                      : ((0x6063U == 
+                                          (0x707fU 
+                                           & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__42__inst))
+                                          ? 0x626c7475U
+                                          : ((0x7063U 
+                                              == (0x707fU 
+                                                  & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__42__inst))
+                                              ? 0x62676575U
+                                              : ((0xbU 
+                                                  == 
+                                                  (0x7fU 
+                                                   & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__42__inst))
+                                                  ? 0x63757330U
+                                                  : 0x3f3f3f3fU))))))))));
             VL_EXTEND_WI(4096,32, __Vtemp43, __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__42__Vfuncout);
             __Vilp = 0U;
             while ((__Vilp <= 0x7fU)) {
@@ -2134,11 +2185,13 @@ void VProc_noparam::__Vdpiexp_Proc_noparam__DOT__v__DOT__line_trace_TOP(VProc_no
                                              & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__48__inst))) 
                              | (0x2000033U == (0xfe00707fU 
                                                & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__48__inst))) 
-                            | (0x13U == (0x707fU & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__48__inst))) 
-                           | (0x7013U == (0x707fU & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__48__inst))) 
-                          | (0x6013U == (0x707fU & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__48__inst))) 
-                         | (0x4013U == (0x707fU & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__48__inst))) 
-                        | (0x2013U == (0x707fU & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__48__inst)))
+                            | (0x48000077U == (0xfe00707fU 
+                                               & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__48__inst))) 
+                           | (0x4a000077U == (0xfe00707fU 
+                                              & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__48__inst))) 
+                          | (0x13U == (0x707fU & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__48__inst))) 
+                         | (0x7013U == (0x707fU & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__48__inst))) 
+                        | (0x6013U == (0x707fU & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__48__inst)))
                         ? ((0x2033U == (0xfe00707fU 
                                         & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__48__inst))
                             ? 0x736c7420U : ((0x3033U 
@@ -2151,140 +2204,152 @@ void VProc_noparam::__Vdpiexp_Proc_noparam__DOT__v__DOT__line_trace_TOP(VProc_no
                                                    & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__48__inst))
                                                   ? 0x6d756c20U
                                                   : 
-                                                 ((0x13U 
-                                                   == 
-                                                   (0x707fU 
-                                                    & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__48__inst))
-                                                   ? 0x61646469U
-                                                   : 
-                                                  ((0x7013U 
-                                                    == 
-                                                    (0x707fU 
-                                                     & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__48__inst))
-                                                    ? 0x616e6469U
-                                                    : 
-                                                   ((0x6013U 
-                                                     == 
-                                                     (0x707fU 
-                                                      & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__48__inst))
-                                                     ? 0x6f726920U
-                                                     : 
-                                                    ((0x4013U 
-                                                      == 
-                                                      (0x707fU 
-                                                       & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__48__inst))
-                                                      ? 0x786f7269U
-                                                      : 0x736c7469U)))))))
-                        : (((((((((0x3013U == (0x707fU 
-                                               & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__48__inst)) 
-                                  | (0x40005033U == 
-                                     (0xfe00707fU & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__48__inst))) 
-                                 | (0x5033U == (0xfe00707fU 
-                                                & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__48__inst))) 
-                                | (0x1033U == (0xfe00707fU 
-                                               & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__48__inst))) 
-                               | (0x40005013U == (0xfe00707fU 
-                                                  & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__48__inst))) 
-                              | (0x5013U == (0xfe00707fU 
-                                             & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__48__inst))) 
-                             | (0x1013U == (0xfe00707fU 
-                                            & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__48__inst))) 
-                            | (0x37U == (0x7fU & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__48__inst)))
-                            ? ((0x3013U == (0x707fU 
-                                            & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__48__inst))
-                                ? 0x736c7449U : ((0x40005033U 
-                                                  == 
-                                                  (0xfe00707fU 
-                                                   & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__48__inst))
-                                                  ? 0x73726120U
-                                                  : 
-                                                 ((0x5033U 
+                                                 ((0x48000077U 
                                                    == 
                                                    (0xfe00707fU 
                                                     & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__48__inst))
-                                                   ? 0x73726c20U
+                                                   ? 0x64643820U
                                                    : 
-                                                  ((0x1033U 
+                                                  ((0x4a000077U 
                                                     == 
                                                     (0xfe00707fU 
                                                      & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__48__inst))
-                                                    ? 0x736c6c20U
+                                                    ? 0x75623820U
                                                     : 
-                                                   ((0x40005013U 
+                                                   ((0x13U 
                                                      == 
-                                                     (0xfe00707fU 
+                                                     (0x707fU 
                                                       & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__48__inst))
-                                                     ? 0x73726169U
+                                                     ? 0x61646469U
                                                      : 
-                                                    ((0x5013U 
+                                                    ((0x7013U 
                                                       == 
-                                                      (0xfe00707fU 
+                                                      (0x707fU 
                                                        & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__48__inst))
-                                                      ? 0x73726c69U
-                                                      : 
-                                                     ((0x1013U 
-                                                       == 
-                                                       (0xfe00707fU 
-                                                        & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__48__inst))
-                                                       ? 0x736c6c69U
-                                                       : 0x6c756920U)))))))
-                            : (((((((((0x17U == (0x7fU 
-                                                 & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__48__inst)) 
-                                      | (0x2003U == 
-                                         (0x707fU & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__48__inst))) 
-                                     | (0x2023U == 
-                                        (0x707fU & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__48__inst))) 
-                                    | (0x6fU == (0x7fU 
+                                                      ? 0x616e6469U
+                                                      : 0x6f726920U)))))))
+                        : (((((((((0x4013U == (0x707fU 
+                                               & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__48__inst)) 
+                                  | (0x2013U == (0x707fU 
                                                  & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__48__inst))) 
-                                   | (0x67U == (0x707fU 
+                                 | (0x3013U == (0x707fU 
                                                 & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__48__inst))) 
-                                  | (0x63U == (0x707fU 
-                                               & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__48__inst))) 
-                                 | (0x1063U == (0x707fU 
+                                | (0x40005033U == (0xfe00707fU 
+                                                   & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__48__inst))) 
+                               | (0x5033U == (0xfe00707fU 
+                                              & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__48__inst))) 
+                              | (0x1033U == (0xfe00707fU 
+                                             & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__48__inst))) 
+                             | (0x40005013U == (0xfe00707fU 
                                                 & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__48__inst))) 
-                                | (0x4063U == (0x707fU 
-                                               & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__48__inst)))
-                                ? ((0x17U == (0x7fU 
-                                              & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__48__inst))
-                                    ? 0x61756950U : 
-                                   ((0x2003U == (0x707fU 
-                                                 & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__48__inst))
-                                     ? 0x6c772020U : 
-                                    ((0x2023U == (0x707fU 
-                                                  & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__48__inst))
-                                      ? 0x73772020U
-                                      : ((0x6fU == 
-                                          (0x7fU & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__48__inst))
-                                          ? 0x6a616c20U
-                                          : ((0x67U 
-                                              == (0x707fU 
-                                                  & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__48__inst))
-                                              ? 0x6a616c72U
-                                              : ((0x63U 
+                            | (0x5013U == (0xfe00707fU 
+                                           & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__48__inst)))
+                            ? ((0x4013U == (0x707fU 
+                                            & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__48__inst))
+                                ? 0x786f7269U : ((0x2013U 
                                                   == 
                                                   (0x707fU 
                                                    & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__48__inst))
-                                                  ? 0x62657120U
+                                                  ? 0x736c7469U
                                                   : 
-                                                 ((0x1063U 
+                                                 ((0x3013U 
                                                    == 
                                                    (0x707fU 
                                                     & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__48__inst))
-                                                   ? 0x626e6520U
-                                                   : 0x626c7420U)))))))
-                                : ((0x5063U == (0x707fU 
+                                                   ? 0x736c7449U
+                                                   : 
+                                                  ((0x40005033U 
+                                                    == 
+                                                    (0xfe00707fU 
+                                                     & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__48__inst))
+                                                    ? 0x73726120U
+                                                    : 
+                                                   ((0x5033U 
+                                                     == 
+                                                     (0xfe00707fU 
+                                                      & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__48__inst))
+                                                     ? 0x73726c20U
+                                                     : 
+                                                    ((0x1033U 
+                                                      == 
+                                                      (0xfe00707fU 
+                                                       & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__48__inst))
+                                                      ? 0x736c6c20U
+                                                      : 
+                                                     ((0x40005013U 
+                                                       == 
+                                                       (0xfe00707fU 
+                                                        & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__48__inst))
+                                                       ? 0x73726169U
+                                                       : 0x73726c69U)))))))
+                            : (((((((((0x1013U == (0xfe00707fU 
+                                                   & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__48__inst)) 
+                                      | (0x37U == (0x7fU 
+                                                   & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__48__inst))) 
+                                     | (0x17U == (0x7fU 
+                                                  & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__48__inst))) 
+                                    | (0x2003U == (0x707fU 
+                                                   & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__48__inst))) 
+                                   | (0x2023U == (0x707fU 
+                                                  & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__48__inst))) 
+                                  | (0x6fU == (0x7fU 
+                                               & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__48__inst))) 
+                                 | (0x67U == (0x707fU 
+                                              & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__48__inst))) 
+                                | (0x63U == (0x707fU 
+                                             & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__48__inst)))
+                                ? ((0x1013U == (0xfe00707fU 
                                                 & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__48__inst))
-                                    ? 0x62676520U : 
-                                   ((0x6063U == (0x707fU 
-                                                 & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__48__inst))
-                                     ? 0x626c7475U : 
-                                    ((0x7063U == (0x707fU 
+                                    ? 0x736c6c69U : 
+                                   ((0x37U == (0x7fU 
+                                               & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__48__inst))
+                                     ? 0x6c756920U : 
+                                    ((0x17U == (0x7fU 
+                                                & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__48__inst))
+                                      ? 0x61756950U
+                                      : ((0x2003U == 
+                                          (0x707fU 
+                                           & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__48__inst))
+                                          ? 0x6c772020U
+                                          : ((0x2023U 
+                                              == (0x707fU 
                                                   & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__48__inst))
-                                      ? 0x62676575U
-                                      : ((0xbU == (0x7fU 
+                                              ? 0x73772020U
+                                              : ((0x6fU 
+                                                  == 
+                                                  (0x7fU 
                                                    & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__48__inst))
-                                          ? 0x63757330U
-                                          : 0x3f3f3f3fU))))))));
+                                                  ? 0x6a616c20U
+                                                  : 
+                                                 ((0x67U 
+                                                   == 
+                                                   (0x707fU 
+                                                    & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__48__inst))
+                                                   ? 0x6a616c72U
+                                                   : 0x62657120U)))))))
+                                : ((0x1063U == (0x707fU 
+                                                & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__48__inst))
+                                    ? 0x626e6520U : 
+                                   ((0x4063U == (0x707fU 
+                                                 & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__48__inst))
+                                     ? 0x626c7420U : 
+                                    ((0x5063U == (0x707fU 
+                                                  & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__48__inst))
+                                      ? 0x62676520U
+                                      : ((0x6063U == 
+                                          (0x707fU 
+                                           & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__48__inst))
+                                          ? 0x626c7475U
+                                          : ((0x7063U 
+                                              == (0x707fU 
+                                                  & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__48__inst))
+                                              ? 0x62676575U
+                                              : ((0xbU 
+                                                  == 
+                                                  (0x7fU 
+                                                   & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__48__inst))
+                                                  ? 0x63757330U
+                                                  : 0x3f3f3f3fU))))))))));
             VL_EXTEND_WI(4096,32, __Vtemp57, __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__48__Vfuncout);
             __Vilp = 0U;
             while ((__Vilp <= 0x7fU)) {
@@ -2544,11 +2609,13 @@ void VProc_noparam::__Vdpiexp_Proc_noparam__DOT__v__DOT__line_trace_TOP(VProc_no
                                              & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__54__inst))) 
                              | (0x2000033U == (0xfe00707fU 
                                                & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__54__inst))) 
-                            | (0x13U == (0x707fU & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__54__inst))) 
-                           | (0x7013U == (0x707fU & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__54__inst))) 
-                          | (0x6013U == (0x707fU & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__54__inst))) 
-                         | (0x4013U == (0x707fU & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__54__inst))) 
-                        | (0x2013U == (0x707fU & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__54__inst)))
+                            | (0x48000077U == (0xfe00707fU 
+                                               & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__54__inst))) 
+                           | (0x4a000077U == (0xfe00707fU 
+                                              & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__54__inst))) 
+                          | (0x13U == (0x707fU & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__54__inst))) 
+                         | (0x7013U == (0x707fU & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__54__inst))) 
+                        | (0x6013U == (0x707fU & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__54__inst)))
                         ? ((0x2033U == (0xfe00707fU 
                                         & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__54__inst))
                             ? 0x736c7420U : ((0x3033U 
@@ -2561,140 +2628,152 @@ void VProc_noparam::__Vdpiexp_Proc_noparam__DOT__v__DOT__line_trace_TOP(VProc_no
                                                    & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__54__inst))
                                                   ? 0x6d756c20U
                                                   : 
-                                                 ((0x13U 
-                                                   == 
-                                                   (0x707fU 
-                                                    & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__54__inst))
-                                                   ? 0x61646469U
-                                                   : 
-                                                  ((0x7013U 
-                                                    == 
-                                                    (0x707fU 
-                                                     & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__54__inst))
-                                                    ? 0x616e6469U
-                                                    : 
-                                                   ((0x6013U 
-                                                     == 
-                                                     (0x707fU 
-                                                      & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__54__inst))
-                                                     ? 0x6f726920U
-                                                     : 
-                                                    ((0x4013U 
-                                                      == 
-                                                      (0x707fU 
-                                                       & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__54__inst))
-                                                      ? 0x786f7269U
-                                                      : 0x736c7469U)))))))
-                        : (((((((((0x3013U == (0x707fU 
-                                               & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__54__inst)) 
-                                  | (0x40005033U == 
-                                     (0xfe00707fU & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__54__inst))) 
-                                 | (0x5033U == (0xfe00707fU 
-                                                & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__54__inst))) 
-                                | (0x1033U == (0xfe00707fU 
-                                               & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__54__inst))) 
-                               | (0x40005013U == (0xfe00707fU 
-                                                  & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__54__inst))) 
-                              | (0x5013U == (0xfe00707fU 
-                                             & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__54__inst))) 
-                             | (0x1013U == (0xfe00707fU 
-                                            & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__54__inst))) 
-                            | (0x37U == (0x7fU & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__54__inst)))
-                            ? ((0x3013U == (0x707fU 
-                                            & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__54__inst))
-                                ? 0x736c7449U : ((0x40005033U 
-                                                  == 
-                                                  (0xfe00707fU 
-                                                   & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__54__inst))
-                                                  ? 0x73726120U
-                                                  : 
-                                                 ((0x5033U 
+                                                 ((0x48000077U 
                                                    == 
                                                    (0xfe00707fU 
                                                     & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__54__inst))
-                                                   ? 0x73726c20U
+                                                   ? 0x64643820U
                                                    : 
-                                                  ((0x1033U 
+                                                  ((0x4a000077U 
                                                     == 
                                                     (0xfe00707fU 
                                                      & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__54__inst))
-                                                    ? 0x736c6c20U
+                                                    ? 0x75623820U
                                                     : 
-                                                   ((0x40005013U 
+                                                   ((0x13U 
                                                      == 
-                                                     (0xfe00707fU 
+                                                     (0x707fU 
                                                       & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__54__inst))
-                                                     ? 0x73726169U
+                                                     ? 0x61646469U
                                                      : 
-                                                    ((0x5013U 
+                                                    ((0x7013U 
                                                       == 
-                                                      (0xfe00707fU 
+                                                      (0x707fU 
                                                        & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__54__inst))
-                                                      ? 0x73726c69U
-                                                      : 
-                                                     ((0x1013U 
-                                                       == 
-                                                       (0xfe00707fU 
-                                                        & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__54__inst))
-                                                       ? 0x736c6c69U
-                                                       : 0x6c756920U)))))))
-                            : (((((((((0x17U == (0x7fU 
-                                                 & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__54__inst)) 
-                                      | (0x2003U == 
-                                         (0x707fU & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__54__inst))) 
-                                     | (0x2023U == 
-                                        (0x707fU & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__54__inst))) 
-                                    | (0x6fU == (0x7fU 
+                                                      ? 0x616e6469U
+                                                      : 0x6f726920U)))))))
+                        : (((((((((0x4013U == (0x707fU 
+                                               & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__54__inst)) 
+                                  | (0x2013U == (0x707fU 
                                                  & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__54__inst))) 
-                                   | (0x67U == (0x707fU 
+                                 | (0x3013U == (0x707fU 
                                                 & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__54__inst))) 
-                                  | (0x63U == (0x707fU 
-                                               & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__54__inst))) 
-                                 | (0x1063U == (0x707fU 
+                                | (0x40005033U == (0xfe00707fU 
+                                                   & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__54__inst))) 
+                               | (0x5033U == (0xfe00707fU 
+                                              & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__54__inst))) 
+                              | (0x1033U == (0xfe00707fU 
+                                             & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__54__inst))) 
+                             | (0x40005013U == (0xfe00707fU 
                                                 & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__54__inst))) 
-                                | (0x4063U == (0x707fU 
-                                               & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__54__inst)))
-                                ? ((0x17U == (0x7fU 
-                                              & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__54__inst))
-                                    ? 0x61756950U : 
-                                   ((0x2003U == (0x707fU 
-                                                 & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__54__inst))
-                                     ? 0x6c772020U : 
-                                    ((0x2023U == (0x707fU 
-                                                  & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__54__inst))
-                                      ? 0x73772020U
-                                      : ((0x6fU == 
-                                          (0x7fU & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__54__inst))
-                                          ? 0x6a616c20U
-                                          : ((0x67U 
-                                              == (0x707fU 
-                                                  & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__54__inst))
-                                              ? 0x6a616c72U
-                                              : ((0x63U 
+                            | (0x5013U == (0xfe00707fU 
+                                           & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__54__inst)))
+                            ? ((0x4013U == (0x707fU 
+                                            & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__54__inst))
+                                ? 0x786f7269U : ((0x2013U 
                                                   == 
                                                   (0x707fU 
                                                    & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__54__inst))
-                                                  ? 0x62657120U
+                                                  ? 0x736c7469U
                                                   : 
-                                                 ((0x1063U 
+                                                 ((0x3013U 
                                                    == 
                                                    (0x707fU 
                                                     & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__54__inst))
-                                                   ? 0x626e6520U
-                                                   : 0x626c7420U)))))))
-                                : ((0x5063U == (0x707fU 
+                                                   ? 0x736c7449U
+                                                   : 
+                                                  ((0x40005033U 
+                                                    == 
+                                                    (0xfe00707fU 
+                                                     & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__54__inst))
+                                                    ? 0x73726120U
+                                                    : 
+                                                   ((0x5033U 
+                                                     == 
+                                                     (0xfe00707fU 
+                                                      & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__54__inst))
+                                                     ? 0x73726c20U
+                                                     : 
+                                                    ((0x1033U 
+                                                      == 
+                                                      (0xfe00707fU 
+                                                       & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__54__inst))
+                                                      ? 0x736c6c20U
+                                                      : 
+                                                     ((0x40005013U 
+                                                       == 
+                                                       (0xfe00707fU 
+                                                        & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__54__inst))
+                                                       ? 0x73726169U
+                                                       : 0x73726c69U)))))))
+                            : (((((((((0x1013U == (0xfe00707fU 
+                                                   & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__54__inst)) 
+                                      | (0x37U == (0x7fU 
+                                                   & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__54__inst))) 
+                                     | (0x17U == (0x7fU 
+                                                  & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__54__inst))) 
+                                    | (0x2003U == (0x707fU 
+                                                   & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__54__inst))) 
+                                   | (0x2023U == (0x707fU 
+                                                  & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__54__inst))) 
+                                  | (0x6fU == (0x7fU 
+                                               & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__54__inst))) 
+                                 | (0x67U == (0x707fU 
+                                              & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__54__inst))) 
+                                | (0x63U == (0x707fU 
+                                             & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__54__inst)))
+                                ? ((0x1013U == (0xfe00707fU 
                                                 & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__54__inst))
-                                    ? 0x62676520U : 
-                                   ((0x6063U == (0x707fU 
-                                                 & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__54__inst))
-                                     ? 0x626c7475U : 
-                                    ((0x7063U == (0x707fU 
+                                    ? 0x736c6c69U : 
+                                   ((0x37U == (0x7fU 
+                                               & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__54__inst))
+                                     ? 0x6c756920U : 
+                                    ((0x17U == (0x7fU 
+                                                & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__54__inst))
+                                      ? 0x61756950U
+                                      : ((0x2003U == 
+                                          (0x707fU 
+                                           & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__54__inst))
+                                          ? 0x6c772020U
+                                          : ((0x2023U 
+                                              == (0x707fU 
                                                   & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__54__inst))
-                                      ? 0x62676575U
-                                      : ((0xbU == (0x7fU 
+                                              ? 0x73772020U
+                                              : ((0x6fU 
+                                                  == 
+                                                  (0x7fU 
                                                    & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__54__inst))
-                                          ? 0x63757330U
-                                          : 0x3f3f3f3fU))))))));
+                                                  ? 0x6a616c20U
+                                                  : 
+                                                 ((0x67U 
+                                                   == 
+                                                   (0x707fU 
+                                                    & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__54__inst))
+                                                   ? 0x6a616c72U
+                                                   : 0x62657120U)))))))
+                                : ((0x1063U == (0x707fU 
+                                                & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__54__inst))
+                                    ? 0x626e6520U : 
+                                   ((0x4063U == (0x707fU 
+                                                 & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__54__inst))
+                                     ? 0x626c7420U : 
+                                    ((0x5063U == (0x707fU 
+                                                  & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__54__inst))
+                                      ? 0x62676520U
+                                      : ((0x6063U == 
+                                          (0x707fU 
+                                           & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__54__inst))
+                                          ? 0x626c7475U
+                                          : ((0x7063U 
+                                              == (0x707fU 
+                                                  & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__54__inst))
+                                              ? 0x62676575U
+                                              : ((0xbU 
+                                                  == 
+                                                  (0x7fU 
+                                                   & __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__54__inst))
+                                                  ? 0x63757330U
+                                                  : 0x3f3f3f3fU))))))))));
             VL_EXTEND_WI(4096,32, __Vtemp71, __Vfunc_Proc_noparam__DOT__v__DOT__tinyrv2__DOT__disasm_tiny__54__Vfuncout);
             __Vilp = 0U;
             while ((__Vilp <= 0x7fU)) {
@@ -2778,21 +2857,19 @@ void VProc_noparam::__Vdpiexp_Proc_noparam__DOT__v__DOT__line_trace_TOP(VProc_no
 void VProc_noparam::__Vdpiexp_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__line_trace_TOP(VProc_noparam__Syms* __restrict vlSymsp, WData/*4095:0*/ (&trace_str)[128]) {
     VL_DEBUG_IF(VL_DBG_MSGF("+    VProc_noparam::__Vdpiexp_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__line_trace_TOP\n"); );
     // Variables
-    CData/*0:0*/ __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_val_rdy_str__94__val;
-    CData/*0:0*/ __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_val_rdy_str__94__rdy;
-    CData/*7:0*/ __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_chars__96__char;
+    CData/*0:0*/ __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_val_rdy_str__96__val;
+    CData/*0:0*/ __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_val_rdy_str__96__rdy;
     CData/*7:0*/ __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_chars__98__char;
     CData/*7:0*/ __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_chars__100__char;
     CData/*7:0*/ __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_chars__102__char;
-    CData/*0:0*/ __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_val_rdy_str__107__val;
-    CData/*0:0*/ __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_val_rdy_str__107__rdy;
-    CData/*7:0*/ __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_chars__109__char;
+    CData/*7:0*/ __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_chars__104__char;
+    CData/*0:0*/ __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_val_rdy_str__109__val;
+    CData/*0:0*/ __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_val_rdy_str__109__rdy;
     CData/*7:0*/ __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_chars__111__char;
     CData/*7:0*/ __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_chars__113__char;
     CData/*7:0*/ __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_chars__115__char;
-    WData/*4095:0*/ __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_val_rdy_str__94__str[128];
-    WData/*4095:0*/ __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__95__str[128];
-    IData/*31:0*/ __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_chars__96__num;
+    CData/*7:0*/ __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_chars__117__char;
+    WData/*4095:0*/ __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_val_rdy_str__96__str[128];
     WData/*4095:0*/ __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__97__str[128];
     IData/*31:0*/ __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_chars__98__num;
     WData/*4095:0*/ __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__99__str[128];
@@ -2800,18 +2877,20 @@ void VProc_noparam::__Vdpiexp_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__
     WData/*4095:0*/ __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__101__str[128];
     IData/*31:0*/ __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_chars__102__num;
     WData/*4095:0*/ __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__103__str[128];
-    WData/*4095:0*/ __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__104__str[128];
+    IData/*31:0*/ __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_chars__104__num;
     WData/*4095:0*/ __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__105__str[128];
     WData/*4095:0*/ __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__106__str[128];
-    WData/*4095:0*/ __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_val_rdy_str__107__str[128];
+    WData/*4095:0*/ __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__107__str[128];
     WData/*4095:0*/ __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__108__str[128];
-    IData/*31:0*/ __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_chars__109__num;
+    WData/*4095:0*/ __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_val_rdy_str__109__str[128];
     WData/*4095:0*/ __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__110__str[128];
     IData/*31:0*/ __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_chars__111__num;
     WData/*4095:0*/ __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__112__str[128];
     IData/*31:0*/ __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_chars__113__num;
     WData/*4095:0*/ __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__114__str[128];
     IData/*31:0*/ __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_chars__115__num;
+    WData/*4095:0*/ __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__116__str[128];
+    IData/*31:0*/ __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_chars__117__num;
     IData/*31:0*/ __Vilp;
     VProc_noparam* const __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
@@ -2819,17 +2898,17 @@ void VProc_noparam::__Vdpiexp_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__
                  ,"%x",64,vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul_istream_msg_D);
     __Vilp = 0U;
     while ((__Vilp <= 0x7fU)) {
-        __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_val_rdy_str__94__str[__Vilp] 
+        __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_val_rdy_str__96__str[__Vilp] 
             = vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__str[__Vilp];
         __Vilp = ((IData)(1U) + __Vilp);
     }
-    __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_val_rdy_str__94__rdy 
+    __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_val_rdy_str__96__rdy 
         = (1U & (~ (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imulresp_q__DOT__genblk1__DOT__ctrl__DOT__full)));
-    __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_val_rdy_str__94__val 
+    __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_val_rdy_str__96__val 
         = vlTOPp->Proc_noparam__DOT__v__DOT__imul_istream_val_D;
     vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len1 = 0U;
     while ((0U != (0xffU & (((0U == (0x1fU & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len1)))
-                              ? 0U : (__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_val_rdy_str__94__str[
+                              ? 0U : (__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_val_rdy_str__96__str[
                                       ((IData)(1U) 
                                        + (0x7fU & (
                                                    VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len1) 
@@ -2837,24 +2916,24 @@ void VProc_noparam::__Vdpiexp_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__
                                       << ((IData)(0x20U) 
                                           - (0x1fU 
                                              & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len1))))) 
-                            | (__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_val_rdy_str__94__str[
+                            | (__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_val_rdy_str__96__str[
                                (0x7fU & (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len1) 
                                          >> 5U))] >> 
                                (0x1fU & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len1))))))) {
         vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len1 
             = ((IData)(1U) + vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len1);
     }
-    if (((IData)(__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_val_rdy_str__94__rdy) 
-         & (IData)(__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_val_rdy_str__94__val))) {
+    if (((IData)(__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_val_rdy_str__96__rdy) 
+         & (IData)(__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_val_rdy_str__96__val))) {
         __Vilp = 0U;
         while ((__Vilp <= 0x7fU)) {
-            __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__95__str[__Vilp] 
-                = __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_val_rdy_str__94__str[__Vilp];
+            __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__97__str[__Vilp] 
+                = __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_val_rdy_str__96__str[__Vilp];
             __Vilp = ((IData)(1U) + __Vilp);
         }
         vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0 = 1U;
         while ((0U != (0xffU & (((0U == (0x1fU & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0)))
-                                  ? 0U : (__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__95__str[
+                                  ? 0U : (__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__97__str[
                                           ((IData)(1U) 
                                            + (0x7fU 
                                               & (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0) 
@@ -2862,7 +2941,7 @@ void VProc_noparam::__Vdpiexp_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__
                                           << ((IData)(0x20U) 
                                               - (0x1fU 
                                                  & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0))))) 
-                                | (__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__95__str[
+                                | (__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__97__str[
                                    (0x7fU & (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0) 
                                              >> 5U))] 
                                    >> (0x1fU & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0))))))) {
@@ -2878,7 +2957,7 @@ void VProc_noparam::__Vdpiexp_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__
             VL_ASSIGNSEL_WIII(8,(0xfffU & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0)), trace_str, 
                               (0xffU & (((0U == (0x1fU 
                                                  & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1)))
-                                          ? 0U : (__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__95__str[
+                                          ? 0U : (__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__97__str[
                                                   ((IData)(1U) 
                                                    + 
                                                    (0x7fU 
@@ -2889,7 +2968,7 @@ void VProc_noparam::__Vdpiexp_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__
                                                    - 
                                                    (0x1fU 
                                                     & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1))))) 
-                                        | (__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__95__str[
+                                        | (__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__97__str[
                                            (0x7fU & 
                                             (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1) 
                                              >> 5U))] 
@@ -2904,16 +2983,16 @@ void VProc_noparam::__Vdpiexp_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__
         }
         trace_str[0U] = vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0;
     } else {
-        if (((IData)(__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_val_rdy_str__94__rdy) 
-             & (~ (IData)(__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_val_rdy_str__94__val)))) {
-            __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_chars__96__num 
+        if (((IData)(__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_val_rdy_str__96__rdy) 
+             & (~ (IData)(__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_val_rdy_str__96__val)))) {
+            __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_chars__98__num 
                 = vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len1;
-            __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_chars__96__char = 0x20U;
+            __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_chars__98__char = 0x20U;
             vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0 
                 = trace_str[0U];
             vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1 = 0U;
-            while (VL_LTS_III(1,32,32, vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1, __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_chars__96__num)) {
-                VL_ASSIGNSEL_WIII(8,(0xfffU & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0)), trace_str, __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_chars__96__char);
+            while (VL_LTS_III(1,32,32, vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1, __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_chars__98__num)) {
+                VL_ASSIGNSEL_WIII(8,(0xfffU & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0)), trace_str, __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_chars__98__char);
                 vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0 
                     = (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0 
                        - (IData)(1U));
@@ -2922,18 +3001,18 @@ void VProc_noparam::__Vdpiexp_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__
             }
             trace_str[0U] = vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0;
         } else {
-            if (((~ (IData)(__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_val_rdy_str__94__rdy)) 
-                 & (IData)(__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_val_rdy_str__94__val))) {
-                __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__97__str[0U] = 0x23U;
+            if (((~ (IData)(__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_val_rdy_str__96__rdy)) 
+                 & (IData)(__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_val_rdy_str__96__val))) {
+                __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__99__str[0U] = 0x23U;
                 __Vilp = 1U;
                 while ((__Vilp <= 0x7fU)) {
-                    __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__97__str[__Vilp] = 0U;
+                    __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__99__str[__Vilp] = 0U;
                     __Vilp = ((IData)(1U) + __Vilp);
                 }
                 vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0 = 1U;
                 while ((0U != (0xffU & (((0U == (0x1fU 
                                                  & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0)))
-                                          ? 0U : (__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__97__str[
+                                          ? 0U : (__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__99__str[
                                                   ((IData)(1U) 
                                                    + 
                                                    (0x7fU 
@@ -2944,7 +3023,7 @@ void VProc_noparam::__Vdpiexp_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__
                                                    - 
                                                    (0x1fU 
                                                     & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0))))) 
-                                        | (__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__97__str[
+                                        | (__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__99__str[
                                            (0x7fU & 
                                             (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0) 
                                              >> 5U))] 
@@ -2966,7 +3045,7 @@ void VProc_noparam::__Vdpiexp_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__
                                                    & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1)))
                                                   ? 0U
                                                   : 
-                                                 (__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__97__str[
+                                                 (__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__99__str[
                                                   ((IData)(1U) 
                                                    + 
                                                    (0x7fU 
@@ -2977,7 +3056,7 @@ void VProc_noparam::__Vdpiexp_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__
                                                    - 
                                                    (0x1fU 
                                                     & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1))))) 
-                                                | (__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__97__str[
+                                                | (__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__99__str[
                                                    (0x7fU 
                                                     & (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1) 
                                                        >> 5U))] 
@@ -2992,15 +3071,15 @@ void VProc_noparam::__Vdpiexp_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__
                            - (IData)(1U));
                 }
                 trace_str[0U] = vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0;
-                __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_chars__98__num 
+                __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_chars__100__num 
                     = (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len1 
                        - (IData)(1U));
-                __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_chars__98__char = 0x20U;
+                __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_chars__100__char = 0x20U;
                 vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0 
                     = trace_str[0U];
                 vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1 = 0U;
-                while (VL_LTS_III(1,32,32, vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1, __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_chars__98__num)) {
-                    VL_ASSIGNSEL_WIII(8,(0xfffU & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0)), trace_str, __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_chars__98__char);
+                while (VL_LTS_III(1,32,32, vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1, __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_chars__100__num)) {
+                    VL_ASSIGNSEL_WIII(8,(0xfffU & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0)), trace_str, __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_chars__100__char);
                     vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0 
                         = (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0 
                            - (IData)(1U));
@@ -3009,92 +3088,9 @@ void VProc_noparam::__Vdpiexp_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__
                 }
                 trace_str[0U] = vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0;
             } else {
-                if ((1U & ((~ (IData)(__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_val_rdy_str__94__rdy)) 
-                           & (~ (IData)(__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_val_rdy_str__94__val))))) {
-                    __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__99__str[0U] = 0x2eU;
-                    __Vilp = 1U;
-                    while ((__Vilp <= 0x7fU)) {
-                        __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__99__str[__Vilp] = 0U;
-                        __Vilp = ((IData)(1U) + __Vilp);
-                    }
-                    vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0 = 1U;
-                    while ((0U != (0xffU & (((0U == 
-                                              (0x1fU 
-                                               & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0)))
-                                              ? 0U : 
-                                             (__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__99__str[
-                                              ((IData)(1U) 
-                                               + (0x7fU 
-                                                  & (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0) 
-                                                     >> 5U)))] 
-                                              << ((IData)(0x20U) 
-                                                  - 
-                                                  (0x1fU 
-                                                   & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0))))) 
-                                            | (__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__99__str[
-                                               (0x7fU 
-                                                & (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0) 
-                                                   >> 5U))] 
-                                               >> (0x1fU 
-                                                   & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0))))))) {
-                        vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0 
-                            = ((IData)(1U) + vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0);
-                    }
-                    vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0 
-                        = trace_str[0U];
-                    vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1 
-                        = (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0 
-                           - (IData)(1U));
-                    while (VL_LTES_III(1,32,32, 0U, vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1)) {
-                        VL_ASSIGNSEL_WIII(8,(0xfffU 
-                                             & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0)), trace_str, 
-                                          (0xffU & 
-                                           (((0U == 
-                                              (0x1fU 
-                                               & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1)))
-                                              ? 0U : 
-                                             (__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__99__str[
-                                              ((IData)(1U) 
-                                               + (0x7fU 
-                                                  & (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1) 
-                                                     >> 5U)))] 
-                                              << ((IData)(0x20U) 
-                                                  - 
-                                                  (0x1fU 
-                                                   & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1))))) 
-                                            | (__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__99__str[
-                                               (0x7fU 
-                                                & (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1) 
-                                                   >> 5U))] 
-                                               >> (0x1fU 
-                                                   & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1))))));
-                        vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0 
-                            = (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0 
-                               - (IData)(1U));
-                        vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1 
-                            = (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1 
-                               - (IData)(1U));
-                    }
-                    trace_str[0U] = vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0;
-                    __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_chars__100__num 
-                        = (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len1 
-                           - (IData)(1U));
-                    __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_chars__100__char = 0x20U;
-                    vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0 
-                        = trace_str[0U];
-                    vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1 = 0U;
-                    while (VL_LTS_III(1,32,32, vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1, __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_chars__100__num)) {
-                        VL_ASSIGNSEL_WIII(8,(0xfffU 
-                                             & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0)), trace_str, __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_chars__100__char);
-                        vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0 
-                            = (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0 
-                               - (IData)(1U));
-                        vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1 
-                            = ((IData)(1U) + vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1);
-                    }
-                    trace_str[0U] = vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0;
-                } else {
-                    __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__101__str[0U] = 0x78U;
+                if ((1U & ((~ (IData)(__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_val_rdy_str__96__rdy)) 
+                           & (~ (IData)(__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_val_rdy_str__96__val))))) {
+                    __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__101__str[0U] = 0x2eU;
                     __Vilp = 1U;
                     while ((__Vilp <= 0x7fU)) {
                         __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__101__str[__Vilp] = 0U;
@@ -3176,435 +3172,11 @@ void VProc_noparam::__Vdpiexp_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__
                             = ((IData)(1U) + vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1);
                     }
                     trace_str[0U] = vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0;
-                }
-            }
-        }
-    }
-    __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__103__str[0U] = 0x28U;
-    __Vilp = 1U;
-    while ((__Vilp <= 0x7fU)) {
-        __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__103__str[__Vilp] = 0U;
-        __Vilp = ((IData)(1U) + __Vilp);
-    }
-    vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0 = 1U;
-    while ((0U != (0xffU & (((0U == (0x1fU & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0)))
-                              ? 0U : (__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__103__str[
-                                      ((IData)(1U) 
-                                       + (0x7fU & (
-                                                   VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0) 
-                                                   >> 5U)))] 
-                                      << ((IData)(0x20U) 
-                                          - (0x1fU 
-                                             & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0))))) 
-                            | (__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__103__str[
-                               (0x7fU & (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0) 
-                                         >> 5U))] >> 
-                               (0x1fU & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0))))))) {
-        vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0 
-            = ((IData)(1U) + vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0);
-    }
-    vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0 
-        = trace_str[0U];
-    vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1 
-        = (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0 
-           - (IData)(1U));
-    while (VL_LTES_III(1,32,32, 0U, vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1)) {
-        VL_ASSIGNSEL_WIII(8,(0xfffU & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0)), trace_str, 
-                          (0xffU & (((0U == (0x1fU 
-                                             & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1)))
-                                      ? 0U : (__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__103__str[
-                                              ((IData)(1U) 
-                                               + (0x7fU 
-                                                  & (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1) 
-                                                     >> 5U)))] 
-                                              << ((IData)(0x20U) 
-                                                  - 
-                                                  (0x1fU 
-                                                   & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1))))) 
-                                    | (__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__103__str[
-                                       (0x7fU & (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1) 
-                                                 >> 5U))] 
-                                       >> (0x1fU & 
-                                           VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1))))));
-        vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0 
-            = (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0 
-               - (IData)(1U));
-        vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1 
-            = (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1 
-               - (IData)(1U));
-    }
-    trace_str[0U] = vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0;
-    if (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__val_reg_out) {
-        __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__104__str[0U] = 0x2aU;
-        __Vilp = 1U;
-        while ((__Vilp <= 0x7fU)) {
-            __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__104__str[__Vilp] = 0U;
-            __Vilp = ((IData)(1U) + __Vilp);
-        }
-        vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0 = 1U;
-        while ((0U != (0xffU & (((0U == (0x1fU & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0)))
-                                  ? 0U : (__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__104__str[
-                                          ((IData)(1U) 
-                                           + (0x7fU 
-                                              & (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0) 
-                                                 >> 5U)))] 
-                                          << ((IData)(0x20U) 
-                                              - (0x1fU 
-                                                 & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0))))) 
-                                | (__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__104__str[
-                                   (0x7fU & (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0) 
-                                             >> 5U))] 
-                                   >> (0x1fU & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0))))))) {
-            vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0 
-                = ((IData)(1U) + vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0);
-        }
-        vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0 
-            = trace_str[0U];
-        vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1 
-            = (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0 
-               - (IData)(1U));
-        while (VL_LTES_III(1,32,32, 0U, vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1)) {
-            VL_ASSIGNSEL_WIII(8,(0xfffU & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0)), trace_str, 
-                              (0xffU & (((0U == (0x1fU 
-                                                 & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1)))
-                                          ? 0U : (__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__104__str[
-                                                  ((IData)(1U) 
-                                                   + 
-                                                   (0x7fU 
-                                                    & (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1) 
-                                                       >> 5U)))] 
-                                                  << 
-                                                  ((IData)(0x20U) 
-                                                   - 
-                                                   (0x1fU 
-                                                    & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1))))) 
-                                        | (__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__104__str[
-                                           (0x7fU & 
-                                            (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1) 
-                                             >> 5U))] 
-                                           >> (0x1fU 
-                                               & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1))))));
-            vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0 
-                = (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0 
-                   - (IData)(1U));
-            vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1 
-                = (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1 
-                   - (IData)(1U));
-        }
-        trace_str[0U] = vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0;
-    } else {
-        __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__105__str[0U] = 0x20U;
-        __Vilp = 1U;
-        while ((__Vilp <= 0x7fU)) {
-            __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__105__str[__Vilp] = 0U;
-            __Vilp = ((IData)(1U) + __Vilp);
-        }
-        vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0 = 1U;
-        while ((0U != (0xffU & (((0U == (0x1fU & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0)))
-                                  ? 0U : (__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__105__str[
-                                          ((IData)(1U) 
-                                           + (0x7fU 
-                                              & (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0) 
-                                                 >> 5U)))] 
-                                          << ((IData)(0x20U) 
-                                              - (0x1fU 
-                                                 & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0))))) 
-                                | (__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__105__str[
-                                   (0x7fU & (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0) 
-                                             >> 5U))] 
-                                   >> (0x1fU & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0))))))) {
-            vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0 
-                = ((IData)(1U) + vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0);
-        }
-        vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0 
-            = trace_str[0U];
-        vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1 
-            = (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0 
-               - (IData)(1U));
-        while (VL_LTES_III(1,32,32, 0U, vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1)) {
-            VL_ASSIGNSEL_WIII(8,(0xfffU & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0)), trace_str, 
-                              (0xffU & (((0U == (0x1fU 
-                                                 & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1)))
-                                          ? 0U : (__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__105__str[
-                                                  ((IData)(1U) 
-                                                   + 
-                                                   (0x7fU 
-                                                    & (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1) 
-                                                       >> 5U)))] 
-                                                  << 
-                                                  ((IData)(0x20U) 
-                                                   - 
-                                                   (0x1fU 
-                                                    & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1))))) 
-                                        | (__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__105__str[
-                                           (0x7fU & 
-                                            (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1) 
-                                             >> 5U))] 
-                                           >> (0x1fU 
-                                               & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1))))));
-            vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0 
-                = (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0 
-                   - (IData)(1U));
-            vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1 
-                = (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1 
-                   - (IData)(1U));
-        }
-        trace_str[0U] = vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0;
-    }
-    __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__106__str[0U] = 0x29U;
-    __Vilp = 1U;
-    while ((__Vilp <= 0x7fU)) {
-        __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__106__str[__Vilp] = 0U;
-        __Vilp = ((IData)(1U) + __Vilp);
-    }
-    vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0 = 1U;
-    while ((0U != (0xffU & (((0U == (0x1fU & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0)))
-                              ? 0U : (__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__106__str[
-                                      ((IData)(1U) 
-                                       + (0x7fU & (
-                                                   VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0) 
-                                                   >> 5U)))] 
-                                      << ((IData)(0x20U) 
-                                          - (0x1fU 
-                                             & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0))))) 
-                            | (__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__106__str[
-                               (0x7fU & (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0) 
-                                         >> 5U))] >> 
-                               (0x1fU & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0))))))) {
-        vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0 
-            = ((IData)(1U) + vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0);
-    }
-    vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0 
-        = trace_str[0U];
-    vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1 
-        = (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0 
-           - (IData)(1U));
-    while (VL_LTES_III(1,32,32, 0U, vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1)) {
-        VL_ASSIGNSEL_WIII(8,(0xfffU & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0)), trace_str, 
-                          (0xffU & (((0U == (0x1fU 
-                                             & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1)))
-                                      ? 0U : (__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__106__str[
-                                              ((IData)(1U) 
-                                               + (0x7fU 
-                                                  & (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1) 
-                                                     >> 5U)))] 
-                                              << ((IData)(0x20U) 
-                                                  - 
-                                                  (0x1fU 
-                                                   & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1))))) 
-                                    | (__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__106__str[
-                                       (0x7fU & (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1) 
-                                                 >> 5U))] 
-                                       >> (0x1fU & 
-                                           VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1))))));
-        vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0 
-            = (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0 
-               - (IData)(1U));
-        vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1 
-            = (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1 
-               - (IData)(1U));
-    }
-    trace_str[0U] = vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0;
-    VL_SFORMAT_X(4096,vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__str
-                 ,"%x",32,vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul_ostream_msg_tmp_X);
-    __Vilp = 0U;
-    while ((__Vilp <= 0x7fU)) {
-        __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_val_rdy_str__107__str[__Vilp] 
-            = vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__str[__Vilp];
-        __Vilp = ((IData)(1U) + __Vilp);
-    }
-    __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_val_rdy_str__107__rdy 
-        = (1U & (~ (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imulresp_q__DOT__genblk1__DOT__ctrl__DOT__full)));
-    __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_val_rdy_str__107__val 
-        = vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__val_reg_out;
-    vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len1 = 0U;
-    while ((0U != (0xffU & (((0U == (0x1fU & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len1)))
-                              ? 0U : (__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_val_rdy_str__107__str[
-                                      ((IData)(1U) 
-                                       + (0x7fU & (
-                                                   VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len1) 
-                                                   >> 5U)))] 
-                                      << ((IData)(0x20U) 
-                                          - (0x1fU 
-                                             & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len1))))) 
-                            | (__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_val_rdy_str__107__str[
-                               (0x7fU & (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len1) 
-                                         >> 5U))] >> 
-                               (0x1fU & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len1))))))) {
-        vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len1 
-            = ((IData)(1U) + vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len1);
-    }
-    if (((IData)(__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_val_rdy_str__107__rdy) 
-         & (IData)(__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_val_rdy_str__107__val))) {
-        __Vilp = 0U;
-        while ((__Vilp <= 0x7fU)) {
-            __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__108__str[__Vilp] 
-                = __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_val_rdy_str__107__str[__Vilp];
-            __Vilp = ((IData)(1U) + __Vilp);
-        }
-        vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0 = 1U;
-        while ((0U != (0xffU & (((0U == (0x1fU & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0)))
-                                  ? 0U : (__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__108__str[
-                                          ((IData)(1U) 
-                                           + (0x7fU 
-                                              & (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0) 
-                                                 >> 5U)))] 
-                                          << ((IData)(0x20U) 
-                                              - (0x1fU 
-                                                 & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0))))) 
-                                | (__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__108__str[
-                                   (0x7fU & (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0) 
-                                             >> 5U))] 
-                                   >> (0x1fU & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0))))))) {
-            vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0 
-                = ((IData)(1U) + vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0);
-        }
-        vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0 
-            = trace_str[0U];
-        vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1 
-            = (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0 
-               - (IData)(1U));
-        while (VL_LTES_III(1,32,32, 0U, vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1)) {
-            VL_ASSIGNSEL_WIII(8,(0xfffU & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0)), trace_str, 
-                              (0xffU & (((0U == (0x1fU 
-                                                 & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1)))
-                                          ? 0U : (__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__108__str[
-                                                  ((IData)(1U) 
-                                                   + 
-                                                   (0x7fU 
-                                                    & (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1) 
-                                                       >> 5U)))] 
-                                                  << 
-                                                  ((IData)(0x20U) 
-                                                   - 
-                                                   (0x1fU 
-                                                    & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1))))) 
-                                        | (__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__108__str[
-                                           (0x7fU & 
-                                            (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1) 
-                                             >> 5U))] 
-                                           >> (0x1fU 
-                                               & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1))))));
-            vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0 
-                = (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0 
-                   - (IData)(1U));
-            vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1 
-                = (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1 
-                   - (IData)(1U));
-        }
-        trace_str[0U] = vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0;
-    } else {
-        if (((IData)(__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_val_rdy_str__107__rdy) 
-             & (~ (IData)(__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_val_rdy_str__107__val)))) {
-            __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_chars__109__num 
-                = vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len1;
-            __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_chars__109__char = 0x20U;
-            vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0 
-                = trace_str[0U];
-            vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1 = 0U;
-            while (VL_LTS_III(1,32,32, vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1, __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_chars__109__num)) {
-                VL_ASSIGNSEL_WIII(8,(0xfffU & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0)), trace_str, __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_chars__109__char);
-                vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0 
-                    = (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0 
-                       - (IData)(1U));
-                vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1 
-                    = ((IData)(1U) + vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1);
-            }
-            trace_str[0U] = vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0;
-        } else {
-            if (((~ (IData)(__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_val_rdy_str__107__rdy)) 
-                 & (IData)(__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_val_rdy_str__107__val))) {
-                __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__110__str[0U] = 0x23U;
-                __Vilp = 1U;
-                while ((__Vilp <= 0x7fU)) {
-                    __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__110__str[__Vilp] = 0U;
-                    __Vilp = ((IData)(1U) + __Vilp);
-                }
-                vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0 = 1U;
-                while ((0U != (0xffU & (((0U == (0x1fU 
-                                                 & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0)))
-                                          ? 0U : (__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__110__str[
-                                                  ((IData)(1U) 
-                                                   + 
-                                                   (0x7fU 
-                                                    & (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0) 
-                                                       >> 5U)))] 
-                                                  << 
-                                                  ((IData)(0x20U) 
-                                                   - 
-                                                   (0x1fU 
-                                                    & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0))))) 
-                                        | (__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__110__str[
-                                           (0x7fU & 
-                                            (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0) 
-                                             >> 5U))] 
-                                           >> (0x1fU 
-                                               & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0))))))) {
-                    vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0 
-                        = ((IData)(1U) + vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0);
-                }
-                vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0 
-                    = trace_str[0U];
-                vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1 
-                    = (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0 
-                       - (IData)(1U));
-                while (VL_LTES_III(1,32,32, 0U, vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1)) {
-                    VL_ASSIGNSEL_WIII(8,(0xfffU & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0)), trace_str, 
-                                      (0xffU & (((0U 
-                                                  == 
-                                                  (0x1fU 
-                                                   & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1)))
-                                                  ? 0U
-                                                  : 
-                                                 (__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__110__str[
-                                                  ((IData)(1U) 
-                                                   + 
-                                                   (0x7fU 
-                                                    & (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1) 
-                                                       >> 5U)))] 
-                                                  << 
-                                                  ((IData)(0x20U) 
-                                                   - 
-                                                   (0x1fU 
-                                                    & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1))))) 
-                                                | (__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__110__str[
-                                                   (0x7fU 
-                                                    & (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1) 
-                                                       >> 5U))] 
-                                                   >> 
-                                                   (0x1fU 
-                                                    & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1))))));
-                    vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0 
-                        = (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0 
-                           - (IData)(1U));
-                    vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1 
-                        = (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1 
-                           - (IData)(1U));
-                }
-                trace_str[0U] = vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0;
-                __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_chars__111__num 
-                    = (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len1 
-                       - (IData)(1U));
-                __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_chars__111__char = 0x20U;
-                vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0 
-                    = trace_str[0U];
-                vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1 = 0U;
-                while (VL_LTS_III(1,32,32, vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1, __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_chars__111__num)) {
-                    VL_ASSIGNSEL_WIII(8,(0xfffU & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0)), trace_str, __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_chars__111__char);
-                    vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0 
-                        = (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0 
-                           - (IData)(1U));
-                    vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1 
-                        = ((IData)(1U) + vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1);
-                }
-                trace_str[0U] = vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0;
-            } else {
-                if ((1U & ((~ (IData)(__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_val_rdy_str__107__rdy)) 
-                           & (~ (IData)(__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_val_rdy_str__107__val))))) {
-                    __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__112__str[0U] = 0x2eU;
+                } else {
+                    __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__103__str[0U] = 0x78U;
                     __Vilp = 1U;
                     while ((__Vilp <= 0x7fU)) {
-                        __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__112__str[__Vilp] = 0U;
+                        __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__103__str[__Vilp] = 0U;
                         __Vilp = ((IData)(1U) + __Vilp);
                     }
                     vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0 = 1U;
@@ -3612,7 +3184,7 @@ void VProc_noparam::__Vdpiexp_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__
                                               (0x1fU 
                                                & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0)))
                                               ? 0U : 
-                                             (__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__112__str[
+                                             (__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__103__str[
                                               ((IData)(1U) 
                                                + (0x7fU 
                                                   & (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0) 
@@ -3621,7 +3193,7 @@ void VProc_noparam::__Vdpiexp_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__
                                                   - 
                                                   (0x1fU 
                                                    & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0))))) 
-                                            | (__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__112__str[
+                                            | (__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__103__str[
                                                (0x7fU 
                                                 & (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0) 
                                                    >> 5U))] 
@@ -3643,7 +3215,7 @@ void VProc_noparam::__Vdpiexp_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__
                                               (0x1fU 
                                                & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1)))
                                               ? 0U : 
-                                             (__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__112__str[
+                                             (__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__103__str[
                                               ((IData)(1U) 
                                                + (0x7fU 
                                                   & (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1) 
@@ -3652,7 +3224,7 @@ void VProc_noparam::__Vdpiexp_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__
                                                   - 
                                                   (0x1fU 
                                                    & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1))))) 
-                                            | (__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__112__str[
+                                            | (__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__103__str[
                                                (0x7fU 
                                                 & (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1) 
                                                    >> 5U))] 
@@ -3666,16 +3238,16 @@ void VProc_noparam::__Vdpiexp_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__
                                - (IData)(1U));
                     }
                     trace_str[0U] = vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0;
-                    __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_chars__113__num 
+                    __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_chars__104__num 
                         = (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len1 
                            - (IData)(1U));
-                    __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_chars__113__char = 0x20U;
+                    __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_chars__104__char = 0x20U;
                     vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0 
                         = trace_str[0U];
                     vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1 = 0U;
-                    while (VL_LTS_III(1,32,32, vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1, __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_chars__113__num)) {
+                    while (VL_LTS_III(1,32,32, vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1, __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_chars__104__num)) {
                         VL_ASSIGNSEL_WIII(8,(0xfffU 
-                                             & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0)), trace_str, __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_chars__113__char);
+                                             & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0)), trace_str, __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_chars__104__char);
                         vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0 
                             = (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0 
                                - (IData)(1U));
@@ -3683,8 +3255,432 @@ void VProc_noparam::__Vdpiexp_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__
                             = ((IData)(1U) + vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1);
                     }
                     trace_str[0U] = vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0;
-                } else {
-                    __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__114__str[0U] = 0x78U;
+                }
+            }
+        }
+    }
+    __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__105__str[0U] = 0x28U;
+    __Vilp = 1U;
+    while ((__Vilp <= 0x7fU)) {
+        __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__105__str[__Vilp] = 0U;
+        __Vilp = ((IData)(1U) + __Vilp);
+    }
+    vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0 = 1U;
+    while ((0U != (0xffU & (((0U == (0x1fU & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0)))
+                              ? 0U : (__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__105__str[
+                                      ((IData)(1U) 
+                                       + (0x7fU & (
+                                                   VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0) 
+                                                   >> 5U)))] 
+                                      << ((IData)(0x20U) 
+                                          - (0x1fU 
+                                             & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0))))) 
+                            | (__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__105__str[
+                               (0x7fU & (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0) 
+                                         >> 5U))] >> 
+                               (0x1fU & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0))))))) {
+        vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0 
+            = ((IData)(1U) + vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0);
+    }
+    vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0 
+        = trace_str[0U];
+    vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1 
+        = (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0 
+           - (IData)(1U));
+    while (VL_LTES_III(1,32,32, 0U, vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1)) {
+        VL_ASSIGNSEL_WIII(8,(0xfffU & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0)), trace_str, 
+                          (0xffU & (((0U == (0x1fU 
+                                             & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1)))
+                                      ? 0U : (__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__105__str[
+                                              ((IData)(1U) 
+                                               + (0x7fU 
+                                                  & (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1) 
+                                                     >> 5U)))] 
+                                              << ((IData)(0x20U) 
+                                                  - 
+                                                  (0x1fU 
+                                                   & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1))))) 
+                                    | (__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__105__str[
+                                       (0x7fU & (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1) 
+                                                 >> 5U))] 
+                                       >> (0x1fU & 
+                                           VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1))))));
+        vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0 
+            = (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0 
+               - (IData)(1U));
+        vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1 
+            = (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1 
+               - (IData)(1U));
+    }
+    trace_str[0U] = vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0;
+    if (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__val_reg_out) {
+        __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__106__str[0U] = 0x2aU;
+        __Vilp = 1U;
+        while ((__Vilp <= 0x7fU)) {
+            __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__106__str[__Vilp] = 0U;
+            __Vilp = ((IData)(1U) + __Vilp);
+        }
+        vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0 = 1U;
+        while ((0U != (0xffU & (((0U == (0x1fU & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0)))
+                                  ? 0U : (__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__106__str[
+                                          ((IData)(1U) 
+                                           + (0x7fU 
+                                              & (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0) 
+                                                 >> 5U)))] 
+                                          << ((IData)(0x20U) 
+                                              - (0x1fU 
+                                                 & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0))))) 
+                                | (__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__106__str[
+                                   (0x7fU & (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0) 
+                                             >> 5U))] 
+                                   >> (0x1fU & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0))))))) {
+            vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0 
+                = ((IData)(1U) + vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0);
+        }
+        vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0 
+            = trace_str[0U];
+        vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1 
+            = (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0 
+               - (IData)(1U));
+        while (VL_LTES_III(1,32,32, 0U, vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1)) {
+            VL_ASSIGNSEL_WIII(8,(0xfffU & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0)), trace_str, 
+                              (0xffU & (((0U == (0x1fU 
+                                                 & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1)))
+                                          ? 0U : (__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__106__str[
+                                                  ((IData)(1U) 
+                                                   + 
+                                                   (0x7fU 
+                                                    & (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1) 
+                                                       >> 5U)))] 
+                                                  << 
+                                                  ((IData)(0x20U) 
+                                                   - 
+                                                   (0x1fU 
+                                                    & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1))))) 
+                                        | (__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__106__str[
+                                           (0x7fU & 
+                                            (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1) 
+                                             >> 5U))] 
+                                           >> (0x1fU 
+                                               & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1))))));
+            vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0 
+                = (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0 
+                   - (IData)(1U));
+            vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1 
+                = (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1 
+                   - (IData)(1U));
+        }
+        trace_str[0U] = vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0;
+    } else {
+        __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__107__str[0U] = 0x20U;
+        __Vilp = 1U;
+        while ((__Vilp <= 0x7fU)) {
+            __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__107__str[__Vilp] = 0U;
+            __Vilp = ((IData)(1U) + __Vilp);
+        }
+        vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0 = 1U;
+        while ((0U != (0xffU & (((0U == (0x1fU & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0)))
+                                  ? 0U : (__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__107__str[
+                                          ((IData)(1U) 
+                                           + (0x7fU 
+                                              & (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0) 
+                                                 >> 5U)))] 
+                                          << ((IData)(0x20U) 
+                                              - (0x1fU 
+                                                 & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0))))) 
+                                | (__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__107__str[
+                                   (0x7fU & (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0) 
+                                             >> 5U))] 
+                                   >> (0x1fU & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0))))))) {
+            vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0 
+                = ((IData)(1U) + vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0);
+        }
+        vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0 
+            = trace_str[0U];
+        vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1 
+            = (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0 
+               - (IData)(1U));
+        while (VL_LTES_III(1,32,32, 0U, vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1)) {
+            VL_ASSIGNSEL_WIII(8,(0xfffU & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0)), trace_str, 
+                              (0xffU & (((0U == (0x1fU 
+                                                 & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1)))
+                                          ? 0U : (__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__107__str[
+                                                  ((IData)(1U) 
+                                                   + 
+                                                   (0x7fU 
+                                                    & (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1) 
+                                                       >> 5U)))] 
+                                                  << 
+                                                  ((IData)(0x20U) 
+                                                   - 
+                                                   (0x1fU 
+                                                    & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1))))) 
+                                        | (__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__107__str[
+                                           (0x7fU & 
+                                            (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1) 
+                                             >> 5U))] 
+                                           >> (0x1fU 
+                                               & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1))))));
+            vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0 
+                = (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0 
+                   - (IData)(1U));
+            vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1 
+                = (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1 
+                   - (IData)(1U));
+        }
+        trace_str[0U] = vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0;
+    }
+    __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__108__str[0U] = 0x29U;
+    __Vilp = 1U;
+    while ((__Vilp <= 0x7fU)) {
+        __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__108__str[__Vilp] = 0U;
+        __Vilp = ((IData)(1U) + __Vilp);
+    }
+    vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0 = 1U;
+    while ((0U != (0xffU & (((0U == (0x1fU & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0)))
+                              ? 0U : (__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__108__str[
+                                      ((IData)(1U) 
+                                       + (0x7fU & (
+                                                   VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0) 
+                                                   >> 5U)))] 
+                                      << ((IData)(0x20U) 
+                                          - (0x1fU 
+                                             & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0))))) 
+                            | (__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__108__str[
+                               (0x7fU & (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0) 
+                                         >> 5U))] >> 
+                               (0x1fU & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0))))))) {
+        vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0 
+            = ((IData)(1U) + vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0);
+    }
+    vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0 
+        = trace_str[0U];
+    vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1 
+        = (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0 
+           - (IData)(1U));
+    while (VL_LTES_III(1,32,32, 0U, vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1)) {
+        VL_ASSIGNSEL_WIII(8,(0xfffU & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0)), trace_str, 
+                          (0xffU & (((0U == (0x1fU 
+                                             & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1)))
+                                      ? 0U : (__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__108__str[
+                                              ((IData)(1U) 
+                                               + (0x7fU 
+                                                  & (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1) 
+                                                     >> 5U)))] 
+                                              << ((IData)(0x20U) 
+                                                  - 
+                                                  (0x1fU 
+                                                   & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1))))) 
+                                    | (__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__108__str[
+                                       (0x7fU & (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1) 
+                                                 >> 5U))] 
+                                       >> (0x1fU & 
+                                           VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1))))));
+        vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0 
+            = (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0 
+               - (IData)(1U));
+        vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1 
+            = (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1 
+               - (IData)(1U));
+    }
+    trace_str[0U] = vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0;
+    VL_SFORMAT_X(4096,vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__str
+                 ,"%x",32,vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul_ostream_msg_tmp_X);
+    __Vilp = 0U;
+    while ((__Vilp <= 0x7fU)) {
+        __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_val_rdy_str__109__str[__Vilp] 
+            = vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__str[__Vilp];
+        __Vilp = ((IData)(1U) + __Vilp);
+    }
+    __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_val_rdy_str__109__rdy 
+        = (1U & (~ (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imulresp_q__DOT__genblk1__DOT__ctrl__DOT__full)));
+    __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_val_rdy_str__109__val 
+        = vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__val_reg_out;
+    vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len1 = 0U;
+    while ((0U != (0xffU & (((0U == (0x1fU & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len1)))
+                              ? 0U : (__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_val_rdy_str__109__str[
+                                      ((IData)(1U) 
+                                       + (0x7fU & (
+                                                   VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len1) 
+                                                   >> 5U)))] 
+                                      << ((IData)(0x20U) 
+                                          - (0x1fU 
+                                             & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len1))))) 
+                            | (__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_val_rdy_str__109__str[
+                               (0x7fU & (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len1) 
+                                         >> 5U))] >> 
+                               (0x1fU & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len1))))))) {
+        vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len1 
+            = ((IData)(1U) + vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len1);
+    }
+    if (((IData)(__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_val_rdy_str__109__rdy) 
+         & (IData)(__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_val_rdy_str__109__val))) {
+        __Vilp = 0U;
+        while ((__Vilp <= 0x7fU)) {
+            __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__110__str[__Vilp] 
+                = __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_val_rdy_str__109__str[__Vilp];
+            __Vilp = ((IData)(1U) + __Vilp);
+        }
+        vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0 = 1U;
+        while ((0U != (0xffU & (((0U == (0x1fU & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0)))
+                                  ? 0U : (__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__110__str[
+                                          ((IData)(1U) 
+                                           + (0x7fU 
+                                              & (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0) 
+                                                 >> 5U)))] 
+                                          << ((IData)(0x20U) 
+                                              - (0x1fU 
+                                                 & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0))))) 
+                                | (__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__110__str[
+                                   (0x7fU & (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0) 
+                                             >> 5U))] 
+                                   >> (0x1fU & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0))))))) {
+            vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0 
+                = ((IData)(1U) + vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0);
+        }
+        vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0 
+            = trace_str[0U];
+        vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1 
+            = (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0 
+               - (IData)(1U));
+        while (VL_LTES_III(1,32,32, 0U, vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1)) {
+            VL_ASSIGNSEL_WIII(8,(0xfffU & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0)), trace_str, 
+                              (0xffU & (((0U == (0x1fU 
+                                                 & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1)))
+                                          ? 0U : (__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__110__str[
+                                                  ((IData)(1U) 
+                                                   + 
+                                                   (0x7fU 
+                                                    & (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1) 
+                                                       >> 5U)))] 
+                                                  << 
+                                                  ((IData)(0x20U) 
+                                                   - 
+                                                   (0x1fU 
+                                                    & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1))))) 
+                                        | (__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__110__str[
+                                           (0x7fU & 
+                                            (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1) 
+                                             >> 5U))] 
+                                           >> (0x1fU 
+                                               & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1))))));
+            vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0 
+                = (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0 
+                   - (IData)(1U));
+            vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1 
+                = (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1 
+                   - (IData)(1U));
+        }
+        trace_str[0U] = vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0;
+    } else {
+        if (((IData)(__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_val_rdy_str__109__rdy) 
+             & (~ (IData)(__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_val_rdy_str__109__val)))) {
+            __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_chars__111__num 
+                = vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len1;
+            __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_chars__111__char = 0x20U;
+            vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0 
+                = trace_str[0U];
+            vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1 = 0U;
+            while (VL_LTS_III(1,32,32, vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1, __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_chars__111__num)) {
+                VL_ASSIGNSEL_WIII(8,(0xfffU & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0)), trace_str, __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_chars__111__char);
+                vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0 
+                    = (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0 
+                       - (IData)(1U));
+                vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1 
+                    = ((IData)(1U) + vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1);
+            }
+            trace_str[0U] = vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0;
+        } else {
+            if (((~ (IData)(__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_val_rdy_str__109__rdy)) 
+                 & (IData)(__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_val_rdy_str__109__val))) {
+                __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__112__str[0U] = 0x23U;
+                __Vilp = 1U;
+                while ((__Vilp <= 0x7fU)) {
+                    __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__112__str[__Vilp] = 0U;
+                    __Vilp = ((IData)(1U) + __Vilp);
+                }
+                vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0 = 1U;
+                while ((0U != (0xffU & (((0U == (0x1fU 
+                                                 & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0)))
+                                          ? 0U : (__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__112__str[
+                                                  ((IData)(1U) 
+                                                   + 
+                                                   (0x7fU 
+                                                    & (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0) 
+                                                       >> 5U)))] 
+                                                  << 
+                                                  ((IData)(0x20U) 
+                                                   - 
+                                                   (0x1fU 
+                                                    & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0))))) 
+                                        | (__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__112__str[
+                                           (0x7fU & 
+                                            (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0) 
+                                             >> 5U))] 
+                                           >> (0x1fU 
+                                               & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0))))))) {
+                    vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0 
+                        = ((IData)(1U) + vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0);
+                }
+                vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0 
+                    = trace_str[0U];
+                vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1 
+                    = (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0 
+                       - (IData)(1U));
+                while (VL_LTES_III(1,32,32, 0U, vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1)) {
+                    VL_ASSIGNSEL_WIII(8,(0xfffU & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0)), trace_str, 
+                                      (0xffU & (((0U 
+                                                  == 
+                                                  (0x1fU 
+                                                   & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1)))
+                                                  ? 0U
+                                                  : 
+                                                 (__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__112__str[
+                                                  ((IData)(1U) 
+                                                   + 
+                                                   (0x7fU 
+                                                    & (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1) 
+                                                       >> 5U)))] 
+                                                  << 
+                                                  ((IData)(0x20U) 
+                                                   - 
+                                                   (0x1fU 
+                                                    & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1))))) 
+                                                | (__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__112__str[
+                                                   (0x7fU 
+                                                    & (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1) 
+                                                       >> 5U))] 
+                                                   >> 
+                                                   (0x1fU 
+                                                    & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1))))));
+                    vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0 
+                        = (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0 
+                           - (IData)(1U));
+                    vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1 
+                        = (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1 
+                           - (IData)(1U));
+                }
+                trace_str[0U] = vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0;
+                __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_chars__113__num 
+                    = (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len1 
+                       - (IData)(1U));
+                __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_chars__113__char = 0x20U;
+                vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0 
+                    = trace_str[0U];
+                vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1 = 0U;
+                while (VL_LTS_III(1,32,32, vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1, __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_chars__113__num)) {
+                    VL_ASSIGNSEL_WIII(8,(0xfffU & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0)), trace_str, __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_chars__113__char);
+                    vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0 
+                        = (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0 
+                           - (IData)(1U));
+                    vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1 
+                        = ((IData)(1U) + vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1);
+                }
+                trace_str[0U] = vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0;
+            } else {
+                if ((1U & ((~ (IData)(__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_val_rdy_str__109__rdy)) 
+                           & (~ (IData)(__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_val_rdy_str__109__val))))) {
+                    __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__114__str[0U] = 0x2eU;
                     __Vilp = 1U;
                     while ((__Vilp <= 0x7fU)) {
                         __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__114__str[__Vilp] = 0U;
@@ -3766,6 +3762,89 @@ void VProc_noparam::__Vdpiexp_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__
                             = ((IData)(1U) + vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1);
                     }
                     trace_str[0U] = vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0;
+                } else {
+                    __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__116__str[0U] = 0x78U;
+                    __Vilp = 1U;
+                    while ((__Vilp <= 0x7fU)) {
+                        __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__116__str[__Vilp] = 0U;
+                        __Vilp = ((IData)(1U) + __Vilp);
+                    }
+                    vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0 = 1U;
+                    while ((0U != (0xffU & (((0U == 
+                                              (0x1fU 
+                                               & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0)))
+                                              ? 0U : 
+                                             (__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__116__str[
+                                              ((IData)(1U) 
+                                               + (0x7fU 
+                                                  & (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0) 
+                                                     >> 5U)))] 
+                                              << ((IData)(0x20U) 
+                                                  - 
+                                                  (0x1fU 
+                                                   & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0))))) 
+                                            | (__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__116__str[
+                                               (0x7fU 
+                                                & (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0) 
+                                                   >> 5U))] 
+                                               >> (0x1fU 
+                                                   & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0))))))) {
+                        vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0 
+                            = ((IData)(1U) + vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0);
+                    }
+                    vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0 
+                        = trace_str[0U];
+                    vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1 
+                        = (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len0 
+                           - (IData)(1U));
+                    while (VL_LTES_III(1,32,32, 0U, vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1)) {
+                        VL_ASSIGNSEL_WIII(8,(0xfffU 
+                                             & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0)), trace_str, 
+                                          (0xffU & 
+                                           (((0U == 
+                                              (0x1fU 
+                                               & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1)))
+                                              ? 0U : 
+                                             (__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__116__str[
+                                              ((IData)(1U) 
+                                               + (0x7fU 
+                                                  & (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1) 
+                                                     >> 5U)))] 
+                                              << ((IData)(0x20U) 
+                                                  - 
+                                                  (0x1fU 
+                                                   & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1))))) 
+                                            | (__Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_str__116__str[
+                                               (0x7fU 
+                                                & (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1) 
+                                                   >> 5U))] 
+                                               >> (0x1fU 
+                                                   & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1))))));
+                        vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0 
+                            = (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0 
+                               - (IData)(1U));
+                        vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1 
+                            = (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1 
+                               - (IData)(1U));
+                    }
+                    trace_str[0U] = vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0;
+                    __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_chars__117__num 
+                        = (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__len1 
+                           - (IData)(1U));
+                    __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_chars__117__char = 0x20U;
+                    vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0 
+                        = trace_str[0U];
+                    vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1 = 0U;
+                    while (VL_LTS_III(1,32,32, vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1, __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_chars__117__num)) {
+                        VL_ASSIGNSEL_WIII(8,(0xfffU 
+                                             & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0)), trace_str, __Vtask_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__append_chars__117__char);
+                        vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0 
+                            = (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0 
+                               - (IData)(1U));
+                        vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1 
+                            = ((IData)(1U) + vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx1);
+                    }
+                    trace_str[0U] = vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__vc_trace__DOT__idx0;
                 }
             }
         }
@@ -3775,37 +3854,37 @@ void VProc_noparam::__Vdpiexp_Proc_noparam__DOT__v__DOT__dpath__DOT__imul__DOT__
 void VProc_noparam::__Vdpiexp_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__line_trace_TOP(VProc_noparam__Syms* __restrict vlSymsp, WData/*4095:0*/ (&trace_str)[128]) {
     VL_DEBUG_IF(VL_DBG_MSGF("+    VProc_noparam::__Vdpiexp_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__line_trace_TOP\n"); );
     // Variables
-    CData/*0:0*/ __Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__116__val;
-    CData/*0:0*/ __Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__116__rdy;
-    CData/*7:0*/ __Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_chars__118__char;
+    CData/*0:0*/ __Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__118__val;
+    CData/*0:0*/ __Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__118__rdy;
     CData/*7:0*/ __Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_chars__120__char;
     CData/*7:0*/ __Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_chars__122__char;
     CData/*7:0*/ __Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_chars__124__char;
-    WData/*4095:0*/ __Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__116__str[128];
-    WData/*4095:0*/ __Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_str__117__str[128];
-    IData/*31:0*/ __Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_chars__118__num;
+    CData/*7:0*/ __Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_chars__126__char;
+    WData/*4095:0*/ __Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__118__str[128];
     WData/*4095:0*/ __Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_str__119__str[128];
     IData/*31:0*/ __Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_chars__120__num;
     WData/*4095:0*/ __Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_str__121__str[128];
     IData/*31:0*/ __Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_chars__122__num;
     WData/*4095:0*/ __Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_str__123__str[128];
     IData/*31:0*/ __Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_chars__124__num;
+    WData/*4095:0*/ __Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_str__125__str[128];
+    IData/*31:0*/ __Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_chars__126__num;
     IData/*31:0*/ __Vilp;
     VProc_noparam* const __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
     vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__type_str 
-        = ((0U == (7U & (vlTOPp->Proc_noparam__DOT__v__DOT____Vcellout__imem_queue__deq_msg[2U] 
+        = ((0U == (7U & (vlTOPp->Proc_noparam__DOT____Vcellout__v__imem_reqstream_msg[2U] 
                          >> 0xaU))) ? 0x7264U : ((1U 
                                                   == 
                                                   (7U 
-                                                   & (vlTOPp->Proc_noparam__DOT__v__DOT____Vcellout__imem_queue__deq_msg[2U] 
+                                                   & (vlTOPp->Proc_noparam__DOT____Vcellout__v__imem_reqstream_msg[2U] 
                                                       >> 0xaU)))
                                                   ? 0x7772U
                                                   : 
                                                  ((2U 
                                                    == 
                                                    (7U 
-                                                    & (vlTOPp->Proc_noparam__DOT__v__DOT____Vcellout__imem_queue__deq_msg[2U] 
+                                                    & (vlTOPp->Proc_noparam__DOT____Vcellout__v__imem_reqstream_msg[2U] 
                                                        >> 0xaU)))
                                                    ? 0x776eU
                                                    : 0x3f3fU)));
@@ -3813,17 +3892,17 @@ void VProc_noparam::__Vdpiexp_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__D
                  ,"%s",16,vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__type_str);
     __Vilp = 0U;
     while ((__Vilp <= 0x7fU)) {
-        __Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__116__str[__Vilp] 
+        __Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__118__str[__Vilp] 
             = vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__str[__Vilp];
         __Vilp = ((IData)(1U) + __Vilp);
     }
-    __Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__116__rdy 
+    __Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__118__rdy 
         = vlTOPp->imem_reqstream_rdy;
-    __Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__116__val 
+    __Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__118__val 
         = vlTOPp->imem_reqstream_val;
     vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__len1 = 0U;
     while ((0U != (0xffU & (((0U == (0x1fU & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__len1)))
-                              ? 0U : (__Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__116__str[
+                              ? 0U : (__Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__118__str[
                                       ((IData)(1U) 
                                        + (0x7fU & (
                                                    VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__len1) 
@@ -3831,24 +3910,24 @@ void VProc_noparam::__Vdpiexp_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__D
                                       << ((IData)(0x20U) 
                                           - (0x1fU 
                                              & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__len1))))) 
-                            | (__Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__116__str[
+                            | (__Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__118__str[
                                (0x7fU & (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__len1) 
                                          >> 5U))] >> 
                                (0x1fU & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__len1))))))) {
         vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__len1 
             = ((IData)(1U) + vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__len1);
     }
-    if (((IData)(__Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__116__rdy) 
-         & (IData)(__Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__116__val))) {
+    if (((IData)(__Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__118__rdy) 
+         & (IData)(__Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__118__val))) {
         __Vilp = 0U;
         while ((__Vilp <= 0x7fU)) {
-            __Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_str__117__str[__Vilp] 
-                = __Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__116__str[__Vilp];
+            __Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_str__119__str[__Vilp] 
+                = __Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__118__str[__Vilp];
             __Vilp = ((IData)(1U) + __Vilp);
         }
         vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__len0 = 1U;
         while ((0U != (0xffU & (((0U == (0x1fU & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__len0)))
-                                  ? 0U : (__Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_str__117__str[
+                                  ? 0U : (__Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_str__119__str[
                                           ((IData)(1U) 
                                            + (0x7fU 
                                               & (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__len0) 
@@ -3856,7 +3935,7 @@ void VProc_noparam::__Vdpiexp_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__D
                                           << ((IData)(0x20U) 
                                               - (0x1fU 
                                                  & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__len0))))) 
-                                | (__Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_str__117__str[
+                                | (__Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_str__119__str[
                                    (0x7fU & (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__len0) 
                                              >> 5U))] 
                                    >> (0x1fU & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__len0))))))) {
@@ -3872,7 +3951,7 @@ void VProc_noparam::__Vdpiexp_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__D
             VL_ASSIGNSEL_WIII(8,(0xfffU & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__idx0)), trace_str, 
                               (0xffU & (((0U == (0x1fU 
                                                  & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__idx1)))
-                                          ? 0U : (__Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_str__117__str[
+                                          ? 0U : (__Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_str__119__str[
                                                   ((IData)(1U) 
                                                    + 
                                                    (0x7fU 
@@ -3883,7 +3962,7 @@ void VProc_noparam::__Vdpiexp_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__D
                                                    - 
                                                    (0x1fU 
                                                     & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__idx1))))) 
-                                        | (__Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_str__117__str[
+                                        | (__Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_str__119__str[
                                            (0x7fU & 
                                             (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__idx1) 
                                              >> 5U))] 
@@ -3898,16 +3977,16 @@ void VProc_noparam::__Vdpiexp_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__D
         }
         trace_str[0U] = vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__idx0;
     } else {
-        if (((IData)(__Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__116__rdy) 
-             & (~ (IData)(__Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__116__val)))) {
-            __Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_chars__118__num 
+        if (((IData)(__Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__118__rdy) 
+             & (~ (IData)(__Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__118__val)))) {
+            __Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_chars__120__num 
                 = vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__len1;
-            __Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_chars__118__char = 0x20U;
+            __Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_chars__120__char = 0x20U;
             vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__idx0 
                 = trace_str[0U];
             vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__idx1 = 0U;
-            while (VL_LTS_III(1,32,32, vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__idx1, __Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_chars__118__num)) {
-                VL_ASSIGNSEL_WIII(8,(0xfffU & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__idx0)), trace_str, __Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_chars__118__char);
+            while (VL_LTS_III(1,32,32, vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__idx1, __Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_chars__120__num)) {
+                VL_ASSIGNSEL_WIII(8,(0xfffU & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__idx0)), trace_str, __Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_chars__120__char);
                 vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__idx0 
                     = (vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__idx0 
                        - (IData)(1U));
@@ -3916,18 +3995,18 @@ void VProc_noparam::__Vdpiexp_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__D
             }
             trace_str[0U] = vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__idx0;
         } else {
-            if (((~ (IData)(__Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__116__rdy)) 
-                 & (IData)(__Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__116__val))) {
-                __Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_str__119__str[0U] = 0x23U;
+            if (((~ (IData)(__Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__118__rdy)) 
+                 & (IData)(__Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__118__val))) {
+                __Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_str__121__str[0U] = 0x23U;
                 __Vilp = 1U;
                 while ((__Vilp <= 0x7fU)) {
-                    __Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_str__119__str[__Vilp] = 0U;
+                    __Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_str__121__str[__Vilp] = 0U;
                     __Vilp = ((IData)(1U) + __Vilp);
                 }
                 vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__len0 = 1U;
                 while ((0U != (0xffU & (((0U == (0x1fU 
                                                  & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__len0)))
-                                          ? 0U : (__Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_str__119__str[
+                                          ? 0U : (__Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_str__121__str[
                                                   ((IData)(1U) 
                                                    + 
                                                    (0x7fU 
@@ -3938,7 +4017,7 @@ void VProc_noparam::__Vdpiexp_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__D
                                                    - 
                                                    (0x1fU 
                                                     & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__len0))))) 
-                                        | (__Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_str__119__str[
+                                        | (__Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_str__121__str[
                                            (0x7fU & 
                                             (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__len0) 
                                              >> 5U))] 
@@ -3960,7 +4039,7 @@ void VProc_noparam::__Vdpiexp_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__D
                                                    & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__idx1)))
                                                   ? 0U
                                                   : 
-                                                 (__Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_str__119__str[
+                                                 (__Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_str__121__str[
                                                   ((IData)(1U) 
                                                    + 
                                                    (0x7fU 
@@ -3971,7 +4050,7 @@ void VProc_noparam::__Vdpiexp_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__D
                                                    - 
                                                    (0x1fU 
                                                     & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__idx1))))) 
-                                                | (__Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_str__119__str[
+                                                | (__Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_str__121__str[
                                                    (0x7fU 
                                                     & (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__idx1) 
                                                        >> 5U))] 
@@ -3986,15 +4065,15 @@ void VProc_noparam::__Vdpiexp_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__D
                            - (IData)(1U));
                 }
                 trace_str[0U] = vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__idx0;
-                __Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_chars__120__num 
+                __Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_chars__122__num 
                     = (vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__len1 
                        - (IData)(1U));
-                __Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_chars__120__char = 0x20U;
+                __Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_chars__122__char = 0x20U;
                 vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__idx0 
                     = trace_str[0U];
                 vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__idx1 = 0U;
-                while (VL_LTS_III(1,32,32, vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__idx1, __Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_chars__120__num)) {
-                    VL_ASSIGNSEL_WIII(8,(0xfffU & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__idx0)), trace_str, __Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_chars__120__char);
+                while (VL_LTS_III(1,32,32, vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__idx1, __Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_chars__122__num)) {
+                    VL_ASSIGNSEL_WIII(8,(0xfffU & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__idx0)), trace_str, __Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_chars__122__char);
                     vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__idx0 
                         = (vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__idx0 
                            - (IData)(1U));
@@ -4003,92 +4082,9 @@ void VProc_noparam::__Vdpiexp_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__D
                 }
                 trace_str[0U] = vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__idx0;
             } else {
-                if ((1U & ((~ (IData)(__Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__116__rdy)) 
-                           & (~ (IData)(__Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__116__val))))) {
-                    __Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_str__121__str[0U] = 0x2eU;
-                    __Vilp = 1U;
-                    while ((__Vilp <= 0x7fU)) {
-                        __Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_str__121__str[__Vilp] = 0U;
-                        __Vilp = ((IData)(1U) + __Vilp);
-                    }
-                    vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__len0 = 1U;
-                    while ((0U != (0xffU & (((0U == 
-                                              (0x1fU 
-                                               & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__len0)))
-                                              ? 0U : 
-                                             (__Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_str__121__str[
-                                              ((IData)(1U) 
-                                               + (0x7fU 
-                                                  & (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__len0) 
-                                                     >> 5U)))] 
-                                              << ((IData)(0x20U) 
-                                                  - 
-                                                  (0x1fU 
-                                                   & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__len0))))) 
-                                            | (__Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_str__121__str[
-                                               (0x7fU 
-                                                & (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__len0) 
-                                                   >> 5U))] 
-                                               >> (0x1fU 
-                                                   & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__len0))))))) {
-                        vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__len0 
-                            = ((IData)(1U) + vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__len0);
-                    }
-                    vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__idx0 
-                        = trace_str[0U];
-                    vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__idx1 
-                        = (vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__len0 
-                           - (IData)(1U));
-                    while (VL_LTES_III(1,32,32, 0U, vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__idx1)) {
-                        VL_ASSIGNSEL_WIII(8,(0xfffU 
-                                             & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__idx0)), trace_str, 
-                                          (0xffU & 
-                                           (((0U == 
-                                              (0x1fU 
-                                               & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__idx1)))
-                                              ? 0U : 
-                                             (__Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_str__121__str[
-                                              ((IData)(1U) 
-                                               + (0x7fU 
-                                                  & (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__idx1) 
-                                                     >> 5U)))] 
-                                              << ((IData)(0x20U) 
-                                                  - 
-                                                  (0x1fU 
-                                                   & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__idx1))))) 
-                                            | (__Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_str__121__str[
-                                               (0x7fU 
-                                                & (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__idx1) 
-                                                   >> 5U))] 
-                                               >> (0x1fU 
-                                                   & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__idx1))))));
-                        vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__idx0 
-                            = (vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__idx0 
-                               - (IData)(1U));
-                        vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__idx1 
-                            = (vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__idx1 
-                               - (IData)(1U));
-                    }
-                    trace_str[0U] = vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__idx0;
-                    __Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_chars__122__num 
-                        = (vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__len1 
-                           - (IData)(1U));
-                    __Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_chars__122__char = 0x20U;
-                    vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__idx0 
-                        = trace_str[0U];
-                    vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__idx1 = 0U;
-                    while (VL_LTS_III(1,32,32, vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__idx1, __Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_chars__122__num)) {
-                        VL_ASSIGNSEL_WIII(8,(0xfffU 
-                                             & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__idx0)), trace_str, __Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_chars__122__char);
-                        vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__idx0 
-                            = (vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__idx0 
-                               - (IData)(1U));
-                        vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__idx1 
-                            = ((IData)(1U) + vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__idx1);
-                    }
-                    trace_str[0U] = vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__idx0;
-                } else {
-                    __Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_str__123__str[0U] = 0x78U;
+                if ((1U & ((~ (IData)(__Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__118__rdy)) 
+                           & (~ (IData)(__Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__118__val))))) {
+                    __Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_str__123__str[0U] = 0x2eU;
                     __Vilp = 1U;
                     while ((__Vilp <= 0x7fU)) {
                         __Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_str__123__str[__Vilp] = 0U;
@@ -4170,6 +4166,89 @@ void VProc_noparam::__Vdpiexp_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__D
                             = ((IData)(1U) + vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__idx1);
                     }
                     trace_str[0U] = vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__idx0;
+                } else {
+                    __Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_str__125__str[0U] = 0x78U;
+                    __Vilp = 1U;
+                    while ((__Vilp <= 0x7fU)) {
+                        __Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_str__125__str[__Vilp] = 0U;
+                        __Vilp = ((IData)(1U) + __Vilp);
+                    }
+                    vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__len0 = 1U;
+                    while ((0U != (0xffU & (((0U == 
+                                              (0x1fU 
+                                               & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__len0)))
+                                              ? 0U : 
+                                             (__Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_str__125__str[
+                                              ((IData)(1U) 
+                                               + (0x7fU 
+                                                  & (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__len0) 
+                                                     >> 5U)))] 
+                                              << ((IData)(0x20U) 
+                                                  - 
+                                                  (0x1fU 
+                                                   & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__len0))))) 
+                                            | (__Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_str__125__str[
+                                               (0x7fU 
+                                                & (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__len0) 
+                                                   >> 5U))] 
+                                               >> (0x1fU 
+                                                   & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__len0))))))) {
+                        vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__len0 
+                            = ((IData)(1U) + vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__len0);
+                    }
+                    vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__idx0 
+                        = trace_str[0U];
+                    vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__idx1 
+                        = (vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__len0 
+                           - (IData)(1U));
+                    while (VL_LTES_III(1,32,32, 0U, vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__idx1)) {
+                        VL_ASSIGNSEL_WIII(8,(0xfffU 
+                                             & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__idx0)), trace_str, 
+                                          (0xffU & 
+                                           (((0U == 
+                                              (0x1fU 
+                                               & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__idx1)))
+                                              ? 0U : 
+                                             (__Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_str__125__str[
+                                              ((IData)(1U) 
+                                               + (0x7fU 
+                                                  & (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__idx1) 
+                                                     >> 5U)))] 
+                                              << ((IData)(0x20U) 
+                                                  - 
+                                                  (0x1fU 
+                                                   & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__idx1))))) 
+                                            | (__Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_str__125__str[
+                                               (0x7fU 
+                                                & (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__idx1) 
+                                                   >> 5U))] 
+                                               >> (0x1fU 
+                                                   & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__idx1))))));
+                        vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__idx0 
+                            = (vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__idx0 
+                               - (IData)(1U));
+                        vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__idx1 
+                            = (vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__idx1 
+                               - (IData)(1U));
+                    }
+                    trace_str[0U] = vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__idx0;
+                    __Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_chars__126__num 
+                        = (vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__len1 
+                           - (IData)(1U));
+                    __Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_chars__126__char = 0x20U;
+                    vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__idx0 
+                        = trace_str[0U];
+                    vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__idx1 = 0U;
+                    while (VL_LTS_III(1,32,32, vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__idx1, __Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_chars__126__num)) {
+                        VL_ASSIGNSEL_WIII(8,(0xfffU 
+                                             & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__idx0)), trace_str, __Vtask_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__append_chars__126__char);
+                        vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__idx0 
+                            = (vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__idx0 
+                               - (IData)(1U));
+                        vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__idx1 
+                            = ((IData)(1U) + vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__idx1);
+                    }
+                    trace_str[0U] = vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_trace__DOT__vc_trace__DOT__idx0;
                 }
             }
         }
@@ -4179,37 +4258,37 @@ void VProc_noparam::__Vdpiexp_Proc_noparam__DOT__v__DOT__imem_reqstream_trace__D
 void VProc_noparam::__Vdpiexp_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__line_trace_TOP(VProc_noparam__Syms* __restrict vlSymsp, WData/*4095:0*/ (&trace_str)[128]) {
     VL_DEBUG_IF(VL_DBG_MSGF("+    VProc_noparam::__Vdpiexp_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__line_trace_TOP\n"); );
     // Variables
-    CData/*0:0*/ __Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__125__val;
-    CData/*0:0*/ __Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__125__rdy;
-    CData/*7:0*/ __Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_chars__127__char;
+    CData/*0:0*/ __Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__127__val;
+    CData/*0:0*/ __Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__127__rdy;
     CData/*7:0*/ __Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_chars__129__char;
     CData/*7:0*/ __Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_chars__131__char;
     CData/*7:0*/ __Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_chars__133__char;
-    WData/*4095:0*/ __Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__125__str[128];
-    WData/*4095:0*/ __Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_str__126__str[128];
-    IData/*31:0*/ __Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_chars__127__num;
+    CData/*7:0*/ __Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_chars__135__char;
+    WData/*4095:0*/ __Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__127__str[128];
     WData/*4095:0*/ __Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_str__128__str[128];
     IData/*31:0*/ __Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_chars__129__num;
     WData/*4095:0*/ __Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_str__130__str[128];
     IData/*31:0*/ __Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_chars__131__num;
     WData/*4095:0*/ __Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_str__132__str[128];
     IData/*31:0*/ __Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_chars__133__num;
+    WData/*4095:0*/ __Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_str__134__str[128];
+    IData/*31:0*/ __Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_chars__135__num;
     IData/*31:0*/ __Vilp;
     VProc_noparam* const __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
     vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__type_str 
-        = ((0U == (7U & (vlTOPp->Proc_noparam__DOT__v__DOT____Vcellout__dmem_queue__deq_msg[2U] 
+        = ((0U == (7U & (vlTOPp->Proc_noparam__DOT____Vcellout__v__dmem_reqstream_msg[2U] 
                          >> 0xaU))) ? 0x7264U : ((1U 
                                                   == 
                                                   (7U 
-                                                   & (vlTOPp->Proc_noparam__DOT__v__DOT____Vcellout__dmem_queue__deq_msg[2U] 
+                                                   & (vlTOPp->Proc_noparam__DOT____Vcellout__v__dmem_reqstream_msg[2U] 
                                                       >> 0xaU)))
                                                   ? 0x7772U
                                                   : 
                                                  ((2U 
                                                    == 
                                                    (7U 
-                                                    & (vlTOPp->Proc_noparam__DOT__v__DOT____Vcellout__dmem_queue__deq_msg[2U] 
+                                                    & (vlTOPp->Proc_noparam__DOT____Vcellout__v__dmem_reqstream_msg[2U] 
                                                        >> 0xaU)))
                                                    ? 0x776eU
                                                    : 0x3f3fU)));
@@ -4217,17 +4296,17 @@ void VProc_noparam::__Vdpiexp_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__D
                  ,"%s",16,vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__type_str);
     __Vilp = 0U;
     while ((__Vilp <= 0x7fU)) {
-        __Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__125__str[__Vilp] 
+        __Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__127__str[__Vilp] 
             = vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__str[__Vilp];
         __Vilp = ((IData)(1U) + __Vilp);
     }
-    __Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__125__rdy 
+    __Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__127__rdy 
         = vlTOPp->dmem_reqstream_rdy;
-    __Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__125__val 
+    __Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__127__val 
         = vlTOPp->dmem_reqstream_val;
     vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__len1 = 0U;
     while ((0U != (0xffU & (((0U == (0x1fU & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__len1)))
-                              ? 0U : (__Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__125__str[
+                              ? 0U : (__Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__127__str[
                                       ((IData)(1U) 
                                        + (0x7fU & (
                                                    VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__len1) 
@@ -4235,24 +4314,24 @@ void VProc_noparam::__Vdpiexp_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__D
                                       << ((IData)(0x20U) 
                                           - (0x1fU 
                                              & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__len1))))) 
-                            | (__Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__125__str[
+                            | (__Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__127__str[
                                (0x7fU & (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__len1) 
                                          >> 5U))] >> 
                                (0x1fU & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__len1))))))) {
         vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__len1 
             = ((IData)(1U) + vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__len1);
     }
-    if (((IData)(__Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__125__rdy) 
-         & (IData)(__Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__125__val))) {
+    if (((IData)(__Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__127__rdy) 
+         & (IData)(__Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__127__val))) {
         __Vilp = 0U;
         while ((__Vilp <= 0x7fU)) {
-            __Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_str__126__str[__Vilp] 
-                = __Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__125__str[__Vilp];
+            __Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_str__128__str[__Vilp] 
+                = __Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__127__str[__Vilp];
             __Vilp = ((IData)(1U) + __Vilp);
         }
         vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__len0 = 1U;
         while ((0U != (0xffU & (((0U == (0x1fU & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__len0)))
-                                  ? 0U : (__Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_str__126__str[
+                                  ? 0U : (__Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_str__128__str[
                                           ((IData)(1U) 
                                            + (0x7fU 
                                               & (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__len0) 
@@ -4260,7 +4339,7 @@ void VProc_noparam::__Vdpiexp_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__D
                                           << ((IData)(0x20U) 
                                               - (0x1fU 
                                                  & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__len0))))) 
-                                | (__Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_str__126__str[
+                                | (__Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_str__128__str[
                                    (0x7fU & (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__len0) 
                                              >> 5U))] 
                                    >> (0x1fU & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__len0))))))) {
@@ -4276,7 +4355,7 @@ void VProc_noparam::__Vdpiexp_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__D
             VL_ASSIGNSEL_WIII(8,(0xfffU & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__idx0)), trace_str, 
                               (0xffU & (((0U == (0x1fU 
                                                  & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__idx1)))
-                                          ? 0U : (__Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_str__126__str[
+                                          ? 0U : (__Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_str__128__str[
                                                   ((IData)(1U) 
                                                    + 
                                                    (0x7fU 
@@ -4287,7 +4366,7 @@ void VProc_noparam::__Vdpiexp_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__D
                                                    - 
                                                    (0x1fU 
                                                     & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__idx1))))) 
-                                        | (__Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_str__126__str[
+                                        | (__Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_str__128__str[
                                            (0x7fU & 
                                             (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__idx1) 
                                              >> 5U))] 
@@ -4302,16 +4381,16 @@ void VProc_noparam::__Vdpiexp_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__D
         }
         trace_str[0U] = vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__idx0;
     } else {
-        if (((IData)(__Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__125__rdy) 
-             & (~ (IData)(__Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__125__val)))) {
-            __Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_chars__127__num 
+        if (((IData)(__Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__127__rdy) 
+             & (~ (IData)(__Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__127__val)))) {
+            __Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_chars__129__num 
                 = vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__len1;
-            __Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_chars__127__char = 0x20U;
+            __Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_chars__129__char = 0x20U;
             vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__idx0 
                 = trace_str[0U];
             vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__idx1 = 0U;
-            while (VL_LTS_III(1,32,32, vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__idx1, __Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_chars__127__num)) {
-                VL_ASSIGNSEL_WIII(8,(0xfffU & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__idx0)), trace_str, __Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_chars__127__char);
+            while (VL_LTS_III(1,32,32, vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__idx1, __Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_chars__129__num)) {
+                VL_ASSIGNSEL_WIII(8,(0xfffU & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__idx0)), trace_str, __Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_chars__129__char);
                 vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__idx0 
                     = (vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__idx0 
                        - (IData)(1U));
@@ -4320,18 +4399,18 @@ void VProc_noparam::__Vdpiexp_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__D
             }
             trace_str[0U] = vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__idx0;
         } else {
-            if (((~ (IData)(__Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__125__rdy)) 
-                 & (IData)(__Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__125__val))) {
-                __Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_str__128__str[0U] = 0x23U;
+            if (((~ (IData)(__Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__127__rdy)) 
+                 & (IData)(__Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__127__val))) {
+                __Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_str__130__str[0U] = 0x23U;
                 __Vilp = 1U;
                 while ((__Vilp <= 0x7fU)) {
-                    __Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_str__128__str[__Vilp] = 0U;
+                    __Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_str__130__str[__Vilp] = 0U;
                     __Vilp = ((IData)(1U) + __Vilp);
                 }
                 vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__len0 = 1U;
                 while ((0U != (0xffU & (((0U == (0x1fU 
                                                  & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__len0)))
-                                          ? 0U : (__Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_str__128__str[
+                                          ? 0U : (__Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_str__130__str[
                                                   ((IData)(1U) 
                                                    + 
                                                    (0x7fU 
@@ -4342,7 +4421,7 @@ void VProc_noparam::__Vdpiexp_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__D
                                                    - 
                                                    (0x1fU 
                                                     & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__len0))))) 
-                                        | (__Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_str__128__str[
+                                        | (__Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_str__130__str[
                                            (0x7fU & 
                                             (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__len0) 
                                              >> 5U))] 
@@ -4364,7 +4443,7 @@ void VProc_noparam::__Vdpiexp_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__D
                                                    & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__idx1)))
                                                   ? 0U
                                                   : 
-                                                 (__Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_str__128__str[
+                                                 (__Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_str__130__str[
                                                   ((IData)(1U) 
                                                    + 
                                                    (0x7fU 
@@ -4375,7 +4454,7 @@ void VProc_noparam::__Vdpiexp_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__D
                                                    - 
                                                    (0x1fU 
                                                     & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__idx1))))) 
-                                                | (__Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_str__128__str[
+                                                | (__Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_str__130__str[
                                                    (0x7fU 
                                                     & (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__idx1) 
                                                        >> 5U))] 
@@ -4390,15 +4469,15 @@ void VProc_noparam::__Vdpiexp_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__D
                            - (IData)(1U));
                 }
                 trace_str[0U] = vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__idx0;
-                __Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_chars__129__num 
+                __Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_chars__131__num 
                     = (vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__len1 
                        - (IData)(1U));
-                __Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_chars__129__char = 0x20U;
+                __Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_chars__131__char = 0x20U;
                 vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__idx0 
                     = trace_str[0U];
                 vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__idx1 = 0U;
-                while (VL_LTS_III(1,32,32, vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__idx1, __Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_chars__129__num)) {
-                    VL_ASSIGNSEL_WIII(8,(0xfffU & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__idx0)), trace_str, __Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_chars__129__char);
+                while (VL_LTS_III(1,32,32, vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__idx1, __Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_chars__131__num)) {
+                    VL_ASSIGNSEL_WIII(8,(0xfffU & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__idx0)), trace_str, __Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_chars__131__char);
                     vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__idx0 
                         = (vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__idx0 
                            - (IData)(1U));
@@ -4407,92 +4486,9 @@ void VProc_noparam::__Vdpiexp_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__D
                 }
                 trace_str[0U] = vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__idx0;
             } else {
-                if ((1U & ((~ (IData)(__Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__125__rdy)) 
-                           & (~ (IData)(__Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__125__val))))) {
-                    __Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_str__130__str[0U] = 0x2eU;
-                    __Vilp = 1U;
-                    while ((__Vilp <= 0x7fU)) {
-                        __Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_str__130__str[__Vilp] = 0U;
-                        __Vilp = ((IData)(1U) + __Vilp);
-                    }
-                    vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__len0 = 1U;
-                    while ((0U != (0xffU & (((0U == 
-                                              (0x1fU 
-                                               & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__len0)))
-                                              ? 0U : 
-                                             (__Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_str__130__str[
-                                              ((IData)(1U) 
-                                               + (0x7fU 
-                                                  & (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__len0) 
-                                                     >> 5U)))] 
-                                              << ((IData)(0x20U) 
-                                                  - 
-                                                  (0x1fU 
-                                                   & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__len0))))) 
-                                            | (__Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_str__130__str[
-                                               (0x7fU 
-                                                & (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__len0) 
-                                                   >> 5U))] 
-                                               >> (0x1fU 
-                                                   & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__len0))))))) {
-                        vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__len0 
-                            = ((IData)(1U) + vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__len0);
-                    }
-                    vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__idx0 
-                        = trace_str[0U];
-                    vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__idx1 
-                        = (vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__len0 
-                           - (IData)(1U));
-                    while (VL_LTES_III(1,32,32, 0U, vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__idx1)) {
-                        VL_ASSIGNSEL_WIII(8,(0xfffU 
-                                             & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__idx0)), trace_str, 
-                                          (0xffU & 
-                                           (((0U == 
-                                              (0x1fU 
-                                               & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__idx1)))
-                                              ? 0U : 
-                                             (__Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_str__130__str[
-                                              ((IData)(1U) 
-                                               + (0x7fU 
-                                                  & (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__idx1) 
-                                                     >> 5U)))] 
-                                              << ((IData)(0x20U) 
-                                                  - 
-                                                  (0x1fU 
-                                                   & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__idx1))))) 
-                                            | (__Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_str__130__str[
-                                               (0x7fU 
-                                                & (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__idx1) 
-                                                   >> 5U))] 
-                                               >> (0x1fU 
-                                                   & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__idx1))))));
-                        vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__idx0 
-                            = (vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__idx0 
-                               - (IData)(1U));
-                        vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__idx1 
-                            = (vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__idx1 
-                               - (IData)(1U));
-                    }
-                    trace_str[0U] = vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__idx0;
-                    __Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_chars__131__num 
-                        = (vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__len1 
-                           - (IData)(1U));
-                    __Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_chars__131__char = 0x20U;
-                    vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__idx0 
-                        = trace_str[0U];
-                    vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__idx1 = 0U;
-                    while (VL_LTS_III(1,32,32, vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__idx1, __Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_chars__131__num)) {
-                        VL_ASSIGNSEL_WIII(8,(0xfffU 
-                                             & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__idx0)), trace_str, __Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_chars__131__char);
-                        vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__idx0 
-                            = (vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__idx0 
-                               - (IData)(1U));
-                        vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__idx1 
-                            = ((IData)(1U) + vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__idx1);
-                    }
-                    trace_str[0U] = vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__idx0;
-                } else {
-                    __Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_str__132__str[0U] = 0x78U;
+                if ((1U & ((~ (IData)(__Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__127__rdy)) 
+                           & (~ (IData)(__Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__127__val))))) {
+                    __Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_str__132__str[0U] = 0x2eU;
                     __Vilp = 1U;
                     while ((__Vilp <= 0x7fU)) {
                         __Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_str__132__str[__Vilp] = 0U;
@@ -4574,6 +4570,89 @@ void VProc_noparam::__Vdpiexp_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__D
                             = ((IData)(1U) + vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__idx1);
                     }
                     trace_str[0U] = vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__idx0;
+                } else {
+                    __Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_str__134__str[0U] = 0x78U;
+                    __Vilp = 1U;
+                    while ((__Vilp <= 0x7fU)) {
+                        __Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_str__134__str[__Vilp] = 0U;
+                        __Vilp = ((IData)(1U) + __Vilp);
+                    }
+                    vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__len0 = 1U;
+                    while ((0U != (0xffU & (((0U == 
+                                              (0x1fU 
+                                               & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__len0)))
+                                              ? 0U : 
+                                             (__Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_str__134__str[
+                                              ((IData)(1U) 
+                                               + (0x7fU 
+                                                  & (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__len0) 
+                                                     >> 5U)))] 
+                                              << ((IData)(0x20U) 
+                                                  - 
+                                                  (0x1fU 
+                                                   & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__len0))))) 
+                                            | (__Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_str__134__str[
+                                               (0x7fU 
+                                                & (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__len0) 
+                                                   >> 5U))] 
+                                               >> (0x1fU 
+                                                   & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__len0))))))) {
+                        vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__len0 
+                            = ((IData)(1U) + vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__len0);
+                    }
+                    vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__idx0 
+                        = trace_str[0U];
+                    vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__idx1 
+                        = (vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__len0 
+                           - (IData)(1U));
+                    while (VL_LTES_III(1,32,32, 0U, vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__idx1)) {
+                        VL_ASSIGNSEL_WIII(8,(0xfffU 
+                                             & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__idx0)), trace_str, 
+                                          (0xffU & 
+                                           (((0U == 
+                                              (0x1fU 
+                                               & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__idx1)))
+                                              ? 0U : 
+                                             (__Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_str__134__str[
+                                              ((IData)(1U) 
+                                               + (0x7fU 
+                                                  & (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__idx1) 
+                                                     >> 5U)))] 
+                                              << ((IData)(0x20U) 
+                                                  - 
+                                                  (0x1fU 
+                                                   & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__idx1))))) 
+                                            | (__Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_str__134__str[
+                                               (0x7fU 
+                                                & (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__idx1) 
+                                                   >> 5U))] 
+                                               >> (0x1fU 
+                                                   & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__idx1))))));
+                        vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__idx0 
+                            = (vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__idx0 
+                               - (IData)(1U));
+                        vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__idx1 
+                            = (vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__idx1 
+                               - (IData)(1U));
+                    }
+                    trace_str[0U] = vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__idx0;
+                    __Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_chars__135__num 
+                        = (vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__len1 
+                           - (IData)(1U));
+                    __Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_chars__135__char = 0x20U;
+                    vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__idx0 
+                        = trace_str[0U];
+                    vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__idx1 = 0U;
+                    while (VL_LTS_III(1,32,32, vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__idx1, __Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_chars__135__num)) {
+                        VL_ASSIGNSEL_WIII(8,(0xfffU 
+                                             & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__idx0)), trace_str, __Vtask_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__append_chars__135__char);
+                        vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__idx0 
+                            = (vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__idx0 
+                               - (IData)(1U));
+                        vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__idx1 
+                            = ((IData)(1U) + vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__idx1);
+                    }
+                    trace_str[0U] = vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__DOT__vc_trace__DOT__idx0;
                 }
             }
         }
@@ -4583,21 +4662,21 @@ void VProc_noparam::__Vdpiexp_Proc_noparam__DOT__v__DOT__dmem_reqstream_trace__D
 void VProc_noparam::__Vdpiexp_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__line_trace_TOP(VProc_noparam__Syms* __restrict vlSymsp, WData/*4095:0*/ (&trace_str)[128]) {
     VL_DEBUG_IF(VL_DBG_MSGF("+    VProc_noparam::__Vdpiexp_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__line_trace_TOP\n"); );
     // Variables
-    CData/*0:0*/ __Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__134__val;
-    CData/*0:0*/ __Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__134__rdy;
-    CData/*7:0*/ __Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_chars__136__char;
+    CData/*0:0*/ __Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__136__val;
+    CData/*0:0*/ __Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__136__rdy;
     CData/*7:0*/ __Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_chars__138__char;
     CData/*7:0*/ __Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_chars__140__char;
     CData/*7:0*/ __Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_chars__142__char;
-    WData/*4095:0*/ __Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__134__str[128];
-    WData/*4095:0*/ __Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_str__135__str[128];
-    IData/*31:0*/ __Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_chars__136__num;
+    CData/*7:0*/ __Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_chars__144__char;
+    WData/*4095:0*/ __Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__136__str[128];
     WData/*4095:0*/ __Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_str__137__str[128];
     IData/*31:0*/ __Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_chars__138__num;
     WData/*4095:0*/ __Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_str__139__str[128];
     IData/*31:0*/ __Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_chars__140__num;
     WData/*4095:0*/ __Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_str__141__str[128];
     IData/*31:0*/ __Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_chars__142__num;
+    WData/*4095:0*/ __Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_str__143__str[128];
+    IData/*31:0*/ __Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_chars__144__num;
     IData/*31:0*/ __Vilp;
     VProc_noparam* const __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
@@ -4613,17 +4692,17 @@ void VProc_noparam::__Vdpiexp_Proc_noparam__DOT__v__DOT__imem_respstream_trace__
                  ,"%s",16,vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__type_str);
     __Vilp = 0U;
     while ((__Vilp <= 0x7fU)) {
-        __Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__134__str[__Vilp] 
+        __Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__136__str[__Vilp] 
             = vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__str[__Vilp];
         __Vilp = ((IData)(1U) + __Vilp);
     }
-    __Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__134__rdy 
+    __Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__136__rdy 
         = vlTOPp->imem_respstream_rdy;
-    __Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__134__val 
+    __Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__136__val 
         = vlTOPp->imem_respstream_val;
     vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__len1 = 0U;
     while ((0U != (0xffU & (((0U == (0x1fU & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__len1)))
-                              ? 0U : (__Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__134__str[
+                              ? 0U : (__Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__136__str[
                                       ((IData)(1U) 
                                        + (0x7fU & (
                                                    VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__len1) 
@@ -4631,24 +4710,24 @@ void VProc_noparam::__Vdpiexp_Proc_noparam__DOT__v__DOT__imem_respstream_trace__
                                       << ((IData)(0x20U) 
                                           - (0x1fU 
                                              & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__len1))))) 
-                            | (__Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__134__str[
+                            | (__Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__136__str[
                                (0x7fU & (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__len1) 
                                          >> 5U))] >> 
                                (0x1fU & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__len1))))))) {
         vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__len1 
             = ((IData)(1U) + vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__len1);
     }
-    if (((IData)(__Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__134__rdy) 
-         & (IData)(__Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__134__val))) {
+    if (((IData)(__Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__136__rdy) 
+         & (IData)(__Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__136__val))) {
         __Vilp = 0U;
         while ((__Vilp <= 0x7fU)) {
-            __Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_str__135__str[__Vilp] 
-                = __Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__134__str[__Vilp];
+            __Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_str__137__str[__Vilp] 
+                = __Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__136__str[__Vilp];
             __Vilp = ((IData)(1U) + __Vilp);
         }
         vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__len0 = 1U;
         while ((0U != (0xffU & (((0U == (0x1fU & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__len0)))
-                                  ? 0U : (__Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_str__135__str[
+                                  ? 0U : (__Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_str__137__str[
                                           ((IData)(1U) 
                                            + (0x7fU 
                                               & (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__len0) 
@@ -4656,7 +4735,7 @@ void VProc_noparam::__Vdpiexp_Proc_noparam__DOT__v__DOT__imem_respstream_trace__
                                           << ((IData)(0x20U) 
                                               - (0x1fU 
                                                  & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__len0))))) 
-                                | (__Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_str__135__str[
+                                | (__Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_str__137__str[
                                    (0x7fU & (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__len0) 
                                              >> 5U))] 
                                    >> (0x1fU & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__len0))))))) {
@@ -4672,7 +4751,7 @@ void VProc_noparam::__Vdpiexp_Proc_noparam__DOT__v__DOT__imem_respstream_trace__
             VL_ASSIGNSEL_WIII(8,(0xfffU & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__idx0)), trace_str, 
                               (0xffU & (((0U == (0x1fU 
                                                  & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__idx1)))
-                                          ? 0U : (__Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_str__135__str[
+                                          ? 0U : (__Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_str__137__str[
                                                   ((IData)(1U) 
                                                    + 
                                                    (0x7fU 
@@ -4683,7 +4762,7 @@ void VProc_noparam::__Vdpiexp_Proc_noparam__DOT__v__DOT__imem_respstream_trace__
                                                    - 
                                                    (0x1fU 
                                                     & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__idx1))))) 
-                                        | (__Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_str__135__str[
+                                        | (__Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_str__137__str[
                                            (0x7fU & 
                                             (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__idx1) 
                                              >> 5U))] 
@@ -4698,16 +4777,16 @@ void VProc_noparam::__Vdpiexp_Proc_noparam__DOT__v__DOT__imem_respstream_trace__
         }
         trace_str[0U] = vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__idx0;
     } else {
-        if (((IData)(__Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__134__rdy) 
-             & (~ (IData)(__Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__134__val)))) {
-            __Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_chars__136__num 
+        if (((IData)(__Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__136__rdy) 
+             & (~ (IData)(__Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__136__val)))) {
+            __Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_chars__138__num 
                 = vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__len1;
-            __Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_chars__136__char = 0x20U;
+            __Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_chars__138__char = 0x20U;
             vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__idx0 
                 = trace_str[0U];
             vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__idx1 = 0U;
-            while (VL_LTS_III(1,32,32, vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__idx1, __Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_chars__136__num)) {
-                VL_ASSIGNSEL_WIII(8,(0xfffU & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__idx0)), trace_str, __Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_chars__136__char);
+            while (VL_LTS_III(1,32,32, vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__idx1, __Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_chars__138__num)) {
+                VL_ASSIGNSEL_WIII(8,(0xfffU & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__idx0)), trace_str, __Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_chars__138__char);
                 vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__idx0 
                     = (vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__idx0 
                        - (IData)(1U));
@@ -4716,18 +4795,18 @@ void VProc_noparam::__Vdpiexp_Proc_noparam__DOT__v__DOT__imem_respstream_trace__
             }
             trace_str[0U] = vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__idx0;
         } else {
-            if (((~ (IData)(__Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__134__rdy)) 
-                 & (IData)(__Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__134__val))) {
-                __Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_str__137__str[0U] = 0x23U;
+            if (((~ (IData)(__Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__136__rdy)) 
+                 & (IData)(__Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__136__val))) {
+                __Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_str__139__str[0U] = 0x23U;
                 __Vilp = 1U;
                 while ((__Vilp <= 0x7fU)) {
-                    __Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_str__137__str[__Vilp] = 0U;
+                    __Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_str__139__str[__Vilp] = 0U;
                     __Vilp = ((IData)(1U) + __Vilp);
                 }
                 vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__len0 = 1U;
                 while ((0U != (0xffU & (((0U == (0x1fU 
                                                  & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__len0)))
-                                          ? 0U : (__Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_str__137__str[
+                                          ? 0U : (__Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_str__139__str[
                                                   ((IData)(1U) 
                                                    + 
                                                    (0x7fU 
@@ -4738,7 +4817,7 @@ void VProc_noparam::__Vdpiexp_Proc_noparam__DOT__v__DOT__imem_respstream_trace__
                                                    - 
                                                    (0x1fU 
                                                     & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__len0))))) 
-                                        | (__Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_str__137__str[
+                                        | (__Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_str__139__str[
                                            (0x7fU & 
                                             (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__len0) 
                                              >> 5U))] 
@@ -4760,7 +4839,7 @@ void VProc_noparam::__Vdpiexp_Proc_noparam__DOT__v__DOT__imem_respstream_trace__
                                                    & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__idx1)))
                                                   ? 0U
                                                   : 
-                                                 (__Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_str__137__str[
+                                                 (__Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_str__139__str[
                                                   ((IData)(1U) 
                                                    + 
                                                    (0x7fU 
@@ -4771,7 +4850,7 @@ void VProc_noparam::__Vdpiexp_Proc_noparam__DOT__v__DOT__imem_respstream_trace__
                                                    - 
                                                    (0x1fU 
                                                     & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__idx1))))) 
-                                                | (__Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_str__137__str[
+                                                | (__Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_str__139__str[
                                                    (0x7fU 
                                                     & (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__idx1) 
                                                        >> 5U))] 
@@ -4786,15 +4865,15 @@ void VProc_noparam::__Vdpiexp_Proc_noparam__DOT__v__DOT__imem_respstream_trace__
                            - (IData)(1U));
                 }
                 trace_str[0U] = vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__idx0;
-                __Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_chars__138__num 
+                __Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_chars__140__num 
                     = (vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__len1 
                        - (IData)(1U));
-                __Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_chars__138__char = 0x20U;
+                __Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_chars__140__char = 0x20U;
                 vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__idx0 
                     = trace_str[0U];
                 vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__idx1 = 0U;
-                while (VL_LTS_III(1,32,32, vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__idx1, __Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_chars__138__num)) {
-                    VL_ASSIGNSEL_WIII(8,(0xfffU & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__idx0)), trace_str, __Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_chars__138__char);
+                while (VL_LTS_III(1,32,32, vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__idx1, __Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_chars__140__num)) {
+                    VL_ASSIGNSEL_WIII(8,(0xfffU & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__idx0)), trace_str, __Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_chars__140__char);
                     vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__idx0 
                         = (vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__idx0 
                            - (IData)(1U));
@@ -4803,92 +4882,9 @@ void VProc_noparam::__Vdpiexp_Proc_noparam__DOT__v__DOT__imem_respstream_trace__
                 }
                 trace_str[0U] = vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__idx0;
             } else {
-                if ((1U & ((~ (IData)(__Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__134__rdy)) 
-                           & (~ (IData)(__Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__134__val))))) {
-                    __Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_str__139__str[0U] = 0x2eU;
-                    __Vilp = 1U;
-                    while ((__Vilp <= 0x7fU)) {
-                        __Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_str__139__str[__Vilp] = 0U;
-                        __Vilp = ((IData)(1U) + __Vilp);
-                    }
-                    vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__len0 = 1U;
-                    while ((0U != (0xffU & (((0U == 
-                                              (0x1fU 
-                                               & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__len0)))
-                                              ? 0U : 
-                                             (__Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_str__139__str[
-                                              ((IData)(1U) 
-                                               + (0x7fU 
-                                                  & (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__len0) 
-                                                     >> 5U)))] 
-                                              << ((IData)(0x20U) 
-                                                  - 
-                                                  (0x1fU 
-                                                   & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__len0))))) 
-                                            | (__Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_str__139__str[
-                                               (0x7fU 
-                                                & (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__len0) 
-                                                   >> 5U))] 
-                                               >> (0x1fU 
-                                                   & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__len0))))))) {
-                        vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__len0 
-                            = ((IData)(1U) + vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__len0);
-                    }
-                    vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__idx0 
-                        = trace_str[0U];
-                    vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__idx1 
-                        = (vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__len0 
-                           - (IData)(1U));
-                    while (VL_LTES_III(1,32,32, 0U, vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__idx1)) {
-                        VL_ASSIGNSEL_WIII(8,(0xfffU 
-                                             & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__idx0)), trace_str, 
-                                          (0xffU & 
-                                           (((0U == 
-                                              (0x1fU 
-                                               & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__idx1)))
-                                              ? 0U : 
-                                             (__Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_str__139__str[
-                                              ((IData)(1U) 
-                                               + (0x7fU 
-                                                  & (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__idx1) 
-                                                     >> 5U)))] 
-                                              << ((IData)(0x20U) 
-                                                  - 
-                                                  (0x1fU 
-                                                   & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__idx1))))) 
-                                            | (__Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_str__139__str[
-                                               (0x7fU 
-                                                & (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__idx1) 
-                                                   >> 5U))] 
-                                               >> (0x1fU 
-                                                   & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__idx1))))));
-                        vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__idx0 
-                            = (vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__idx0 
-                               - (IData)(1U));
-                        vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__idx1 
-                            = (vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__idx1 
-                               - (IData)(1U));
-                    }
-                    trace_str[0U] = vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__idx0;
-                    __Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_chars__140__num 
-                        = (vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__len1 
-                           - (IData)(1U));
-                    __Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_chars__140__char = 0x20U;
-                    vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__idx0 
-                        = trace_str[0U];
-                    vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__idx1 = 0U;
-                    while (VL_LTS_III(1,32,32, vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__idx1, __Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_chars__140__num)) {
-                        VL_ASSIGNSEL_WIII(8,(0xfffU 
-                                             & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__idx0)), trace_str, __Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_chars__140__char);
-                        vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__idx0 
-                            = (vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__idx0 
-                               - (IData)(1U));
-                        vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__idx1 
-                            = ((IData)(1U) + vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__idx1);
-                    }
-                    trace_str[0U] = vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__idx0;
-                } else {
-                    __Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_str__141__str[0U] = 0x78U;
+                if ((1U & ((~ (IData)(__Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__136__rdy)) 
+                           & (~ (IData)(__Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__136__val))))) {
+                    __Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_str__141__str[0U] = 0x2eU;
                     __Vilp = 1U;
                     while ((__Vilp <= 0x7fU)) {
                         __Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_str__141__str[__Vilp] = 0U;
@@ -4970,6 +4966,89 @@ void VProc_noparam::__Vdpiexp_Proc_noparam__DOT__v__DOT__imem_respstream_trace__
                             = ((IData)(1U) + vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__idx1);
                     }
                     trace_str[0U] = vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__idx0;
+                } else {
+                    __Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_str__143__str[0U] = 0x78U;
+                    __Vilp = 1U;
+                    while ((__Vilp <= 0x7fU)) {
+                        __Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_str__143__str[__Vilp] = 0U;
+                        __Vilp = ((IData)(1U) + __Vilp);
+                    }
+                    vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__len0 = 1U;
+                    while ((0U != (0xffU & (((0U == 
+                                              (0x1fU 
+                                               & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__len0)))
+                                              ? 0U : 
+                                             (__Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_str__143__str[
+                                              ((IData)(1U) 
+                                               + (0x7fU 
+                                                  & (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__len0) 
+                                                     >> 5U)))] 
+                                              << ((IData)(0x20U) 
+                                                  - 
+                                                  (0x1fU 
+                                                   & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__len0))))) 
+                                            | (__Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_str__143__str[
+                                               (0x7fU 
+                                                & (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__len0) 
+                                                   >> 5U))] 
+                                               >> (0x1fU 
+                                                   & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__len0))))))) {
+                        vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__len0 
+                            = ((IData)(1U) + vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__len0);
+                    }
+                    vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__idx0 
+                        = trace_str[0U];
+                    vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__idx1 
+                        = (vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__len0 
+                           - (IData)(1U));
+                    while (VL_LTES_III(1,32,32, 0U, vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__idx1)) {
+                        VL_ASSIGNSEL_WIII(8,(0xfffU 
+                                             & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__idx0)), trace_str, 
+                                          (0xffU & 
+                                           (((0U == 
+                                              (0x1fU 
+                                               & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__idx1)))
+                                              ? 0U : 
+                                             (__Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_str__143__str[
+                                              ((IData)(1U) 
+                                               + (0x7fU 
+                                                  & (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__idx1) 
+                                                     >> 5U)))] 
+                                              << ((IData)(0x20U) 
+                                                  - 
+                                                  (0x1fU 
+                                                   & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__idx1))))) 
+                                            | (__Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_str__143__str[
+                                               (0x7fU 
+                                                & (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__idx1) 
+                                                   >> 5U))] 
+                                               >> (0x1fU 
+                                                   & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__idx1))))));
+                        vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__idx0 
+                            = (vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__idx0 
+                               - (IData)(1U));
+                        vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__idx1 
+                            = (vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__idx1 
+                               - (IData)(1U));
+                    }
+                    trace_str[0U] = vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__idx0;
+                    __Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_chars__144__num 
+                        = (vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__len1 
+                           - (IData)(1U));
+                    __Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_chars__144__char = 0x20U;
+                    vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__idx0 
+                        = trace_str[0U];
+                    vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__idx1 = 0U;
+                    while (VL_LTS_III(1,32,32, vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__idx1, __Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_chars__144__num)) {
+                        VL_ASSIGNSEL_WIII(8,(0xfffU 
+                                             & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__idx0)), trace_str, __Vtask_Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__append_chars__144__char);
+                        vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__idx0 
+                            = (vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__idx0 
+                               - (IData)(1U));
+                        vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__idx1 
+                            = ((IData)(1U) + vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__idx1);
+                    }
+                    trace_str[0U] = vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_trace__DOT__vc_trace__DOT__idx0;
                 }
             }
         }
@@ -4979,21 +5058,21 @@ void VProc_noparam::__Vdpiexp_Proc_noparam__DOT__v__DOT__imem_respstream_trace__
 void VProc_noparam::__Vdpiexp_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__line_trace_TOP(VProc_noparam__Syms* __restrict vlSymsp, WData/*4095:0*/ (&trace_str)[128]) {
     VL_DEBUG_IF(VL_DBG_MSGF("+    VProc_noparam::__Vdpiexp_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__line_trace_TOP\n"); );
     // Variables
-    CData/*0:0*/ __Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__143__val;
-    CData/*0:0*/ __Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__143__rdy;
-    CData/*7:0*/ __Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_chars__145__char;
+    CData/*0:0*/ __Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__145__val;
+    CData/*0:0*/ __Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__145__rdy;
     CData/*7:0*/ __Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_chars__147__char;
     CData/*7:0*/ __Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_chars__149__char;
     CData/*7:0*/ __Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_chars__151__char;
-    WData/*4095:0*/ __Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__143__str[128];
-    WData/*4095:0*/ __Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_str__144__str[128];
-    IData/*31:0*/ __Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_chars__145__num;
+    CData/*7:0*/ __Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_chars__153__char;
+    WData/*4095:0*/ __Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__145__str[128];
     WData/*4095:0*/ __Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_str__146__str[128];
     IData/*31:0*/ __Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_chars__147__num;
     WData/*4095:0*/ __Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_str__148__str[128];
     IData/*31:0*/ __Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_chars__149__num;
     WData/*4095:0*/ __Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_str__150__str[128];
     IData/*31:0*/ __Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_chars__151__num;
+    WData/*4095:0*/ __Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_str__152__str[128];
+    IData/*31:0*/ __Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_chars__153__num;
     IData/*31:0*/ __Vilp;
     VProc_noparam* const __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
@@ -5009,17 +5088,17 @@ void VProc_noparam::__Vdpiexp_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__
                  ,"%s",16,vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__type_str);
     __Vilp = 0U;
     while ((__Vilp <= 0x7fU)) {
-        __Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__143__str[__Vilp] 
+        __Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__145__str[__Vilp] 
             = vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__str[__Vilp];
         __Vilp = ((IData)(1U) + __Vilp);
     }
-    __Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__143__rdy 
+    __Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__145__rdy 
         = vlTOPp->dmem_respstream_rdy;
-    __Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__143__val 
+    __Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__145__val 
         = vlTOPp->dmem_respstream_val;
     vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__len1 = 0U;
     while ((0U != (0xffU & (((0U == (0x1fU & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__len1)))
-                              ? 0U : (__Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__143__str[
+                              ? 0U : (__Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__145__str[
                                       ((IData)(1U) 
                                        + (0x7fU & (
                                                    VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__len1) 
@@ -5027,24 +5106,24 @@ void VProc_noparam::__Vdpiexp_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__
                                       << ((IData)(0x20U) 
                                           - (0x1fU 
                                              & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__len1))))) 
-                            | (__Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__143__str[
+                            | (__Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__145__str[
                                (0x7fU & (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__len1) 
                                          >> 5U))] >> 
                                (0x1fU & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__len1))))))) {
         vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__len1 
             = ((IData)(1U) + vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__len1);
     }
-    if (((IData)(__Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__143__rdy) 
-         & (IData)(__Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__143__val))) {
+    if (((IData)(__Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__145__rdy) 
+         & (IData)(__Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__145__val))) {
         __Vilp = 0U;
         while ((__Vilp <= 0x7fU)) {
-            __Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_str__144__str[__Vilp] 
-                = __Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__143__str[__Vilp];
+            __Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_str__146__str[__Vilp] 
+                = __Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__145__str[__Vilp];
             __Vilp = ((IData)(1U) + __Vilp);
         }
         vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__len0 = 1U;
         while ((0U != (0xffU & (((0U == (0x1fU & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__len0)))
-                                  ? 0U : (__Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_str__144__str[
+                                  ? 0U : (__Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_str__146__str[
                                           ((IData)(1U) 
                                            + (0x7fU 
                                               & (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__len0) 
@@ -5052,7 +5131,7 @@ void VProc_noparam::__Vdpiexp_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__
                                           << ((IData)(0x20U) 
                                               - (0x1fU 
                                                  & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__len0))))) 
-                                | (__Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_str__144__str[
+                                | (__Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_str__146__str[
                                    (0x7fU & (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__len0) 
                                              >> 5U))] 
                                    >> (0x1fU & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__len0))))))) {
@@ -5068,7 +5147,7 @@ void VProc_noparam::__Vdpiexp_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__
             VL_ASSIGNSEL_WIII(8,(0xfffU & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__idx0)), trace_str, 
                               (0xffU & (((0U == (0x1fU 
                                                  & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__idx1)))
-                                          ? 0U : (__Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_str__144__str[
+                                          ? 0U : (__Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_str__146__str[
                                                   ((IData)(1U) 
                                                    + 
                                                    (0x7fU 
@@ -5079,7 +5158,7 @@ void VProc_noparam::__Vdpiexp_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__
                                                    - 
                                                    (0x1fU 
                                                     & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__idx1))))) 
-                                        | (__Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_str__144__str[
+                                        | (__Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_str__146__str[
                                            (0x7fU & 
                                             (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__idx1) 
                                              >> 5U))] 
@@ -5094,16 +5173,16 @@ void VProc_noparam::__Vdpiexp_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__
         }
         trace_str[0U] = vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__idx0;
     } else {
-        if (((IData)(__Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__143__rdy) 
-             & (~ (IData)(__Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__143__val)))) {
-            __Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_chars__145__num 
+        if (((IData)(__Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__145__rdy) 
+             & (~ (IData)(__Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__145__val)))) {
+            __Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_chars__147__num 
                 = vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__len1;
-            __Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_chars__145__char = 0x20U;
+            __Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_chars__147__char = 0x20U;
             vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__idx0 
                 = trace_str[0U];
             vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__idx1 = 0U;
-            while (VL_LTS_III(1,32,32, vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__idx1, __Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_chars__145__num)) {
-                VL_ASSIGNSEL_WIII(8,(0xfffU & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__idx0)), trace_str, __Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_chars__145__char);
+            while (VL_LTS_III(1,32,32, vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__idx1, __Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_chars__147__num)) {
+                VL_ASSIGNSEL_WIII(8,(0xfffU & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__idx0)), trace_str, __Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_chars__147__char);
                 vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__idx0 
                     = (vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__idx0 
                        - (IData)(1U));
@@ -5112,18 +5191,18 @@ void VProc_noparam::__Vdpiexp_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__
             }
             trace_str[0U] = vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__idx0;
         } else {
-            if (((~ (IData)(__Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__143__rdy)) 
-                 & (IData)(__Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__143__val))) {
-                __Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_str__146__str[0U] = 0x23U;
+            if (((~ (IData)(__Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__145__rdy)) 
+                 & (IData)(__Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__145__val))) {
+                __Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_str__148__str[0U] = 0x23U;
                 __Vilp = 1U;
                 while ((__Vilp <= 0x7fU)) {
-                    __Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_str__146__str[__Vilp] = 0U;
+                    __Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_str__148__str[__Vilp] = 0U;
                     __Vilp = ((IData)(1U) + __Vilp);
                 }
                 vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__len0 = 1U;
                 while ((0U != (0xffU & (((0U == (0x1fU 
                                                  & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__len0)))
-                                          ? 0U : (__Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_str__146__str[
+                                          ? 0U : (__Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_str__148__str[
                                                   ((IData)(1U) 
                                                    + 
                                                    (0x7fU 
@@ -5134,7 +5213,7 @@ void VProc_noparam::__Vdpiexp_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__
                                                    - 
                                                    (0x1fU 
                                                     & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__len0))))) 
-                                        | (__Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_str__146__str[
+                                        | (__Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_str__148__str[
                                            (0x7fU & 
                                             (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__len0) 
                                              >> 5U))] 
@@ -5156,7 +5235,7 @@ void VProc_noparam::__Vdpiexp_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__
                                                    & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__idx1)))
                                                   ? 0U
                                                   : 
-                                                 (__Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_str__146__str[
+                                                 (__Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_str__148__str[
                                                   ((IData)(1U) 
                                                    + 
                                                    (0x7fU 
@@ -5167,7 +5246,7 @@ void VProc_noparam::__Vdpiexp_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__
                                                    - 
                                                    (0x1fU 
                                                     & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__idx1))))) 
-                                                | (__Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_str__146__str[
+                                                | (__Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_str__148__str[
                                                    (0x7fU 
                                                     & (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__idx1) 
                                                        >> 5U))] 
@@ -5182,15 +5261,15 @@ void VProc_noparam::__Vdpiexp_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__
                            - (IData)(1U));
                 }
                 trace_str[0U] = vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__idx0;
-                __Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_chars__147__num 
+                __Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_chars__149__num 
                     = (vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__len1 
                        - (IData)(1U));
-                __Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_chars__147__char = 0x20U;
+                __Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_chars__149__char = 0x20U;
                 vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__idx0 
                     = trace_str[0U];
                 vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__idx1 = 0U;
-                while (VL_LTS_III(1,32,32, vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__idx1, __Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_chars__147__num)) {
-                    VL_ASSIGNSEL_WIII(8,(0xfffU & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__idx0)), trace_str, __Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_chars__147__char);
+                while (VL_LTS_III(1,32,32, vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__idx1, __Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_chars__149__num)) {
+                    VL_ASSIGNSEL_WIII(8,(0xfffU & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__idx0)), trace_str, __Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_chars__149__char);
                     vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__idx0 
                         = (vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__idx0 
                            - (IData)(1U));
@@ -5199,92 +5278,9 @@ void VProc_noparam::__Vdpiexp_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__
                 }
                 trace_str[0U] = vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__idx0;
             } else {
-                if ((1U & ((~ (IData)(__Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__143__rdy)) 
-                           & (~ (IData)(__Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__143__val))))) {
-                    __Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_str__148__str[0U] = 0x2eU;
-                    __Vilp = 1U;
-                    while ((__Vilp <= 0x7fU)) {
-                        __Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_str__148__str[__Vilp] = 0U;
-                        __Vilp = ((IData)(1U) + __Vilp);
-                    }
-                    vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__len0 = 1U;
-                    while ((0U != (0xffU & (((0U == 
-                                              (0x1fU 
-                                               & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__len0)))
-                                              ? 0U : 
-                                             (__Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_str__148__str[
-                                              ((IData)(1U) 
-                                               + (0x7fU 
-                                                  & (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__len0) 
-                                                     >> 5U)))] 
-                                              << ((IData)(0x20U) 
-                                                  - 
-                                                  (0x1fU 
-                                                   & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__len0))))) 
-                                            | (__Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_str__148__str[
-                                               (0x7fU 
-                                                & (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__len0) 
-                                                   >> 5U))] 
-                                               >> (0x1fU 
-                                                   & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__len0))))))) {
-                        vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__len0 
-                            = ((IData)(1U) + vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__len0);
-                    }
-                    vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__idx0 
-                        = trace_str[0U];
-                    vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__idx1 
-                        = (vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__len0 
-                           - (IData)(1U));
-                    while (VL_LTES_III(1,32,32, 0U, vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__idx1)) {
-                        VL_ASSIGNSEL_WIII(8,(0xfffU 
-                                             & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__idx0)), trace_str, 
-                                          (0xffU & 
-                                           (((0U == 
-                                              (0x1fU 
-                                               & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__idx1)))
-                                              ? 0U : 
-                                             (__Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_str__148__str[
-                                              ((IData)(1U) 
-                                               + (0x7fU 
-                                                  & (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__idx1) 
-                                                     >> 5U)))] 
-                                              << ((IData)(0x20U) 
-                                                  - 
-                                                  (0x1fU 
-                                                   & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__idx1))))) 
-                                            | (__Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_str__148__str[
-                                               (0x7fU 
-                                                & (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__idx1) 
-                                                   >> 5U))] 
-                                               >> (0x1fU 
-                                                   & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__idx1))))));
-                        vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__idx0 
-                            = (vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__idx0 
-                               - (IData)(1U));
-                        vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__idx1 
-                            = (vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__idx1 
-                               - (IData)(1U));
-                    }
-                    trace_str[0U] = vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__idx0;
-                    __Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_chars__149__num 
-                        = (vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__len1 
-                           - (IData)(1U));
-                    __Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_chars__149__char = 0x20U;
-                    vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__idx0 
-                        = trace_str[0U];
-                    vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__idx1 = 0U;
-                    while (VL_LTS_III(1,32,32, vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__idx1, __Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_chars__149__num)) {
-                        VL_ASSIGNSEL_WIII(8,(0xfffU 
-                                             & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__idx0)), trace_str, __Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_chars__149__char);
-                        vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__idx0 
-                            = (vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__idx0 
-                               - (IData)(1U));
-                        vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__idx1 
-                            = ((IData)(1U) + vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__idx1);
-                    }
-                    trace_str[0U] = vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__idx0;
-                } else {
-                    __Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_str__150__str[0U] = 0x78U;
+                if ((1U & ((~ (IData)(__Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__145__rdy)) 
+                           & (~ (IData)(__Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_val_rdy_str__145__val))))) {
+                    __Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_str__150__str[0U] = 0x2eU;
                     __Vilp = 1U;
                     while ((__Vilp <= 0x7fU)) {
                         __Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_str__150__str[__Vilp] = 0U;
@@ -5366,6 +5362,89 @@ void VProc_noparam::__Vdpiexp_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__
                             = ((IData)(1U) + vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__idx1);
                     }
                     trace_str[0U] = vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__idx0;
+                } else {
+                    __Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_str__152__str[0U] = 0x78U;
+                    __Vilp = 1U;
+                    while ((__Vilp <= 0x7fU)) {
+                        __Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_str__152__str[__Vilp] = 0U;
+                        __Vilp = ((IData)(1U) + __Vilp);
+                    }
+                    vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__len0 = 1U;
+                    while ((0U != (0xffU & (((0U == 
+                                              (0x1fU 
+                                               & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__len0)))
+                                              ? 0U : 
+                                             (__Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_str__152__str[
+                                              ((IData)(1U) 
+                                               + (0x7fU 
+                                                  & (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__len0) 
+                                                     >> 5U)))] 
+                                              << ((IData)(0x20U) 
+                                                  - 
+                                                  (0x1fU 
+                                                   & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__len0))))) 
+                                            | (__Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_str__152__str[
+                                               (0x7fU 
+                                                & (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__len0) 
+                                                   >> 5U))] 
+                                               >> (0x1fU 
+                                                   & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__len0))))))) {
+                        vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__len0 
+                            = ((IData)(1U) + vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__len0);
+                    }
+                    vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__idx0 
+                        = trace_str[0U];
+                    vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__idx1 
+                        = (vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__len0 
+                           - (IData)(1U));
+                    while (VL_LTES_III(1,32,32, 0U, vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__idx1)) {
+                        VL_ASSIGNSEL_WIII(8,(0xfffU 
+                                             & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__idx0)), trace_str, 
+                                          (0xffU & 
+                                           (((0U == 
+                                              (0x1fU 
+                                               & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__idx1)))
+                                              ? 0U : 
+                                             (__Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_str__152__str[
+                                              ((IData)(1U) 
+                                               + (0x7fU 
+                                                  & (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__idx1) 
+                                                     >> 5U)))] 
+                                              << ((IData)(0x20U) 
+                                                  - 
+                                                  (0x1fU 
+                                                   & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__idx1))))) 
+                                            | (__Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_str__152__str[
+                                               (0x7fU 
+                                                & (VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__idx1) 
+                                                   >> 5U))] 
+                                               >> (0x1fU 
+                                                   & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__idx1))))));
+                        vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__idx0 
+                            = (vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__idx0 
+                               - (IData)(1U));
+                        vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__idx1 
+                            = (vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__idx1 
+                               - (IData)(1U));
+                    }
+                    trace_str[0U] = vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__idx0;
+                    __Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_chars__153__num 
+                        = (vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__len1 
+                           - (IData)(1U));
+                    __Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_chars__153__char = 0x20U;
+                    vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__idx0 
+                        = trace_str[0U];
+                    vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__idx1 = 0U;
+                    while (VL_LTS_III(1,32,32, vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__idx1, __Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_chars__153__num)) {
+                        VL_ASSIGNSEL_WIII(8,(0xfffU 
+                                             & VL_MULS_III(12,32,32, (IData)(8U), vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__idx0)), trace_str, __Vtask_Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__append_chars__153__char);
+                        vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__idx0 
+                            = (vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__idx0 
+                               - (IData)(1U));
+                        vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__idx1 
+                            = ((IData)(1U) + vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__idx1);
+                    }
+                    trace_str[0U] = vlTOPp->Proc_noparam__DOT__v__DOT__dmem_respstream_trace__DOT__vc_trace__DOT__idx0;
                 }
             }
         }
@@ -5428,8 +5507,15 @@ VL_INLINE_OPT void VProc_noparam::_sequent__TOP__1(VProc_noparam__Syms* __restri
         vlTOPp->Proc_noparam__DOT__v__DOT__proc2mngr_queue__DOT__genblk1__DOT__dpath__DOT__qstore 
             = vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__wb_result_W;
     }
-    vlTOPp->Proc_noparam__DOT__v__DOT__imem_queue__DOT__genblk2__DOT__ctrl__DOT__deq_ptr 
-        = ((IData)(vlTOPp->reset) ? 0U : (1U & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__imem_queue__DOT__genblk2__DOT__ctrl__DOT__deq_ptr_next)));
+    if (vlTOPp->reset) {
+        vlTOPp->Proc_noparam__DOT__v__DOT__imem_queue__DOT__genblk2__DOT__ctrl__DOT__deq_ptr = 0U;
+        vlTOPp->Proc_noparam__DOT__v__DOT__imem_queue__DOT__genblk2__DOT__ctrl__DOT__full = 0U;
+    } else {
+        vlTOPp->Proc_noparam__DOT__v__DOT__imem_queue__DOT__genblk2__DOT__ctrl__DOT__deq_ptr 
+            = (1U & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__imem_queue__DOT__genblk2__DOT__ctrl__DOT__deq_ptr_next));
+        vlTOPp->Proc_noparam__DOT__v__DOT__imem_queue__DOT__genblk2__DOT__ctrl__DOT__full 
+            = (1U & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__imem_queue__DOT__genblk2__DOT__ctrl__DOT__full_next));
+    }
     if (((IData)(vlTOPp->Proc_noparam__DOT__v__DOT__imem_queue__DOT__genblk2__DOT__ctrl__DOT__do_enq) 
          & (~ (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__imem_queue__DOT__genblk2__DOT__ctrl__DOT__do_bypass)))) {
         __Vdlyvval__Proc_noparam__DOT__v__DOT__imem_queue__DOT__genblk2__DOT__dpath__DOT__qstore__DOT__rfile__v0[0U] 
@@ -5442,8 +5528,6 @@ VL_INLINE_OPT void VProc_noparam::_sequent__TOP__1(VProc_noparam__Syms* __restri
         __Vdlyvdim0__Proc_noparam__DOT__v__DOT__imem_queue__DOT__genblk2__DOT__dpath__DOT__qstore__DOT__rfile__v0 
             = vlTOPp->Proc_noparam__DOT__v__DOT__imem_queue__DOT__genblk2__DOT__ctrl__DOT__enq_ptr;
     }
-    vlTOPp->Proc_noparam__DOT__v__DOT__imem_queue__DOT__genblk2__DOT__ctrl__DOT__full 
-        = ((IData)(vlTOPp->reset) ? 0U : (1U & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__imem_queue__DOT__genblk2__DOT__ctrl__DOT__full_next)));
     vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_drop_unit__DOT__state 
         = ((~ (IData)(vlTOPp->reset)) & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_drop_unit__DOT__next_state));
     if ((1U & ((IData)(vlTOPp->reset) | (~ (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__ctrl__DOT__stall_X))))) {
@@ -5594,59 +5678,120 @@ VL_INLINE_OPT void VProc_noparam::_sequent__TOP__1(VProc_noparam__Syms* __restri
     vlTOPp->Proc_noparam__DOT__v__DOT__xcel_reqstream_enq_msg 
         = ((0x3f00000000ULL & vlTOPp->Proc_noparam__DOT__v__DOT__xcel_reqstream_enq_msg) 
            | (IData)((IData)(vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op1_X)));
-    if ((8U & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__alu_fn_X))) {
-        if ((4U & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__alu_fn_X))) {
-            if ((2U & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__alu_fn_X))) {
-                vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__alu_result_X = 0U;
-            } else {
-                if ((1U & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__alu_fn_X))) {
-                    vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__alu_result_X 
-                        = (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op1_X 
-                           + vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op2_X);
-                    vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__alu_result_X 
-                        = (0xfffffffeU & vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__alu_result_X);
+    if ((0x20U & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__alu_fn_X))) {
+        vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__alu_result_X = 0U;
+    } else {
+        if ((0x10U & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__alu_fn_X))) {
+            vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__alu_result_X 
+                = ((8U & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__alu_fn_X))
+                    ? 0U : ((4U & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__alu_fn_X))
+                             ? 0U : ((2U & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__alu_fn_X))
+                                      ? 0U : ((1U & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__alu_fn_X))
+                                               ? ((0xff000000U 
+                                                   & (((vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op1_X 
+                                                        >> 0x18U) 
+                                                       - 
+                                                       (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op2_X 
+                                                        >> 0x18U)) 
+                                                      << 0x18U)) 
+                                                  | ((0xff0000U 
+                                                      & (((vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op1_X 
+                                                           >> 0x10U) 
+                                                          - 
+                                                          (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op2_X 
+                                                           >> 0x10U)) 
+                                                         << 0x10U)) 
+                                                     | ((0xff00U 
+                                                         & (((vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op1_X 
+                                                              >> 8U) 
+                                                             - 
+                                                             (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op2_X 
+                                                              >> 8U)) 
+                                                            << 8U)) 
+                                                        | (0xffU 
+                                                           & (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op1_X 
+                                                              - vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op2_X)))))
+                                               : ((0xff000000U 
+                                                   & (((vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op1_X 
+                                                        >> 0x18U) 
+                                                       + 
+                                                       (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op2_X 
+                                                        >> 0x18U)) 
+                                                      << 0x18U)) 
+                                                  | ((0xff0000U 
+                                                      & (((vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op1_X 
+                                                           >> 0x10U) 
+                                                          + 
+                                                          (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op2_X 
+                                                           >> 0x10U)) 
+                                                         << 0x10U)) 
+                                                     | ((0xff00U 
+                                                         & (((vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op1_X 
+                                                              >> 8U) 
+                                                             + 
+                                                             (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op2_X 
+                                                              >> 8U)) 
+                                                            << 8U)) 
+                                                        | (0xffU 
+                                                           & (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op1_X 
+                                                              + vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op2_X)))))))));
+        } else {
+            if ((8U & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__alu_fn_X))) {
+                if ((4U & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__alu_fn_X))) {
+                    if ((2U & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__alu_fn_X))) {
+                        vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__alu_result_X = 0U;
+                    } else {
+                        if ((1U & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__alu_fn_X))) {
+                            vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__alu_result_X 
+                                = (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op1_X 
+                                   + vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op2_X);
+                            vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__alu_result_X 
+                                = (0xfffffffeU & vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__alu_result_X);
+                        } else {
+                            vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__alu_result_X 
+                                = vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op2_X;
+                        }
+                    }
                 } else {
                     vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__alu_result_X 
-                        = vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op2_X;
+                        = ((2U & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__alu_fn_X))
+                            ? ((1U & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__alu_fn_X))
+                                ? vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op1_X
+                                : VL_SHIFTRS_III(32,32,5, vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op1_X, 
+                                                 (0x1fU 
+                                                  & vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op2_X)))
+                            : ((1U & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__alu_fn_X))
+                                ? (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op1_X 
+                                   >> (0x1fU & vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op2_X))
+                                : (~ (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op1_X 
+                                      | vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op2_X))));
                 }
+            } else {
+                vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__alu_result_X 
+                    = ((4U & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__alu_fn_X))
+                        ? ((2U & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__alu_fn_X))
+                            ? ((1U & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__alu_fn_X))
+                                ? (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op1_X 
+                                   ^ vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op2_X)
+                                : (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op1_X 
+                                   & vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op2_X))
+                            : ((1U & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__alu_fn_X))
+                                ? (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op1_X 
+                                   < vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op2_X)
+                                : VL_LTS_III(32,32,32, vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op1_X, vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op2_X)))
+                        : ((2U & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__alu_fn_X))
+                            ? ((1U & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__alu_fn_X))
+                                ? (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op1_X 
+                                   | vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op2_X)
+                                : (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op1_X 
+                                   << (0x1fU & vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op2_X)))
+                            : ((1U & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__alu_fn_X))
+                                ? (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op1_X 
+                                   - vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op2_X)
+                                : (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op1_X 
+                                   + vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op2_X))));
             }
-        } else {
-            vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__alu_result_X 
-                = ((2U & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__alu_fn_X))
-                    ? ((1U & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__alu_fn_X))
-                        ? vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op1_X
-                        : VL_SHIFTRS_III(32,32,5, vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op1_X, 
-                                         (0x1fU & vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op2_X)))
-                    : ((1U & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__alu_fn_X))
-                        ? (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op1_X 
-                           >> (0x1fU & vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op2_X))
-                        : (~ (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op1_X 
-                              | vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op2_X))));
         }
-    } else {
-        vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__alu_result_X 
-            = ((4U & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__alu_fn_X))
-                ? ((2U & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__alu_fn_X))
-                    ? ((1U & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__alu_fn_X))
-                        ? (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op1_X 
-                           ^ vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op2_X)
-                        : (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op1_X 
-                           & vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op2_X))
-                    : ((1U & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__alu_fn_X))
-                        ? (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op1_X 
-                           < vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op2_X)
-                        : VL_LTS_III(32,32,32, vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op1_X, vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op2_X)))
-                : ((2U & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__alu_fn_X))
-                    ? ((1U & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__alu_fn_X))
-                        ? (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op1_X 
-                           | vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op2_X)
-                        : (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op1_X 
-                           << (0x1fU & vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op2_X)))
-                    : ((1U & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__alu_fn_X))
-                        ? (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op1_X 
-                           - vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op2_X)
-                        : (vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op1_X 
-                           + vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__op2_X))));
     }
     vlTOPp->Proc_noparam__DOT__v__DOT__xcel_reqstream_enq_msg 
         = ((0x1fffffffffULL & vlTOPp->Proc_noparam__DOT__v__DOT__xcel_reqstream_enq_msg) 
@@ -5714,10 +5859,6 @@ VL_INLINE_OPT void VProc_noparam::_sequent__TOP__1(VProc_noparam__Syms* __restri
                    & (~ (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__ctrl__DOT__stall_M)));
         }
     }
-    vlTOPp->xcel_reqstream_msg = ((IData)(vlTOPp->Proc_noparam__DOT__v__DOT__xcel_queue__DOT__genblk1__DOT__ctrl__DOT__full)
-                                   ? vlTOPp->Proc_noparam__DOT__v__DOT__xcel_queue__DOT__genblk1__DOT__dpath__DOT__qstore
-                                   : ((IData)(vlTOPp->Proc_noparam__DOT__v__DOT__xcel_queue__DOT__genblk1__DOT__ctrl__DOT__full)
-                                       ? 0ULL : vlTOPp->Proc_noparam__DOT__v__DOT__xcel_reqstream_enq_msg));
     vlTOPp->Proc_noparam__DOT__v__DOT__imem_queue__DOT__genblk2__DOT__ctrl__DOT__empty 
         = ((~ (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__imem_queue__DOT__genblk2__DOT__ctrl__DOT__full)) 
            & ((IData)(vlTOPp->Proc_noparam__DOT__v__DOT__imem_queue__DOT__genblk2__DOT__ctrl__DOT__enq_ptr) 
@@ -5783,10 +5924,6 @@ VL_INLINE_OPT void VProc_noparam::_sequent__TOP__1(VProc_noparam__Syms* __restri
                 = vlTOPp->Proc_noparam__DOT__v__DOT__ctrl__DOT__rf_waddr_X;
         }
     }
-    vlTOPp->proc2mngr_msg = ((IData)(vlTOPp->Proc_noparam__DOT__v__DOT__proc2mngr_queue__DOT__genblk1__DOT__ctrl__DOT__full)
-                              ? vlTOPp->Proc_noparam__DOT__v__DOT__proc2mngr_queue__DOT__genblk1__DOT__dpath__DOT__qstore
-                              : ((IData)(vlTOPp->Proc_noparam__DOT__v__DOT__proc2mngr_queue__DOT__genblk1__DOT__ctrl__DOT__full)
-                                  ? 0U : vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__wb_result_W));
     if ((1U & (~ (IData)(vlTOPp->reset)))) {
         if ((1U & (~ (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__ctrl__DOT__stall_M)))) {
             vlTOPp->Proc_noparam__DOT__v__DOT__ctrl__DOT__stats_en_wen_M 
@@ -5808,30 +5945,9 @@ VL_INLINE_OPT void VProc_noparam::_sequent__TOP__1(VProc_noparam__Syms* __restri
                    & (~ (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__ctrl__DOT__stall_X)));
         }
     }
-    if (vlTOPp->Proc_noparam__DOT__v__DOT__dmem_queue__DOT__genblk1__DOT__ctrl__DOT__full) {
-        vlTOPp->Proc_noparam__DOT__v__DOT____Vcellout__dmem_queue__deq_msg[0U] 
-            = vlTOPp->Proc_noparam__DOT__v__DOT__dmem_queue__DOT__genblk1__DOT__dpath__DOT__qstore[0U];
-        vlTOPp->Proc_noparam__DOT__v__DOT____Vcellout__dmem_queue__deq_msg[1U] 
-            = vlTOPp->Proc_noparam__DOT__v__DOT__dmem_queue__DOT__genblk1__DOT__dpath__DOT__qstore[1U];
-        vlTOPp->Proc_noparam__DOT__v__DOT____Vcellout__dmem_queue__deq_msg[2U] 
-            = vlTOPp->Proc_noparam__DOT__v__DOT__dmem_queue__DOT__genblk1__DOT__dpath__DOT__qstore[2U];
-    } else {
-        vlTOPp->Proc_noparam__DOT__v__DOT____Vcellout__dmem_queue__deq_msg[0U] 
-            = ((IData)(vlTOPp->Proc_noparam__DOT__v__DOT__dmem_queue__DOT__genblk1__DOT__ctrl__DOT__full)
-                ? 0U : vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_enq_msg[0U]);
-        vlTOPp->Proc_noparam__DOT__v__DOT____Vcellout__dmem_queue__deq_msg[1U] 
-            = ((IData)(vlTOPp->Proc_noparam__DOT__v__DOT__dmem_queue__DOT__genblk1__DOT__ctrl__DOT__full)
-                ? 0U : vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_enq_msg[1U]);
-        vlTOPp->Proc_noparam__DOT__v__DOT____Vcellout__dmem_queue__deq_msg[2U] 
-            = ((IData)(vlTOPp->Proc_noparam__DOT__v__DOT__dmem_queue__DOT__genblk1__DOT__ctrl__DOT__full)
-                ? 0U : vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_enq_msg[2U]);
-    }
     vlTOPp->Proc_noparam__DOT__v__DOT__ctrl__DOT__stall_W 
         = ((IData)(vlTOPp->Proc_noparam__DOT__v__DOT__ctrl__DOT__val_W) 
            & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__ctrl__DOT__ostall_W));
-    vlTOPp->dmem_reqstream_msg[0U] = vlTOPp->Proc_noparam__DOT__v__DOT____Vcellout__dmem_queue__deq_msg[0U];
-    vlTOPp->dmem_reqstream_msg[1U] = vlTOPp->Proc_noparam__DOT__v__DOT____Vcellout__dmem_queue__deq_msg[1U];
-    vlTOPp->dmem_reqstream_msg[2U] = vlTOPp->Proc_noparam__DOT__v__DOT____Vcellout__dmem_queue__deq_msg[2U];
     if ((1U & (~ (IData)(vlTOPp->reset)))) {
         if ((1U & (~ (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__ctrl__DOT__stall_X)))) {
             vlTOPp->Proc_noparam__DOT__v__DOT__ctrl__DOT__rf_waddr_X 
@@ -5870,6 +5986,11 @@ VL_INLINE_OPT void VProc_noparam::_sequent__TOP__1(VProc_noparam__Syms* __restri
         vlTOPp->Proc_noparam__DOT__v__DOT__inst_D = 
             ((IData)(vlTOPp->reset) ? 0U : (IData)(vlTOPp->imem_respstream_msg));
     }
+    vlTOPp->proc2mngr_msg = (((IData)(vlTOPp->Proc_noparam__DOT__v__DOT__proc2mngr_queue__DOT__genblk1__DOT__ctrl__DOT__full)
+                               ? vlTOPp->Proc_noparam__DOT__v__DOT__proc2mngr_queue__DOT__genblk1__DOT__dpath__DOT__qstore
+                               : ((IData)(vlTOPp->Proc_noparam__DOT__v__DOT__proc2mngr_queue__DOT__genblk1__DOT__ctrl__DOT__full)
+                                   ? 0U : vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__wb_result_W)) 
+                             & (- (IData)((IData)(vlTOPp->proc2mngr_val))));
     if (vlTOPp->reset) {
         vlTOPp->Proc_noparam__DOT__v__DOT__ctrl__DOT__val_D = 0U;
     } else {
@@ -6032,68 +6153,95 @@ VL_INLINE_OPT void VProc_noparam::_sequent__TOP__1(VProc_noparam__Syms* __restri
                                                       & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
                                                      ? 9U
                                                      : 2U)))))))
-                : (((((((((0x13U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
-                          | (0x7013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                         | (0x6013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                        | (0x4013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                       | (0x2013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                      | (0x3013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                     | (0x40005013U == (0xfe00707fU 
-                                        & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                    | (0x5013U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))
-                    ? ((0x13U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
-                        ? 0U : ((0x7013U == (0x707fU 
-                                             & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
-                                 ? 6U : ((0x6013U == 
-                                          (0x707fU 
-                                           & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
-                                          ? 3U : ((0x4013U 
-                                                   == 
-                                                   (0x707fU 
-                                                    & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
-                                                   ? 7U
-                                                   : 
-                                                  ((0x2013U 
+                : (((((((((0x48000077U == (0xfe00707fU 
+                                           & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                          | (0x4a000077U == (0xfe00707fU 
+                                             & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                         | (0x13U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                        | (0x7013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                       | (0x6013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                      | (0x4013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                     | (0x2013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                    | (0x3013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))
+                    ? ((0x48000077U == (0xfe00707fU 
+                                        & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                        ? 0x10U : ((0x4a000077U == 
+                                    (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                    ? 0x11U : ((0x13U 
+                                                == 
+                                                (0x707fU 
+                                                 & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                                ? 0U
+                                                : (
+                                                   (0x7013U 
                                                     == 
                                                     (0x707fU 
                                                      & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
-                                                    ? 4U
+                                                    ? 6U
                                                     : 
-                                                   ((0x3013U 
+                                                   ((0x6013U 
                                                      == 
                                                      (0x707fU 
                                                       & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
-                                                     ? 5U
+                                                     ? 3U
                                                      : 
-                                                    ((0x40005013U 
+                                                    ((0x4013U 
                                                       == 
-                                                      (0xfe00707fU 
+                                                      (0x707fU 
                                                        & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
-                                                      ? 0xaU
-                                                      : 9U)))))))
-                    : (((((((((0x1013U == (0xfe00707fU 
-                                           & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
-                              | (0x37U == (0x7fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                             | (0x17U == (0x7fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                            | (0x2003U == (0x707fU 
-                                           & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                           | (0x2023U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                          | (0x1063U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                         | (0x63U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                        | (0x4063U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))
-                        ? ((0x1013U == (0xfe00707fU 
-                                        & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
-                            ? 2U : ((0x37U == (0x7fU 
-                                               & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
-                                     ? 0xcU : 0U)) : 
-                       ((0x6063U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
-                         ? 0U : ((0x5063U == (0x707fU 
-                                              & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
-                                  ? 0U : ((0x7063U 
-                                           == (0x707fU 
-                                               & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
-                                           ? 0U : (
-                                                   (0x6fU 
+                                                      ? 7U
+                                                      : 
+                                                     ((0x2013U 
+                                                       == 
+                                                       (0x707fU 
+                                                        & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                                       ? 4U
+                                                       : 5U)))))))
+                    : (((((((((0x40005013U == (0xfe00707fU 
+                                               & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                              | (0x5013U == (0xfe00707fU 
+                                             & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                             | (0x1013U == (0xfe00707fU 
+                                            & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                            | (0x37U == (0x7fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                           | (0x17U == (0x7fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                          | (0x2003U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                         | (0x2023U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                        | (0x1063U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))
+                        ? ((0x40005013U == (0xfe00707fU 
+                                            & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                            ? 0xaU : ((0x5013U == (0xfe00707fU 
+                                                   & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                       ? 9U : ((0x1013U 
+                                                == 
+                                                (0xfe00707fU 
+                                                 & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                                ? 2U
+                                                : (
+                                                   (0x37U 
+                                                    == 
+                                                    (0x7fU 
+                                                     & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                                    ? 0xcU
+                                                    : 0U))))
+                        : ((0x63U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                            ? 0U : ((0x4063U == (0x707fU 
+                                                 & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                     ? 0U : ((0x6063U 
+                                              == (0x707fU 
+                                                  & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                              ? 0U : 
+                                             ((0x5063U 
+                                               == (0x707fU 
+                                                   & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                               ? 0U
+                                               : ((0x7063U 
+                                                   == 
+                                                   (0x707fU 
+                                                    & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                                   ? 0U
+                                                   : 
+                                                  ((0x6fU 
                                                     == 
                                                     (0x7fU 
                                                      & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
@@ -6104,7 +6252,7 @@ VL_INLINE_OPT void VProc_noparam::_sequent__TOP__1(VProc_noparam__Syms* __restri
                                                      (0x707fU 
                                                       & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
                                                      ? 0xdU
-                                                     : 0U))))))));
+                                                     : 0U))))))))));
         vlTOPp->Proc_noparam__DOT__v__DOT__ctrl__DOT__rf_wen_D 
             = (((((((((0x7033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
                       | (0x6033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
@@ -6114,37 +6262,52 @@ VL_INLINE_OPT void VProc_noparam::_sequent__TOP__1(VProc_noparam__Syms* __restri
                   | (0x40005033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
                  | (0x5033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
                 | (0x1033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-               | (((((((((0x13U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
-                         | (0x7013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                        | (0x6013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                       | (0x4013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                      | (0x2013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                     | (0x3013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                    | (0x40005013U == (0xfe00707fU 
-                                       & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                   | (0x5013U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                  | (((((((((0x1013U == (0xfe00707fU 
-                                         & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
-                            | (0x37U == (0x7fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                           | (0x17U == (0x7fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                          | (0x2003U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                         | (0x2023U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                        | (0x1063U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                       | (0x63U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                      | (0x4063U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))
-                      ? ((0x1013U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
-                         | ((0x37U == (0x7fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
-                            | ((0x17U == (0x7fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
-                               | (0x2003U == (0x707fU 
-                                              & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))))
-                      : ((0x6063U != (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
-                         & ((0x5063U != (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
-                            & ((0x7063U != (0x707fU 
-                                            & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
-                               & ((0x6fU == (0x7fU 
+               | (((((((((0x48000077U == (0xfe00707fU 
+                                          & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                         | (0x4a000077U == (0xfe00707fU 
+                                            & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                        | (0x13U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                       | (0x7013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                      | (0x6013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                     | (0x4013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                    | (0x2013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                   | (0x3013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                  | (((((((((0x40005013U == (0xfe00707fU 
                                              & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
-                                  | (0x67U == (0x707fU 
-                                               & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))))))));
+                            | (0x5013U == (0xfe00707fU 
+                                           & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                           | (0x1013U == (0xfe00707fU 
+                                          & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                          | (0x37U == (0x7fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                         | (0x17U == (0x7fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                        | (0x2003U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                       | (0x2023U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                      | (0x1063U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))
+                      ? ((0x40005013U == (0xfe00707fU 
+                                          & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                         | ((0x5013U == (0xfe00707fU 
+                                         & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                            | ((0x1013U == (0xfe00707fU 
+                                            & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                               | ((0x37U == (0x7fU 
+                                             & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                                  | ((0x17U == (0x7fU 
+                                                & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                                     | (0x2003U == 
+                                        (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))))))
+                      : ((0x63U != (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                         & ((0x4063U != (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                            & ((0x6063U != (0x707fU 
+                                            & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                               & ((0x5063U != (0x707fU 
+                                               & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                                  & ((0x7063U != (0x707fU 
+                                                  & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                                     & ((0x6fU == (0x7fU 
+                                                   & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                                        | (0x67U == 
+                                           (0x707fU 
+                                            & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))))))))));
         vlTOPp->Proc_noparam__DOT__v__DOT__ctrl__DOT__wb_result_sel_D 
             = (((((((((0x7033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
                       | (0x6033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
@@ -6154,55 +6317,69 @@ VL_INLINE_OPT void VProc_noparam::_sequent__TOP__1(VProc_noparam__Syms* __restri
                   | (0x40005033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
                  | (0x5033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
                 | (0x1033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))
-                ? 0U : (((((((((0x13U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
-                               | (0x7013U == (0x707fU 
-                                              & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                              | (0x6013U == (0x707fU 
-                                             & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                             | (0x4013U == (0x707fU 
-                                            & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                            | (0x2013U == (0x707fU 
+                ? 0U : (((((((((0x48000077U == (0xfe00707fU 
+                                                & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                               | (0x4a000077U == (0xfe00707fU 
+                                                  & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                              | (0x13U == (0x707fU 
                                            & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                           | (0x3013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                          | (0x40005013U == (0xfe00707fU 
-                                             & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                         | (0x5013U == (0xfe00707fU 
-                                        & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))
-                         ? 0U : (((((((((0x1013U == 
-                                         (0xfe00707fU 
-                                          & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
-                                        | (0x37U == 
-                                           (0x7fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                                       | (0x17U == 
-                                          (0x7fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                                      | (0x2003U == 
-                                         (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                                     | (0x2023U == 
-                                        (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                                    | (0x1063U == (0x707fU 
+                             | (0x7013U == (0x707fU 
+                                            & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                            | (0x6013U == (0x707fU 
+                                           & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                           | (0x4013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                          | (0x2013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                         | (0x3013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))
+                         ? 0U : (((((((((0x40005013U 
+                                         == (0xfe00707fU 
+                                             & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                                        | (0x5013U 
+                                           == (0xfe00707fU 
+                                               & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                                       | (0x1013U == 
+                                          (0xfe00707fU 
+                                           & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                                      | (0x37U == (0x7fU 
                                                    & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                                   | (0x63U == (0x707fU 
-                                                & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                                  | (0x4063U == (0x707fU 
+                                     | (0x17U == (0x7fU 
+                                                  & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                                    | (0x2003U == (0x707fU 
+                                                   & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                                   | (0x2023U == (0x707fU 
+                                                  & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                                  | (0x1063U == (0x707fU 
                                                  & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))
-                                  ? ((0x1013U == (0xfe00707fU 
-                                                  & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
-                                      ? 0U : ((0x37U 
-                                               == (0x7fU 
+                                  ? ((0x40005013U == 
+                                      (0xfe00707fU 
+                                       & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                      ? 0U : ((0x5013U 
+                                               == (0xfe00707fU 
                                                    & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
                                                ? 0U
-                                               : ((0x17U 
+                                               : ((0x1013U 
                                                    == 
-                                                   (0x7fU 
+                                                   (0xfe00707fU 
                                                     & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
                                                    ? 0U
                                                    : 
-                                                  ((0x2003U 
+                                                  ((0x37U 
                                                     == 
-                                                    (0x707fU 
+                                                    (0x7fU 
                                                      & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
-                                                    ? 1U
-                                                    : 0U))))
+                                                    ? 0U
+                                                    : 
+                                                   ((0x17U 
+                                                     == 
+                                                     (0x7fU 
+                                                      & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                                     ? 0U
+                                                     : 
+                                                    ((0x2003U 
+                                                      == 
+                                                      (0x707fU 
+                                                       & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                                      ? 1U
+                                                      : 0U))))))
                                   : 0U)));
         vlTOPp->Proc_noparam__DOT__v__DOT__ctrl__DOT__ex_result_sel_D 
             = (((((((((0x7033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
@@ -6213,41 +6390,354 @@ VL_INLINE_OPT void VProc_noparam::_sequent__TOP__1(VProc_noparam__Syms* __restri
                   | (0x40005033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
                  | (0x5033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
                 | (0x1033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))
-                ? 0U : (((((((((0x13U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
-                               | (0x7013U == (0x707fU 
-                                              & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                              | (0x6013U == (0x707fU 
-                                             & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                             | (0x4013U == (0x707fU 
-                                            & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                            | (0x2013U == (0x707fU 
+                ? 0U : (((((((((0x48000077U == (0xfe00707fU 
+                                                & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                               | (0x4a000077U == (0xfe00707fU 
+                                                  & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                              | (0x13U == (0x707fU 
                                            & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                           | (0x3013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                          | (0x40005013U == (0xfe00707fU 
-                                             & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                         | (0x5013U == (0xfe00707fU 
-                                        & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))
-                         ? 0U : (((((((((0x1013U == 
-                                         (0xfe00707fU 
-                                          & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
-                                        | (0x37U == 
-                                           (0x7fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                                       | (0x17U == 
-                                          (0x7fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                                      | (0x2003U == 
-                                         (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                                     | (0x2023U == 
-                                        (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                                    | (0x1063U == (0x707fU 
+                             | (0x7013U == (0x707fU 
+                                            & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                            | (0x6013U == (0x707fU 
+                                           & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                           | (0x4013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                          | (0x2013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                         | (0x3013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))
+                         ? 0U : (((((((((0x40005013U 
+                                         == (0xfe00707fU 
+                                             & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                                        | (0x5013U 
+                                           == (0xfe00707fU 
+                                               & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                                       | (0x1013U == 
+                                          (0xfe00707fU 
+                                           & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                                      | (0x37U == (0x7fU 
                                                    & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                                   | (0x63U == (0x707fU 
-                                                & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                                  | (0x4063U == (0x707fU 
+                                     | (0x17U == (0x7fU 
+                                                  & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                                    | (0x2003U == (0x707fU 
+                                                   & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                                   | (0x2023U == (0x707fU 
+                                                  & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                                  | (0x1063U == (0x707fU 
                                                  & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))
-                                  ? 0U : ((0x6063U 
-                                           == (0x707fU 
-                                               & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                  ? 0U : ((0x63U == 
+                                           (0x707fU 
+                                            & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
                                            ? 0U : (
+                                                   (0x4063U 
+                                                    == 
+                                                    (0x707fU 
+                                                     & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                                    ? 0U
+                                                    : 
+                                                   ((0x6063U 
+                                                     == 
+                                                     (0x707fU 
+                                                      & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                                     ? 0U
+                                                     : 
+                                                    ((0x5063U 
+                                                      == 
+                                                      (0x707fU 
+                                                       & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                                      ? 0U
+                                                      : 
+                                                     ((0x7063U 
+                                                       == 
+                                                       (0x707fU 
+                                                        & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                                       ? 0U
+                                                       : 
+                                                      ((0x6fU 
+                                                        == 
+                                                        (0x7fU 
+                                                         & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                                        ? 2U
+                                                        : 
+                                                       ((0x67U 
+                                                         == 
+                                                         (0x707fU 
+                                                          & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                                         ? 2U
+                                                         : 0U))))))))));
+        vlTOPp->Proc_noparam__DOT__v__DOT__ctrl__DOT__br_type_D 
+            = (((((((((0x7033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                      | (0x6033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                     | (0x4033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                    | (0x2033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                   | (0x3033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                  | (0x40005033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                 | (0x5033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                | (0x1033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))
+                ? 0U : (((((((((0x48000077U == (0xfe00707fU 
+                                                & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                               | (0x4a000077U == (0xfe00707fU 
+                                                  & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                              | (0x13U == (0x707fU 
+                                           & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                             | (0x7013U == (0x707fU 
+                                            & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                            | (0x6013U == (0x707fU 
+                                           & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                           | (0x4013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                          | (0x2013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                         | (0x3013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))
+                         ? 0U : (((((((((0x40005013U 
+                                         == (0xfe00707fU 
+                                             & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                                        | (0x5013U 
+                                           == (0xfe00707fU 
+                                               & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                                       | (0x1013U == 
+                                          (0xfe00707fU 
+                                           & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                                      | (0x37U == (0x7fU 
+                                                   & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                                     | (0x17U == (0x7fU 
+                                                  & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                                    | (0x2003U == (0x707fU 
+                                                   & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                                   | (0x2023U == (0x707fU 
+                                                  & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                                  | (0x1063U == (0x707fU 
+                                                 & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))
+                                  ? ((0x40005013U == 
+                                      (0xfe00707fU 
+                                       & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                      ? 0U : ((0x5013U 
+                                               == (0xfe00707fU 
+                                                   & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                               ? 0U
+                                               : ((0x1013U 
+                                                   == 
+                                                   (0xfe00707fU 
+                                                    & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                                   ? 0U
+                                                   : 
+                                                  ((0x37U 
+                                                    == 
+                                                    (0x7fU 
+                                                     & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                                    ? 0U
+                                                    : 
+                                                   ((0x17U 
+                                                     == 
+                                                     (0x7fU 
+                                                      & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                                     ? 0U
+                                                     : 
+                                                    ((0x2003U 
+                                                      == 
+                                                      (0x707fU 
+                                                       & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                                      ? 0U
+                                                      : 
+                                                     ((0x2023U 
+                                                       == 
+                                                       (0x707fU 
+                                                        & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                                       ? 0U
+                                                       : 1U)))))))
+                                  : ((0x63U == (0x707fU 
+                                                & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                      ? 4U : ((0x4063U 
+                                               == (0x707fU 
+                                                   & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                               ? 2U
+                                               : ((0x6063U 
+                                                   == 
+                                                   (0x707fU 
+                                                    & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                                   ? 3U
+                                                   : 
+                                                  ((0x5063U 
+                                                    == 
+                                                    (0x707fU 
+                                                     & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                                    ? 5U
+                                                    : 
+                                                   ((0x7063U 
+                                                     == 
+                                                     (0x707fU 
+                                                      & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                                     ? 6U
+                                                     : 
+                                                    ((0x6fU 
+                                                      == 
+                                                      (0x7fU 
+                                                       & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                                      ? 0U
+                                                      : 
+                                                     ((0x67U 
+                                                       == 
+                                                       (0x707fU 
+                                                        & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                                       ? 7U
+                                                       : 0U))))))))));
+        vlTOPp->Proc_noparam__DOT__v__DOT__ctrl__DOT__dmem_reqstream_type_D 
+            = (((((((((0x7033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                      | (0x6033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                     | (0x4033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                    | (0x2033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                   | (0x3033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                  | (0x40005033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                 | (0x5033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                | (0x1033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))
+                ? 0U : (((((((((0x48000077U == (0xfe00707fU 
+                                                & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                               | (0x4a000077U == (0xfe00707fU 
+                                                  & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                              | (0x13U == (0x707fU 
+                                           & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                             | (0x7013U == (0x707fU 
+                                            & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                            | (0x6013U == (0x707fU 
+                                           & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                           | (0x4013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                          | (0x2013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                         | (0x3013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))
+                         ? 0U : (((((((((0x40005013U 
+                                         == (0xfe00707fU 
+                                             & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                                        | (0x5013U 
+                                           == (0xfe00707fU 
+                                               & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                                       | (0x1013U == 
+                                          (0xfe00707fU 
+                                           & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                                      | (0x37U == (0x7fU 
+                                                   & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                                     | (0x17U == (0x7fU 
+                                                  & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                                    | (0x2003U == (0x707fU 
+                                                   & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                                   | (0x2023U == (0x707fU 
+                                                  & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                                  | (0x1063U == (0x707fU 
+                                                 & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))
+                                  ? ((0x40005013U == 
+                                      (0xfe00707fU 
+                                       & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                      ? 0U : ((0x5013U 
+                                               == (0xfe00707fU 
+                                                   & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                               ? 0U
+                                               : ((0x1013U 
+                                                   == 
+                                                   (0xfe00707fU 
+                                                    & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                                   ? 0U
+                                                   : 
+                                                  ((0x37U 
+                                                    == 
+                                                    (0x7fU 
+                                                     & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                                    ? 0U
+                                                    : 
+                                                   ((0x17U 
+                                                     == 
+                                                     (0x7fU 
+                                                      & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                                     ? 0U
+                                                     : 
+                                                    ((0x2003U 
+                                                      == 
+                                                      (0x707fU 
+                                                       & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                                      ? 1U
+                                                      : 
+                                                     ((0x2023U 
+                                                       == 
+                                                       (0x707fU 
+                                                        & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                                       ? 2U
+                                                       : 0U)))))))
+                                  : 0U)));
+        vlTOPp->Proc_noparam__DOT__v__DOT__op2_sel_D 
+            = (((((((((0x7033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                      | (0x6033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                     | (0x4033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                    | (0x2033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                   | (0x3033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                  | (0x40005033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                 | (0x5033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                | (0x1033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))
+                ? 0U : (((((((((0x48000077U == (0xfe00707fU 
+                                                & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                               | (0x4a000077U == (0xfe00707fU 
+                                                  & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                              | (0x13U == (0x707fU 
+                                           & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                             | (0x7013U == (0x707fU 
+                                            & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                            | (0x6013U == (0x707fU 
+                                           & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                           | (0x4013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                          | (0x2013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                         | (0x3013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))
+                         ? ((0x48000077U == (0xfe00707fU 
+                                             & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                             ? 0U : ((0x4a000077U == 
+                                      (0xfe00707fU 
+                                       & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                      ? 0U : 1U)) : 
+                        (((((((((0x40005013U == (0xfe00707fU 
+                                                 & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                                | (0x5013U == (0xfe00707fU 
+                                               & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                               | (0x1013U == (0xfe00707fU 
+                                              & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                              | (0x37U == (0x7fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                             | (0x17U == (0x7fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                            | (0x2003U == (0x707fU 
+                                           & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                           | (0x2023U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                          | (0x1063U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))
+                          ? ((0x40005013U == (0xfe00707fU 
+                                              & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                              ? 1U : ((0x5013U == (0xfe00707fU 
+                                                   & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                       ? 1U : ((0x1013U 
+                                                == 
+                                                (0xfe00707fU 
+                                                 & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                                ? 1U
+                                                : (
+                                                   (0x37U 
+                                                    == 
+                                                    (0x7fU 
+                                                     & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                                    ? 1U
+                                                    : 
+                                                   ((0x17U 
+                                                     == 
+                                                     (0x7fU 
+                                                      & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                                     ? 1U
+                                                     : 
+                                                    ((0x2003U 
+                                                      == 
+                                                      (0x707fU 
+                                                       & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                                      ? 1U
+                                                      : 
+                                                     ((0x2023U 
+                                                       == 
+                                                       (0x707fU 
+                                                        & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                                       ? 1U
+                                                       : 0U)))))))
+                          : ((0x63U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                              ? 0U : ((0x4063U == (0x707fU 
+                                                   & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                       ? 0U : ((0x6063U 
+                                                == 
+                                                (0x707fU 
+                                                 & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                                ? 0U
+                                                : (
                                                    (0x5063U 
                                                     == 
                                                     (0x707fU 
@@ -6264,267 +6754,14 @@ VL_INLINE_OPT void VProc_noparam::_sequent__TOP__1(VProc_noparam__Syms* __restri
                                                       == 
                                                       (0x7fU 
                                                        & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
-                                                      ? 2U
+                                                      ? 0U
                                                       : 
                                                      ((0x67U 
                                                        == 
                                                        (0x707fU 
                                                         & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
-                                                       ? 2U
-                                                       : 0U))))))));
-        vlTOPp->Proc_noparam__DOT__v__DOT__ctrl__DOT__br_type_D 
-            = (((((((((0x7033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
-                      | (0x6033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                     | (0x4033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                    | (0x2033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                   | (0x3033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                  | (0x40005033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                 | (0x5033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                | (0x1033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))
-                ? 0U : (((((((((0x13U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
-                               | (0x7013U == (0x707fU 
-                                              & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                              | (0x6013U == (0x707fU 
-                                             & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                             | (0x4013U == (0x707fU 
-                                            & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                            | (0x2013U == (0x707fU 
-                                           & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                           | (0x3013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                          | (0x40005013U == (0xfe00707fU 
-                                             & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                         | (0x5013U == (0xfe00707fU 
-                                        & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))
-                         ? 0U : (((((((((0x1013U == 
-                                         (0xfe00707fU 
-                                          & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
-                                        | (0x37U == 
-                                           (0x7fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                                       | (0x17U == 
-                                          (0x7fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                                      | (0x2003U == 
-                                         (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                                     | (0x2023U == 
-                                        (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                                    | (0x1063U == (0x707fU 
-                                                   & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                                   | (0x63U == (0x707fU 
-                                                & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                                  | (0x4063U == (0x707fU 
-                                                 & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))
-                                  ? ((0x1013U == (0xfe00707fU 
-                                                  & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
-                                      ? 0U : ((0x37U 
-                                               == (0x7fU 
-                                                   & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
-                                               ? 0U
-                                               : ((0x17U 
-                                                   == 
-                                                   (0x7fU 
-                                                    & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
-                                                   ? 0U
-                                                   : 
-                                                  ((0x2003U 
-                                                    == 
-                                                    (0x707fU 
-                                                     & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
-                                                    ? 0U
-                                                    : 
-                                                   ((0x2023U 
-                                                     == 
-                                                     (0x707fU 
-                                                      & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
-                                                     ? 0U
-                                                     : 
-                                                    ((0x1063U 
-                                                      == 
-                                                      (0x707fU 
-                                                       & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
-                                                      ? 1U
-                                                      : 
-                                                     ((0x63U 
-                                                       == 
-                                                       (0x707fU 
-                                                        & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
-                                                       ? 4U
-                                                       : 2U)))))))
-                                  : ((0x6063U == (0x707fU 
-                                                  & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
-                                      ? 3U : ((0x5063U 
-                                               == (0x707fU 
-                                                   & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
-                                               ? 5U
-                                               : ((0x7063U 
-                                                   == 
-                                                   (0x707fU 
-                                                    & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
-                                                   ? 6U
-                                                   : 
-                                                  ((0x6fU 
-                                                    == 
-                                                    (0x7fU 
-                                                     & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
-                                                    ? 0U
-                                                    : 
-                                                   ((0x67U 
-                                                     == 
-                                                     (0x707fU 
-                                                      & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
-                                                     ? 7U
-                                                     : 0U))))))));
-        vlTOPp->Proc_noparam__DOT__v__DOT__ctrl__DOT__dmem_reqstream_type_D 
-            = (((((((((0x7033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
-                      | (0x6033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                     | (0x4033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                    | (0x2033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                   | (0x3033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                  | (0x40005033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                 | (0x5033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                | (0x1033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))
-                ? 0U : (((((((((0x13U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
-                               | (0x7013U == (0x707fU 
-                                              & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                              | (0x6013U == (0x707fU 
-                                             & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                             | (0x4013U == (0x707fU 
-                                            & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                            | (0x2013U == (0x707fU 
-                                           & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                           | (0x3013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                          | (0x40005013U == (0xfe00707fU 
-                                             & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                         | (0x5013U == (0xfe00707fU 
-                                        & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))
-                         ? 0U : (((((((((0x1013U == 
-                                         (0xfe00707fU 
-                                          & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
-                                        | (0x37U == 
-                                           (0x7fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                                       | (0x17U == 
-                                          (0x7fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                                      | (0x2003U == 
-                                         (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                                     | (0x2023U == 
-                                        (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                                    | (0x1063U == (0x707fU 
-                                                   & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                                   | (0x63U == (0x707fU 
-                                                & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                                  | (0x4063U == (0x707fU 
-                                                 & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))
-                                  ? ((0x1013U == (0xfe00707fU 
-                                                  & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
-                                      ? 0U : ((0x37U 
-                                               == (0x7fU 
-                                                   & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
-                                               ? 0U
-                                               : ((0x17U 
-                                                   == 
-                                                   (0x7fU 
-                                                    & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
-                                                   ? 0U
-                                                   : 
-                                                  ((0x2003U 
-                                                    == 
-                                                    (0x707fU 
-                                                     & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
-                                                    ? 1U
-                                                    : 
-                                                   ((0x2023U 
-                                                     == 
-                                                     (0x707fU 
-                                                      & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
-                                                     ? 2U
-                                                     : 0U)))))
-                                  : 0U)));
-        vlTOPp->Proc_noparam__DOT__v__DOT__op2_sel_D 
-            = (((((((((0x7033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
-                      | (0x6033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                     | (0x4033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                    | (0x2033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                   | (0x3033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                  | (0x40005033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                 | (0x5033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                | (0x1033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))
-                ? 0U : (((((((((0x13U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
-                               | (0x7013U == (0x707fU 
-                                              & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                              | (0x6013U == (0x707fU 
-                                             & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                             | (0x4013U == (0x707fU 
-                                            & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                            | (0x2013U == (0x707fU 
-                                           & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                           | (0x3013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                          | (0x40005013U == (0xfe00707fU 
-                                             & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                         | (0x5013U == (0xfe00707fU 
-                                        & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))
-                         ? 1U : (((((((((0x1013U == 
-                                         (0xfe00707fU 
-                                          & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
-                                        | (0x37U == 
-                                           (0x7fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                                       | (0x17U == 
-                                          (0x7fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                                      | (0x2003U == 
-                                         (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                                     | (0x2023U == 
-                                        (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                                    | (0x1063U == (0x707fU 
-                                                   & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                                   | (0x63U == (0x707fU 
-                                                & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                                  | (0x4063U == (0x707fU 
-                                                 & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))
-                                  ? ((0x1013U == (0xfe00707fU 
-                                                  & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
-                                      ? 1U : ((0x37U 
-                                               == (0x7fU 
-                                                   & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
-                                               ? 1U
-                                               : ((0x17U 
-                                                   == 
-                                                   (0x7fU 
-                                                    & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
-                                                   ? 1U
-                                                   : 
-                                                  ((0x2003U 
-                                                    == 
-                                                    (0x707fU 
-                                                     & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
-                                                    ? 1U
-                                                    : 
-                                                   ((0x2023U 
-                                                     == 
-                                                     (0x707fU 
-                                                      & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
-                                                     ? 1U
-                                                     : 0U)))))
-                                  : ((0x6063U == (0x707fU 
-                                                  & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
-                                      ? 0U : ((0x5063U 
-                                               == (0x707fU 
-                                                   & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
-                                               ? 0U
-                                               : ((0x7063U 
-                                                   == 
-                                                   (0x707fU 
-                                                    & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
-                                                   ? 0U
-                                                   : 
-                                                  ((0x6fU 
-                                                    == 
-                                                    (0x7fU 
-                                                     & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
-                                                    ? 0U
-                                                    : 
-                                                   ((0x67U 
-                                                     == 
-                                                     (0x707fU 
-                                                      & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
-                                                     ? 1U
-                                                     : 0U))))))));
+                                                       ? 1U
+                                                       : 0U))))))))));
     }
     vlTOPp->Proc_noparam__DOT__v__DOT__op1_sel_D = 
         ((~ ((((((((0x13U == vlTOPp->Proc_noparam__DOT__v__DOT__inst_D) 
@@ -6543,26 +6780,33 @@ VL_INLINE_OPT void VProc_noparam::_sequent__TOP__1(VProc_noparam__Syms* __restri
                   | (0x40005033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
                  | (0x5033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
                 | (0x1033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))) 
-            & ((~ ((((((((0x13U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
-                         | (0x7013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                        | (0x6013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                       | (0x4013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                      | (0x2013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                     | (0x3013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                    | (0x40005013U == (0xfe00707fU 
+            & ((~ ((((((((0x48000077U == (0xfe00707fU 
+                                          & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                         | (0x4a000077U == (0xfe00707fU 
+                                            & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                        | (0x13U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                       | (0x7013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                      | (0x6013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                     | (0x4013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                    | (0x2013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                   | (0x3013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))) 
+               & (((((((((0x40005013U == (0xfe00707fU 
+                                          & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                         | (0x5013U == (0xfe00707fU 
+                                        & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                        | (0x1013U == (0xfe00707fU 
                                        & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                   | (0x5013U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))) 
-               & (((((((((0x1013U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
-                         | (0x37U == (0x7fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                        | (0x17U == (0x7fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                       | (0x2003U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                      | (0x2023U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                     | (0x1063U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                    | (0x63U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                   | (0x4063U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                  & ((0x1013U != (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
-                     & ((0x37U == (0x7fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
-                        | (0x17U == (0x7fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))))))));
+                       | (0x37U == (0x7fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                      | (0x17U == (0x7fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                     | (0x2003U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                    | (0x2023U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                   | (0x1063U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                  & ((0x40005013U != (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                     & ((0x5013U != (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                        & ((0x1013U != (0xfe00707fU 
+                                        & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                           & ((0x37U == (0x7fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                              | (0x17U == (0x7fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))))))))));
     vlTOPp->Proc_noparam__DOT__v__DOT__ctrl__DOT__csrw_D 
         = (((((((((0x13U == vlTOPp->Proc_noparam__DOT__v__DOT__inst_D) 
                   | (0x1063U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
@@ -6614,128 +6858,152 @@ VL_INLINE_OPT void VProc_noparam::_sequent__TOP__1(VProc_noparam__Syms* __restri
                                           (0xfe00707fU 
                                            & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))
                                        ? 0U : (((((
-                                                   ((((0x13U 
+                                                   ((((0x48000077U 
                                                        == 
-                                                       (0x707fU 
+                                                       (0xfe00707fU 
                                                         & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
-                                                      | (0x7013U 
+                                                      | (0x4a000077U 
                                                          == 
-                                                         (0x707fU 
+                                                         (0xfe00707fU 
                                                           & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                                                     | (0x6013U 
+                                                     | (0x13U 
                                                         == 
                                                         (0x707fU 
                                                          & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                                                    | (0x4013U 
+                                                    | (0x7013U 
                                                        == 
                                                        (0x707fU 
                                                         & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                                                   | (0x2013U 
+                                                   | (0x6013U 
                                                       == 
                                                       (0x707fU 
                                                        & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                                                  | (0x3013U 
+                                                  | (0x4013U 
                                                      == 
                                                      (0x707fU 
                                                       & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                                                 | (0x40005013U 
+                                                 | (0x2013U 
                                                     == 
-                                                    (0xfe00707fU 
+                                                    (0x707fU 
                                                      & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                                                | (0x5013U 
+                                                | (0x3013U 
                                                    == 
-                                                   (0xfe00707fU 
+                                                   (0x707fU 
                                                     & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))
                                                 ? 0U
                                                 : (
-                                                   ((((((((0x1013U 
+                                                   ((((((((0x40005013U 
                                                            == 
                                                            (0xfe00707fU 
                                                             & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
-                                                          | (0x37U 
+                                                          | (0x5013U 
                                                              == 
-                                                             (0x7fU 
+                                                             (0xfe00707fU 
                                                               & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                                                         | (0x17U 
+                                                         | (0x1013U 
                                                             == 
-                                                            (0x7fU 
+                                                            (0xfe00707fU 
                                                              & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                                                        | (0x2003U 
+                                                        | (0x37U 
                                                            == 
-                                                           (0x707fU 
+                                                           (0x7fU 
                                                             & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                                                       | (0x2023U 
+                                                       | (0x17U 
                                                           == 
-                                                          (0x707fU 
+                                                          (0x7fU 
                                                            & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                                                      | (0x1063U 
+                                                      | (0x2003U 
                                                          == 
                                                          (0x707fU 
                                                           & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                                                     | (0x63U 
+                                                     | (0x2023U 
                                                         == 
                                                         (0x707fU 
                                                          & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                                                    | (0x4063U 
+                                                    | (0x1063U 
                                                        == 
                                                        (0x707fU 
                                                         & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))
                                                     ? 
-                                                   ((0x1013U 
+                                                   ((0x40005013U 
                                                      == 
                                                      (0xfe00707fU 
                                                       & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
                                                      ? 0U
                                                      : 
-                                                    ((0x37U 
+                                                    ((0x5013U 
                                                       == 
-                                                      (0x7fU 
+                                                      (0xfe00707fU 
                                                        & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
-                                                      ? 3U
+                                                      ? 0U
                                                       : 
-                                                     ((0x17U 
+                                                     ((0x1013U 
                                                        == 
-                                                       (0x7fU 
+                                                       (0xfe00707fU 
                                                         & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
-                                                       ? 3U
+                                                       ? 0U
                                                        : 
-                                                      ((0x2003U 
+                                                      ((0x37U 
                                                         == 
-                                                        (0x707fU 
+                                                        (0x7fU 
                                                          & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
-                                                        ? 0U
+                                                        ? 3U
                                                         : 
-                                                       ((0x2023U 
+                                                       ((0x17U 
                                                          == 
-                                                         (0x707fU 
+                                                         (0x7fU 
                                                           & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
-                                                         ? 1U
-                                                         : 2U)))))
+                                                         ? 3U
+                                                         : 
+                                                        ((0x2003U 
+                                                          == 
+                                                          (0x707fU 
+                                                           & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                                          ? 0U
+                                                          : 
+                                                         ((0x2023U 
+                                                           == 
+                                                           (0x707fU 
+                                                            & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                                           ? 1U
+                                                           : 2U)))))))
                                                     : 
-                                                   ((0x6063U 
+                                                   ((0x63U 
                                                      == 
                                                      (0x707fU 
                                                       & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
                                                      ? 2U
                                                      : 
-                                                    ((0x5063U 
+                                                    ((0x4063U 
                                                       == 
                                                       (0x707fU 
                                                        & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
                                                       ? 2U
                                                       : 
-                                                     ((0x7063U 
+                                                     ((0x6063U 
                                                        == 
                                                        (0x707fU 
                                                         & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
                                                        ? 2U
                                                        : 
-                                                      ((0x6fU 
+                                                      ((0x5063U 
                                                         == 
-                                                        (0x7fU 
+                                                        (0x707fU 
                                                          & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
-                                                        ? 4U
-                                                        : 0U))))))));
+                                                        ? 2U
+                                                        : 
+                                                       ((0x7063U 
+                                                         == 
+                                                         (0x707fU 
+                                                          & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                                         ? 2U
+                                                         : 
+                                                        ((0x6fU 
+                                                          == 
+                                                          (0x7fU 
+                                                           & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))
+                                                          ? 4U
+                                                          : 0U))))))))));
     vlTOPp->Proc_noparam__DOT__v__DOT__ctrl__DOT__jal_D 
         = ((~ ((((((((0x13U == vlTOPp->Proc_noparam__DOT__v__DOT__inst_D) 
                      | (0x1063U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
@@ -6756,29 +7024,36 @@ VL_INLINE_OPT void VProc_noparam::_sequent__TOP__1(VProc_noparam__Syms* __restri
                                        & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
                    | (0x5033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
                   | (0x1033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))) 
-              & ((~ ((((((((0x13U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
-                           | (0x7013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                          | (0x6013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                         | (0x4013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                        | (0x2013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                       | (0x3013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                      | (0x40005013U == (0xfe00707fU 
-                                         & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                     | (0x5013U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))) 
-                 & ((~ ((((((((0x1013U == (0xfe00707fU 
-                                           & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
-                              | (0x37U == (0x7fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                             | (0x17U == (0x7fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                            | (0x2003U == (0x707fU 
-                                           & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                           | (0x2023U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                          | (0x1063U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                         | (0x63U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                        | (0x4063U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))) 
-                    & ((0x6063U != (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
-                       & ((0x5063U != (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
-                          & ((0x7063U != (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
-                             & (0x6fU == (0x7fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))))))));
+              & ((~ ((((((((0x48000077U == (0xfe00707fU 
+                                            & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                           | (0x4a000077U == (0xfe00707fU 
+                                              & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                          | (0x13U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                         | (0x7013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                        | (0x6013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                       | (0x4013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                      | (0x2013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                     | (0x3013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))) 
+                 & ((~ ((((((((0x40005013U == (0xfe00707fU 
+                                               & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                              | (0x5013U == (0xfe00707fU 
+                                             & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                             | (0x1013U == (0xfe00707fU 
+                                            & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                            | (0x37U == (0x7fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                           | (0x17U == (0x7fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                          | (0x2003U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                         | (0x2023U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                        | (0x1063U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))) 
+                    & ((0x63U != (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                       & ((0x4063U != (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                          & ((0x6063U != (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                             & ((0x5063U != (0x707fU 
+                                             & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                                & ((0x7063U != (0x707fU 
+                                                & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                                   & (0x6fU == (0x7fU 
+                                                & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))))))))));
     vlTOPp->Proc_noparam__DOT__v__DOT__ctrl__DOT__mul_D 
         = (((((((((0x13U == vlTOPp->Proc_noparam__DOT__v__DOT__inst_D) 
                   | (0x1063U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
@@ -6833,35 +7108,50 @@ VL_INLINE_OPT void VProc_noparam::_sequent__TOP__1(VProc_noparam__Syms* __restri
                   | (0x40005033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
                  | (0x5033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
                 | (0x1033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-               | (((((((((0x13U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
-                         | (0x7013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                        | (0x6013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                       | (0x4013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                      | (0x2013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                     | (0x3013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                    | (0x40005013U == (0xfe00707fU 
-                                       & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                   | (0x5013U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                  | (((((((((0x1013U == (0xfe00707fU 
-                                         & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
-                            | (0x37U == (0x7fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                           | (0x17U == (0x7fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                          | (0x2003U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                         | (0x2023U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                        | (0x1063U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                       | (0x63U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                      | (0x4063U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))
-                      ? ((0x1013U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
-                         | ((0x37U != (0x7fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
-                            & (0x17U != (0x7fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))))
-                      : ((0x6063U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
-                         | ((0x5063U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
-                            | ((0x7063U == (0x707fU 
-                                            & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
-                               | ((0x6fU != (0x7fU 
+               | (((((((((0x48000077U == (0xfe00707fU 
+                                          & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                         | (0x4a000077U == (0xfe00707fU 
+                                            & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                        | (0x13U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                       | (0x7013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                      | (0x6013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                     | (0x4013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                    | (0x2013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                   | (0x3013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                  | (((((((((0x40005013U == (0xfe00707fU 
                                              & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
-                                  & (0x67U == (0x707fU 
-                                               & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))))))));
+                            | (0x5013U == (0xfe00707fU 
+                                           & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                           | (0x1013U == (0xfe00707fU 
+                                          & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                          | (0x37U == (0x7fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                         | (0x17U == (0x7fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                        | (0x2003U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                       | (0x2023U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                      | (0x1063U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))
+                      ? ((0x40005013U == (0xfe00707fU 
+                                          & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                         | ((0x5013U == (0xfe00707fU 
+                                         & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                            | ((0x1013U == (0xfe00707fU 
+                                            & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                               | ((0x37U != (0x7fU 
+                                             & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                                  & (0x17U != (0x7fU 
+                                               & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))))))
+                      : ((0x63U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                         | ((0x4063U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                            | ((0x6063U == (0x707fU 
+                                            & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                               | ((0x5063U == (0x707fU 
+                                               & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                                  | ((0x7063U == (0x707fU 
+                                                  & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                                     | ((0x6fU != (0x7fU 
+                                                   & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                                        & (0x67U == 
+                                           (0x707fU 
+                                            & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))))))))));
         vlTOPp->Proc_noparam__DOT__v__DOT__ctrl__DOT__rs2_en_D 
             = (((((((((0x7033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
                       | (0x6033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
@@ -6871,34 +7161,51 @@ VL_INLINE_OPT void VProc_noparam::_sequent__TOP__1(VProc_noparam__Syms* __restri
                   | (0x40005033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
                  | (0x5033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
                 | (0x1033U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-               | ((~ ((((((((0x13U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
-                            | (0x7013U == (0x707fU 
+               | (((((((((0x48000077U == (0xfe00707fU 
+                                          & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                         | (0x4a000077U == (0xfe00707fU 
+                                            & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                        | (0x13U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                       | (0x7013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                      | (0x6013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                     | (0x4013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                    | (0x2013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                   | (0x3013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))
+                   ? ((0x48000077U == (0xfe00707fU 
+                                       & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                      | (0x4a000077U == (0xfe00707fU 
+                                         & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))
+                   : (((((((((0x40005013U == (0xfe00707fU 
+                                              & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                             | (0x5013U == (0xfe00707fU 
+                                            & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                            | (0x1013U == (0xfe00707fU 
                                            & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                           | (0x6013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                          | (0x4013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                         | (0x2013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                        | (0x3013U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                       | (0x40005013U == (0xfe00707fU 
-                                          & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                      | (0x5013U == (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))) 
-                  & (((((((((0x1013U == (0xfe00707fU 
-                                         & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
-                            | (0x37U == (0x7fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                           | (0x17U == (0x7fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                          | (0x2003U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                         | (0x2023U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                        | (0x1063U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                       | (0x63U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
-                      | (0x4063U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))
-                      ? ((0x1013U != (0xfe00707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
-                         & ((0x37U != (0x7fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
-                            & ((0x17U != (0x7fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
-                               & (0x2003U != (0x707fU 
-                                              & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))))
-                      : ((0x6063U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
-                         | ((0x5063U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
-                            | (0x7063U == (0x707fU 
-                                           & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))))));
+                           | (0x37U == (0x7fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                          | (0x17U == (0x7fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                         | (0x2003U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                        | (0x2023U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D))) 
+                       | (0x1063U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))
+                       ? ((0x40005013U != (0xfe00707fU 
+                                           & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                          & ((0x5013U != (0xfe00707fU 
+                                          & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                             & ((0x1013U != (0xfe00707fU 
+                                             & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                                & ((0x37U != (0x7fU 
+                                              & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                                   & ((0x17U != (0x7fU 
+                                                 & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                                      & (0x2003U != 
+                                         (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))))))
+                       : ((0x63U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                          | ((0x4063U == (0x707fU & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                             | ((0x6063U == (0x707fU 
+                                             & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                                | ((0x5063U == (0x707fU 
+                                                & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)) 
+                                   | (0x7063U == (0x707fU 
+                                                  & vlTOPp->Proc_noparam__DOT__v__DOT__inst_D)))))))));
         vlTOPp->Proc_noparam__DOT__v__DOT__ctrl__DOT__csrr_D = 0U;
     }
     if (vlTOPp->reset) {
@@ -7124,33 +7431,6 @@ VL_INLINE_OPT void VProc_noparam::_sequent__TOP__1(VProc_noparam__Syms* __restri
                                                        ((QData)((IData)(vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__pc_next_F)) 
                                                         >> 0x20U)) 
                                                << 2U)));
-    if (vlTOPp->Proc_noparam__DOT__v__DOT__imem_queue__DOT__genblk2__DOT__ctrl__DOT__empty) {
-        vlTOPp->Proc_noparam__DOT__v__DOT____Vcellout__imem_queue__deq_msg[0U] 
-            = ((IData)(vlTOPp->Proc_noparam__DOT__v__DOT__imem_queue__DOT__genblk2__DOT__ctrl__DOT__empty)
-                ? vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_enq_msg[0U]
-                : 0U);
-        vlTOPp->Proc_noparam__DOT__v__DOT____Vcellout__imem_queue__deq_msg[1U] 
-            = ((IData)(vlTOPp->Proc_noparam__DOT__v__DOT__imem_queue__DOT__genblk2__DOT__ctrl__DOT__empty)
-                ? vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_enq_msg[1U]
-                : 0U);
-        vlTOPp->Proc_noparam__DOT__v__DOT____Vcellout__imem_queue__deq_msg[2U] 
-            = ((IData)(vlTOPp->Proc_noparam__DOT__v__DOT__imem_queue__DOT__genblk2__DOT__ctrl__DOT__empty)
-                ? vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_enq_msg[2U]
-                : 0U);
-    } else {
-        vlTOPp->Proc_noparam__DOT__v__DOT____Vcellout__imem_queue__deq_msg[0U] 
-            = vlTOPp->Proc_noparam__DOT__v__DOT__imem_queue__DOT__genblk2__DOT__dpath__DOT__qstore__DOT__rfile
-            [vlTOPp->Proc_noparam__DOT__v__DOT__imem_queue__DOT__genblk2__DOT__ctrl__DOT__deq_ptr][0U];
-        vlTOPp->Proc_noparam__DOT__v__DOT____Vcellout__imem_queue__deq_msg[1U] 
-            = vlTOPp->Proc_noparam__DOT__v__DOT__imem_queue__DOT__genblk2__DOT__dpath__DOT__qstore__DOT__rfile
-            [vlTOPp->Proc_noparam__DOT__v__DOT__imem_queue__DOT__genblk2__DOT__ctrl__DOT__deq_ptr][1U];
-        vlTOPp->Proc_noparam__DOT__v__DOT____Vcellout__imem_queue__deq_msg[2U] 
-            = vlTOPp->Proc_noparam__DOT__v__DOT__imem_queue__DOT__genblk2__DOT__dpath__DOT__qstore__DOT__rfile
-            [vlTOPp->Proc_noparam__DOT__v__DOT__imem_queue__DOT__genblk2__DOT__ctrl__DOT__deq_ptr][2U];
-    }
-    vlTOPp->imem_reqstream_msg[0U] = vlTOPp->Proc_noparam__DOT__v__DOT____Vcellout__imem_queue__deq_msg[0U];
-    vlTOPp->imem_reqstream_msg[1U] = vlTOPp->Proc_noparam__DOT__v__DOT____Vcellout__imem_queue__deq_msg[1U];
-    vlTOPp->imem_reqstream_msg[2U] = vlTOPp->Proc_noparam__DOT__v__DOT____Vcellout__imem_queue__deq_msg[2U];
 }
 
 VL_INLINE_OPT void VProc_noparam::_combo__TOP__3(VProc_noparam__Syms* __restrict vlSymsp) {
@@ -7284,14 +7564,14 @@ VL_INLINE_OPT void VProc_noparam::_combo__TOP__3(VProc_noparam__Syms* __restrict
              & (~ (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__ctrl__DOT__stall_X))) 
             & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__ctrl__DOT__mul_X)) 
            & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__imul_ostream_val_X));
-    vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_enq_val 
-        = (((IData)(vlTOPp->Proc_noparam__DOT__v__DOT__ctrl__DOT__val_X) 
-            & (~ (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__ctrl__DOT__stall_X))) 
-           & (0U != (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__ctrl__DOT__dmem_reqstream_type_X)));
     vlTOPp->Proc_noparam__DOT__v__DOT__xcel_reqstream_enq_val 
         = (((IData)(vlTOPp->Proc_noparam__DOT__v__DOT__ctrl__DOT__val_X) 
             & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__ctrl__DOT__xcelreq_X)) 
            & (~ (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__ctrl__DOT__stall_X)));
+    vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_enq_val 
+        = (((IData)(vlTOPp->Proc_noparam__DOT__v__DOT__ctrl__DOT__val_X) 
+            & (~ (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__ctrl__DOT__stall_X))) 
+           & (0U != (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__ctrl__DOT__dmem_reqstream_type_X)));
     vlTOPp->Proc_noparam__DOT__v__DOT__ctrl__DOT__osquash_X 
         = (((IData)(vlTOPp->Proc_noparam__DOT__v__DOT__ctrl__DOT__val_X) 
             & (~ (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__ctrl__DOT__stall_X))) 
@@ -7311,16 +7591,16 @@ VL_INLINE_OPT void VProc_noparam::_combo__TOP__3(VProc_noparam__Syms* __restrict
         = (((~ (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imulresp_q__DOT__genblk1__DOT__ctrl__DOT__full)) 
             & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imulresp_q__DOT__genblk1__DOT__ctrl__DOT__do_enq)) 
            & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imulresp_q__DOT__genblk1__DOT__ctrl__DOT__do_deq));
-    vlTOPp->Proc_noparam__DOT__v__DOT__dmem_queue__DOT__genblk1__DOT__ctrl__DOT__do_enq 
-        = ((~ (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__dmem_queue__DOT__genblk1__DOT__ctrl__DOT__full)) 
-           & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_enq_val));
-    vlTOPp->dmem_reqstream_val = ((IData)(vlTOPp->Proc_noparam__DOT__v__DOT__dmem_queue__DOT__genblk1__DOT__ctrl__DOT__full) 
-                                  | (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_enq_val));
     vlTOPp->Proc_noparam__DOT__v__DOT__xcel_queue__DOT__genblk1__DOT__ctrl__DOT__do_enq 
         = ((~ (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__xcel_queue__DOT__genblk1__DOT__ctrl__DOT__full)) 
            & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__xcel_reqstream_enq_val));
     vlTOPp->xcel_reqstream_val = ((IData)(vlTOPp->Proc_noparam__DOT__v__DOT__xcel_queue__DOT__genblk1__DOT__ctrl__DOT__full) 
                                   | (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__xcel_reqstream_enq_val));
+    vlTOPp->Proc_noparam__DOT__v__DOT__dmem_queue__DOT__genblk1__DOT__ctrl__DOT__do_enq 
+        = ((~ (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__dmem_queue__DOT__genblk1__DOT__ctrl__DOT__full)) 
+           & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_enq_val));
+    vlTOPp->dmem_reqstream_val = ((IData)(vlTOPp->Proc_noparam__DOT__v__DOT__dmem_queue__DOT__genblk1__DOT__ctrl__DOT__full) 
+                                  | (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_enq_val));
     vlTOPp->Proc_noparam__DOT__v__DOT__ctrl__DOT__squash_D 
         = ((IData)(vlTOPp->Proc_noparam__DOT__v__DOT__ctrl__DOT__val_D) 
            & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__ctrl__DOT__osquash_X));
@@ -7335,10 +7615,42 @@ VL_INLINE_OPT void VProc_noparam::_combo__TOP__3(VProc_noparam__Syms* __restrict
            & (((IData)(vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imulresp_q__DOT__genblk1__DOT__ctrl__DOT__do_enq) 
                & (~ (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imulresp_q__DOT__genblk1__DOT__ctrl__DOT__do_bypass))) 
               | (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__dpath__DOT__imulresp_q__DOT__genblk1__DOT__ctrl__DOT__full)));
-    vlTOPp->Proc_noparam__DOT__v__DOT__dmem_queue__DOT__genblk1__DOT__ctrl__DOT__do_deq 
-        = ((IData)(vlTOPp->dmem_reqstream_rdy) & (IData)(vlTOPp->dmem_reqstream_val));
+    vlTOPp->xcel_reqstream_msg = (((IData)(vlTOPp->Proc_noparam__DOT__v__DOT__xcel_queue__DOT__genblk1__DOT__ctrl__DOT__full)
+                                    ? vlTOPp->Proc_noparam__DOT__v__DOT__xcel_queue__DOT__genblk1__DOT__dpath__DOT__qstore
+                                    : ((IData)(vlTOPp->Proc_noparam__DOT__v__DOT__xcel_queue__DOT__genblk1__DOT__ctrl__DOT__full)
+                                        ? 0ULL : vlTOPp->Proc_noparam__DOT__v__DOT__xcel_reqstream_enq_msg)) 
+                                  & (- (QData)((IData)(vlTOPp->xcel_reqstream_val))));
     vlTOPp->Proc_noparam__DOT__v__DOT__xcel_queue__DOT__genblk1__DOT__ctrl__DOT__do_deq 
         = ((IData)(vlTOPp->xcel_reqstream_rdy) & (IData)(vlTOPp->xcel_reqstream_val));
+    vlTOPp->Proc_noparam__DOT____Vcellout__v__dmem_reqstream_msg[0U] = 0U;
+    vlTOPp->Proc_noparam__DOT____Vcellout__v__dmem_reqstream_msg[1U] = 0U;
+    vlTOPp->Proc_noparam__DOT____Vcellout__v__dmem_reqstream_msg[2U] = 0U;
+    if (vlTOPp->dmem_reqstream_val) {
+        if (vlTOPp->Proc_noparam__DOT__v__DOT__dmem_queue__DOT__genblk1__DOT__ctrl__DOT__full) {
+            vlTOPp->Proc_noparam__DOT____Vcellout__v__dmem_reqstream_msg[0U] 
+                = vlTOPp->Proc_noparam__DOT__v__DOT__dmem_queue__DOT__genblk1__DOT__dpath__DOT__qstore[0U];
+            vlTOPp->Proc_noparam__DOT____Vcellout__v__dmem_reqstream_msg[1U] 
+                = vlTOPp->Proc_noparam__DOT__v__DOT__dmem_queue__DOT__genblk1__DOT__dpath__DOT__qstore[1U];
+            vlTOPp->Proc_noparam__DOT____Vcellout__v__dmem_reqstream_msg[2U] 
+                = vlTOPp->Proc_noparam__DOT__v__DOT__dmem_queue__DOT__genblk1__DOT__dpath__DOT__qstore[2U];
+        } else {
+            vlTOPp->Proc_noparam__DOT____Vcellout__v__dmem_reqstream_msg[0U] 
+                = ((IData)(vlTOPp->Proc_noparam__DOT__v__DOT__dmem_queue__DOT__genblk1__DOT__ctrl__DOT__full)
+                    ? 0U : vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_enq_msg[0U]);
+            vlTOPp->Proc_noparam__DOT____Vcellout__v__dmem_reqstream_msg[1U] 
+                = ((IData)(vlTOPp->Proc_noparam__DOT__v__DOT__dmem_queue__DOT__genblk1__DOT__ctrl__DOT__full)
+                    ? 0U : vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_enq_msg[1U]);
+            vlTOPp->Proc_noparam__DOT____Vcellout__v__dmem_reqstream_msg[2U] 
+                = ((IData)(vlTOPp->Proc_noparam__DOT__v__DOT__dmem_queue__DOT__genblk1__DOT__ctrl__DOT__full)
+                    ? 0U : vlTOPp->Proc_noparam__DOT__v__DOT__dmem_reqstream_enq_msg[2U]);
+        }
+        if ((0U == (7U & (vlTOPp->Proc_noparam__DOT____Vcellout__v__dmem_reqstream_msg[2U] 
+                          >> 0xaU)))) {
+            vlTOPp->Proc_noparam__DOT____Vcellout__v__dmem_reqstream_msg[0U] = 0U;
+        }
+    }
+    vlTOPp->Proc_noparam__DOT__v__DOT__dmem_queue__DOT__genblk1__DOT__ctrl__DOT__do_deq 
+        = ((IData)(vlTOPp->dmem_reqstream_rdy) & (IData)(vlTOPp->dmem_reqstream_val));
     vlTOPp->Proc_noparam__DOT__v__DOT__reg_en_D = (1U 
                                                    & ((~ (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__ctrl__DOT__stall_D)) 
                                                       | (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__ctrl__DOT__squash_D)));
@@ -7357,14 +7669,17 @@ VL_INLINE_OPT void VProc_noparam::_combo__TOP__3(VProc_noparam__Syms* __restrict
                 | (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__ctrl__DOT__ostall_X)) 
                | (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__ctrl__DOT__ostall_M)) 
               | (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__ctrl__DOT__ostall_W)));
-    vlTOPp->Proc_noparam__DOT__v__DOT__dmem_queue__DOT__genblk1__DOT__ctrl__DOT__do_bypass 
-        = (((~ (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__dmem_queue__DOT__genblk1__DOT__ctrl__DOT__full)) 
-            & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__dmem_queue__DOT__genblk1__DOT__ctrl__DOT__do_enq)) 
-           & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__dmem_queue__DOT__genblk1__DOT__ctrl__DOT__do_deq));
     vlTOPp->Proc_noparam__DOT__v__DOT__xcel_queue__DOT__genblk1__DOT__ctrl__DOT__do_bypass 
         = (((~ (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__xcel_queue__DOT__genblk1__DOT__ctrl__DOT__full)) 
             & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__xcel_queue__DOT__genblk1__DOT__ctrl__DOT__do_enq)) 
            & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__xcel_queue__DOT__genblk1__DOT__ctrl__DOT__do_deq));
+    vlTOPp->dmem_reqstream_msg[0U] = vlTOPp->Proc_noparam__DOT____Vcellout__v__dmem_reqstream_msg[0U];
+    vlTOPp->dmem_reqstream_msg[1U] = vlTOPp->Proc_noparam__DOT____Vcellout__v__dmem_reqstream_msg[1U];
+    vlTOPp->dmem_reqstream_msg[2U] = vlTOPp->Proc_noparam__DOT____Vcellout__v__dmem_reqstream_msg[2U];
+    vlTOPp->Proc_noparam__DOT__v__DOT__dmem_queue__DOT__genblk1__DOT__ctrl__DOT__do_bypass 
+        = (((~ (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__dmem_queue__DOT__genblk1__DOT__ctrl__DOT__full)) 
+            & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__dmem_queue__DOT__genblk1__DOT__ctrl__DOT__do_enq)) 
+           & (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__dmem_queue__DOT__genblk1__DOT__ctrl__DOT__do_deq));
     vlTOPp->Proc_noparam__DOT__v__DOT__reg_en_F = (1U 
                                                    & ((~ (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__ctrl__DOT__stall_F)) 
                                                       | (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__ctrl__DOT__squash_F)));
@@ -7375,16 +7690,16 @@ VL_INLINE_OPT void VProc_noparam::_combo__TOP__3(VProc_noparam__Syms* __restrict
         = (1U & (((~ (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__ctrl__DOT__stall_F)) 
                   | (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__ctrl__DOT__squash_F)) 
                  & (~ (IData)(vlTOPp->reset))));
-    vlTOPp->Proc_noparam__DOT__v__DOT__dmem_queue__DOT__genblk1__DOT__ctrl__DOT__full_next 
-        = ((~ (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__dmem_queue__DOT__genblk1__DOT__ctrl__DOT__do_deq)) 
-           & (((IData)(vlTOPp->Proc_noparam__DOT__v__DOT__dmem_queue__DOT__genblk1__DOT__ctrl__DOT__do_enq) 
-               & (~ (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__dmem_queue__DOT__genblk1__DOT__ctrl__DOT__do_bypass))) 
-              | (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__dmem_queue__DOT__genblk1__DOT__ctrl__DOT__full)));
     vlTOPp->Proc_noparam__DOT__v__DOT__xcel_queue__DOT__genblk1__DOT__ctrl__DOT__full_next 
         = ((~ (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__xcel_queue__DOT__genblk1__DOT__ctrl__DOT__do_deq)) 
            & (((IData)(vlTOPp->Proc_noparam__DOT__v__DOT__xcel_queue__DOT__genblk1__DOT__ctrl__DOT__do_enq) 
                & (~ (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__xcel_queue__DOT__genblk1__DOT__ctrl__DOT__do_bypass))) 
               | (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__xcel_queue__DOT__genblk1__DOT__ctrl__DOT__full)));
+    vlTOPp->Proc_noparam__DOT__v__DOT__dmem_queue__DOT__genblk1__DOT__ctrl__DOT__full_next 
+        = ((~ (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__dmem_queue__DOT__genblk1__DOT__ctrl__DOT__do_deq)) 
+           & (((IData)(vlTOPp->Proc_noparam__DOT__v__DOT__dmem_queue__DOT__genblk1__DOT__ctrl__DOT__do_enq) 
+               & (~ (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__dmem_queue__DOT__genblk1__DOT__ctrl__DOT__do_bypass))) 
+              | (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__dmem_queue__DOT__genblk1__DOT__ctrl__DOT__full)));
     vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_drop_unit__DOT__istream_go 
         = ((IData)(vlTOPp->imem_respstream_rdy) & (IData)(vlTOPp->imem_respstream_val));
     vlTOPp->Proc_noparam__DOT__v__DOT__imem_queue__DOT__genblk2__DOT__ctrl__DOT__do_enq 
@@ -7398,8 +7713,32 @@ VL_INLINE_OPT void VProc_noparam::_combo__TOP__3(VProc_noparam__Syms* __restrict
                   ? (~ (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_drop_unit__DOT__istream_go))
                   : ((IData)(vlTOPp->Proc_noparam__DOT__v__DOT__ctrl__DOT__squash_F) 
                      & (~ (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__imem_respstream_drop_unit__DOT__istream_go)))));
+    vlTOPp->Proc_noparam__DOT____Vcellout__v__imem_reqstream_msg[0U] 
+        = (((IData)(vlTOPp->Proc_noparam__DOT__v__DOT__imem_queue__DOT__genblk2__DOT__ctrl__DOT__empty)
+             ? ((IData)(vlTOPp->Proc_noparam__DOT__v__DOT__imem_queue__DOT__genblk2__DOT__ctrl__DOT__empty)
+                 ? vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_enq_msg[0U]
+                 : 0U) : vlTOPp->Proc_noparam__DOT__v__DOT__imem_queue__DOT__genblk2__DOT__dpath__DOT__qstore__DOT__rfile
+            [vlTOPp->Proc_noparam__DOT__v__DOT__imem_queue__DOT__genblk2__DOT__ctrl__DOT__deq_ptr][0U]) 
+           & (- (IData)((IData)(vlTOPp->imem_reqstream_val))));
+    vlTOPp->Proc_noparam__DOT____Vcellout__v__imem_reqstream_msg[1U] 
+        = (((IData)(vlTOPp->Proc_noparam__DOT__v__DOT__imem_queue__DOT__genblk2__DOT__ctrl__DOT__empty)
+             ? ((IData)(vlTOPp->Proc_noparam__DOT__v__DOT__imem_queue__DOT__genblk2__DOT__ctrl__DOT__empty)
+                 ? vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_enq_msg[1U]
+                 : 0U) : vlTOPp->Proc_noparam__DOT__v__DOT__imem_queue__DOT__genblk2__DOT__dpath__DOT__qstore__DOT__rfile
+            [vlTOPp->Proc_noparam__DOT__v__DOT__imem_queue__DOT__genblk2__DOT__ctrl__DOT__deq_ptr][1U]) 
+           & (- (IData)((IData)(vlTOPp->imem_reqstream_val))));
+    vlTOPp->Proc_noparam__DOT____Vcellout__v__imem_reqstream_msg[2U] 
+        = (((IData)(vlTOPp->Proc_noparam__DOT__v__DOT__imem_queue__DOT__genblk2__DOT__ctrl__DOT__empty)
+             ? ((IData)(vlTOPp->Proc_noparam__DOT__v__DOT__imem_queue__DOT__genblk2__DOT__ctrl__DOT__empty)
+                 ? vlTOPp->Proc_noparam__DOT__v__DOT__imem_reqstream_enq_msg[2U]
+                 : 0U) : vlTOPp->Proc_noparam__DOT__v__DOT__imem_queue__DOT__genblk2__DOT__dpath__DOT__qstore__DOT__rfile
+            [vlTOPp->Proc_noparam__DOT__v__DOT__imem_queue__DOT__genblk2__DOT__ctrl__DOT__deq_ptr][2U]) 
+           & (- (IData)((IData)(vlTOPp->imem_reqstream_val))));
     vlTOPp->Proc_noparam__DOT__v__DOT__imem_queue__DOT__genblk2__DOT__ctrl__DOT__do_deq 
         = ((IData)(vlTOPp->imem_reqstream_rdy) & (IData)(vlTOPp->imem_reqstream_val));
+    vlTOPp->imem_reqstream_msg[0U] = vlTOPp->Proc_noparam__DOT____Vcellout__v__imem_reqstream_msg[0U];
+    vlTOPp->imem_reqstream_msg[1U] = vlTOPp->Proc_noparam__DOT____Vcellout__v__imem_reqstream_msg[1U];
+    vlTOPp->imem_reqstream_msg[2U] = vlTOPp->Proc_noparam__DOT____Vcellout__v__imem_reqstream_msg[2U];
     vlTOPp->Proc_noparam__DOT__v__DOT__imem_queue__DOT__genblk2__DOT__ctrl__DOT__full_next 
         = ((((IData)(vlTOPp->Proc_noparam__DOT__v__DOT__imem_queue__DOT__genblk2__DOT__ctrl__DOT__do_enq) 
              & (~ (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__imem_queue__DOT__genblk2__DOT__ctrl__DOT__do_deq))) 
@@ -7423,64 +7762,3 @@ VL_INLINE_OPT void VProc_noparam::_combo__TOP__3(VProc_noparam__Syms* __restrict
                   ? ((IData)(1U) + (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__imem_queue__DOT__genblk2__DOT__ctrl__DOT__enq_ptr))
                   : (IData)(vlTOPp->Proc_noparam__DOT__v__DOT__imem_queue__DOT__genblk2__DOT__ctrl__DOT__enq_ptr)));
 }
-
-void VProc_noparam::_eval(VProc_noparam__Syms* __restrict vlSymsp) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+    VProc_noparam::_eval\n"); );
-    VProc_noparam* const __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
-    // Body
-    if (((IData)(vlTOPp->clk) & (~ (IData)(vlTOPp->__Vclklast__TOP__clk)))) {
-        vlTOPp->_sequent__TOP__1(vlSymsp);
-    }
-    vlTOPp->_combo__TOP__3(vlSymsp);
-    // Final
-    vlTOPp->__Vclklast__TOP__clk = vlTOPp->clk;
-}
-
-VL_INLINE_OPT QData VProc_noparam::_change_request(VProc_noparam__Syms* __restrict vlSymsp) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+    VProc_noparam::_change_request\n"); );
-    VProc_noparam* const __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
-    // Body
-    return (vlTOPp->_change_request_1(vlSymsp));
-}
-
-VL_INLINE_OPT QData VProc_noparam::_change_request_1(VProc_noparam__Syms* __restrict vlSymsp) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+    VProc_noparam::_change_request_1\n"); );
-    VProc_noparam* const __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
-    // Body
-    // Change detection
-    QData __req = false;  // Logically a bool
-    return __req;
-}
-
-#ifdef VL_DEBUG
-void VProc_noparam::_eval_debug_assertions() {
-    VL_DEBUG_IF(VL_DBG_MSGF("+    VProc_noparam::_eval_debug_assertions\n"); );
-    // Body
-    if (VL_UNLIKELY((clk & 0xfeU))) {
-        Verilated::overWidthError("clk");}
-    if (VL_UNLIKELY((reset & 0xfeU))) {
-        Verilated::overWidthError("reset");}
-    if (VL_UNLIKELY((dmem_reqstream_rdy & 0xfeU))) {
-        Verilated::overWidthError("dmem_reqstream_rdy");}
-    if (VL_UNLIKELY((dmem_respstream_msg & 0ULL))) {
-        Verilated::overWidthError("dmem_respstream_msg");}
-    if (VL_UNLIKELY((dmem_respstream_val & 0xfeU))) {
-        Verilated::overWidthError("dmem_respstream_val");}
-    if (VL_UNLIKELY((imem_reqstream_rdy & 0xfeU))) {
-        Verilated::overWidthError("imem_reqstream_rdy");}
-    if (VL_UNLIKELY((imem_respstream_msg & 0ULL))) {
-        Verilated::overWidthError("imem_respstream_msg");}
-    if (VL_UNLIKELY((imem_respstream_val & 0xfeU))) {
-        Verilated::overWidthError("imem_respstream_val");}
-    if (VL_UNLIKELY((mngr2proc_val & 0xfeU))) {
-        Verilated::overWidthError("mngr2proc_val");}
-    if (VL_UNLIKELY((proc2mngr_rdy & 0xfeU))) {
-        Verilated::overWidthError("proc2mngr_rdy");}
-    if (VL_UNLIKELY((xcel_reqstream_rdy & 0xfeU))) {
-        Verilated::overWidthError("xcel_reqstream_rdy");}
-    if (VL_UNLIKELY((xcel_respstream_msg & 0ULL))) {
-        Verilated::overWidthError("xcel_respstream_msg");}
-    if (VL_UNLIKELY((xcel_respstream_val & 0xfeU))) {
-        Verilated::overWidthError("xcel_respstream_val");}
-}
-#endif  // VL_DEBUG
