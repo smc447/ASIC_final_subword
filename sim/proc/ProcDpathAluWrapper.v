@@ -16,7 +16,7 @@ module proc_ProcDpathAluWrapper
 
   input  logic        istream_val,
   output logic        istream_rdy,
-  input  logic [69:0] istream_msg,
+  input  logic [70:0] istream_msg,
 
   output logic        ostream_val,
   input  logic        ostream_rdy,
@@ -58,13 +58,13 @@ module proc_ProcDpathAluWrapper
     .q     (in1_reg_out)
   );
 
-  logic [5:0] fn_reg_out;
+  logic [6:0] fn_reg_out;
 
-  vc_EnReg#(6) fn_reg
+  vc_EnReg#(7) fn_reg
   (
     .clk   (clk),
     .reset (reset),
-    .d     (istream_msg[69:64]),
+    .d     (istream_msg[70:64]),
     .en    (ostream_rdy),
     .q     (fn_reg_out)
   );

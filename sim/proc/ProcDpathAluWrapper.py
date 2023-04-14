@@ -8,7 +8,7 @@ from pymtl3.stdlib.stream.ifcs import IStreamIfc, OStreamIfc
 
 class ProcDpathAluWrapper( VerilogPlaceholder, Component ):
   def construct( s ):
-    s.istream = IStreamIfc( Bits70 )
+    s.istream = IStreamIfc( Bits71 )
     s.ostream = OStreamIfc( Bits35 )
 
     s.set_metadata( VerilogTranslationPass.explicit_module_name,

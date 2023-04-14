@@ -22,7 +22,7 @@ class TestHarness( Component ):
 
     # Instantiate models
 
-    s.src  = StreamSourceFL( Bits70 )
+    s.src  = StreamSourceFL( Bits71 )
     s.sink = StreamSinkFL( Bits35 )
     s.imul = imul
 
@@ -44,7 +44,7 @@ class TestHarness( Component ):
 # Make input message, truncate ints to ensure they fit in 32 bits.
 
 def mk_imsg( a, b, fn ):
-  return concat( Bits6( fn, trunc_int=True ), Bits32( a, trunc_int=True ), Bits32( b, trunc_int=True ) )
+  return concat( Bits7( fn, trunc_int=True ), Bits32( a, trunc_int=True ), Bits32( b, trunc_int=True ) )
 
 # Make output message, truncate ints to ensure they fit in 32 bits.
 
@@ -68,11 +68,11 @@ add_msgs = [
 #----------------------------------------------------------------------
 
 sub_msgs = [
-  mk_imsg(  0x00000000,   0x00000000,   1   ), mk_omsg( 0x00000000, 1,0,0 ),
-  mk_imsg(  0x0ffaa660,   0x00012304,   1 ), mk_omsg(  0x0ff9835c, 0, 0, 0 ),
-  mk_imsg( 0x00132050,   0xd6620040,   1), mk_omsg(   0x29b12010, 0 , 0, 1),
-  mk_imsg(0xfff0a440,   0x00004450,   1), mk_omsg(0xfff05ff0, 0, 1, 0 ),
-  mk_imsg( 0xfeeeeaa3,   0xf4650000,   1 ), mk_omsg(  0x0a89eaa3, 0, 0, 0 ),
+  mk_imsg( 0x00000000,   0x00000000,   1 ), mk_omsg( 0x00000000, 1, 0, 0 ),
+  mk_imsg( 0x0ffaa660,   0x00012304,   1 ), mk_omsg( 0x0ff9835c, 0, 0, 0 ),
+  mk_imsg( 0x00132050,   0xd6620040,   1 ), mk_omsg( 0x29b12010, 0, 0, 1 ),
+  mk_imsg( 0xfff0a440,   0x00004450,   1 ), mk_omsg( 0xfff05ff0, 0, 1, 0 ),
+  mk_imsg( 0xfeeeeaa3,   0xf4650000,   1 ), mk_omsg( 0x0a89eaa3, 0, 0, 0 ),
 ]
 
 #----------------------------------------------------------------------
@@ -143,6 +143,62 @@ and_msgs = [
   mk_imsg(  0xfff0a440,   0x00004450,   6 ), mk_omsg( 0x00000440, 0, 1, 0 ),
   mk_imsg(  0xfeeeeaa3,   0xf4650000,   6 ), mk_omsg( 0xf4640000, 0, 0, 0 ),
   ]
+
+#----------------------------------------------------------------------
+# Test Case: xor
+#----------------------------------------------------------------------
+
+xor_msgs = [
+  mk_imsg(  0x00000000,   0x00000000,   7 ), mk_omsg( 0x00000000, 1, 0, 0 ),
+  mk_imsg(  0x0ffaa660,   0x00012304,   7 ), mk_omsg( 0x0ffb8564, 0, 0, 0 ),
+  mk_imsg(  0x00132050,   0xd6620040,   7 ), mk_omsg( 0xd6712010, 0, 0, 1 ),
+  mk_imsg(  0xfff0a440,   0x00004450,   7 ), mk_omsg( 0xfff0e010, 0, 1, 0 ),
+  mk_imsg(  0xfeeeeaa3,   0xf4650000,   7 ), mk_omsg( 0x0a8beaa3, 0, 0, 0 ),
+  ]
+
+#----------------------------------------------------------------------
+# Test Case: nor
+#----------------------------------------------------------------------
+
+nor_msgs = [
+  mk_imsg(  0x00000000,   0x00000000,   8 ), mk_omsg( 0xffffffff, 1, 0, 0 ),
+  mk_imsg(  0x0ffaa660,   0x00012304,   8 ), mk_omsg( 0xf004589b, 0, 0, 0 ),
+  mk_imsg(  0x00132050,   0xd6620040,   8 ), mk_omsg( 0x298cdfaf, 0, 0, 1 ),
+  mk_imsg(  0xfff0a440,   0x00004450,   8 ), mk_omsg( 0x000f1baf, 0, 1, 0 ),
+  mk_imsg(  0xfeeeeaa3,   0xf4650000,   8 ), mk_omsg( 0x0110155c, 0, 0, 0 ),
+  ]
+
+
+#----------------------------------------------------------------------
+# Test Case: srl
+#----------------------------------------------------------------------
+
+srl_msgs = [
+  mk_imsg(  0x00000000,   0x00000000,   9 ), mk_omsg( 0x00000000, 1, 0, 0 ),
+  mk_imsg(  0x05050505,   0x00000001,   9 ), mk_omsg( 0x02828282, 0, 0, 0 ),
+  mk_imsg(  0x05050505,   0x00000002,   9 ), mk_omsg( 0x01414141, 0, 0, 0 ),
+  mk_imsg(  0x05050505,   0x00000004,   9 ), mk_omsg( 0x00505050, 0, 0, 0 ),
+  mk_imsg(  0x50505050,   0x00000008,   9 ), mk_omsg( 0x00505050, 0, 0, 0 ),
+  mk_imsg(  0x50505050,   0x0000000f,   9 ), mk_omsg( 0x0000a0a0, 0, 0, 0 ),
+  mk_imsg(  0x50505050,   0x00000010,   9 ), mk_omsg( 0x00005050, 0, 0, 0 ),
+  mk_imsg(  0x50505050,   0x0000001f,   9 ), mk_omsg( 0x00000000, 0, 0, 0 ),
+]
+
+#----------------------------------------------------------------------
+# Test Case: sra
+#----------------------------------------------------------------------
+
+sra_msgs = [
+  mk_imsg(  0x00000000,   0x00000000,   10 ), mk_omsg( 0x00000000, 1, 0, 0 ),
+  mk_imsg(  0x05050505,   0x00000001,   10 ), mk_omsg( 0x02828282, 0, 0, 0 ),
+  mk_imsg(  0x05050505,   0x00000002,   10 ), mk_omsg( 0x01414141, 0, 0, 0 ),
+  mk_imsg(  0x05050505,   0x00000004,   10 ), mk_omsg( 0x00505050, 0, 0, 0 ),
+  mk_imsg(  0x50505050,   0x00000008,   10 ), mk_omsg( 0x00505050, 0, 0, 0 ),
+  mk_imsg(  0x50505050,   0x0000000f,   10 ), mk_omsg( 0x0000a0a0, 0, 0, 0 ),
+  mk_imsg(  0x50505050,   0x00000010,   10 ), mk_omsg( 0x00005050, 0, 0, 0 ),
+  mk_imsg(  0x50505050,   0x0000001f,   10 ), mk_omsg( 0x00000000, 0, 0, 0 ),
+]
+
 
 #-------------------------------------------------------------------------
 # add8

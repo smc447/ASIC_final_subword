@@ -62,7 +62,7 @@ module proc_ProcCtrl
   output logic        imul_istream_val_D,
 
   output logic        reg_en_X,
-  output logic [5:0]  alu_fn_X,
+  output logic [6:0]  alu_fn_X,
   output logic [1:0]  ex_result_sel_X,
   output logic        imul_ostream_rdy_X,
 
@@ -293,24 +293,32 @@ module proc_ProcCtrl
   localparam bm_csr   = 2'd2; // Use from mngr data
 
   // ALU Function
+  
+  // number of bits needed to describe alu function 
+  // (fn width minus 2, since the 2 most significant bits are used for word size)
+  localparam fn_width = 7'd5;
 
-  localparam alu_x    = 6'bx;
-  localparam alu_add  = 6'd0;
-  localparam alu_sub  = 6'd1;
-  localparam alu_sll  = 6'd2;
-  localparam alu_or   = 6'd3;
-  localparam alu_lt   = 6'd4;
-  localparam alu_ltu  = 6'd5;
-  localparam alu_and  = 6'd6;
-  localparam alu_xor  = 6'd7;
-  localparam alu_nor  = 6'd8;
-  localparam alu_srl  = 6'd9;
-  localparam alu_sra  = 6'd10;
-  localparam alu_cp0  = 6'd11; // copy in0
-  localparam alu_cp1  = 6'd12; // copy in1
-  localparam alu_adz  = 6'd13; // special case for JALR
-  localparam alu_add_8_bit  = 6'd16;
-  localparam alu_sub_8_bit  = 6'd17;
+  localparam alu_x    = 7'bx;
+  localparam alu_add  = 7'd0;
+  localparam alu_sub  = 7'd1;
+  localparam alu_sll  = 7'd2;
+  localparam alu_or   = 7'd3;
+  localparam alu_lt   = 7'd4;
+  localparam alu_ltu  = 7'd5;
+  localparam alu_and  = 7'd6;
+  localparam alu_xor  = 7'd7;
+  localparam alu_nor  = 7'd8;
+  localparam alu_srl  = 7'd9;
+  localparam alu_sra  = 7'd10;
+  localparam alu_cp0  = 7'd11; // copy in0
+  localparam alu_cp1  = 7'd12; // copy in1
+  localparam alu_adz  = 7'd13; // special case for JALR
+  
+  // 8 bit function codes
+  localparam alu_add8  = alu_add + (1 << fn_width);
+  localparam alu_sub8  = alu_sub + (1 << fn_width);
+
+  // NEW_INST
 
   // Immediate Type
   localparam imm_x    = 3'bx;
@@ -347,7 +355,7 @@ module proc_ProcCtrl
   logic       jal_D;
   logic       rs1_en_D;
   logic       rs2_en_D;
-  logic [5:0] alu_fn_D;
+  logic [6:0] alu_fn_D;
   logic [2:0] dmem_reqstream_type_D;
   logic [1:0] ex_result_sel_D;
   logic [1:0] wb_result_sel_D;
@@ -366,7 +374,7 @@ module proc_ProcCtrl
     input logic       cs_rs1_en,
     input logic [1:0] cs_op2_sel,
     input logic       cs_rs2_en,
-    input logic [5:0] cs_alu_fn,
+    input logic [6:0] cs_alu_fn,
     input logic [2:0] cs_dmem_reqstream_type,
     input logic [1:0] cs_ex_result_sel,
     input logic [1:0] cs_wb_result_sel,
@@ -398,7 +406,7 @@ module proc_ProcCtrl
   // Control signals table
 
   always_comb begin
-
+    // NEW_INST
     casez ( inst_D )
 
       //                            br     jal  imm    op1   rs1 op2    rs2 alu      dmm xres  wbmux rf
@@ -421,8 +429,8 @@ module proc_ProcCtrl
       `TINYRV2_INST_SRA     :cs( y, br_na,  n,  imm_x, am_rf, y, bm_rf,  y, alu_sra, nr, xm_a, wm_a, y,  n,  n,   n    );
       `TINYRV2_INST_SRL     :cs( y, br_na,  n,  imm_x, am_rf, y, bm_rf,  y, alu_srl, nr, xm_a, wm_a, y,  n,  n,   n    );
       `TINYRV2_INST_SLL     :cs( y, br_na,  n,  imm_x, am_rf, y, bm_rf,  y, alu_sll, nr, xm_a, wm_a, y,  n,  n,   n    );
-      `TINYRV2_INST_ADD_8_BIT:cs( y, br_na,  n,  imm_x, am_rf, y, bm_rf,  y, alu_add_8_bit, nr, xm_a, wm_a, y,  n,  n,   n    );
-      `TINYRV2_INST_SUB_8_BIT:cs( y, br_na,  n,  imm_x, am_rf, y, bm_rf,  y, alu_sub_8_bit, nr, xm_a, wm_a, y,  n,  n,   n    );
+      `TINYRV2_INST_ADD_8_BIT:cs( y, br_na,  n,  imm_x, am_rf, y, bm_rf,  y, alu_add8, nr, xm_a, wm_a, y,  n,  n,   n    );
+      `TINYRV2_INST_SUB_8_BIT:cs( y, br_na,  n,  imm_x, am_rf, y, bm_rf,  y, alu_sub8, nr, xm_a, wm_a, y,  n,  n,   n    );
      
       // reg-imm
       `TINYRV2_INST_ADDI    :cs( y, br_na,  n,  imm_i, am_rf, y, bm_imm, n, alu_add, nr, xm_a, wm_a, y,  n,  n,   n    );

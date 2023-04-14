@@ -925,6 +925,7 @@ def decode_inst_name( inst ):
 
   if inst == 0b00000000000000000000000000010011: inst_name = "nop"
 
+  # NEW_INST
   elif inst[opcode] == 0b0110011:
     if   inst[funct7] == 0b0000000:
       if   inst[funct3] == 0b000:     inst_name = "add"

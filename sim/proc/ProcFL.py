@@ -100,6 +100,7 @@ class ProcFL( Component ):
         inst = TinyRV2Inst( s.raw_inst )
         inst_name = inst.name
 
+        # NEW_INST
         if   inst_name == "nop":
           s.PC += 4
         elif inst_name == "add":

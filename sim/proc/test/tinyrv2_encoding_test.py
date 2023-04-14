@@ -59,6 +59,7 @@ def check_sym( sym, pc, inst_str, inst_bits_ref, inst_str_ref ):
 def test_tinyrv2_inst_nop():
   check( "nop",                     0b00000000000000000000000000010011, "nop" )
 
+# NEW_INST
 #-------------------------------------------------------------------------
 # Register-register arithmetic, logical, and comparison instructions
 #-------------------------------------------------------------------------

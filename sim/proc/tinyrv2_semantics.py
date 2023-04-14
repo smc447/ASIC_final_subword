@@ -121,6 +121,7 @@ class TinyRV2Semantics (object):
   def execute_nop( s, inst ):
     s.PC += 4
 
+  # NEW_INST
   #-----------------------------------------------------------------------
   # Register-register arithmetic, logical, and comparison instructions
   #-----------------------------------------------------------------------
@@ -420,7 +421,7 @@ class TinyRV2Semantics (object):
   #-----------------------------------------------------------------------
   # exec
   #-----------------------------------------------------------------------
-
+  # NEW_INST
   execute_dispatch = {
 
   # Listed in the order of the lecture handout

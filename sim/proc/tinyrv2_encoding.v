@@ -65,6 +65,7 @@
 `define TINYRV2_INST_NOP   32'b0000000_00000_00000_000_00000_0010011
 `define TINYRV2_ZERO       32'b0000000_00000_00000_000_00000_0000000
 
+// NEW_INST
 // Register-register arithmetic, logical, and comparison instructions
 
 `define TINYRV2_INST_ADD   32'b0000000_?????_?????_000_?????_0110011
